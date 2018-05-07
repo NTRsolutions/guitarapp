@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/login_rounded_corners"
+    android:paddingBottom="20dp"
+    android:layout_margin="10dp"
+    >
+    <LinearLayout
+        android:layout_marginTop="@dimen/thirty_dp"
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_marginRight="@dimen/fifteen_dp"
+        android:layout_marginEnd="@dimen/fifteen_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/rect_login_box_color_with_solid_shape"-->
+                <!--android:alpha="0.65"/>-->
+
+            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                android:id="@+id/eT_loginUserName"
+                android:inputType="text"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:textCursorDrawable="@drawable/white_color_cursor_drawable"
+
+
+                android:textSize="@dimen/fifteen_sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/phoneOrEmailOrUser"
+                android:textColorHint="@color/hint_color"
+                android:textColor="@color/white"
+                android:drawableLeft="@drawable/username"
+                android:drawablePadding="10dp"
+                android:paddingLeft="7dp"
+                />
+
+            <ImageView
+                android:id="@+id/iV_login_userName_error"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/error_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:contentDescription="@string/simple_image_view"/>
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/login_tab_bg"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/rect_login_box_color_with_solid_shape"-->
+                <!--android:alpha="0.65"/>-->
+
+            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                android:id="@+id/eT_loginPassword"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:textCursorDrawable="@drawable/white_color_cursor_drawable"
+
+                android:textSize="@dimen/fifteen_sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/password"
+                android:drawableLeft="@drawable/password"
+                android:textColorHint="@color/hint_color"
+                android:textColor="@color/white"
+                android:drawablePadding="10dp"
+                android:paddingLeft="7dp"
+                />
+
+            <ImageView
+                android:id="@+id/iV_login_password_error"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/error_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/simple_image_view"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/login_tab_bg"/>
+
+    </LinearLayout>
+
+    <!-- Forgot your login details -->
+    <!--android:background="@drawable/button_rounded_corners"-->
+
+    <!-- Login Button -->
+    <RelativeLayout
+        android:id="@+id/rL_do_login"
+        android:layout_marginTop="@dimen/twenty_five_dp"
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_marginRight="@dimen/fifteen_dp"
+        android:layout_marginEnd="@dimen/fifteen_dp"
+        android:layout_width="120dp"
+        android:layout_gravity="center"
+        android:layout_height="45dp"
+        android:background="@drawable/button_rounded_corners"
+        >
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/tV_do_login"
+            android:gravity="center"
+            android:textSize="@dimen/nineteen_sp"
+            android:textColor="@color/white"
+            android:text="@string/login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_login"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/white_color_progress_bar_bg"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rL_forgot_password"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:id="@+id/forgot_your_login"
+            android:textSize="@dimen/small_text_size"
+            android:text="@string/forgot_your_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"/>
+
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_toEndOf="@+id/forgot_your_login"
+            android:layout_toRightOf="@+id/forgot_your_login"
+            android:text="@string/get_help_signing_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+</LinearLayout>

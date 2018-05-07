@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.yelo.com.utility.DynamicHeightImageView
+        android:id="@+id/iV_image"
+        android:background="@color/image_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/simple_image_view"
+        />
+
+    <!-- Featured tag -->
+    <RelativeLayout
+        android:id="@+id/rL_featured"
+        android:visibility="gone"
+        android:layout_margin="@dimen/five_dp"
+        android:padding="@dimen/five_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/pink_color">
+        <ImageView
+            android:id="@+id/iV_featured_icon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/featured_icon"
+            android:contentDescription="@string/simple_image_view"/>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iV_featured_icon"
+            android:layout_toEndOf="@+id/iV_featured_icon"
+            android:textColor="@color/white"
+            android:textSize="@dimen/subheading_text_size"
+            android:text="@string/featured"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginStart="@dimen/five_dp"/>
+    </RelativeLayout>
+</RelativeLayout>

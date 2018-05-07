@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_white_color_with_solid_shape">
+
+    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/permission_denied"
+        android:textSize="@dimen/twenty_two_sp"
+        android:textColor="@color/color_overlay"
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_marginTop="@dimen/fifteen_dp"/>
+
+    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        android:id="@+id/tV_permission_name"
+        android:textSize="@dimen/subheading_text_size"
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_allow_the_permission"
+        android:textColor="@color/or_text_color"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/twenty_five_dp"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/tV_cancel"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/item_name_color"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/heading_text_size"
+            android:background="@drawable/selector_list_view"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rL_allow"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/tV_unfollow"
+                android:layout_margin="@dimen/eight_dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="@string/allow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/status_bar_color"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ten_dp"/>
+</LinearLayout>

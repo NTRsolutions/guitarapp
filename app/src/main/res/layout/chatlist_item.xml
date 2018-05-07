@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="3dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="3dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+    <RelativeLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <FrameLayout
+            android:id="@+id/storeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="13dp"
+
+            >
+
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/storeImage2"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+
+
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp" />
+
+
+            <!--android:scaleType="center"-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+
+                android:layout_marginStart="8dp"
+
+
+                android:textAllCaps="true"
+                android:textColor="#222222"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/storeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="24dp"
+            android:layout_toLeftOf="@+id/newMessageDate"
+            android:layout_toEndOf="@+id/storeImage"
+            android:layout_toRightOf="@+id/storeImage"
+            android:layout_toStartOf="@+id/newMessageDate"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/message_view"
+            android:layout_toStartOf="@+id/newMessageTime"
+            android:layout_toLeftOf="@+id/newMessageTime"
+            android:layout_toEndOf="@+id/storeImage"
+            android:layout_toRightOf="@+id/storeImage"
+            android:layout_below="@+id/storeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/tick"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:visibility="visible"
+                android:layout_marginTop="3dp"
+                app:srcCompat="@drawable/ic_double_tick" />
+            <TextView
+                android:id="@+id/newMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="3dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:layout_toEndOf="@+id/tick"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_toRightOf="@+id/tick"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#808080"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/newMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/message_view"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:textColor="#616161"
+            android:textSize="12sp"
+            android:visibility="visible"
+
+            />
+
+        <TextView
+            android:id="@+id/newMessageDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/storeName"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:textColor="#616161"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/badge"
+            android:padding="3dp">
+            <TextView
+                android:id="@+id/newMessageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:maxLength="2"
+                android:text="12"
+                android:textColor="@color/color_white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

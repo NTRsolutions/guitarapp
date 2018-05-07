@@ -1,0 +1,125 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/black">
+
+    <view
+        class="co.simplecrop.android.simplecropimage.CropImageView"
+        android:id="@+id/image"
+        android:layout_above="@+id/rL_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+    <!--
+        <include
+            android:id="@+id/done_cancel_bar"
+            layout="@layout/crop__layout_done_cancel" />
+    -->
+
+    <RelativeLayout
+        android:id="@+id/rL_bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/crop__bar_height"
+        >
+        <RelativeLayout
+            android:id="@+id/rL_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="@dimen/text_size"
+                android:textStyle="normal"
+                android:layout_marginLeft="@dimen/twenty_five_dp"
+                android:layout_marginStart="@dimen/twenty_five_dp"
+                android:layout_centerVertical="true"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/cancel"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/rotateLeft"
+            android:layout_centerInParent="true"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/rotate_icon"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rL_done"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="@dimen/text_size"
+                android:textStyle="normal"
+                android:layout_marginRight="@dimen/twenty_five_dp"
+                android:layout_marginEnd="@dimen/twenty_five_dp"
+                android:layout_centerVertical="true"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/done"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+
+
+            <Button
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/discard"
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    style="@style/CropButton"
+                    android:text="@string/cancel"
+                    />
+
+            <ImageButton
+                    android:id="@+id/rotateLeft"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@id/discard"
+                    style="@style/CropButton"
+                    android:src="@drawable/ic_rotate_left"
+                    />
+
+            <ImageButton
+                    android:id="@+id/rotateRight"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@id/rotateLeft"
+                    style="@style/CropButton"
+                    android:src="@drawable/ic_rotate_right"
+                    />
+            <Button
+                    android:id="@+id/save"
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@id/rotateRight"
+                    style="@style/CropButton"
+                    android:text="@string/save"
+                    />
+
+        </RelativeLayout>
+    -->
+</RelativeLayout>

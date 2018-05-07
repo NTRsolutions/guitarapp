@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/counter_offer_received_bg">
+
+        <!--android:layout_height="wrap_content"-->
+        <com.yelo.com.mqttchat.Utilities.AdjustableImageView
+            android:id="@+id/imgshow"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@color/ashcolor"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_grid_view_image_icon"
+            android:transitionName="image"
+            />
+        <!--android:paddingBottom="5dp"-->
+        <!--android:transitionName="image"-->
+        <TextView
+            android:id="@+id/ts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imgshow"
+            android:layout_alignRight="@+id/imgshow"
+            android:layout_below="@+id/imgshow"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="italic" />
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgshow"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/comma"
+            android:layout_toStartOf="@+id/comma"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <TextView
+            android:id="@+id/comma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgshow"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/ts"
+            android:layout_toStartOf="@+id/ts"
+            android:text=","
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/download"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="58dp"
+            android:layout_marginStart="58dp"
+            android:background="@drawable/download_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:tint="#ffffff"
+            app:srcCompat="@drawable/ic_file_download_white_48px" />
+
+
+        <com.yelo.com.mqttchat.Utilities.RingProgressBar
+            android:id="@+id/progress"
+
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="57dp"
+            android:layout_marginStart="57dp"
+            android:background="@drawable/download_background"
+            android:visibility="gone"
+            app:max="100"
+            app:ringColor="#ffffff"
+            app:ringProgressColor="#63affc"
+            app:ringWidth="4dp"
+            app:style="STROKE"
+            app:textColor="#ffffff"
+            app:textIsShow="true"
+            app:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/progress2"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="56dp"
+            android:layout_marginStart="56dp"
+
+
+            android:background="@drawable/download_background"
+            android:visibility="gone" />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/cancel"
+            android:layout_width="29dp"
+
+
+            android:layout_height="29dp"
+            android:layout_alignEnd="@id/imgshow"
+
+            android:layout_alignRight="@id/imgshow"
+
+            android:layout_marginTop="5dp"
+
+
+            android:src="@drawable/com_facebook_close"
+
+            android:visibility="gone"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/fnf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="@string/image_nf"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+
+
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+

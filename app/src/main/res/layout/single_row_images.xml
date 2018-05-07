@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iV_image"
+        android:src="@drawable/app_launcher_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/simple_image_view"
+        />
+
+    <ImageView
+        android:id="@+id/iV_delete_icon"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete_icon"
+        android:layout_alignEnd="@+id/iV_image"
+        android:layout_alignRight="@+id/iV_image"
+        android:layout_alignBottom="@+id/iV_image"
+        android:contentDescription="@string/simple_image_view"/>
+
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Action bar -->
+    <RelativeLayout
+        android:id="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bottom_shadow">
+
+        <RelativeLayout
+            android:id="@+id/rL_back_btn"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/back_arrow_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_color"
+            android:layout_toRightOf="@+id/rL_back_btn"
+            android:layout_toEndOf="@+id/rL_back_btn"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginStart="@dimen/five_dp"
+            android:text="@string/currency_list"
+            android:textSize="@dimen/action_bar_text_size"/>
+    </RelativeLayout>
+
+    <!-- Search -->
+    <RelativeLayout
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            android:id="@+id/eT_searchCode"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:hint="@string/search"
+            android:textColorHint="@color/hint_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/purple_color_cursor_drawable"
+            />
+
+        <View
+            android:layout_below="@+id/eT_searchCode"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"/>
+    </RelativeLayout>
+
+    <!--
+        <android.support.v7.widget.SearchView
+            android:id="@+id/mSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/transparant">
+
+        </android.support.v7.widget.SearchView>
+    -->
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_weight="2"
+            android:textColor="@color/purple_color"
+            android:textSize="@dimen/heading_text_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/country"/>
+
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/tV_code"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/purple_color"
+                android:textSize="@dimen/heading_text_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/code"/>
+
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/tV_symbol"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/purple_color"
+                android:textSize="@dimen/heading_text_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/symbol"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rV_currency"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

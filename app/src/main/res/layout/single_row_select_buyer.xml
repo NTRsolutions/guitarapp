@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_margin="@dimen/fifteen_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/sixty_dp"
+            android:layout_height="@dimen/sixty_dp"
+            android:src="@drawable/default_circle_img"
+            android:contentDescription="@string/simple_image_view"
+            />
+        <RelativeLayout
+            android:layout_marginStart="@dimen/eight_dp"
+            android:layout_marginLeft="@dimen/eight_dp"
+            android:layout_toLeftOf="@+id/rL_select"
+            android:layout_toStartOf="@+id/rL_select"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/image"
+            android:layout_toRightOf="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/tV_heading"
+                android:textSize="16sp"
+                android:textColor="@color/item_name_color"
+                android:text="@string/daniel_welllington"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_subHeading"
+                android:layout_marginTop="2dp"
+                android:layout_below="@id/tV_heading"
+                android:textSize="14sp"
+                android:textColor="@color/sub_heading_color"
+                android:text="@string/amelia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+
+        <!-- Select -->
+        <RelativeLayout
+            android:id="@+id/rL_select"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/ninety_dp"
+            android:layout_height="@dimen/thirty_five_dp"
+            android:background="@drawable/rect_purple_color_with_stroke_shape">
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/tV_follow"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/medium_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple_color"
+                android:text="@string/select"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color"/>
+</LinearLayout>

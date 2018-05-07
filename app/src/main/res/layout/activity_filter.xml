@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:id="@+id/rL_rootElement">
+
+    <!--Action bar-->
+    <RelativeLayout
+        android:id="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rL_back_btn"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cross_icon"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/status_bar_color"
+            android:layout_centerInParent="true"
+            android:text="@string/filter"
+            android:textSize="@dimen/eighteen_sp"/>
+
+    </RelativeLayout>
+
+    <!--Filter contents-->
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_apply"
+        android:layout_below="@+id/rL_action_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Location -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/price_fill_color">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:text="@string/location"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:textColor="@color/heading_color"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <RelativeLayout
+                android:id="@+id/rL_changeLoc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/white">
+
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:id="@+id/tV_setLocation"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toStartOf="@+id/iV_find"
+                    android:layout_toLeftOf="@+id/iV_find"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_Location"
+                    android:singleLine="true"
+                    android:textColor="@color/change_location"/>
+
+                <ImageView
+                    android:id="@+id/iV_find"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/forward_arrow"
+                    android:contentDescription="@string/simple_image_view"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <!-- Categories -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/price_fill_color">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:text="@string/category"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:textColor="@color/heading_color"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rV_category"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <!-- Distance -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/price_fill_color">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:id="@+id/distance"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:text="@string/distance"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:textColor="@color/heading_color"
+                    />
+
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:id="@+id/colon"
+                    android:layout_toEndOf="@+id/distance"
+                    android:layout_toRightOf="@+id/distance"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:text="@string/colon_symbol"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_marginStart="@dimen/five_dp"
+                    android:layout_marginLeft="@dimen/five_dp"
+                    android:textColor="@color/heading_color"
+                    />
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:id="@+id/tV_starting_dis"
+                    android:layout_toEndOf="@+id/colon"
+                    android:layout_toRightOf="@+id/colon"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:text="@string/min_dist"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_marginStart="@dimen/five_dp"
+                    android:layout_marginLeft="@dimen/five_dp"
+                    android:textColor="@color/heading_color"
+                    />
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white">
+                <LinearLayout
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/fifteen_sp"
+                    android:layout_marginRight="@dimen/fifteen_sp"
+                    android:weightSum="10"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/initial_distance_icon"
+                        android:contentDescription="@string/simple_image_view"/>
+
+                    <SeekBar
+                        android:id="@+id/distance_seekbar"
+                        android:layout_gravity="center_vertical"
+                        android:max="3000"
+                        style="@style/tallerBarStyle"
+                        android:layout_weight="7.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/thumb"
+                        android:progressDrawable="@drawable/custom_seekbar"
+                        />
+
+                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                        android:gravity="end"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/heading_color"
+                        android:text="@string/max"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/subheading_text_size"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <!-- Sort by -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/price_fill_color">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:text="@string/sort_by"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:textColor="@color/heading_color"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <RadioGroup
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <!-- Newest first -->
+                <com.yelo.com.custom_fonts.RadioButtonRobotoRegular
+                    android:id="@+id/radio_NewestFirst"
+                    android:background="@android:color/transparent"
+                    android:text="@string/newest_first"
+                    android:textColor="@drawable/selector_check_box_text"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fifteen_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:paddingRight="@dimen/fifteen_dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/selector_category_check_box"
+                    android:drawableRight="@drawable/selector_category_check_box"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/news_divider_color"/>
+
+                <!-- Closest first -->
+                <com.yelo.com.custom_fonts.RadioButtonRobotoRegular
+                    android:id="@+id/radio_ClosestFirst"
+                    android:background="@android:color/transparent"
+                    android:text="@string/closest_first"
+                    android:textColor="@drawable/selector_check_box_text"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fifteen_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:paddingRight="@dimen/fifteen_dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/selector_category_check_box"
+                    android:drawableRight="@drawable/selector_category_check_box"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/news_divider_color"/>
+
+                <!-- Price : High to low -->
+                <com.yelo.com.custom_fonts.RadioButtonRobotoRegular
+                    android:id="@+id/radio_highToLow"
+                    android:background="@android:color/transparent"
+                    android:text="@string/price_high_to_low"
+                    android:textColor="@drawable/selector_check_box_text"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fifteen_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:paddingRight="@dimen/fifteen_dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/selector_category_check_box"
+                    android:drawableRight="@drawable/selector_category_check_box"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/news_divider_color"/>
+
+                <!-- Price : Low to high -->
+                <com.yelo.com.custom_fonts.RadioButtonRobotoRegular
+                    android:id="@+id/radio_lowToHigh"
+                    android:background="@android:color/transparent"
+                    android:text="@string/price_low_to_high"
+                    android:textColor="@drawable/selector_check_box_text"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fifteen_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:paddingRight="@dimen/fifteen_dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/selector_category_check_box"
+                    android:drawableRight="@drawable/selector_category_check_box"
+                    />
+
+            </RadioGroup>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <!--Posted within-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/price_fill_color">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:text="@string/posted_within"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:textColor="@color/heading_color"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <RadioGroup
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <!-- The last 24 hour -->
+                <com.yelo.com.custom_fonts.RadioButtonRobotoRegular
+                    android:id="@+id/radio_last24hr"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginRight="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/fifteen_dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/the_last_24hr"
+                    android:textColor="@drawable/selector_check_box_text"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:layout_gravity="center_vertical"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/selector_category_check_box"
+                    android:drawableRight="@drawable/selector_category_check_box"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/news_divider_color"/>
+
+                <!-- The last 7 days -->
+                <com.yelo.com.custom_fonts.RadioButtonRobotoRegular
+                    android:id="@+id/radio_last7day"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginRight="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/fifteen_dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/the_last_7day"
+                    android:textColor="@drawable/selector_check_box_text"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/selector_category_check_box"
+                    android:drawableRight="@drawable/selector_category_check_box"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/news_divider_color"/>
+
+                <!-- The Last 30 days -->
+                <com.yelo.com.custom_fonts.RadioButtonRobotoRegular
+                    android:id="@+id/radio_last30day"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginRight="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/fifteen_dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/the_last_30day"
+                    android:textColor="@drawable/selector_check_box_text"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/selector_category_check_box"
+                    android:drawableRight="@drawable/selector_category_check_box"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/news_divider_color"/>
+
+                <!-- All products -->
+                <com.yelo.com.custom_fonts.RadioButtonRobotoRegular
+                    android:id="@+id/radio_allProduct"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginRight="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/fifteen_dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/all_producs"
+                    android:textColor="@drawable/selector_check_box_text"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/selector_category_check_box"
+                    android:drawableRight="@drawable/selector_category_check_box"
+                    />
+
+            </RadioGroup>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <!-- Price -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/price_fill_color">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:text="@string/price"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:textColor="@color/heading_color"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <RelativeLayout
+                android:id="@+id/rL_currency"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginRight="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/rL_dropDown_currency"
+                    android:layout_toLeftOf="@+id/rL_dropDown_currency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                        android:id="@+id/currency"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/currency"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/heading_color"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rL_dropDown_currency"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                        android:id="@+id/tV_currency"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/seventeen_sp"
+                        android:textColor="@color/purple_color"/>
+                    <ImageView
+                        android:id="@+id/iV_dropDown_currency"
+                        android:layout_toEndOf="@+id/tV_currency"
+                        android:layout_toRightOf="@+id/tV_currency"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/drop_down_black_color_icon"
+                        android:contentDescription="@string/simple_image_view"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <!-- Min price -->
+            <LinearLayout
+                android:weightSum="8"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginRight="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/white">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/from"
+                    android:textColor="@color/heading_color"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:textColor="@color/heading_color"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/colon_symbol"/>
+
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/ten_dp"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_gray_color_with_with_stroke_shape">
+
+<!--
+                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                        android:id="@+id/tV_min_currency_symbol"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/status_bar_color"
+                        android:textSize="@dimen/small_text_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+-->
+
+                    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                        android:id="@+id/eT_minprice"
+                        android:layout_marginStart="@dimen/five_dp"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_centerInParent="true"
+                        android:inputType="number"
+                        android:textSize="@dimen/small_text_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/price"
+                        android:textColorHint="@color/hint_color"
+                        android:textColor="@color/status_bar_color"
+                        android:textCursorDrawable="@drawable/purple_color_cursor_drawable"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <!-- Max price -->
+            <LinearLayout
+                android:weightSum="8"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginRight="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/white">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/to"
+                    android:textColor="@color/heading_color"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:textColor="@color/heading_color"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/colon_symbol"/>
+
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/ten_dp"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_gray_color_with_with_stroke_shape">
+
+<!--
+                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                        android:id="@+id/tV_max_currency_symbol"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/status_bar_color"
+                        android:textSize="@dimen/small_text_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+-->
+                    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                        android:id="@+id/eT_maxprice"
+                        android:layout_marginStart="@dimen/five_dp"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_centerInParent="true"
+                        android:inputType="number"
+                        android:textSize="@dimen/small_text_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/price"
+                        android:textColorHint="@color/hint_color"
+                        android:textColor="@color/status_bar_color"
+                        android:textCursorDrawable="@drawable/purple_color_cursor_drawable"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ten_dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Save -->
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/linear_apply"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/tV_reset"
+            android:gravity="center"
+            android:text="@string/reset"
+            android:textSize="@dimen/eighteen_sp"
+            android:layout_weight="1"
+            android:textColor="@color/change_location"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/reset_button_bg"/>
+
+        <RelativeLayout
+            android:id="@+id/rL_apply"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/status_bar_color"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:id="@+id/tV_save"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:text="@string/apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar_save"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDrawable="@drawable/white_color_progress_bar_bg"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

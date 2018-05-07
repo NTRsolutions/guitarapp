@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rL_rootview">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rV_notification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_notification"
+        android:visibility="visible"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/custom_progress_background"
+        />
+
+    <!-- show when no activity found -->
+    <LinearLayout
+        android:id="@+id/linear_no_activity"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iV_icon"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notification_you_empty"
+            android:contentDescription="@string/simple_image_view"/>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:textSize="@dimen/heading_text_size"
+            android:textColor="@color/heading_color"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_on_yelo"/>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:textSize="@dimen/subheading_text_size"
+            android:textColor="@color/sub_heading_color"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/make_money_selling"/>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:textSize="@dimen/subheading_text_size"
+            android:textColor="@color/sub_heading_color"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/and_find_great"/>
+
+        <RelativeLayout
+            android:id="@+id/rL_start_selling"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginLeft="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginRight="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/rect_with_pink_color_rounded_corner_solid_shape">
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/tV_save"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="@string/start_selling"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

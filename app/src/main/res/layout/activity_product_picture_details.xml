@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/textViewProduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="sdsf"
+        android:textSize="@dimen/medium_text_size"
+        android:textColor="#ffffff"
+        android:gravity="center"/>
+
+</android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textViewProductDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry  and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry  and typesetting industry. "
+        android:textSize="@dimen/medium_text_size"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:padding="7dp"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewProductDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+        app:spanCount="3"
+        android:padding="7dp"/>
+
+</LinearLayout>

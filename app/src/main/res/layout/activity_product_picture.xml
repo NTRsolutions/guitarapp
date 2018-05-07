@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <com.yelo.com.custom_fonts.TextViewOrgano
+            android:id="@+id/textViewProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="CATEGORIES"
+            android:textSize="@dimen/action_bar_text_size"
+            android:textColor="#000"
+            android:gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewProductPicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager"
+            app:spanCount="2"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rL_sell_stuff"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="@dimen/twenty_dp"
+            android:paddingRight="@dimen/twenty_dp"
+            android:paddingTop="@dimen/eight_dp"
+            android:paddingBottom="@dimen/eight_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/rounded_rectangular_purple_color_with_solid_shape">
+            <ImageView
+                android:id="@+id/camera_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/camera_icon"
+                android:contentDescription="@string/simple_image_view"/>
+
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginStart="@dimen/five_dp"
+                android:layout_toEndOf="@+id/camera_icon"
+                android:layout_toRightOf="@+id/camera_icon"
+                android:text="@string/sell_your_stuff"
+                android:textColor="@color/black"
+                android:textSize="@dimen/subheading_text_size" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linear_rootElement">
+
+    <!-- Action bar -->
+    <RelativeLayout
+        android:id="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bottom_shadow">
+
+        <RelativeLayout
+            android:id="@+id/rL_back_btn"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/back_arrow_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_color"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/rL_back_btn"
+            android:layout_toRightOf="@+id/rL_back_btn"
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:text="@string/click"
+            android:textSize="@dimen/action_bar_text_size"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fouty_dp"
+        android:background="@color/thick_divider_color">
+
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/tV_country_name"
+            android:layout_marginLeft="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/heading_text_size"
+            android:text="@string/clicks_from"
+            android:textColor="@color/item_name_color"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/news_divider_color"/>
+
+    <LinearLayout
+        android:id="@+id/linear_location"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+
+</LinearLayout>

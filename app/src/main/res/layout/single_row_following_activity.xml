@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iV_user1_profilePic"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_circle_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/simple_image_view"/>
+        <LinearLayout
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/iV_user1_profilePic"
+            android:layout_toRightOf="@+id/iV_user1_profilePic"
+            android:layout_toStartOf="@+id/rL_right"
+            android:layout_toLeftOf="@+id/rL_right"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_activity"
+                android:textSize="14sp"
+                android:textColor="@color/item_name_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:id="@+id/tV_time"
+                    android:textColor="@color/sub_heading_color"
+                    android:textSize="12sp"
+                    android:text="@string/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rL_right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/hundred_dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iV_user2_profilePic"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_image"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/sixty_dp"
+                android:layout_height="@dimen/sixty_dp"
+                android:contentDescription="@string/simple_image_view"/>
+
+            <!-- Follow -->
+            <RelativeLayout
+                android:id="@+id/relative_follow"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/hundred_dp"
+                android:layout_height="@dimen/thirty_dp"
+                android:background="@drawable/rect_purple_color_with_stroke_shape">
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:id="@+id/tV_follow"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/medium_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple_color"
+                    android:text="@string/follow"/>
+            </RelativeLayout>
+
+            <!--Rate User-->
+            <RelativeLayout
+                android:id="@+id/relative_rate_user"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/hundred_dp"
+                android:layout_height="@dimen/thirty_dp"
+                android:background="@drawable/rect_pink_color_with_solid_shape">
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/medium_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/rate_user"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color"/>
+
+</LinearLayout>

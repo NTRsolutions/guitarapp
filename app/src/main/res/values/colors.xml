@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BABABA</color>
+    <!--<color name="colorPrimary">#5c34a3</color>-->
+    <!--<color name="colorPrimaryDark">#5c34a3</color>-->
+    <color name="colorPrimaryDark">#BABABA</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="ashcolor">#B2BEB5</color>
+    <color name="black80">#3f3d3d</color>
+
+    <!-- Common color -->
+    <color name="rating_bar_color">#ffc200</color>
+    <color name="white">#ffffff</color>
+    <color name="white50">#8affffff</color>
+    <color name="tab_bg">#f9f6ff</color>
+    <color name="black">#000000</color>
+    <color name="transparant_black">#a6000000</color>
+    <color name="divider_color">#d4d4d4</color>
+    <color name="hint_color">#b8b8b8</color>
+    <color name="transparant">#00000000</color>
+    <color name="transparent_background">#00FF0000</color>
+    <color name="fb_bg_color">#3b5998</color>
+    <color name="google_bg_color">#518ef8</color>
+    <color name="action_bar_color">#fafafa</color>
+    <!--<color name="purple_color">#5c34a3</color>-->
+    <color name="purple_color">#000000</color>
+    <color name="sub_heading">#acacac</color>
+    <color name="text_color">#4c4c4c</color>
+    <color name="search_box_color">#ebebeb</color>
+    <color name="background_color">#fdfbff</color>
+    <color name="sub_heading_color">#919191</color>
+    <color name="heading_color">#333333</color>
+    <color name="green_text_color">#10a325</color>
+    <color name="status_bar_color">#BABABA</color>
+    <!--<color name="status_bar_color">#5c34a3</color>-->
+    <color name="red_color">#ff0000</color>
+    <color name="tab_unselected_color">#b5a7d4</color>
+    <color name="item_name_color">#282828</color>
+    <color name="pink_color">#ff4081</color>
+    <color name="thick_divider_color">#fbfaff</color>
+    <color name="gallery_img_bg">#ece8ddff</color>
+    <color name="half_white_transparant">#88ffffff</color>
+    <color name="snapNpostColor">#b0b0b0</color>
+    <color name="error_bg_color">#ff3a3a</color>
+
+    <!--Error dialog box color-->
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+    <color name="error_heading_color">#575757</color>
+    <color name="error_title_color">#797979</color>
+
+    <!-- Login page -->
+    <color name="login_page_blue_box">#5c34a3</color>
+
+    <color name="light_blue_color">#cbe4fb</color>
+    <color name="or_text_color">#939393</color>
+    <color name="login_tab_bg">#777777</color>
+    <color name="half_transparant">#88777777</color>
+    <!--<color name="half_transparant_new">#5c34a4</color>-->
+    <color name="half_transparant_new">#BABABA</color>
+    <color name="half_transparant_new1">#a5a5a5</color>
+    <color name="text_box">#636363</color>
+
+    <!-- Home page explore page -->
+    <color name="search_box_text_color">#999999</color>
+
+    <!--Home page news feed-->
+    <color name="news_divider_color">#e1e1e1</color>
+    <color name="full_divider">#b2b3b3</color>
+
+    <!--Home profile -->
+
+    <!-- Profile setting screen -->
+    <color name="post_text_color">#444444</color>
+    <color name="no_post_found_text_color">#b3b3b3</color>
+    <color name="follow_people_color">#979698</color>
+    <color name="get_paypal_link_color">#555555</color>
+
+    <!-- Make offer -->
+    <color name="location_color">#bbbbbb</color>
+    <color name="price_box_border">#ebebeb</color>
+
+    <!--Filter screen-->
+    <color name="change_location">#484848</color>
+    <color name="hide_button_border_color">#b7b7b7</color>
+    <color name="reset_button_bg">#c4c4c4</color>
+    <color name="price_fill_color">#f9f6ff</color>
+    <!--<color name="price_text_color">#6d3ec1</color>-->
+    <color name="price_text_color">#BABABA</color>
+    <!-- Post product -->
+    <color name="add_title">#b9b8b8</color>
+
+    <!-- Add review -->
+    <color name="add_review_bg">#f0f0f0</color>
+    <color name="comment_text_color">#666666</color>
+
+    <!-- Insight color -->
+    <color name="insight_divider_color">#dbdbdb</color>
+    <color name="image_bg_color">#3cdbdbdb</color>
+    <color name="posted_on_color">#888888</color>
+    <!--<color name="this_week">#7448c2</color>-->
+    <color name="this_week">#BABABA</color>
+
+    <color name="unique_click">#aaaaaa</color>
+
+    <!--chat color code-->
+
+    <color name="color_white">#ffffff</color>
+    <color name="lblFromName">#888888</color>
+    <color name="chat_blue_tick">#00B0FF</color>
+    <color name="color_text_black">#222222</color>
+    <color name="helper_screen_blue">#63affc</color>
+    <color name="color_text_search">#808080</color>
+    <color name="color_text_gray">#959595</color>
+    <color name="color_background_gray">#f5f5f5</color>
+    <color name="color_black">#000000</color>
+    <color name="custom_dialog_options_menu">#4d4747</color>
+    <color name="color_tint">#222222</color>
+    <color name="color_text_gray_dark">#BDBDBD</color>
+    <color name="color_line_gray">#e5e5e5</color>
+    <color name="color_overlay">#A5000000</color>
+    <color name="progress_drawable_color">#607D8B</color>
+    <color name="color_gray_chatscreen">#9E9E9E</color>
+    <color name="color_date_overlay_chat">#88d5e8ff</color>
+    <color name="color_profile">#C5CAE9</color>
+    <color name="gray">#ffbbbbbb</color>
+    <color name="image_not_gray">#9E9E9E</color>
+    <color name="botom_tab_bg">#fcfcfb</color>
+    <color name="server_message_background">#E1F5FE</color>
+    <color name="color_tag">#607D8B</color>
+    <color name="color_chat_text">#616161</color>
+    <color name="direct_message">#999999</color>
+    <color name="doodle_color_red">#C70202</color>
+    <color name="doodle_color_black">#000000</color>
+    <color name="doodle_color_green">#029935</color>
+    <color name="doodle_color_blue">#02CCFF</color>
+
+    <color name="sticker_text">#757575</color>
+
+
+    <color name="light_pink">#FF4081</color>
+    <color name="lighter_pink">#f580a8</color>
+    <color name="lightest_pink">#f690b3</color>
+
+</resources>

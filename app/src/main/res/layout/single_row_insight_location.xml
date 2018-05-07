@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fouty_dp">
+
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:id="@+id/tV_country_name"
+            android:layout_toLeftOf="@+id/rL_forward_arr"
+            android:layout_toStartOf="@+id/rL_forward_arr"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/fifteen_sp"
+            android:textColor="@color/post_text_color"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country"/>
+
+        <RelativeLayout
+            android:id="@+id/rL_forward_arr"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_totalViews"
+                android:layout_marginRight="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:textSize="@dimen/fifteen_sp"
+                android:textColor="@color/post_text_color"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zero"/>
+
+            <ImageView
+                android:id="@+id/iV_array"
+                android:layout_toRightOf="@+id/tV_totalViews"
+                android:layout_toEndOf="@+id/tV_totalViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/forward_arrow"
+                android:contentDescription="@string/simple_image_view"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_marginRight="@dimen/fifteen_dp"
+        android:layout_marginEnd="@dimen/fifteen_dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/news_divider_color"/>
+
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <!-- Connect to facebook -->
+    <RelativeLayout
+        android:id="@+id/rL_connectTofb"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iV_fbicon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fb_invite_icon"
+            android:contentDescription="@string/simple_image_view"
+            />
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iV_forward_icon"
+            android:layout_toStartOf="@+id/iV_forward_icon"
+            android:layout_toRightOf="@+id/iV_fbicon"
+            android:layout_toEndOf="@+id/iV_fbicon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp">
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_connect_to_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/connect_to_fb"
+                android:textSize="@dimen/heading_text_size"
+                android:textColor="@color/heading_color"/>
+
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_fb_friends_count"
+                android:layout_below="@+id/tV_connect_to_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_follow_ur_friends"
+                android:textSize="@dimen/subheading_text_size"
+                android:textColor="@color/search_box_text_color"/>
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iV_forward_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/forward_arrow"
+            android:contentDescription="@string/simple_image_view"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_fb_divider"
+        android:layout_below="@+id/rL_connectTofb"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/news_divider_color"/>
+
+    <!-- Connect to contact -->
+    <RelativeLayout
+        android:id="@+id/rL_connectToContact"
+        android:layout_below="@+id/view_fb_divider"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iV_contact_icon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contact_icon"
+            android:contentDescription="@string/simple_image_view"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iV_forward_icon1"
+            android:layout_toStartOf="@+id/iV_forward_icon1"
+            android:layout_toRightOf="@+id/iV_contact_icon"
+            android:layout_toEndOf="@+id/iV_contact_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp">
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_connect_to_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/connect_to_contacts"
+                android:textSize="@dimen/heading_text_size"
+                android:textColor="@color/heading_color"/>
+
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_contect_friend_count"
+                android:layout_below="@+id/tV_connect_to_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_follow_ur_friends"
+                android:textSize="@dimen/subheading_text_size"
+                android:textColor="@color/search_box_text_color"/>
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iV_forward_icon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/forward_arrow"
+            android:contentDescription="@string/simple_image_view"/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/rL_connectToContact"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/news_divider_color"/>
+    <View
+        android:id="@+id/view_contact_divider"
+        android:layout_below="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/action_bar_color"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@+id/view_contact_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/news_divider_color"/>
+
+
+</RelativeLayout>

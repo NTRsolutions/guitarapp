@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_white_color_with_solid_shape">
+
+    <!-- delete post -->
+    <RelativeLayout
+        android:id="@+id/rL_delete_post"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty_five_dp"
+        android:background="@drawable/selector_list_view">
+
+        <ImageView
+            android:id="@+id/iV_facebook_icon"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_delete"
+            android:contentDescription="@string/simple_image_view"/>
+
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_toRightOf="@+id/iV_facebook_icon"
+            android:layout_toEndOf="@+id/iV_facebook_icon"
+            android:textSize="@dimen/heading_text_size"
+            android:textColor="@color/error_heading_color"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_this_product"/>
+
+    </RelativeLayout>
+
+    <View
+        android:background="@color/news_divider_color"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <!-- Edit post -->
+    <RelativeLayout
+        android:id="@+id/rL_edit_post"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty_dp"
+        android:background="@drawable/selector_list_view">
+
+        <ImageView
+            android:id="@+id/iV_copy_icon"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_edit"
+            android:contentDescription="@string/simple_image_view"/>
+
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_toRightOf="@+id/iV_copy_icon"
+            android:layout_toEndOf="@+id/iV_copy_icon"
+            android:textSize="@dimen/heading_text_size"
+            android:textColor="@color/error_heading_color"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_this_product"/>
+
+    </RelativeLayout>
+
+    <View
+        android:background="@color/news_divider_color"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <!-- Cancel -->
+    <com.yelo.com.custom_fonts.TextViewRobotoBold
+        android:id="@+id/cancel_button"
+        android:textStyle="bold"
+        android:textColor="@color/pink_color"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:text="@string/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/selector_list_view"
+        />
+
+</LinearLayout>

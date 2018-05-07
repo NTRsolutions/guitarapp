@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparant_black">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circle_with_tick_icon"
+            android:contentDescription="@string/simple_image_view"
+            android:layout_gravity="center"/>
+
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/congratulation"
+            android:textColor="@color/white"
+            android:textSize="@dimen/action_bar_text_size"/>
+
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/successfully_posted"
+            android:textColor="@color/white"
+            android:textSize="@dimen/heading_text_size"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_done"
+            android:layout_marginTop="@dimen/twenty_five_dp"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/ninety_dp"
+            android:layout_height="@dimen/thirty_five_dp"
+            android:background="@drawable/rect_pink_color_with_solid_shape"
+            >
+          <com.yelo.com.custom_fonts.TextViewRobotoMedium
+              android:textSize="@dimen/heading_text_size"
+              android:textColor="@color/white"
+              android:layout_centerInParent="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/ok"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

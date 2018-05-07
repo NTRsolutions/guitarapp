@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:layout_marginBottom="@dimen/ten_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iV_category"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/simple_image_view"
+            android:src="@drawable/add_photo"/>
+
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:id="@+id/tV_category"
+            android:textColor="@color/heading_color"
+            android:text="@string/category"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/iV_category"
+            android:layout_toRightOf="@+id/iV_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/subheading_text_size"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginLeft="@dimen/ten_dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

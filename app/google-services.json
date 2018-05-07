@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "612096447830",
+    "firebase_url": "https://yelloapp-1523966967878.firebaseio.com",
+    "project_id": "yelloapp-1523966967878",
+    "storage_bucket": "yelloapp-1523966967878.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612096447830:android:411704a430b42c5e",
+        "android_client_info": {
+          "package_name": "com.yelo.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612096447830-d3cmh8of39b48llm9pqu4b2r4vdsea0e.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "612096447830-v96ehhvmol8jrj44i0ps07dho3lt1cj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIVhsnf1WZdaIPu8JcSIDX-i7ynXAh-MI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612096447830-d3cmh8of39b48llm9pqu4b2r4vdsea0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_message"
+        android:layout_width="177dp"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/balloon_incoming_normal">
+
+
+        <!--we have to put a view here to show contact details-->
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="10dp"
+
+
+            android:layout_toEndOf="@+id/contactImage"
+            android:layout_toRightOf="@+id/contactImage"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingEnd="5dp"
+
+
+            android:paddingLeft="5dp"
+
+
+            android:paddingRight="5dp"
+
+            android:paddingStart="5dp"
+            android:textColor="@color/color_text_black"
+            android:textSize="12sp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/contactNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactName"
+
+
+            android:layout_toEndOf="@+id/contactImage"
+            android:layout_toRightOf="@+id/contactImage"
+            android:paddingBottom="5dp"
+            android:paddingEnd="13dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="13dp"
+
+
+            android:paddingStart="5dp"
+            android:textColor="@color/color_text_gray"
+            android:textSize="10sp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/ts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/contactImage"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="2dp"
+            android:text="12:45 AM"
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactImage"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/comma"
+            android:layout_toStartOf="@+id/comma"
+            android:text="Yesterday"
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <TextView
+            android:id="@+id/comma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactImage"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/ts"
+            android:layout_toStartOf="@+id/ts"
+            android:text=","
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/contactImage"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/com_facebook_profile_picture_blank_square" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="3dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="3dp">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <FrameLayout
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+
+            android:layout_height="180dp"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            >
+
+            <com.yelo.com.mqttchat.Utilities.AdjustableImageView
+                android:id="@+id/vidshow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+
+                />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/overlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:foreground="@drawable/ripple_selector"
+
+                android:tint="@color/color_white"
+                app:srcCompat="@drawable/ic_play_circle_outline_white_48px" />
+
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fnf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:textColor="@color/color_text_search"
+        android:textSize="18sp"
+        android:visibility="gone" />
+</android.support.v7.widget.CardView>

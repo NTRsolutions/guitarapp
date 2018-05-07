@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/counter_offer_received_bg">
+        <TextView
+            android:id="@+id/txtMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="8dp"
+            android:paddingEnd="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="5dp"
+            android:paddingStart="8dp"
+            android:gravity="start"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/ts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtMsg"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/comma"
+            android:layout_toRightOf="@+id/comma"
+            android:text="23:45 AM"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="italic" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txtMsg"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <TextView
+            android:id="@+id/comma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtMsg"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/date"
+
+            android:layout_toRightOf="@+id/date"
+            android:text=","
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="italic" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

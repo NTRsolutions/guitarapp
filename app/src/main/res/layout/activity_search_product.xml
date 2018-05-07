@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thick_divider_color"
+    android:id="@+id/linear_rootElement">
+
+    <!-- Search -->
+    <RelativeLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bottom_shadow"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rL_close"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            >
+            <ImageView
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/cross_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/rL_close"
+            android:layout_toRightOf="@+id/rL_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_gray_color_with_solid_shape"
+            >
+            <ImageView
+                android:id="@+id/search_icon"
+                android:padding="@dimen/ten_dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/simple_image_view"/>
+
+            <com.yelo.com.custom_fonts.EditTextRobotoRegular
+                android:id="@+id/eT_search_users"
+                android:inputType="textNoSuggestions"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@drawable/purple_color_cursor_drawable"
+                android:textSize="@dimen/medium_text_size"
+                android:textColorHint="@color/hint_color"
+                android:layout_toEndOf="@+id/search_icon"
+                android:layout_toRightOf="@+id/search_icon"
+                android:textColor="@color/heading_color"
+                android:hint="@string/search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparant"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- View pager -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/chat_appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            style="@style/AppTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/price_fill_color"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/login_page_blue_box"
+            app:tabIndicatorHeight="2.5dp"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/login_page_blue_box"
+            app:tabTextAppearance="@style/AppTabTextAppearance"
+            app:tabTextColor="@color/tab_unselected_color" />
+    </android.support.design.widget.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/news_divider_color"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

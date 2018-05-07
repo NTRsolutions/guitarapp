@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.yelo.com.custom_fonts.RadioButtonRobotoRegular
+        android:id="@+id/radio_reportReason"
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_marginRight="@dimen/fifteen_dp"
+        android:layout_marginEnd="@dimen/fifteen_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:background="@android:color/transparent"
+        android:text="@string/newest_first"
+        android:textColor="@drawable/selector_check_box_text"
+        android:textSize="@dimen/fifteen_sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableEnd="@drawable/selector_category_check_box"
+        android:drawableRight="@drawable/selector_category_check_box"
+        />
+
+    <!-- Report reason by user -->
+    <RelativeLayout
+        android:id="@+id/rL_reasonDesc"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginBottom="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_marginRight="@dimen/fifteen_dp"
+        android:layout_marginEnd="@dimen/fifteen_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_gray_color_stroke_and_solid_shape">
+        <com.yelo.com.custom_fonts.EditTextRobotoRegular
+            android:id="@+id/eT_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fifteen_sp"
+            android:textColor="@color/item_name_color"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/purple_color_cursor_drawable"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/news_divider_color"/>
+</LinearLayout>

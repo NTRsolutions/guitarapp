@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_app_bg"
+    android:id="@+id/rL_rootElement">
+
+<!--
+    <VideoView
+        android:id="@+id/videoview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </VideoView>
+-->
+
+
+    <!-- ACtion bar with login and signup option -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:id="@+id/rL_back_btn"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/white_color_back_button"
+                    android:contentDescription="@string/simple_image_view"/>
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_centerInParent="true"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.yelo.com.custom_fonts.RadioButtonMedium
+                    android:id="@+id/radio_login"
+                    android:textSize="@dimen/heading_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/left_btn_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="@string/login"
+                    android:textColor="@drawable/left_text_selector_on"
+                    />
+
+                <com.yelo.com.custom_fonts.RadioButtonMedium
+                    android:id="@+id/radio_signup"
+                    android:textSize="@dimen/heading_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/right_btn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="@string/sign_up"
+                    android:textColor="@drawable/left_text_selector_on"
+                    />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <!-- Login fields  -->
+        <include
+            android:id="@+id/login_views"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/login_fields"/>
+
+        <!-- Sign up fields -->
+        <include
+            android:id="@+id/signup_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/sign_up_fields"/>
+    </LinearLayout>
+</RelativeLayout>
+

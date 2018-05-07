@@ -1,0 +1,1299 @@
+<?xml version="1.0"?>
+
+<!--facebook brstdev91@gmail.com pass brstdev91    google brstdev20@gmail.com  pass-brstdeveloper20  /-->
+
+<!--firebase account push notification &#45;&#45;brstdev20@gmail.com  pass-brstdeveloper20-->
+
+<resources>
+    <string name="app_name">GuitarAmps</string>
+    <!-- Landing page -->
+    <string name="continue_with_fb">Continue with Facebook</string>
+    <string name="continue_with_google">Continue with Google          </string>
+    <string name="by_continuing">By Continuing, You agree to our</string>
+    <string name="termscondition"><u>Terms and Conditions</u></string>
+    <string name="and">and</string>
+    <string name="privacyPolicy"><u>Privacy Policy</u></string>
+    <string name="quick_connect_with">Quickly connect with</string>
+    <!-- Login page -->
+    <string name="phoneOrEmailOrUser">Username:</string>
+    <string name="login">Log In</string>
+    <string name="forgot_your_login">Forgot your login details\?</string>
+    <string name="get_help_signing_in"><u>Get help signing in.</u></string>
+    <string name="or">OR</string>
+    <!-- Login with facebook -->
+    <string name="Loginfailed">Login failed</string>
+    <!-- Forgot password -->
+    <string name="forgot_password">Forgot Password</string>
+    <string name="find_your_acc">Find your account</string>
+    <string name="enter_your_email_add">Enter your e-mail address associated with your account.</string>
+    <string name="send">Send</string>
+    <!--Sign up-->
+    <string name="sign_up">Sign Up</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="user_name">Username</string>
+    <string name="user_full_name">Full name</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="number">Number</string>
+    <string name="emai_id">Email Address</string>
+    <string name="location">Location</string>
+    <string name="gender">Gender</string>
+    <string name="by_signing_up">By signing up, you agree to our</string>
+    <string name="create">Create</string>
+    <string name="signup">SIGNUP</string>
+    <string name="updateProfilePic">Update profile picture</string>
+    <string name="take_beautiful_pic">Take a new picture</string>
+    <string name="choose_existing_img">Choose an existing photo</string>
+    <string name="remove_existing_img">Remove an existing photo</string>
+    <string name="browse">Browse</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="please_accept_termsNconditions">Please accept Terms and Conditions</string>
+    <string name="username_already_registered">Username already registered</string>
+    <string name="email_already_registered">Email already registered</string>
+    <string name="phone_already_registered">Mobile number already registered</string>
+    <!-- Number Verification screen -->
+    <string name="number_verification">Number Verification</string>
+    <string name="enter_verification_code">Enter the verification code</string>
+    <string name="enter_the_code">Enter the code that we sent to</string>
+    <string name="resend_code">Resend Code.</string>
+    <string name="verify">Verify</string>
+    <string name="invalid_otp_code">Invalid otp code</string>
+    <!-- Home page tabs -->
+    <string name="home">Home</string>
+    <string name="socail">Social</string>
+    <string name="Chat">Chat</string>
+    <string name="Profile">Profile</string>
+    <!--Home page search text -->
+    <string name="sell_your_stuff">Sell Your Stuff</string>
+    <string name="featured">Featured</string>
+    <!--Home page news feed tab-->
+    <string name="time">Time</string>
+    <string name="please_follow_user">Please follow users to view</string>
+    <string name="post_in_your">posts in your newsfeed</string>
+    <string name="find_friends">Find Friends</string>
+    <!-- Home page chat   -->
+    <string name="buying">Buying</string>
+    <string name="selling">Selling</string>
+    <string name="daniel_welllington">Daniel Wellington Classic</string>
+    <string name="amelia">Amelia Kelly</string>
+    <string name="thousasnd_of_buyer">Thousands of buyer are</string>
+    <string name="browsing_yelo">Browsing Yelo right now</string>
+    <string name="no_chat_available">No chats available</string>
+    <!--Home Profile chat-->
+    <string name="profile">Profile</string>
+    <string name="posts">Posts</string>
+    <string name="people">People</string>
+    <string name="followings">Following</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="sold">Sold</string>
+    <string name="favourites">Favourites</string>
+    <string name="call">Call</string>
+    <string name="Email">Email</string>
+    <!-- Explore notification -->
+    <string name="you">You</string>
+    <string name="liked_your_post">liked your post</string>
+    <string name="startes_following">started following</string>
+    <string name="left_a_review_on">left a review on</string>
+    <string name="commented_your_post">left a review on your post</string>
+    <string name="startedFollowingYou">started following you</string>
+    <string name="welcome_on_yelo">Welcome to Yelo!</string>
+    <string name="make_money_selling">Make money selling What you don\'t need</string>
+    <string name="and_find_great">and find great deals nearby</string>
+    <string name="no_following_yet">No following yet!</string>
+    <string name="no_follower_yet">No follower yet!</string>
+    <string name="send_a_offer_on_your_product">Sent an offer on your product</string>
+    <string name="liked">likes</string>
+    <string name="own">own</string>
+    <!-- Explore Filter -->
+    <string name="filter">Filters</string>
+    <string name="change_Location">Change Location</string>
+    <string name="category">Categories</string>
+    <string name="distance">Distance</string>
+    <string name="sort_by">Sort By</string>
+    <string name="please_select_your_loc">Please select location</string>
+    <string name="distanceAsc">distanceAsc</string>
+    <string name="postedOnDesc">postedOnDesc</string>
+    <string name="priceAsc">priceAsc</string>
+    <string name="priceDsc">priceDsc</string>
+    <string name="newest_first">Newest First</string>
+    <string name="closest_first">Closest First</string>
+    <string name="price_low_to_high">Price : low to high</string>
+    <string name="price_high_to_low">Price : high to low</string>
+    <string name="posted_within">Posted Within</string>
+    <string name="the_last_24hr">The Last 24 hour</string>
+    <string name="the_last_7day">The Last 7 days</string>
+    <string name="the_last_30day">The Last 30 days</string>
+    <string name="all_producs">All Products</string>
+    <string name="min_price_cant_be_higher">The minimum price can\'t be higher than the maximum price.</string>
+    <!-- Change location -->
+    <string name="change_location">Change Location</string>
+    <string name="confirm_location">Confirm Location</string>
+    <!-- Product details -->
+    <string name="add_a_review">Add Review</string>
+    <string name="share_item">Share Item</string>
+    <string name="share_on_fb">Share on facebook</string>
+    <string name="copy_image_url">Copy Share URL</string>
+    <string name="sold_by">Sold by</string>
+    <string name="follow">Follow</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="description">Description</string>
+    <string name="conditions">Condition</string>
+    <string name="default_location">1241 East Main Street \n Stamford ct- 06902</string>
+    <string name="negotiable">Negotiable</string>
+    <string name="not_negotiable">Not Negotiable</string>
+    <string name="make_offer">Make Offer</string>
+    <string name="your_offer">Your Offer :</string>
+    <string name="asking_price">Asking Price :</string>
+    <string name="away">away</string>
+    <string name="product_location">Products Location</string>
+    <string name="url_copied">URL copied</string>
+    <!-- Report product -->
+    <string name="report_item">Report Item</string>
+    <string name="why_do_you_want">Why do you report this item ?</string>
+    <string name="the_product_report_has_been">The product has been reported. Thanks!</string>
+    <string name="the_report_is_already_reported">The product is already reported. Thanks!</string>
+    <!-- Report user -->
+    <string name="report_user">Report User</string>
+    <string name="the_user_report_has_been">The user has been reported. Thanks</string>
+    <!-- Review product -->
+    <string name="review">Reviews</string>
+    <string name="add_review">Add Review</string>
+    <string name="there_is_no_review">There are no reviews on this product,</string>
+    <string name="be_the_first">be the first to add one</string>
+    <!-- Profile Settings -->
+    <string name="profile_details">Profile details couldn\'t load</string>
+    <string name="please_try_again"><u>Please try again</u>.</string>
+    <string name="private_information">Private Information</string>
+    <string name="setting">Settings</string>
+    <string name="website">Website</string>
+    <string name="bio">Bio</string>
+    <string name="follow_people">Follow People</string>
+    <string name="find_facebook_friends">Find Facebook Friends</string>
+    <string name="connect_to_contacts">Connect to Contacts</string>
+    <string name="account">Account</string>
+    <string name="support">Support</string>
+    <string name="report_a_problem">Report a Problem</string>
+    <string name="about">About</string>
+    <string name="search_text">Search…</string>
+    <string name="search_post">Search Posts</string>
+    <string name="search_people">Search Peoples</string>
+    <string name="no_post">No Post</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="termsNcondition">Terms &amp; Conditions</string>
+    <string name="logout">Logout</string>
+    <string name="version">App Version</string>
+    <string name="are_you_sure_u_want">Are you sure you want to logout?</string>
+    <string name="do_you_want_to_sell_it_again">Do you want to sell it again?</string>
+    <string name="sell_it_again">Sell it again</string>
+    <string name="no_post_yet">No Post Yet!</string>
+    <string name="no_sold_yet">Not Sold Yet!</string>
+    <string name="no_post_found">No Post Found</string>
+    <string name="verified_with">Verified With</string>
+    <string name="paypal_me">Paypal.Me</string>
+    <string name="payment">Payments</string>
+    <string name="my_payment">My Payments</string>
+    <string name="no_likes_yet_be_the_first">No Likes Yet! Be the first to like this product</string>
+    <string name="no_ads_yet">No Ads Yet?</string>
+    <string name="snapNpostIn">Snap and post in 30 second to sell stuff!</string>
+    <string name="start_selling">Start Selling</string>
+    <string name="start_browsing">Start Browsing</string>
+    <string name="found_your_fav_yet">Found Your Favourite Yet</string>
+    <string name="ads_you_love_and_mark">Ads you love &amp; mark as \'favourite\' will appear here</string>
+    <string name="start_discovery">Start Discovering</string>
+    <string name="mark_as_sold">Mark As Sold</string>
+    <string name="rate_user">Rate User</string>
+    <string name="would_you_sell_to_megan_again">Would you sell to</string>
+    <string name="again">again?</string>
+    <string name="price_offered">Price Offered</string>
+    <string name="select_the_buyer_to_rate">Select the buyer to rate</string>
+    <string name="sold_it_somewhere_else">Sold it somewhere else</string>
+    <string name="want_to_sell_somewhere_else">Do you want to sell somewhere else?</string>
+    <string name="i_didnt_sell_it_on_offerup">I didn\'t sell it on Yelo</string>
+    <string name="select">Select</string>
+    <string name="absolutely_not">Absolutely,</string>
+    <string name="not">Not.</string>
+    <string name="yes">Yes,</string>
+    <string name="Yes">yes</string>
+    <string name="no">No</string>
+    <string name="definitely">Definitely!</string>
+    <string name="submit_rating">Submit Rating</string>
+    <string name="you_havnt_received">You havn\'t received any message or offer yet!</string>
+    <string name="delete_this_product">Delete this product</string>
+    <string name="edit_this_product">Edit this product</string>
+    <string name="update">Update</string>
+    <string name="update_post">Update Post</string>
+    <string name="promotions">Promotions</string>
+    <string name="promote_this_item">Promote this item</string>
+    <!-- Connect paypal -->
+    <string name="connect_paypal">Connect Paypal</string>
+    <string name="if_you_already_have_paypal">If you already have a Paypal.me link add it here</string>
+    <string name="example_https">Example : <u>https://www.paypal.me/appscrip</u></string>
+    <string name="connect_paypal_link">https://www.paypal.me/</string>
+    <string name="get_my">Get my</string>
+    <string name="link">link</string>
+    <string name="your_name">your name</string>
+    <string name="get_paypal">Get Paypal</string>
+    <!--Discover people screen-->
+    <string name="discover_people">Discover People</string>
+    <string name="connect_to_fb">Connect to Facebook</string>
+    <string name="to_follow_ur_friends">to follow your friends</string>
+    <string name="hide">Hide</string>
+    <string name="contacts">Contacts</string>
+    <!-- Post product -->
+    <string name="post_product">Post Product</string>
+    <string name="add_title">Add Title&#8230;</string>
+    <string name="descriptions">Description&#8230;</string>
+    <string name="Product_category">Product Category</string>
+    <string name="currency">Currency</string>
+    <string name="price">Price</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="post">Post</string>
+    <string name="currency_list">Currency List</string>
+    <string name="country">Country</string>
+    <string name="code">Code</string>
+    <string name="symbol">Symbol</string>
+    <string name="please_add_title">Please add title</string>
+    <string name="please_add_description">Please add description</string>
+    <string name="please_select_product_cate">Please select product category</string>
+    <string name="please_select_condition">Please select condition</string>
+    <string name="please_select_currency">Please select currency</string>
+    <string name="please_enter_price">Please enter price</string>
+    <string name="please_enter_location">Please enter location</string>
+    <string name="at_least_one_image_is">At least one photo is mandatory</string>
+    <string name="add_upto_4_more_img">Add up to 4 more photo(optional)</string>
+    <string name="add_upto_3_more_img">Add up to 3 more photo(optional)</string>
+    <string name="add_upto_2_more_img">Add up to 2 more photo(optional)</string>
+    <string name="add_upto_1_more_img">Add up to 1 more photo(optional)</string>
+    <string name="congratulation">Congratulations !</string>
+    <string name="successfully_posted">Successfully posted your listing.</string>
+    <!-- Product conditions -->
+    <string name="other_see_descriptions">Other(see description)</string>
+    <string name="for_parts">For Parts</string>
+    <string name="used_normal_wear">Used(normal wear)</string>
+    <string name="open_box">Open Box(never used)</string>
+    <string name="reconditioned">Reconditioned/Certified</string>
+    <string name="new_never_used">New(never used)</string>
+    <!-- Insight screen -->
+    <string name="insights">Insights</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
+    <string name="this_year">This Year</string>
+    <string name="posted_on">Posted on</string>
+    <string name="time_frame">Time Frame</string>
+    <string name="unique_click">Unique Clicks</string>
+    <string name="total_click">Total Click</string>
+    <string name="saved">Saved</string>
+    <string name="click">Clicks</string>
+    <string name="clicks_from">Clicks from</string>
+    <!-- Item Promotion -->
+    <string name="choose_a_plan">Choose a Plan</string>
+    <string name="purchase">Purchase</string>
+    <!-- Common text -->
+    <string name="empty_username">Empty Username!</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="failedToUpload">Failed to upload images.Try Again!!</string>
+    <string name="simple_image_view">This is simple image view</string>
+    <string name="password">Password:</string>
+    <string name="message">Message</string>
+    <string name="error_message">Here there is an error</string>
+    <string name="dialog_ok">OK</string>
+    <string name="NoInternetAccess">No Internet-Access</string>
+    <string name="demo_price">100</string>
+    <string name="default_price">0.00</string>
+    <string name="zero">0</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="search">Search</string>
+    <string name="country_code">Code</string>
+    <string name="country_name">Country name</string>
+    <string name="select_country">Select Country Code</string>
+    <string name="notification">Notifications</string>
+    <string name="min_dist">0 km</string>
+    <string name="max">Max</string>
+    <string name="min_price">Min</string>
+    <string name="max_price">Max</string>
+    <string name="km">Km</string>
+    <string name="Followers">Followers</string>
+    <string name="Following">Following</string>
+    <string name="likes">Likes</string>
+    <string name="done">Done</string>
+    <string name="double_zero_after_dot">.00</string>
+    <string name="double_zero">00</string>
+    <string name="reset">Reset</string>
+    <string name="apply">Apply</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="remove">Remove</string>
+    <string name="one">1</string>
+    <string name="of">of</string>
+    <string name="submit">Submit</string>
+    <string name="camera_roll">Camera Roll</string>
+    <string name="you_can_select_only_upto">You can take only up to a maximum of 5 photos</string>
+    <string name="report_email"></string><!--put here report email-->
+    <string name="problem_on_yelo">Problem on Yelo</string>
+    <string name="friend_on">Friend on</string>
+    <string name="friends_on">Friends on</string>
+    <string name="friend">Friend</string>
+    <string name="friends">Friends</string>
+    <string name="ok">OK</string>
+    <string name="cover">Cover</string>
+    <string name="know_more">Know More</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="please_allow_the_permission">Please allow the permission to access the</string>
+    <string name="by_clicking_on_allow_button">by clicking on the Allow button.</string>
+    <string name="allow">Allow</string>
+    <string name="camera">Camera</string>
+    <string name="external_storage">External Storage</string>
+    <string name="coarse_location">Coarse Location</string>
+    <string name="fine_location">Fine Location</string>
+    <string name="read_contact">Read Phone Contact</string>
+    <string name="you_just_bought">You just bought</string>
+    <string name="pls_rate_your_exp_with">Please rate your experience with the seller by clicking here</string>
+    <!--Fetch Address-->
+    <string name="no_address_found">Sorry, no address found</string>
+    <string name="no_location_data_provided">No location data provided</string>
+    <string name="service_not_available">Sorry, the service is not available</string>
+    <string name="invalid_lat_long_used">Invalid latitude or longitude used</string>
+    <!-- Currency symbol -->
+    <string name="usd">$</string>
+    <string name="plus">+</string>
+    <string name="star">*</string>
+    <string name="at_the_rate">\@\</string>
+    <string name="question_mark">\?\</string>
+    <!-- Special symbol -->
+    <string name="colon_symbol">:</string>
+    <!-- Keys -->
+    <string name="facebook_app_id">2023177354602917</string><!--put your facebook app id-->
+    <string name="google_map_api_key"> AIzaSyCut_UpCItTRN7Blad2ooEP5x8f3fX-Rq4 </string><!--put your google map key from google api console-->
+    <string name="servers_client_id">612096447830-v96ehhvmol8jrj44i0ps07dho3lt1cj6.apps.googleusercontent.com</string><!--put server client id from google api console -->
+
+    <!--McD8c7RCgP7lLD_viXa_kp1_  google client secret Gogle plus api//-->
+
+    <!-- Links -->
+    <string name="termsNconditionsUrl"></string><!--here terms and condition link -->
+    <string name="privacyPolicyUrl"></string><!--here privacy policy link -->
+    <string name="share_item_base_url">/</string><!--here item share link -->
+    <!--Country iso code and number-->
+    <string-array name="countryCodes">
+    <!--Country iso code and number-->
+        <item>93,AF</item>
+    <!--Country iso code and number-->
+        <item>355,AL</item>
+    <!--Country iso code and number-->
+        <item>213,DZ</item>
+    <!--Country iso code and number-->
+        <item>376,AD</item>
+    <!--Country iso code and number-->
+        <item>244,AO</item>
+    <!--Country iso code and number-->
+        <item>672,AQ</item>
+    <!--Country iso code and number-->
+        <item>54,AR</item>
+    <!--Country iso code and number-->
+        <item>374,AM</item>
+    <!--Country iso code and number-->
+        <item>297,AW</item>
+    <!--Country iso code and number-->
+        <item>61,AU</item>
+    <!--Country iso code and number-->
+        <item>43,AT</item>
+    <!--Country iso code and number-->
+        <item>994,AZ</item>
+    <!--Country iso code and number-->
+        <item>973,BH</item>
+    <!--Country iso code and number-->
+        <item>880,BD</item>
+    <!--Country iso code and number-->
+        <item>375,BY</item>
+    <!--Country iso code and number-->
+        <item>32,BE</item>
+    <!--Country iso code and number-->
+        <item>501,BZ</item>
+    <!--Country iso code and number-->
+        <item>229,BJ</item>
+    <!--Country iso code and number-->
+        <item>975,BT</item>
+    <!--Country iso code and number-->
+        <item>591,BO</item>
+    <!--Country iso code and number-->
+        <item>387,BA</item>
+    <!--Country iso code and number-->
+        <item>267,BW</item>
+    <!--Country iso code and number-->
+        <item>55,BR</item>
+    <!--Country iso code and number-->
+        <item>673,BN</item>
+    <!--Country iso code and number-->
+        <item>359,BG</item>
+    <!--Country iso code and number-->
+        <item>226,BF</item>
+    <!--Country iso code and number-->
+        <item>95,MM</item>
+    <!--Country iso code and number-->
+        <item>257,BI</item>
+    <!--Country iso code and number-->
+        <item>855,KH</item>
+    <!--Country iso code and number-->
+        <item>237,CM</item>
+    <!--Country iso code and number-->
+        <item>1,CA</item>
+    <!--Country iso code and number-->
+        <item>238,CV</item>
+    <!--Country iso code and number-->
+        <item>236,CF</item>
+    <!--Country iso code and number-->
+        <item>235,TD</item>
+    <!--Country iso code and number-->
+        <item>56,CL</item>
+    <!--Country iso code and number-->
+        <item>86,CN</item>
+    <!--Country iso code and number-->
+        <item>61,CX</item>
+    <!--Country iso code and number-->
+        <item>61,CC</item>
+    <!--Country iso code and number-->
+        <item>57,CO</item>
+    <!--Country iso code and number-->
+        <item>269,KM</item>
+    <!--Country iso code and number-->
+        <item>242,CG</item>
+    <!--Country iso code and number-->
+        <item>243,CD</item>
+    <!--Country iso code and number-->
+        <item>682,CK</item>
+    <!--Country iso code and number-->
+        <item>506,CR</item>
+    <!--Country iso code and number-->
+        <item>385,HR</item>
+    <!--Country iso code and number-->
+        <item>53,CU</item>
+    <!--Country iso code and number-->
+        <item>357,CY</item>
+    <!--Country iso code and number-->
+        <item>420,CZ</item>
+    <!--Country iso code and number-->
+        <item>45,DK</item>
+    <!--Country iso code and number-->
+        <item>253,DJ</item>
+    <!--Country iso code and number-->
+        <item>670,TL</item>
+    <!--Country iso code and number-->
+        <item>593,EC</item>
+    <!--Country iso code and number-->
+        <item>20,EG</item>
+    <!--Country iso code and number-->
+        <item>503,SV</item>
+    <!--Country iso code and number-->
+        <item>240,GQ</item>
+    <!--Country iso code and number-->
+        <item>291,ER</item>
+    <!--Country iso code and number-->
+        <item>372,EE</item>
+    <!--Country iso code and number-->
+        <item>251,ET</item>
+    <!--Country iso code and number-->
+        <item>500,FK</item>
+    <!--Country iso code and number-->
+        <item>298,FO</item>
+    <!--Country iso code and number-->
+        <item>679,FJ</item>
+    <!--Country iso code and number-->
+        <item>358,FI</item>
+    <!--Country iso code and number-->
+        <item>33,FR</item>
+    <!--Country iso code and number-->
+        <item>689,PF</item>
+    <!--Country iso code and number-->
+        <item>241,GA</item>
+    <!--Country iso code and number-->
+        <item>220,GM</item>
+    <!--Country iso code and number-->
+        <item>995,GE</item>
+    <!--Country iso code and number-->
+        <item>49,DE</item>
+    <!--Country iso code and number-->
+        <item>233,GH</item>
+    <!--Country iso code and number-->
+        <item>350,GI</item>
+    <!--Country iso code and number-->
+        <item>30,GR</item>
+    <!--Country iso code and number-->
+        <item>299,GL</item>
+    <!--Country iso code and number-->
+        <item>502,GT</item>
+    <!--Country iso code and number-->
+        <item>224,GN</item>
+    <!--Country iso code and number-->
+        <item>245,GW</item>
+    <!--Country iso code and number-->
+        <item>592,GY</item>
+    <!--Country iso code and number-->
+        <item>509,HT</item>
+    <!--Country iso code and number-->
+        <item>504,HN</item>
+    <!--Country iso code and number-->
+        <item>852,HK</item>
+    <!--Country iso code and number-->
+        <item>36,HU</item>
+    <!--Country iso code and number-->
+        <item>91,IN</item>
+    <!--Country iso code and number-->
+        <item>62,ID</item>
+    <!--Country iso code and number-->
+        <item>98,IR</item>
+    <!--Country iso code and number-->
+        <item>964,IQ</item>
+    <!--Country iso code and number-->
+        <item>353,IE</item>
+    <!--Country iso code and number-->
+        <item>44,IM</item>
+    <!--Country iso code and number-->
+        <item>972,IL</item>
+    <!--Country iso code and number-->
+        <item>39,IT</item>
+    <!--Country iso code and number-->
+        <item>225,CI</item>
+    <!--Country iso code and number-->
+        <item>81,JP</item>
+    <!--Country iso code and number-->
+        <item>962,JO</item>
+    <!--Country iso code and number-->
+        <item>7,KZ</item>
+    <!--Country iso code and number-->
+        <item>254,KE</item>
+    <!--Country iso code and number-->
+        <item>686,KI</item>
+    <!--Country iso code and number-->
+        <item>965,KW</item>
+    <!--Country iso code and number-->
+        <item>996,KG</item>
+    <!--Country iso code and number-->
+        <item>856,LA</item>
+    <!--Country iso code and number-->
+        <item>371,LV</item>
+    <!--Country iso code and number-->
+        <item>961,LB</item>
+    <!--Country iso code and number-->
+        <item>266,LS</item>
+    <!--Country iso code and number-->
+        <item>231,LR</item>
+    <!--Country iso code and number-->
+        <item>218,LY</item>
+    <!--Country iso code and number-->
+        <item>423,LI</item>
+    <!--Country iso code and number-->
+        <item>370,LT</item>
+    <!--Country iso code and number-->
+        <item>352,LU</item>
+    <!--Country iso code and number-->
+        <item>853,MO</item>
+    <!--Country iso code and number-->
+        <item>389,MK</item>
+    <!--Country iso code and number-->
+        <item>261,MG</item>
+    <!--Country iso code and number-->
+        <item>265,MW</item>
+    <!--Country iso code and number-->
+        <item>60,MY</item>
+    <!--Country iso code and number-->
+        <item>960,MV</item>
+    <!--Country iso code and number-->
+        <item>223,ML</item>
+    <!--Country iso code and number-->
+        <item>356,MT</item>
+    <!--Country iso code and number-->
+        <item>692,MH</item>
+    <!--Country iso code and number-->
+        <item>222,MR</item>
+    <!--Country iso code and number-->
+        <item>230,MU</item>
+    <!--Country iso code and number-->
+        <item>262,YT</item>
+    <!--Country iso code and number-->
+        <item>52,MX</item>
+    <!--Country iso code and number-->
+        <item>691,FM</item>
+    <!--Country iso code and number-->
+        <item>373,MD</item>
+    <!--Country iso code and number-->
+        <item>377,MC</item>
+    <!--Country iso code and number-->
+        <item>976,MN</item>
+    <!--Country iso code and number-->
+        <item>382,ME</item>
+    <!--Country iso code and number-->
+        <item>212,MA</item>
+    <!--Country iso code and number-->
+        <item>258,MZ</item>
+    <!--Country iso code and number-->
+        <item>264,NA</item>
+    <!--Country iso code and number-->
+        <item>674,NR</item>
+    <!--Country iso code and number-->
+        <item>977,NP</item>
+    <!--Country iso code and number-->
+        <item>31,NL</item>
+    <!--Country iso code and number-->
+        <item>599,AN</item>
+    <!--Country iso code and number-->
+        <item>687,NC</item>
+    <!--Country iso code and number-->
+        <item>64,NZ</item>
+    <!--Country iso code and number-->
+        <item>505,NI</item>
+    <!--Country iso code and number-->
+        <item>227,NE</item>
+    <!--Country iso code and number-->
+        <item>234,NG</item>
+    <!--Country iso code and number-->
+        <item>683,NU</item>
+    <!--Country iso code and number-->
+        <item>850,KP</item>
+    <!--Country iso code and number-->
+        <item>47,NO</item>
+    <!--Country iso code and number-->
+        <item>968,OM</item>
+    <!--Country iso code and number-->
+        <item>92,PK</item>
+    <!--Country iso code and number-->
+        <item>680,PW</item>
+    <!--Country iso code and number-->
+        <item>507,PA</item>
+    <!--Country iso code and number-->
+        <item>675,PG</item>
+    <!--Country iso code and number-->
+        <item>595,PY</item>
+    <!--Country iso code and number-->
+        <item>51,PE</item>
+    <!--Country iso code and number-->
+        <item>63,PH</item>
+    <!--Country iso code and number-->
+        <item>870,PN</item>
+    <!--Country iso code and number-->
+        <item>48,PL</item>
+    <!--Country iso code and number-->
+        <item>351,PT</item>
+    <!--Country iso code and number-->
+        <item>1,PR</item>
+    <!--Country iso code and number-->
+        <item>974,QA</item>
+    <!--Country iso code and number-->
+        <item>40,RO</item>
+    <!--Country iso code and number-->
+        <item>7,RU</item>
+    <!--Country iso code and number-->
+        <item>250,RW</item>
+    <!--Country iso code and number-->
+        <item>590,BL</item>
+    <!--Country iso code and number-->
+        <item>685,WS</item>
+    <!--Country iso code and number-->
+        <item>378,SM</item>
+    <!--Country iso code and number-->
+        <item>239,ST</item>
+    <!--Country iso code and number-->
+        <item>966,SA</item>
+    <!--Country iso code and number-->
+        <item>221,SN</item>
+    <!--Country iso code and number-->
+        <item>381,RS</item>
+    <!--Country iso code and number-->
+        <item>248,SC</item>
+    <!--Country iso code and number-->
+        <item>232,SL</item>
+    <!--Country iso code and number-->
+        <item>65,SG</item>
+    <!--Country iso code and number-->
+        <item>421,SK</item>
+    <!--Country iso code and number-->
+        <item>386,SI</item>
+    <!--Country iso code and number-->
+        <item>677,SB</item>
+    <!--Country iso code and number-->
+        <item>252,SO</item>
+    <!--Country iso code and number-->
+        <item>27,ZA</item>
+    <!--Country iso code and number-->
+        <item>82,KR</item>
+    <!--Country iso code and number-->
+        <item>34,ES</item>
+    <!--Country iso code and number-->
+        <item>94,LK</item>
+    <!--Country iso code and number-->
+        <item>290,SH</item>
+    <!--Country iso code and number-->
+        <item>508,PM</item>
+    <!--Country iso code and number-->
+        <item>249,SD</item>
+    <!--Country iso code and number-->
+        <item>597,SR</item>
+    <!--Country iso code and number-->
+        <item>268,SZ</item>
+    <!--Country iso code and number-->
+        <item>46,SE</item>
+    <!--Country iso code and number-->
+        <item>41,CH</item>
+    <!--Country iso code and number-->
+        <item>963,SY</item>
+    <!--Country iso code and number-->
+        <item>886,TW</item>
+    <!--Country iso code and number-->
+        <item>992,TJ</item>
+    <!--Country iso code and number-->
+        <item>255,TZ</item>
+    <!--Country iso code and number-->
+        <item>66,TH</item>
+    <!--Country iso code and number-->
+        <item>228,TG</item>
+    <!--Country iso code and number-->
+        <item>690,TK</item>
+    <!--Country iso code and number-->
+        <item>676,TO</item>
+    <!--Country iso code and number-->
+        <item>216,TN</item>
+    <!--Country iso code and number-->
+        <item>90,TR</item>
+    <!--Country iso code and number-->
+        <item>993,TM</item>
+    <!--Country iso code and number-->
+        <item>688,TV</item>
+    <!--Country iso code and number-->
+        <item>971,AE</item>
+    <!--Country iso code and number-->
+        <item>256,UG</item>
+    <!--Country iso code and number-->
+        <item>44,GB</item>
+    <!--Country iso code and number-->
+        <item>380,UA</item>
+    <!--Country iso code and number-->
+        <item>598,UY</item>
+    <!--Country iso code and number-->
+        <item>1,US</item>
+    <!--Country iso code and number-->
+        <item>998,UZ</item>
+    <!--Country iso code and number-->
+        <item>678,VU</item>
+    <!--Country iso code and number-->
+        <item>39,VA</item>
+    <!--Country iso code and number-->
+        <item>58,VE</item>
+    <!--Country iso code and number-->
+        <item>84,VN</item>
+    <!--Country iso code and number-->
+        <item>681,WF</item>
+    <!--Country iso code and number-->
+        <item>967,YE</item>
+    <!--Country iso code and number-->
+        <item>260,ZM</item>
+    <!--Country iso code and number-->
+        <item>263,ZW</item>
+    </string-array>
+    <string-array name="currency_picker">
+        <item>Afghanistan,AFN,AFN</item>
+        <item>Aland Islands,EUR,â‚¬</item>
+        <item>Albania,ALL,ALL</item>
+        <item>Algeria,DZD,Ø¯Ø¬</item>
+        <item>Andorra,EUR,â‚¬</item>
+        <item>Angola,AOA,Kz</item>
+        <item>Anguilla,XCD,EC$</item>
+        <item>Antigua &amp; Barbuda,XCD,EC$</item>
+        <item>Argentina,ARS,AR$</item>
+        <item>Armenia,AMD,Õ¤Ö€</item>
+        <item>Aruba,AWG,Æ’</item>
+        <item>Australia,AUD,AU$</item>
+        <item>Austria,EUR,â‚¬</item>
+        <item>Azerbaijan,AZN,Ð¼Ð°Ð½</item>
+        <item>Bahamas,BSD,BS$</item>
+        <item>Bahrain,BHD,Ø¨.Ø¯</item>
+        <item>Bangladesh,BDT,à§³</item>
+        <item>Barbados,BBD,Bds$</item>
+        <item>Belarus,BYR,Br</item>
+        <item>Belgium,EUR,â‚¬</item>
+        <item>Belize,BZD,BZ$</item>
+        <item>Benin,XOF,franc</item>
+        <item>Bermuda,BMD,BD$</item>
+        <item>Bhutan,BTN,Nu</item>
+        <item>Bolivia,BOB,Bs</item>
+        <item>Bosnia &amp; Herzegovina,BAM,KM</item>
+        <item>Botswana,BWP,P</item>
+        <item>Brazil,BRL,R$</item>
+        <item>Brunei,BND,B$</item>
+        <item>Bulgaria,BGN,Ð»Ð²</item>
+        <item>Burkina Faso,XOF,franc</item>
+        <item>Burundi,BIF,FBu</item>
+        <item>Cambodia,KHR,áŸ›</item>
+        <item>Cameroon,XAF,franc</item>
+        <item>Canada,CAD,CA$</item>
+        <item>Cape Verde,CVE,CV$</item>
+        <item>Cayman Islands,KYD,CI$</item>
+        <item>Central African Republic,XAF,franc</item>
+        <item>Chad,XAF,franc</item>
+        <item>Chile,CLP	,CL$</item>
+        <item>China,CNY,CNÂ¥</item>
+        <item>Christmas Island,AUD,AU$</item>
+        <item>Cocos(Keeling) Islands,AUD,AU$</item>
+        <item>Colombia,COP,Col$</item>
+        <item>Comoros,KMF,KMF</item>
+        <item>Congo(Dem. Rep.),CDF,CDFr</item>
+        <item>Congo(Rep.),XAF,franc</item>
+        <item>Cook Islands,NZD,NZ$</item>
+        <item>Costa Rica,CRC,â‚¡</item>
+        <item>Cote d\'Ivoire,XOF,franc</item>
+        <item>Croatia(Hrvatska),HRK,HRK</item>
+        <item>Cuba,CUC,CU$</item>
+        <item>Cyprus,CYP,CYÂ£</item>
+        <item>Czech Republic,CZK,KÄ</item>
+        <item>Denmark,DKK,Ã¸</item>
+        <item>Djibouti,DJF,Fdj</item>
+        <item>Dominica,XCD,EC$</item>
+        <item>Dominican Republic,DOP,RD$</item>
+        <item>Ecuador,USD,US$</item>
+        <item>Egypt,EGP,Ø¬.Ù…</item>
+        <item>El Salvador,USD,US$</item>
+        <item>Equatorial Guinea,XAF,franc</item>
+        <item>Eritrea,ERN,Nfk</item>
+        <item>Estonia,EEK,KR</item>
+        <item>Ethiopia,ETB,Br</item>
+        <item>Faeroe Islands,DKK,Ã¸</item>
+        <item>Falkland Islands(Malvinas),FKP,FKÂ£</item>
+        <item>Fiji,FJD,FJ$</item>
+        <item>Finland,EUR,â‚¬</item>
+        <item>France,EUR,â‚¬</item>
+        <item>French Guiana,EUR,â‚¬</item>
+        <item>French Polynesia,XPF,CFP</item>
+        <item>TAAF,EUR,â‚¬</item>
+        <item>Gabon,XAF,franc</item>
+        <item>Gambia,GMD,D</item>
+        <item>Georgia,GEL,GEL</item>
+        <item>Germany,EUR,â‚¬</item>
+        <item>Ghana,GHC,â‚µ</item>
+        <item>Gibraltar,GIP,GIÂ£</item>
+        <item>Greece,EUR,â‚¬</item>
+        <item>Greenland,DKK,Ã¸</item>
+        <item>Grenada,XCD,EC$</item>
+        <item>Guadeloupe,EUR,â‚¬</item>
+        <item>Guam,USD,US$</item>
+        <item>Guatemala,GTQ,Q</item>
+        <item>Guinea,GNF,FG</item>
+        <item>Guinea-Bissau,XOF,franc</item>
+        <item>Guyana,GYD,GY$</item>
+        <item>Haiti,HTG,G</item>
+        <item>Honduras,HNL,L</item>
+        <item>Hong Kong,HKD,HK$</item>
+        <item>Hungary,HUF,Ft</item>
+        <item>Iceland,ISK,ISK</item>
+        <item>India,INR,₹</item>
+        <item>Indonesia,IDR,Rp</item>
+        <item>Iran,IRR,	Ø±ÙŠØ§Ù„</item>
+        <item>Iraq,IQD,	Ø¹.Ø¯</item>
+        <item>Ireland,EUR,â‚¬</item>
+        <item>Isle of Man,GBP,UKÂ£</item>
+        <item>Israel,ILS,â‚ª</item>
+        <item>Italy,EUR	,â‚¬</item>
+        <item>Jamaica,JMD,JA$</item>
+        <item>Japan,JPY,JPÂ¥</item>
+        <item>Jersey,GBP,UKÂ£</item>
+        <item>Jordan,JOD,JD</item>
+        <item>Kazakhstan,KZT,KZT</item>
+        <item>Kenya,KES,KSh</item>
+        <item>Kiribati,AUD,AU$</item>
+        <item>Korea North,KPW,â‚©</item>
+        <item>Korea South,KRW,â‚©</item>
+        <item>Kuwait,KWD,Ø¯.Ùƒ</item>
+        <item>Kyrgyzstan,KGS,KGS</item>
+        <item>Latvia,LVL,Ls</item>
+        <item>Lebanon,LBP,Ù„.Ù„</item>
+        <item>Lesotho,LSL,L</item>
+        <item>Liberia,LRD,L$</item>
+        <item>Libya,LYD,Ù„.Ø¯</item>
+        <item>Liechtenstein,CHF,CHF</item>
+        <item>Luxembourg,EUR,â‚¬</item>
+        <item>Macedonia,MKD,MKD</item>
+        <item>Madagascar,MGA,MGA</item>
+        <item>Malawi,MWK,MK</item>
+        <item>Malaysia,MYR,RM</item>
+        <item>Maldives,MVR,MRf</item>
+        <item>Mali,XOF,franc</item>
+        <item>Malta,MTL,Lm</item>
+        <item>Marshall Islands,USD,US$</item>
+        <item>Martinique,EUR,â‚¬</item>
+        <item>Mauritania,MRO,UM</item>
+        <item>Mauritius,MUR,MUâ‚¨</item>
+        <item>Mayotte,EUR,â‚¬</item>
+        <item>Mexico,MXN,Mex$</item>
+        <item>Micronesia,USD,US$</item>
+        <item>Moldova,MDL,MDL</item>
+        <item>Mongolia,MNT,â‚®</item>
+        <item>Montenegro,EUR,â‚¬</item>
+        <item>Montserrat,XCD,EC$</item>
+        <item>Morocco,MAD,Ø¯.Ù…</item>
+        <item>Mozambique,MZN,MTn</item>
+        <item>Myanmar(Burma),MMK,K</item>
+        <item>Namibia,NAD,N$</item>
+        <item>Nauru,AUD,AU$</item>
+        <item>Nepal,NPR,NPâ‚¨</item>
+        <item>Netherlands,EUR,â‚¬</item>
+        <item>Netherlands Antilles,ANG,NAÆ’</item>
+        <item>New Caledonia,XPF,CFP</item>
+        <item>New Zealand,NZD,NZ$</item>
+        <item>Nicaragua,NIO,C$</item>
+        <item>Niger,XOF,franc</item>
+        <item>Nigeria,NGN,â‚¦</item>
+        <item>Niue,NZD,NZ$</item>
+        <item>Norfolk Island,AUD,AU$</item>
+        <item>Northern Mariana Islands,USD,US$</item>
+        <item>Norway,NOK,Ã¸re</item>
+        <item>Oman,OMR,Ø±.Ø¹</item>
+        <item>Pakistan,PKR,PKRs</item>
+        <item>Palau,USD,US$</item>
+        <item>Palestine,JOD,JD</item>
+        <item>Panama,PAB,PAB</item>
+        <item>Papua New Guinea,PGK,K</item>
+        <item>Paraguay,PYG,â‚²</item>
+        <item>Peru,PEN,S./</item>
+        <item>Philippines,PHP,â‚±</item>
+        <item>Pitcairn Islands,NZD,NZ$</item>
+        <item>Poland,PLN,zÅ‚</item>
+        <item>Portugal,EUR,â‚¬</item>
+        <item>Puerto Rico,USD,US$</item>
+        <item>Qatar,QAR,Ø±.Ù‚</item>
+        <item>Reunion,EUR,â‚¬</item>
+        <item>Romania,RON,ROL</item>
+        <item>Russia,RUB,RUÑ€ÑƒÐ±</item>
+        <item>Rwanda,RWF,RF</item>
+        <item>St Helena,SHP,SHÂ£</item>
+        <item>St Kitts &amp; Nevis,XCD,EC$</item>
+        <item>St Lucia,XCD,EC$</item>
+        <item>St Pierre &amp; Miquelon,EUR,â‚¬</item>
+        <item>St Vincent &amp; Grenadines,XCD,EC$</item>
+        <item>Samoa,WST,WS$</item>
+        <item>Samoa(American),USD,US$</item>
+        <item>San Marino,EUR,â‚¬</item>
+        <item>Sao Tome &amp; Principe,STD,Db</item>
+        <item>Saudi Arabia,SAR,Ø±.Ø³</item>
+        <item>Senegal,XOF,franc</item>
+        <item>Serbia,RSD,Ð´Ð¸Ð½</item>
+        <item>Seychelles,SCR,SRe</item>
+        <item>Sierra Leone,SLL,Le</item>
+        <item>Singapore,SGD,S$</item>
+        <item>Slovakia,SKK,Sk</item>
+        <item>Slovenia,EUR,â‚¬</item>
+        <item>Solomon Islands,SBD,SI$</item>
+        <item>Somalia,SOS,Sh</item>
+        <item>South Africa,ZAR,SAR</item>
+        <item>South Georgia Islands,GBP,UKÂ£</item>
+        <item>Spain,EUR,â‚¬</item>
+        <item>Sri Lanka,LKR,LKâ‚¨</item>
+        <item>Sudan,SDD,Â£Sd</item>
+        <item>Suriname,SRD,SR$</item>
+        <item>Svalbard &amp; Jan Mayen,NOK,Ã¸re</item>
+        <item>Sweden,SEK,kr</item>
+        <item>Switzerland,CHF,CHF</item>
+        <item>Syria,SYP,SÂ£</item>
+        <item>Taiwan,TWD,NT$</item>
+        <item>Tajikistan,TJS,TJS</item>
+        <item>Tanzania,TZS,TSh</item>
+        <item>Thailand,THB,à¸¿</item>
+        <item>Timor-Leste,USD,US$</item>
+        <item>Togo,XOF,franc</item>
+        <item>Tokelau,NZD,NZ$</item>
+        <item>Tonga,TOP,PT$</item>
+        <item>Trinidad &amp; Tobago,TTD,TT$</item>
+        <item>Tunisia,TND,Ø¯.Øª</item>
+        <item>Turkey,TRY,YTL</item>
+        <item>Turkmenistan,TMM,m</item>
+        <item>Turks &amp; Caicos Islands,USD,US$</item>
+        <item>Tuvalu,AUD,AU$</item>
+        <item>Uganda,UGX,USh</item>
+        <item>Ukraine,UAH,â‚´</item>
+        <item>United Arab Emirates,AED,Ø¯.Ø¥</item>
+        <item>UK,GBP,UKÂ£</item>
+        <item>USA,USD,US$</item>
+        <item>Uruguay,UYU,UR$</item>
+        <item>Uzbekistan,UZS,UZS</item>
+        <item>Vanuatu,VUV,Vt</item>
+        <item>Vatican City,EUR,â‚¬</item>
+        <item>Venezuela,VEB,Bs</item>
+        <item>Vietnam,VND,â‚«</item>
+        <item>Virgin Islands British,USD,US$</item>
+        <item>United States,USD,	US$</item>
+        <item>Wallis &amp; Futuna,XPF,CFP</item>
+        <item>Yemen,YER,YER</item>
+        <item>Zambia,ZMK,ZK</item>
+        <item>Zimbabwe,ZWD,Z$</item>
+    </string-array>
+    <!--chat string code-->
+    <string name="AlreadyDownloading">Already downloading!!</string>
+    <string name="PermissionDenied">Permission denied</string>
+    <string name="DownloadConfirmation">Download Confirmation</string>
+    <string name="Download">Download</string>
+    <string name="SizeImage">size image?</string>
+    <string name="Ok">OK</string>
+    <string name="Cancel">Cancel</string>
+    <string name="ContinueCapital">CONTINUE</string>
+    <string name="SizeVideo">size video?</string>
+    <string name="DownloadFailed">Download failed!!</string>
+    <string name="FileNotFound">File not found!!</string>
+    <string name="DownloadCanceled">Download canceled!!</string>
+    <string name="NoInternet">No internet connection!!</string>
+    <string name="ImageCamelCase">Image</string>
+    <string name="VideoCamelCase">Video</string>
+    <string name="ImageDownloaded">Image downloaded!!</string>
+    <string name="VideoDownloaded">Video downloaded!!</string>
+    <string name="DoodleDownloaded">Doodle downloaded!!</string>
+    <string name="StorageAccess">Allow external storage access to download %s</string>
+    <string name="Gallery">Gallery</string>
+    <string name="GalleryAccess">Allow gallery access!!</string>
+    <string name="SelectPicture">Select Picture</string>
+    <string name="CaptureImagePermission">Access external storage permission required to save captured image!!</string>
+    <string name="StorageAccessDenied">Access external storage permission denied!!</string>
+    <string name="CameraAbsent">Camera not found!!</string>
+    <string name="AnotherVideo">Video can\'t be selected,Try different video!!</string>
+    <string name="GreaterThan">Can\'t send video greater than</string>
+    <string name="VideoError">Error sending video,Try again!!</string>
+    <string name="ImageError">Error sending image,Try again!!</string>
+    <string name="CaptureAgain">Image can\'t be sent,try capturing again!!</string>
+    <string name="AnotherImage">Image can\'t be selected,try different image!!</string>
+    <string name="Mb">Mb!!</string>
+    <string name="Today">Today</string>
+    <string name="Yesterday">Yesterday</string>
+    <string name="NoChatWith">No chat with</string>
+    <string name="TryDownload">Try downloading!!</string>
+    <string name="AccessCamera">Allow camera access!!</string>
+    <string name="AccessCameraDenied">Access camera permission denied!!</string>
+    <string name="Unknown">Unknown</string>
+    <string name="PlayConfirmation">Play Confirmation</string>
+    <string name="NoApp">No app installed to play audio?</string>
+    <string name="PlayHere">PLAY HERE</string>
+    <string name="AudioDownloaded">Audio downloaded!!</string>
+    <string name="AudioCamelCase">Audio</string>
+    <string name="LocationCamelCase">Location</string>
+    <string name="ContactCamelCase">Contact</string>
+    <string name="AudioReceived">Audio Received</string>
+    <string name="AudioNotFound">Audio Not Found</string>
+    <string name="AudioSent">Audio Sent</string>
+    <string name="SizeAudio">size audio?</string>
+    <string name="NoChats">No chats to show</string>
+    <string name="Items">items</string>
+    <string name="video_nf">Video Not Found</string>
+    <string name="NoMediaSent">No media sent yet</string>
+    <string name="image_nf">Image Not Found</string>
+    <string name="doodle_nf">Doodle Not Found</string>
+    <string name="gif">GIFS</string>
+    <string name="stickers">STICKERS</string>
+    <string name="MediaSent">Media sent</string>
+    <string name="VideoNotDownloaded">Video not downloaded yet!!</string>
+    <string name="NoMediaRec">No media received yet</string>
+    <string name="And">AND</string>
+    <string name="MediaReceived">Media received</string>
+    <string name="VideoNotFound">Video not found!!</string>
+    <string name="Sent">SENT</string>
+    <string name="Received">RECEIVED</string>
+    <string name="AccessStorageDenied">Access storage permission denied!!</string>
+    <string name="MediaHistory">MEDIA HISTORY</string>
+    <string name="MediaHistoryNotCapital">Media History</string>
+    <string name="DeleteChatCamelCase">Delete Chat</string>
+    <string name="EnableLast">Enable Last Seen</string>
+    <string name="DisableLast">Disable Last Seen</string>
+    <string name="DeleteCon">Delete Confirmation</string>
+    <string name="DeleteChatWith">Delete chat with</string>
+    <string name="No">NO</string>
+    <string name="Name">Name:</string>
+    <string name="Address">Address:</string>
+    <string name="LatLng">LatLng:</string>
+    <string name="LocationShared">Location Shared</string>
+    <string name="OpenMap">OPEN MAP</string>
+    <string name="NoLocationApp">No app installed to show location!!</string>
+    <string name="LatLngSelected">Lat/Lng Selected:</string>
+    <string name="LocationSelected">Location Selected:</string>
+    <string name="LocationFailed">Failed to select location,Try Again!!</string>
+    <string name="AudioAgain">Error sending audio,Try again!!</string>
+    <string name="AudioGreater">Can\'t send audio greater than</string>
+    <string name="AnotherAudio">Audio can\'t be selected,Try another audio!!</string>
+    <string name="AllowLocation">Allow location access!!</string>
+    <string name="EnableLocation">Enable location services!!</string>
+    <string name="string_803">Yelo File Uploading</string>
+    <string name="Online">Online</string>
+    <string name="Loading">Loading&#8230;</string>
+    <string name="updating">Updating&#8230;</string>
+    <string name="deleting">Deleting&#8230;</string>
+    <string name="posting">Posting&#8230;</string>
+    <string name="ContactsDenied">Access contacts permission denied!!</string>
+    <string name="LocationDenied">Access location permission denied!!</string>
+    <string name="ContactDenied">Contact can\'t be selected,Try another contact!!</string>
+    <string name="LocationSettings">Location Settings</string>
+    <string name="LocationServices">Location services isn\'t enabled</string>
+    <string name="Enable">ENABLE</string>
+    <string name="ContactAccess">Allow contacts access!!</string>
+    <string name="UploadFailed">Upload failed!!</string>
+    <string name="Upload_Failed">Failed to upload profile pic!!</string>
+    <string name="DeleteSuccess">deleted successfully!!</string>
+    <string name="DeleteMessage">Deleting a message is irreversible?</string>
+    <string name="Message">Message</string>
+    <string name="OpenProfile">I will open user profile!!</string>
+    <string name="TypeSomething">Type something to send!!</string>
+    <string name="Connecting">Connecting&#8230;</string>
+    <string name="WriteMessage">Write a message&#8230;</string>
+    <string name="Offline">Offline</string>
+    <!--
+
+    For non-firebase signup and login
+
+    -->
+    <string name="EmptyEmail">Email can\'t be empty</string>
+    <string name="EnterPW">Enter the password</string>
+    <string name="InvalidLength">Password must have atleast 6 characters</string>
+    <string name="SignInFailed">Failed to signin user</string>
+    <string name="SigningIn">Signing-In User</string>
+    <string name="name_save">Enter a valid name to save</string>
+    <string name="name_atleast">Name must have atleast 4 characters</string>
+    <string name="EnterName">We should call you as&#8230;</string>
+    <string name="ImageFailed">Sorry! Failed to select image</string>
+    <string name="CaptureProfile">Access camera permission required to capture profile image!!</string>
+    <string name="SelectProfile">Access storage permission required to select profile image!!</string>
+    <string name="UserIdentifier">Enter valid userIdentifier</string>
+    <string name="FromGallery">Add Image From Gallery</string>
+    <string name="FromCamera">Take Image From Camera</string>
+    <string name="ProfileImage">Add Profile Image</string>
+    <string name="UpdateNameFailed">Failed to update the name!!</string>
+    <string name="UpdatePicFailed">Failed to update the profile pic!!</string>
+    <string name="NoInternetConnectionAvailable">No Internet Connection!!</string>
+    <string name="Sticker">Sticker</string>
+    <string name="Doodle">Doodle</string>
+    <string name="Gif">Gif</string>
+    <string name="NewImage">New Image</string>
+    <string name="NewVideo">New Video</string>
+    <string name="NewLocation">New Location</string>
+    <string name="NewContact">New Contact</string>
+    <string name="NewAudio">New Audio</string>
+    <string name="NewSticker">New Sticker</string>
+    <string name="NewDoodle">New Doodle</string>
+    <string name="NewGiphy">New Giphy</string>
+    <string name="Image">Image</string>
+    <string name="Video">Video</string>
+    <string name="Location">Location</string>
+    <string name="Contact">Contact</string>
+    <string name="Audio">Audio</string>
+    <string name="Stickers">Sticker</string>
+    <string name="Giphy">Giphy</string>
+    <string name="EnterSticker">Please enter sticker name!!</string>
+    <string name="EnterGiphy">Please enter giphy name!!</string>
+    <string name="Search">Search</string>
+    <string name="Typing">Typing&#8230;</string>
+    <string name="DeleteConfirmation">Delete Confirmation</string>
+    <string name="Continue">CONTINUE</string>
+    <string name="DeleteChat">Deleting a chat is irreversible?</string>
+    <string name="YouInvited">You have invited</string>
+    <string name="JoinSecretChat">to join a product chat</string>
+    <string name="youAreInvited">You are invited by</string>
+    <string name="ProductChat">Product chat:</string>
+    <string name="ProductDetails">No need to type all the product details</string>
+    <string name="detailsText">Details</string>
+    <!--
+
+    User's Screen
+
+    -->
+    <string name="FetchingUsers">Fetching users</string>
+    <string name="FetchUsers">Fetch users</string>
+    <string name="FetchFailed">Failed to fetch the users</string>
+    <string name="OOM">Out of memory.Try Again!!</string>
+    <string name="SelectionCanceled">Image selection canceled!!</string>
+    <string name="CaptureFailed">Sorry! Failed to capture image</string>
+    <string name="CaptureCanceled">Image capture canceled!!</string>
+    <string name="CropFailed">Sorry! Failed to crop image</string>
+    <!--
+
+    Option on click of plus icon
+
+    -->
+    <string name="OptionCall">Chat</string>
+    <string name="OptionProfile">Profile</string>
+    <string name="DoodleAccess">Access external storage permission required to save doodle drawn!!</string>
+    <!--
+
+    Setup profile
+
+    -->
+    <string name="name_empty">Name can\'t be empty</string>
+    <!--
+
+    Crop image
+    -->
+    <string name="crop_image_activity_title"></string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="NoNumber">No Number</string>
+    <string name="NewName">UPDATE NAME</string>
+    <string name="PhoneAndStatus">User Details</string>
+    <string name="profile_disclaimer">This is not your username and will be visible to your contacts using MQtt module.</string>
+    <!--
+
+    Sync chats
+
+    -->
+    <string name="ChatSync">No chats to sync</string>
+    <string name="RetrieveMessage">Retrieving messages&#8230;</string>
+    <string name="FailedMessageRetrieve">Failed to retrieve previous messages!!</string>
+    <string name="MoreMessage">more new messages</string>
+    <!--
+
+    Delete notification
+
+    -->
+    <string name="DeleteFailed">Failed to delete the chat!!</string>
+    <string name="progress_dialog_loading">Loading…</string>
+    <string name="chat_invition_text">You have invited joma to join a chat</string>
+    <string name="counter_offer_received">Counter offer received :</string>
+    <string name="temp_text">$200</string>
+    <string name="counter_offer_text">Counter Offer</string>
+    <string name="paypal_text">Paypal</string>
+    <string name="pay_pal_failed_text">Failed to get Paypal link</string>
+    <string name="pay_with_my">Pay with My</string>
+    <string name="offer_confirmed">Offer Confirmed</string>
+    <string name="pay_pal_shared">Payapl shared</string>
+    <string name="sell_first">First accept the offer!</string>
+    <string name="purchased_first">Purchased the product first!</string>
+    <string name="error_on_product_update">Not able to update product details!</string>
+    <string name="produt_details_loading">Loading product details!</string>
+    <string name="accept_text">ACCEPT</string>
+    <string name="counter_offer">COUNTER OFFER</string>
+    <string name="not_negotiable_text">This product is not negotiable.</string>
+    <string name="Error_on_plandetaisl">Please select a plan details</string>
+    <string name="purchaset_error">Unable to Purchased Item!</string>
+    <string name="updating_purchase_text">Updating purchase.....</string>
+    <string name="Stored_item_error">Purchased item is not matching with the stored Key</string>
+    <string name="parse_exception_text">Parse exception!</string>
+    <string name="userIdtext">Use is not registered for chatting</string>
+    <string name="not_register_task">This product is not register for Chat!</string>
+    <string name="stay_safe_text">STAY SAFE</string>
+    <string name="seft_hint_one">Meet in person and pay by Paypal.Me</string>
+    <string name="seft_hint_two">Keep conversation in the Yelo chat.</string>
+    <string name="seft_hint_three">Too good to be true? Find another buyer/seller.</string>
+    <string name="ok_text">OK</string>
+    <string name="stay_safe_title">STAY SAFE</string>
+    <string name="already_sold_Text">Product is already sold!</string>
+    <string name="mqtt_user_not_text">User doesn\'t have MQTT id!</string>
+    <string name="offer_sent_text">Offer Sent :</string>
+    <string name="already_sold_out_text">Product no longer exist.</string>
+    <string name="no_longer_exist">Product no longer exist.</string>
+    <string name="no_product_aleret_msg">Product no longer exist</string>
+    <string name="consumer">Consumer</string>
+    <string name="market_store">Music store</string>
+    <string name="store_name">Store name</string>
+    <string name="buy">BUY</string>
+    <string name="sell">SELL</string>
+    <string name="model">Model</string>
+    <string name="year">Year</string>
+    <string name="make">Make</string>
+    <string name="models">Models</string>
+    <string name="makes">Makes</string>
+</resources>

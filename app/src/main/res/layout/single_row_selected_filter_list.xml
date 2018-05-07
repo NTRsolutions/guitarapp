@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_margin="@dimen/eight_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:id="@+id/tV_filter"
+            android:layout_marginTop="@dimen/five_dp"
+            android:text="@string/about"
+            android:textColor="@color/purple_color"
+            android:textSize="@dimen/small_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_filter_text_color_with_stroke"
+            android:padding="@dimen/eight_dp"
+            />
+
+        <ImageView
+            android:id="@+id/tV_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cross_purple_color"
+            android:layout_marginStart="-8dp"
+            android:layout_marginLeft="-8dp"
+            android:layout_toEndOf="@+id/tV_filter"
+            android:layout_toRightOf="@+id/tV_filter"
+            android:contentDescription="@string/simple_image_view"/>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

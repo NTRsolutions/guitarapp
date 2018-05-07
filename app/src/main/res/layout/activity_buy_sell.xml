@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:id="@+id/rL_rootElement">
+
+
+    <!--landing_screen-->
+
+    <!-- ACtion bar with login and signup option -->
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:gravity="center|top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/text_view_buy"
+            android:text="What are you looking for?"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+       />
+        <RelativeLayout
+            android:id="@+id/rL_do_buy"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginRight="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:layout_width="180dp"
+            android:layout_gravity="center"
+            android:layout_height="60dp"
+            android:background="@drawable/button_rounded_corners"
+            >
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+
+                android:gravity="center"
+                android:textSize="@dimen/nineteen_sp"
+                android:textColor="@color/white"
+                android:text="@string/buy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                />
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:background="#d3d3d3"
+                android:layout_width="0dp"
+                android:layout_weight="4.5"
+                android:layout_height="2dp"></View>
+
+            <TextView
+                android:layout_width="0dp"
+                android:text="Or"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="#d3d3d3"
+                android:layout_width="0dp"
+                android:layout_weight="4.5"
+                android:layout_height="2dp"></View>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rL_do_sell"
+
+            android:layout_marginLeft="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginRight="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:layout_width="180dp"
+            android:layout_gravity="center"
+            android:layout_height="60dp"
+            android:background="@drawable/button_rounded_corners"
+            >
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+
+                android:gravity="center"
+                android:textSize="@dimen/nineteen_sp"
+                android:textColor="@color/white"
+                android:text="@string/sell"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</RelativeLayout>
+

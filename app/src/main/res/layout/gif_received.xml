@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/balloon_incoming_normal">
+
+
+        <FrameLayout
+            android:id="@+id/fl"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+
+            android:layout_marginTop="8dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/gifStillImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/gif_circle"
+                android:gravity="center"
+                android:text="GIF"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/vidshow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/ts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/fl"
+            android:layout_alignRight="@+id/fl"
+            android:layout_below="@+id/fl"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/comma"
+
+            android:layout_toStartOf="@+id/comma"
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <TextView
+            android:id="@+id/comma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/ts"
+            android:layout_toStartOf="@+id/ts"
+            android:text=","
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+

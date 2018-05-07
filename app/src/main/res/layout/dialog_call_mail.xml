@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_white_color_with_solid_shape">
+
+    <!-- Call -->
+    <RelativeLayout
+        android:id="@+id/rL_call"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/seventy_dp"
+        android:background="@drawable/selector_list_view"
+        >
+        <ImageView
+            android:id="@+id/iV_report_icon"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/call_icon"
+            android:contentDescription="@string/simple_image_view"/>
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iV_report_icon"
+            android:layout_toEndOf="@+id/iV_report_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/call"
+            android:textSize="@dimen/eighteen_sp"
+            android:textColor="@color/item_name_color"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color"/>
+
+    <!-- Email -->
+    <RelativeLayout
+        android:id="@+id/rL_mail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/seventy_dp"
+        android:background="@drawable/selector_list_view"
+        >
+
+        <ImageView
+            android:id="@+id/iV_share_icon"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/email_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/simple_image_view"
+            />
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/iV_share_icon"
+            android:layout_toEndOf="@+id/iV_share_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Email"
+            android:textSize="@dimen/eighteen_sp"
+            android:textColor="@color/item_name_color"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color"/>
+
+    <!-- Cancel -->
+    <com.yelo.com.custom_fonts.TextViewRobotoBold
+        android:id="@+id/cancel_button"
+        android:textStyle="bold"
+        android:textColor="@color/pink_color"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:text="@string/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/selector_list_view"
+        />
+
+</LinearLayout>

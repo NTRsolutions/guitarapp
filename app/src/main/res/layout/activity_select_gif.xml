@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:orientation="vertical"
+    tools:context=".Giphy.SelectGIF">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+
+        android:layout_height="60dp"
+        android:background="@color/color_white"
+
+
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:text="@string/stickers"
+
+            android:textColor="#222222"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:elevation="5dp"
+
+            android:foreground="@drawable/ripple_selector"
+            android:tint="#222222"
+            app:srcCompat="@drawable/cancel_normal" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+
+
+        android:layout_below="@+id/toolbar"
+        android:background="#e5e5e5"
+
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/seperator"
+        android:layout_margin="16dp"
+        android:background="@drawable/gif_search_background"
+        android:elevation="5dp">
+
+        <EditText
+            android:id="@+id/search_Text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_toLeftOf="@+id/search_button"
+
+            android:layout_toStartOf="@+id/search_button"
+            android:background="@android:color/transparent"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/color_black"
+            android:clickable="true"
+            android:text="@string/Search"
+            android:foreground="@drawable/ripple_selector"
+            android:textColor="@color/color_white" />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/seperator2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+
+
+        android:layout_below="@+id/rl"
+        android:background="#e5e5e5"
+
+
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvGif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seperator2"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:scrollbarStyle="outsideInset" />
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iV_gallery_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/default_image"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/simple_image_view"
+        android:padding="2dp"
+        android:background="@color/transparant"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rL_tick_mark"
+        android:layout_width="@dimen/twenty_five_dp"
+        android:layout_height="@dimen/twenty_five_dp"
+        android:background="@drawable/circle_with_white_color_stroke_and_solid_shape"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/ten_dp">
+
+        <ImageView
+            android:id="@+id/iV_tick_mark"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_tick_mark"
+            android:contentDescription="@string/simple_image_view"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

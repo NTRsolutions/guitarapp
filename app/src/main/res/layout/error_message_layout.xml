@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rect_white_color_with_solid_shape">
+
+    <FrameLayout
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/warning_circle" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/warning_sign"
+            android:scaleType="center" />
+    </FrameLayout>
+
+    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        android:layout_marginTop="15dp"
+        android:text="@string/message"
+        android:textColor="@color/error_heading_color"
+        android:textSize="19sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+
+    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        android:id="@+id/tV_message_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/error_title_color"/>
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        style="@style/dialog_blue_button"
+        android:text="@string/dialog_ok" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"/>
+
+</LinearLayout>

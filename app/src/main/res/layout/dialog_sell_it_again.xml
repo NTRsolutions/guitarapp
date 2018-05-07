@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rect_white_color_with_solid_shape">
+
+    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        android:id="@+id/tV_title"
+        android:layout_margin="@dimen/fifteen_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/do_you_want_to_sell_it_again"
+        android:textColor="@color/item_name_color"
+        android:textSize="18sp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/fifteen_dp"
+        android:layout_marginRight="@dimen/fifteen_dp">
+
+        <!-- Log out -->
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/tV_yes"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:text="@string/Yes"
+            android:textAllCaps="true"
+            android:textColor="@color/purple_color"
+            android:layout_toEndOf="@+id/tV_no"
+            android:layout_toRightOf="@+id/tV_no"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <!-- Cancel -->
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/tV_no"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:layout_marginRight="@dimen/fifteen_dp"
+            android:textAllCaps="true"
+            android:text="@string/no"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/red_btn_bg_color"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+</LinearLayout>

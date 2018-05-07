@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rL_rootElement"
+    android:background="@color/background_color">
+
+    <!-- Action bar -->
+    <!--
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            layout="@layout/action_bar_layout"/>
+    -->
+    <RelativeLayout
+        android:id="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bottom_shadow">
+
+        <RelativeLayout
+            android:id="@+id/rL_back_btn"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/back_arrow_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+        <com.yelo.com.custom_fonts.TextViewOrgano
+            android:layout_toLeftOf="@+id/tV_insight"
+            android:layout_toStartOf="@+id/tV_insight"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/rL_back_btn"
+            android:layout_toEndOf="@+id/rL_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/thirty_one_sp"
+            android:text="@string/app_name"
+            />
+
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/tV_insight"
+            android:textColor="@color/purple_color"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:textSize="@dimen/medium_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/insights"/>
+    </RelativeLayout>
+
+    <!-- product description -->
+    <RelativeLayout
+        android:id="@+id/rL_about_product"
+        android:layout_below="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/rL_makeoffer_img"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iV_productImage"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/app_launcher_logo"
+                android:contentDescription="@string/simple_image_view"/>
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/iV_productImage"
+                android:layout_toRightOf="@+id/iV_productImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:id="@+id/tV_productname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/daniel_welllington"
+                    android:textColor="@color/item_name_color"
+                    android:textSize="@dimen/heading_text_size"/>
+
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:id="@+id/tV_category"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:text="@string/category"
+                    android:textSize="@dimen/subheading_text_size"
+                    android:textColor="@color/search_box_text_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/eight_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rL_markAsSold"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/one_twenty_dp"
+                        android:layout_height="@dimen/thirty_dp"
+                        android:background="@drawable/rect_purple_color_with_stroke_shape">
+                        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                            android:id="@+id/tV_follow"
+                            android:layout_centerInParent="true"
+                            android:textSize="@dimen/subheading_text_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_color"
+                            android:textAllCaps="true"
+                            android:text="@string/mark_as_sold"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rL_update_product"
+                        android:layout_marginLeft="@dimen/eight_dp"
+                        android:layout_marginStart="@dimen/eight_dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/rL_markAsSold"
+                        android:layout_toEndOf="@+id/rL_markAsSold"
+                        android:layout_width="@dimen/sixty_dp"
+                        android:layout_height="@dimen/thirty_dp"
+                        android:background="@drawable/rect_gray_color_with_solid_shape">
+                        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                            android:textSize="@dimen/subheading_text_size"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/item_name_color"
+                            android:text="@string/update"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/rL_about_product"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/news_divider_color"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="@dimen/fifteen_dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/news_divider_color"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_below="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rV_acceptedOffer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/custom_progress_background"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rL_empty_offer"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iV_empty_offer"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_offer_icon"
+            android:contentDescription="@string/simple_image_view"/>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:textColor="@color/text_box"
+            android:textSize="@dimen/subheading_text_size"
+            android:layout_below="@+id/iV_empty_offer"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_havnt_received"/>
+    </RelativeLayout>
+
+</RelativeLayout>

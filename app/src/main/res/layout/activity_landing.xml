@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_app_bg"
+    android:id="@+id/rL_rootview">
+
+<!--
+    <VideoView android:id="@+id/videoview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </VideoView>
+-->
+
+    <!-- Skip -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rL_skip"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"
+            android:layout_gravity="end"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/white_color_cross_icon"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+
+        <!-- app logo -->
+        <ScrollView
+            android:layout_below="@+id/rL_skip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="35dp"
+                android:orientation="vertical"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--<ImageView-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/app_logo_icon"-->
+                        <!--android:contentDescription="@string/simple_image_view"/>-->
+
+                    <com.yelo.com.custom_fonts.TextViewOrgano
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:gravity="center"
+                        android:layout_toStartOf="@+id/linear_search"
+                        android:layout_toLeftOf="@+id/linear_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/fourty_sp"
+                        android:text="@string/app_name"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/twenty_five_dp_new"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:weightSum="8"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:background="@color/white"/>
+
+                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/small_text_size"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/quick_connect_with"
+                        android:textColor="@color/white"
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        app:textAllCaps="false"
+                        android:layout_height="wrap_content"
+                        />
+                    <View
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:background="@color/white"/>
+                </LinearLayout>
+
+
+                <!-- Continue with facebook -->
+                <RelativeLayout
+                    android:id="@+id/rL_fb_login"
+                    android:layout_marginTop="@dimen/twenty_five_dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_rounded_fb_color_with_solid_shape"
+                    >
+                    <ImageView
+                        android:id="@+id/iV_fbicon"
+                        android:padding="3dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/fb_rounded_bg"
+                        android:layout_centerVertical="true"
+
+                        android:layout_marginLeft="@dimen/ten_dp_new"
+                        android:contentDescription="@string/simple_image_view"/>
+
+                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                        android:id="@+id/tV_facebook"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/continue_with_fb"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/heading_text_size"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/pBar_fbLogin"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminateDrawable="@drawable/white_color_progress_bar_bg"
+                        />
+
+                </RelativeLayout>
+
+                <!-- Continue with google -->
+                <RelativeLayout
+                    android:id="@+id/rL_google_login"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_rounded_google_bg_with_solid_shape"
+                    >
+                    <ImageView
+                        android:id="@+id/iV_google_icon"
+                        android:padding="3dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/google_rounded_bg"
+                        android:layout_centerVertical="true"
+
+                        android:layout_marginLeft="@dimen/ten_dp_new"
+                        android:contentDescription="@string/simple_image_view"/>
+
+                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                        android:id="@+id/tV_googleLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/continue_with_google"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+
+                        android:textSize="@dimen/heading_text_size"
+                        android:layout_centerInParent="true"/>
+
+                    <ProgressBar
+                        android:id="@+id/pBar_googleLogin"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminateDrawable="@drawable/white_color_progress_bar_bg"
+                        />
+
+                </RelativeLayout>
+
+                <!-- OR option -->
+                <LinearLayout
+                    android:layout_marginTop="@dimen/twenty_five_dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:weightSum="7"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:background="@color/white"/>
+
+                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                        android:layout_gravity="center"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/small_text_size"
+                        android:gravity="center"
+                        android:text="@string/or"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <View
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:background="@color/white"/>
+                </LinearLayout>
+
+                <!-- Login and signup -->
+                <LinearLayout
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize">
+
+                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                        android:id="@+id/tV_login"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/heading_text_size"
+                        android:text="@string/login"
+                        android:textColor="@color/white"
+                        android:gravity="center"/>
+
+                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                        android:id="@+id/tV_signup"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/heading_text_size"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/white"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!--Terms and conditions-->
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/termsNcondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/small_text_size"
+                android:text="@string/by_continuing"
+                />
+
+            <LinearLayout
+                android:layout_below="@+id/termsNcondition"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:id="@+id/tV_termsNcondition"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_text_size"
+                    android:text="@string/termscondition"
+                    />
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:layout_marginStart="@dimen/five_dp"
+                    android:layout_marginLeft="@dimen/five_dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_text_size"
+                    android:text="@string/and"
+                    />
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:id="@+id/tV_privacy"
+                    android:layout_marginStart="@dimen/five_dp"
+                    android:layout_marginLeft="@dimen/five_dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_text_size"
+                    android:text="@string/privacyPolicy"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

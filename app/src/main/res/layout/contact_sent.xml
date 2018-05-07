@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_message"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+
+        android:background="@drawable/balloon_outgoing_normal">
+
+
+        <!--we have to put a view here to show contact details-->
+
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/contactImage"
+
+
+            android:layout_toRightOf="@+id/contactImage"
+            android:ellipsize="end"
+
+            android:maxLines="2"
+            android:paddingEnd="13dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="13dp"
+            android:paddingStart="5dp"
+            android:textColor="@color/color_text_black"
+            android:textSize="12sp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/contactNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactName"
+            android:layout_toEndOf="@+id/contactImage"
+            android:layout_toRightOf="@+id/contactImage"
+            android:paddingBottom="5dp"
+            android:paddingEnd="13dp"
+
+            android:paddingLeft="5dp"
+            android:paddingRight="13dp"
+            android:paddingStart="5dp"
+            android:textColor="@color/color_text_gray"
+            android:textSize="10sp"
+
+
+            />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/contactImage"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="13dp"
+
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/com_facebook_profile_picture_blank_square" />
+
+
+        <TextView
+            android:id="@+id/ts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/contactImage"
+
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/comma"
+            android:layout_toRightOf="@+id/comma"
+
+            android:text="15:56 AM"
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/single_tick_green"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+
+            android:layout_below="@+id/contactImage"
+            android:layout_marginBottom="3dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/ts"
+
+            android:layout_toRightOf="@+id/ts"
+            android:background="@drawable/ic_single_tick"
+            android:visibility="gone" />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/double_tick_green"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_below="@+id/contactImage"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="5dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/ts"
+            android:layout_toRightOf="@+id/ts"
+            android:background="@drawable/ic_double_tick"
+            android:visibility="gone" />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/double_tick_blue"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_below="@+id/contactImage"
+            android:layout_marginBottom="2dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="5dp"
+
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+
+            android:layout_toEndOf="@+id/ts"
+            android:layout_toRightOf="@+id/ts"
+            android:src="@drawable/ic_double_tick"
+            android:tint="@color/chat_blue_tick"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/clock"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:layout_below="@+id/contactImage"
+
+
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="5dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/ts"
+            android:layout_toRightOf="@+id/ts"
+
+            android:background="@drawable/clock"
+            android:visibility="visible" />
+
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/contactImage"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="Yesterday"
+
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <TextView
+            android:id="@+id/comma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactImage"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/date"
+
+
+            android:layout_toRightOf="@+id/date"
+            android:text=","
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

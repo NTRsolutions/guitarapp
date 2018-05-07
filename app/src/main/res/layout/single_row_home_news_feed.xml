@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_margin="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--profilePic-->
+        <ImageView
+            android:id="@+id/iV_profilePic"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/simple_image_view"
+            android:src="@drawable/default_circle_img"/>
+
+        <!-- posted By User Name -->
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/tV_productname"
+            android:layout_toRightOf="@id/iV_profilePic"
+            android:layout_toEndOf="@id/iV_profilePic"
+            android:layout_toLeftOf="@+id/tV_time"
+            android:layout_toStartOf="@+id/tV_time"
+            android:layout_marginLeft="@dimen/eight_dp"
+            android:layout_marginStart="@dimen/eight_dp"
+            android:textSize="@dimen/heading_text_size"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/item_name_color"/>
+
+        <!--Time ex. 5 min ago-->
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:id="@+id/tV_time"
+            android:textSize="@dimen/heading_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <!--Product image-->
+    <ImageView
+        android:id="@+id/iV_productImage"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/insight_divider_color"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/simple_image_view"/>
+
+    <!-- Product price -->
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/tV_currency"
+            android:textSize="@dimen/ten_sp"
+            android:textColor="@color/heading_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           />
+
+        <com.yelo.com.custom_fonts.TextViewRobotoBlack
+            android:id="@+id/tV_price"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tV_currency"
+            android:layout_toEndOf="@+id/tV_currency"
+            android:textSize="@dimen/eighteen_sp"
+            android:textColor="@color/heading_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+
+    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        android:id="@+id/tV_categoryName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/subheading_text_size"
+        android:textColor="@color/sub_heading_color"/>
+
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/news_divider_color"/>
+
+    <!--Like count, total like -->
+    <LinearLayout
+        android:baselineAligned="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_view"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_gray_color_with_with_stroke_shape">
+            <ImageView
+                android:id="@+id/like_view_icon"
+                android:layout_centerVertical="true"
+                android:src="@drawable/eye_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/simple_image_view"/>
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_view_count"
+                android:textColor="@color/sub_heading_color"
+                android:textSize="@dimen/fifteen_sp"
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:layout_marginRight="@dimen/ten_dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/like_view_icon"
+                android:layout_toRightOf="@+id/like_view_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zero"/>
+        </RelativeLayout>
+
+        <!-- Like count -->
+        <RelativeLayout
+            android:id="@+id/relative_like_product"
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_gray_color_with_with_stroke_shape">
+            <ImageView
+                android:id="@+id/like_item_icon"
+                android:layout_centerVertical="true"
+                android:src="@drawable/like_icon_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/simple_image_view"/>
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_like_count"
+                android:textColor="@color/sub_heading_color"
+                android:textSize="@dimen/fifteen_sp"
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:layout_marginRight="@dimen/ten_dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/like_item_icon"
+                android:layout_toRightOf="@+id/like_item_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zero"/>
+        </RelativeLayout>
+
+        <!--List of followed images-->
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/linear_followed_images"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iV_followed_list"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/three_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/simple_image_view"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--
+        <LinearLayout
+            android:baselineAligned="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:weightSum="7"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <RelativeLayout
+                android:id="@+id/relative_view"
+                android:padding="@dimen/six_dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_gray_color_with_with_stroke_shape">
+                <ImageView
+                    android:id="@+id/like_view_icon"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/eye_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/simple_image_view"/>
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:id="@+id/tV_view_count"
+                    android:layout_marginStart="@dimen/five_dp"
+                    android:layout_marginLeft="@dimen/five_dp"
+                    android:textColor="@color/sub_heading_color"
+                    android:textSize="@dimen/fifteen_sp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/like_view_icon"
+                    android:layout_toRightOf="@+id/like_view_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+
+            &lt;!&ndash; Like count &ndash;&gt;
+            <RelativeLayout
+                android:id="@+id/rL_like"
+                android:layout_marginStart="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_gray_color_with_with_stroke_shape">
+                <ImageView
+                    android:id="@+id/iV_like_icon"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/like_icon_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/simple_image_view"/>
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:id="@+id/tV_likes_count"
+                    android:textColor="@color/sub_heading_color"
+                    android:textSize="@dimen/fifteen_sp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iV_like_icon"
+                    android:layout_toRightOf="@+id/iV_like_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"/>
+            </RelativeLayout>
+
+            &lt;!&ndash;List of followed images&ndash;&gt;
+            <HorizontalScrollView
+                android:scrollbars="none"
+                android:layout_marginStart="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/linear_likedByUsers"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iV_three_dots"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/three_dots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/simple_image_view"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    -->
+
+    <!--
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rL_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/rect_gray_color_with_with_stroke_shape">
+
+                <ImageView
+                    android:id="@+id/iV_like_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/simple_image_view"
+                    android:src="@drawable/like_icon_off" />
+
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:id="@+id/tV_like_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_toEndOf="@+id/iV_like_icon"
+                    android:layout_toRightOf="@+id/iV_like_icon"
+                    android:text="@string/zero"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            &lt;!&ndash;show liked pople list&ndash;&gt;
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/rL_like"
+                android:layout_toLeftOf="@+id/iV_three_dots"
+                android:layout_toRightOf="@+id/rL_like"
+                android:layout_toStartOf="@+id/iV_three_dots">
+
+                <LinearLayout
+                    android:id="@+id/linear_likedByUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/iV_three_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/simple_image_view"
+                android:src="@drawable/three_dots" />
+        </RelativeLayout>
+    -->
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/full_divider"/>
+
+</LinearLayout>

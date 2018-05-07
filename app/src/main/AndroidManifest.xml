@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yelo.com">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        tools:replace="android:allowBackup,android:icon"
+        android:name=".mqttchat.AppController"
+        android:allowBackup="false"
+        android:icon="@drawable/app_launcher_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+        <activity android:name=".main.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    <!--Landing Activity-->
+        <activity android:name=".main.activity.LandingActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".main.activity.MarketOwnerActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--<activity android:name=".main.activity.BuySellFragment"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:launchMode="standard"-->
+            <!--android:theme="@style/AppTheme.NoActionBar"/>-->
+
+
+        <!--LoginOrSignupActivity-->
+        <activity android:name=".main.activity.LoginOrSignupActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- NumberVerificationActivity -->
+        <activity android:name=".main.activity.NumberVerificationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- OAuthActivity -->
+        <activity android:name=".Twiter_manager.OAuthActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- HomePageActivity -->
+        <activity android:name=".main.activity.HomePageActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- ForgotPasswordActivity -->
+        <activity android:name=".main.activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- ProfileSettingActivity -->
+        <activity android:name=".main.activity.ProfileSettingActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--EditProfileActivity-->
+        <activity android:name=".main.activity.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--VerifyPhoneNoActivity-->
+        <activity android:name=".main.activity.VerifyPhoneNoActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--Verify EmailId Activity-->
+        <activity android:name=".main.activity.VerifyEmailIdActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- ProfileNumberVerifyActivity -->
+        <activity android:name=".main.activity.ProfileNumberVerifyActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--NotificationActivity-->
+        <activity android:name=".main.activity.NotificationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--Explore Filter Activity-->
+        <activity android:name=".main.activity.FilterActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--Self Profile Activity-->
+        <activity android:name=".main.activity.SelfProfileActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- Product Details Activity -->
+        <activity android:name=".main.activity.products.ProductDetailsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/ThemeSwipeBack"
+            />
+
+        <activity android:name=".main.activity.products.ProductPictureDetailsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/ThemeSwipeBack"
+            />
+
+        <!-- ReportProductActivity -->
+        <activity android:name=".main.activity.products.ReportProductActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- ReportUserActivity -->
+        <activity android:name=".main.activity.ReportUserActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- Products Map Activity -->
+        <activity android:name=".main.activity.products.ProductsMapActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- Product Images Activity -->
+        <activity android:name="com.yelo.com.main.activity.products.ProductImagesActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/ThemeSwipeBack"
+            />
+
+        <!-- Product Images Activity -->
+        <activity android:name="com.yelo.com.main.activity.products.ProductReviewActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <!--SelfFollowingActivity-->
+        <activity android:name=".main.activity.SelfFollowingActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--UserFollowingActivity-->
+        <activity android:name=".main.activity.UserFollowingActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--DiscoverPeopleActivity-->
+        <activity android:name=".main.activity.DiscoverPeopleActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- PhoneContactsActivity -->
+        <activity android:name=".main.activity.PhoneContactsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- PhoneContactsActivity -->
+        <activity android:name=".main.activity.FacebookFriendsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--UserLikesActivity-->
+        <activity android:name=".main.activity.UserLikesActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--MakeOfferActivity-->
+        <activity android:name=".main.activity.MakeOfferActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- Camera Activity -->
+        <activity android:name=".main.activity.CameraActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- Camera Activity -->
+        <activity android:name=".main.activity.Camera2Activity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- Gallery Activity -->
+        <activity android:name=".main.activity.GalleryActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- Search Product Activity -->
+        <activity android:name=".main.activity.SearchProductActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- Post Product Activity -->
+        <activity android:name=".main.activity.PostProductActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- Post Product Activity -->
+        <activity android:name=".main.activity.UpdatePostActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- ProductCategoryActivity -->
+        <activity android:name=".main.activity.ProductCategoryActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- PostConditionsActivity -->
+        <activity android:name=".main.activity.PostConditionsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- ProductModelsActivity -->
+        <activity android:name=".main.activity.ProductModelsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- ProductModelsActivity -->
+        <activity android:name=".main.activity.YearModelsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- CurrencyListActivity -->
+        <activity android:name=".main.activity.CurrencyListActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- ChangeLocationActivity -->
+        <activity android:name=".main.activity.ChangeLocationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- ChangeLocationActivity -->
+        <activity android:name=".main.activity.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- EditProductActivity -->
+        <activity android:name=".main.activity.EditProductActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/SetAppTheme"/>
+
+        <!-- RateUserActivity -->
+        <activity android:name=".main.activity.RateUserActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/SetAppTheme"/>
+
+        <!-- SelectBuyerActivity -->
+        <activity android:name=".main.activity.SelectBuyerActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/SetAppTheme"/>
+
+        <!-- InsightActivity -->
+        <activity android:name=".main.activity.InsightActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/SetAppTheme"
+            android:windowSoftInputMode="adjustResize"
+            />
+
+
+
+        <!-- GetTotalClicksActivity -->
+        <activity android:name=".main.activity.GetTotalClicksActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/SetAppTheme"
+            android:windowSoftInputMode="adjustResize"
+            />
+
+        <!-- WebViewActivity -->
+        <activity android:name=".main.activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/SetAppTheme"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <!-- Facebook page-->
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            />
+
+        <activity android:name="co.simplecrop.android.simplecropimage.CropImage"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_api_key" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Services -->
+        <service
+            android:name=".moveCameraObj.FetchAddressIntentService"
+            android:exported="false" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8c41e9486e74492897473de501e087dbc6d9f391" />
+
+
+        <!-- Firebase Notifications -->
+        <service android:name=".fcm_push_notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".fcm_push_notification.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--FCM notification icon.-->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher" />
+        <!--FCM text color-->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/purple_color" />
+
+        <!-- Chat related -->
+        <activity
+            android:name=".mqttchat.Activities.ChatMessageScreen"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".mqttchat.ImageCropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".mqttchat.Activities.MediaHistory"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".mqttchat.Activities.MediaHistory_FullScreenImage"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".mqttchat.Activities.MediaHistory_FullScreenVideo"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".mqttchat.Giphy.GifPlayer"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".mqttchat.Giphy.SelectGIF"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".mqttchat.SetupProfile.OwnProfileDetails"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".main.activity.SearchAmpsActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".main.activity.MakeModelsActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service android:name=".mqttchat.Service.AppKilled" />
+        <receiver
+            android:name=".mqttchat.Utilities.TimeChangedReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_TIME_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".mqttchat.Utilities.BootCompletedIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!--For htc phones -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".mqttchat.Utilities.ShutdownReceiver">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWEROFF" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.QUICKBOOT_POWEROFF" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".mqttchat.Activities.CounterPricePage"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!--<activity android:name="ChatMessageScreen" />-->
+    </application>
+</manifest>

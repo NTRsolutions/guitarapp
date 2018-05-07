@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iV_userPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:contentDescription="@string/simple_image_view"/>
+        <RelativeLayout
+            android:id="@+id/rL_sold_by"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/tV_time"
+            android:layout_toLeftOf="@+id/tV_time"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iV_userPic"
+            android:layout_toRightOf="@+id/iV_userPic">
+
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/tV_userName"
+                android:text="@string/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/subheading_text_size"
+                android:textColor="@color/item_name_color"/>
+
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_description"
+                android:textSize="@dimen/subheading_text_size"
+                android:textColor="@color/comment_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tV_userName"
+                android:text="@string/description"
+                android:maxLines="3"
+                android:ellipsize="end"
+                />
+        </RelativeLayout>
+
+        <!--Follow-->
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:id="@+id/tV_time"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/eleven_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/sub_heading_color"
+            android:text="@string/time"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/news_divider_color"/>
+</LinearLayout>

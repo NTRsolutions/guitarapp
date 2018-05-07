@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@drawable/layout_back_shape_login"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:paddingTop="5dp"
+                    android:id="@+id/usernameWrapper"
+                    android:layout_width="match_parent"
+                    android:textColorHint="#000"
+                    android:theme="@style/TextLabel"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textColorHint="#000"
+                        android:hint=""/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:background="@drawable/layout_back_shape_login"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:paddingTop="5dp"
+
+                    android:layout_width="match_parent"
+                    android:textColorHint="#000"
+                    android:theme="@style/TextLabel"
+                    android:layout_height="match_parent">
+
+                    <EditText
+
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textColorHint="#000"
+                        android:hint=""/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:background="@drawable/layout_back_shape_login"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:paddingTop="5dp"
+
+                    android:layout_width="match_parent"
+                    android:textColorHint="#000"
+                    android:theme="@style/TextLabel"
+                    android:layout_height="match_parent">
+
+                    <EditText
+
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textColorHint="#000"
+                        android:hint=""/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/layout_back_shape_login"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:paddingTop="5dp"
+
+                    android:layout_width="match_parent"
+                    android:textColorHint="#000"
+                    android:theme="@style/TextLabel"
+                    android:layout_height="match_parent">
+
+                    <EditText
+
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textColorHint="#000"
+                        android:hint=""/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:background="@drawable/layout_back_shape_login"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:paddingTop="5dp"
+
+                    android:layout_width="match_parent"
+                    android:textColorHint="#000"
+                    android:theme="@style/TextLabel"
+                    android:layout_height="match_parent">
+
+                    <EditText
+
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textColorHint="#000"
+                        android:hint=""/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="3dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:id="@+id/image_view_user_click"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/app_launcher_logo"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/ed_notes"
+                    android:hint="Notes"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:gravity="top"
+                    android:paddingLeft="10dp"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rL_do_sell"
+
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginRight="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_width="180dp"
+                android:layout_gravity="center"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_rounded_corners"
+                >
+                <TextView
+
+                    android:gravity="center"
+                    android:textSize="@dimen/nineteen_sp"
+                    android:textColor="@color/white"
+                    android:text="Submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

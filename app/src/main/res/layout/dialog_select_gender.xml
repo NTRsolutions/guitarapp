@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_white_color_with_solid_shape">
+
+    <RelativeLayout
+        android:id="@+id/rL_select_gender"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_color">
+
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:textColor="@color/white"
+            android:text="@string/gender"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        android:id="@+id/tV_male"
+        android:textColor="@color/heading_color"
+        android:textStyle="bold"
+        android:layout_below="@+id/rL_select_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="@string/male"
+        android:textAllCaps="true"
+        android:background="@drawable/selector_list_view"/>
+
+    <View
+        android:id="@+id/male_divider"
+        android:layout_below="@+id/tV_male"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/news_divider_color"/>
+
+    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        android:id="@+id/tV_female"
+        android:textColor="@color/heading_color"
+        android:textStyle="bold"
+        android:layout_below="@+id/male_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="@string/female"
+        android:textAllCaps="true"
+        android:background="@drawable/selector_list_view"/>
+</RelativeLayout>

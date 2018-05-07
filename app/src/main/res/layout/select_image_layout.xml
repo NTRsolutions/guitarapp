@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rect_white_color_with_solid_shape">
+
+    <RelativeLayout
+        android:id="@+id/rL_select_img_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        >
+
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/item_name_color"
+            android:text="@string/updateProfilePic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginLeft="@dimen/fifteen_dp"
+            />
+
+    </RelativeLayout>
+
+    <!--Camera-->
+    <RelativeLayout
+        android:id="@+id/rL_take_pic"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:layout_marginLeft="@dimen/eight_dp"
+        android:padding="5dp"
+        android:layout_below="@id/rL_select_img_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_list_view">
+
+        <RelativeLayout
+            android:id="@+id/rL_camera_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_gray_color_with_solid_shape"
+            android:padding="5dp"
+            >
+            <ImageView
+                android:id="@+id/camera_icon"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/ic_menu_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/simple_image_view"/>
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/rL_camera_icon"
+            android:layout_toRightOf="@+id/rL_camera_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginLeft="@dimen/ten_dp">
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/camera_text"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/item_name_color"
+                android:text="@string/camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:textSize="14sp"
+                android:layout_below="@+id/camera_text"
+                android:text="@string/take_beautiful_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sub_heading"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!--Gallery-->
+    <RelativeLayout
+        android:id="@+id/rL_select_pic"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:layout_marginLeft="@dimen/eight_dp"
+        android:padding="5dp"
+        android:layout_below="@id/rL_take_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_list_view"
+        android:layout_marginTop="5dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rL_gallery_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_gray_color_with_solid_shape"
+            android:padding="5dp">
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/simple_image_view"/>
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_toEndOf="@+id/rL_gallery_icon"
+            android:layout_toRightOf="@+id/rL_gallery_icon">
+
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/gallery_text"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/item_name_color"
+                android:text="@string/browse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:textSize="14sp"
+                android:layout_below="@+id/gallery_text"
+                android:text="@string/choose_existing_img"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sub_heading"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- remove -->
+    <RelativeLayout
+        android:id="@+id/rL_remove_pic"
+        android:padding="5dp"
+        android:layout_below="@id/rL_select_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_list_view"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:layout_marginLeft="@dimen/eight_dp">
+
+        <RelativeLayout
+            android:id="@+id/rL_remove_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_gray_color_with_solid_shape"
+            android:padding="5dp">
+            <ImageView
+                android:src="@android:drawable/ic_menu_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_toEndOf="@+id/rL_remove_icon"
+            android:layout_toRightOf="@+id/rL_remove_icon">
+
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/remove_text"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/item_name_color"
+                android:text="@string/remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:textSize="14sp"
+                android:layout_below="@+id/remove_text"
+                android:text="@string/remove_existing_img"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sub_heading"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_below="@+id/rL_remove_pic"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+</RelativeLayout>

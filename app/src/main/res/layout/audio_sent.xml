@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_message"
+        android:layout_width="177dp"
+        android:layout_height="96dp"
+
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/balloon_outgoing_normal">
+
+
+        <TextView
+
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:paddingEnd="13dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="13dp"
+            android:paddingStart="5dp"
+            android:text="@string/AudioSent"
+            android:textColor="@color/color_text_black"
+
+            android:textSize="12sp" />
+
+
+        <!--we have to put a view here to show audio details-->
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView26"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/tv"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:foreground="@drawable/ripple_selector"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_play_arrow_black_48px" />
+
+
+        <com.yelo.com.mqttchat.Utilities.RingProgressBar
+            android:id="@+id/progress"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="56dp"
+
+            android:layout_marginStart="56dp"
+
+
+            android:background="@drawable/download_background"
+            android:visibility="gone"
+            app:max="100"
+            app:ringColor="@color/color_white"
+            app:ringProgressColor="@color/helper_screen_blue"
+            app:ringWidth="4dp"
+            app:style="STROKE"
+            app:textColor="@color/color_white"
+            app:textIsShow="true"
+            app:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/progress2"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="56dp"
+
+            android:layout_marginStart="56dp"
+
+            android:background="@drawable/download_background"
+            android:visibility="gone" />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/download"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:layout_centerVertical="true"
+
+            android:layout_marginLeft="58dp"
+
+            android:layout_marginStart="58dp"
+            android:background="@drawable/download_background"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:tint="@color/color_white"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_file_download_white_48px" />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/cancel"
+            android:layout_width="29dp"
+
+
+            android:layout_height="29dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+
+            android:foreground="@drawable/ripple_selector"
+            android:src="@drawable/com_facebook_close"
+
+
+            android:visibility="gone"
+
+            />
+
+
+        <TextView
+            android:id="@+id/ts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/comma"
+            android:layout_toRightOf="@+id/comma"
+
+            android:text="15:36 PM"
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/single_tick_green"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/ts"
+            android:layout_toRightOf="@+id/ts"
+            android:background="@drawable/ic_single_tick"
+            android:visibility="gone" />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/double_tick_green"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/ts"
+            android:layout_toRightOf="@+id/ts"
+            android:background="@drawable/ic_double_tick"
+            android:visibility="gone" />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/double_tick_blue"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="5dp"
+
+            android:layout_marginRight="8dp"
+
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/ts"
+            android:layout_toRightOf="@+id/ts"
+            android:src="@drawable/ic_double_tick"
+            android:tint="@color/chat_blue_tick"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/clock"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginBottom="7dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+
+
+            android:layout_marginStart="5dp"
+
+
+            android:layout_toEndOf="@+id/ts"
+            android:layout_toRightOf="@+id/ts"
+
+            android:background="@drawable/clock"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+
+            android:text="Yesterday"
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <TextView
+            android:id="@+id/comma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/date"
+            android:layout_toRightOf="@+id/date"
+            android:text=","
+            android:textColor="@color/lblFromName"
+            android:textSize="10sp"
+            android:textStyle="italic"
+
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/fnf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_centerInParent="true"
+
+
+                android:text="@string/AudioNotFound"
+                android:textColor="@color/color_text_search"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+

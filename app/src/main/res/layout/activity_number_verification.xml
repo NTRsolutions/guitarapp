@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/landing_screen"
+    android:id="@+id/rL_rootElement">
+
+    <!-- ACtion bar -->
+    <RelativeLayout
+        android:id="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rL_back_btn"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/white_color_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rL_back_btn"
+            android:layout_toEndOf="@+id/rL_back_btn"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginStart="@dimen/five_dp"
+            android:text="@string/number_verification"
+            android:textSize="@dimen/action_bar_text_size"/>
+
+        <RelativeLayout
+            android:id="@+id/rL_submit"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/seventy_dp"
+            android:layout_height="match_parent"
+            >
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/tV_sumit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:text="@string/verify"
+                android:textSize="@dimen/seventeen_sp"/>
+
+            <ProgressBar
+                android:id="@+id/pBar_submit"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="@dimen/thirty_dp"
+                android:layout_height="@dimen/thirty_dp"
+                android:indeterminateDrawable="@drawable/white_color_progress_bar_bg"
+                />
+
+        </RelativeLayout>
+
+
+        <!--
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:text="@string/verify"
+                    android:textSize="@dimen/action_bar_text_size"
+                    android:layout_marginRight="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/ten_dp"/>
+        -->
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Verification code -->
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+
+                android:layout_marginTop="@dimen/sixty_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/enter_verification_code"
+                android:textSize="@dimen/action_bar_text_size"/>
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/enter_the_code"
+                    android:textSize="@dimen/medium_text_size"/>
+
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:id="@+id/tV_mobile_no"
+                    android:layout_marginLeft="@dimen/five_dp"
+                    android:layout_marginStart="@dimen/five_dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/medium_text_size"/>
+            </LinearLayout>
+
+
+
+            <!--
+                        <RelativeLayout
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                                android:id="@+id/tV_mobile_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="@dimen/medium_text_size"/>
+
+                        </RelativeLayout>
+            -->
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.yelo.com.custom_fonts.TextViewRobotoBold
+                    android:id="@+id/tV_reSend"
+                    android:clickable="false"
+                    android:layout_marginStart="@dimen/five_dp"
+                    android:layout_marginLeft="@dimen/five_dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/resend_code"
+                    android:textSize="@dimen/subheading_text_size"/>
+
+                <ProgressBar
+                    android:id="@+id/pBar_resend"
+                    android:layout_marginEnd="@dimen/ten_dp"
+                    android:layout_marginRight="@dimen/ten_dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateDrawable="@drawable/white_color_progress_bar_bg"
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:baselineAligned="true"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/thirty_dp"
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                        android:id="@+id/eT_first_digit"
+                        android:minWidth="@dimen/hundred_dp"
+                        android:minHeight="@dimen/fifty_dp"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/twenty_four_sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textColorHint="@color/hint_color"
+                        android:textColor="@color/white"
+                        android:cursorVisible="true"
+                        android:textCursorDrawable="@drawable/white_color_cursor_drawable"
+                        />
+                    <View
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="@dimen/fifty_dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/eT_first_digit"
+                        android:background="@color/white"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                        android:id="@+id/eT_second_digit"
+                        android:minWidth="@dimen/hundred_dp"
+                        android:minHeight="@dimen/fifty_dp"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/twenty_four_sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textColorHint="@color/hint_color"
+                        android:textColor="@color/white"
+                        android:textCursorDrawable="@drawable/white_color_cursor_drawable"/>
+                    <View
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="@dimen/fifty_dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/eT_second_digit"
+                        android:background="@color/white"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                        android:id="@+id/eT_third_digit"
+                        android:minWidth="@dimen/hundred_dp"
+                        android:minHeight="@dimen/fifty_dp"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/twenty_four_sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textColorHint="@color/hint_color"
+                        android:textColor="@color/white"
+                        android:textCursorDrawable="@drawable/white_color_cursor_drawable"/>
+                    <View
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="@dimen/fifty_dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/eT_third_digit"
+                        android:background="@color/white"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                        android:id="@+id/eT_fourth_digit"
+                        android:minWidth="@dimen/hundred_dp"
+                        android:minHeight="@dimen/fifty_dp"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/twenty_four_sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textColorHint="@color/hint_color"
+                        android:textColor="@color/white"
+                        android:textCursorDrawable="@drawable/white_color_cursor_drawable"/>
+                    <View
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="@dimen/fifty_dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/eT_fourth_digit"
+                        android:background="@color/white"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Verify -->
+<!--
+            <RelativeLayout
+                android:id="@+id/rL_submit"
+                android:layout_marginTop="@dimen/hundred_dp"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginRight="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/rect_purple_color_with_solid_shape"
+                >
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:id="@+id/tV_sumit"
+                    android:gravity="center"
+                    android:textSize="@dimen/nineteen_sp"
+                    android:textColor="@color/white"
+                    android:text="@string/verify"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/pBar_submit"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateDrawable="@drawable/white_color_progress_bar_bg"
+                    />
+
+            </RelativeLayout>
+-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

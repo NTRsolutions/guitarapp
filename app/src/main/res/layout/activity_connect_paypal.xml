@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:id="@+id/rL_rootview">
+
+    <!-- Action bar -->
+    <RelativeLayout
+        android:id="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bottom_shadow">
+
+        <RelativeLayout
+            android:id="@+id/rL_back_btn"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/back_arrow_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_color"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/rL_back_btn"
+            android:layout_toRightOf="@+id/rL_back_btn"
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:text="@string/connect_paypal"
+            android:textSize="@dimen/action_bar_text_size"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            >
+            <LinearLayout
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:textSize="@dimen/small_text_size"
+                    android:textColor="@color/post_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/if_you_already_have_paypal"/>
+
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:textSize="@dimen/small_text_size"
+                    android:textColor="@color/search_box_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/example_https"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/news_divider_color"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fourty_five_dp"
+            android:background="@color/white"
+            >
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:id="@+id/tV_link"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/heading_color"
+                    android:textSize="@dimen/eighteen_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/connect_paypal_link"/>
+                <com.yelo.com.custom_fonts.EditTextRobotoRegular
+                    android:id="@+id/eT_yourName"
+                    android:maxLines="1"
+                    android:textSize="@dimen/eighteen_sp"
+                    android:hint="@string/your_name"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/heading_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tV_link"
+                    android:layout_toEndOf="@+id/tV_link"
+                    android:background="@color/transparant"
+                    android:textCursorDrawable="@drawable/purple_color_cursor_drawable"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/news_divider_color"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/twenty_five_dp"
+            android:background="@color/news_divider_color"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:text="@string/if_you_already_have_paypal"
+                android:textColor="@color/post_text_color"
+                android:textSize="@dimen/small_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/rL_getPaypal"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginRight="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@drawable/rect_gray_color_with_with_stroke_shape">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/get_my"
+                        android:textColor="@color/get_paypal_link_color"
+                        android:textSize="@dimen/eighteen_sp"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginStart="@dimen/five_dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/paypal_me_icon"
+                        android:contentDescription="@string/simple_image_view"/>
+                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginStart="@dimen/five_dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/link"
+                        android:textColor="@color/get_paypal_link_color"
+                        android:textSize="@dimen/eighteen_sp"
+                        />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ten_dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/news_divider_color"
+            />
+
+    </LinearLayout>
+
+    <!-- Save -->
+    <RelativeLayout
+        android:id="@+id/rL_apply"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/status_bar_color"
+        >
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/tV_save"
+            android:gravity="center"
+            android:textSize="@dimen/action_bar_text_size"
+            android:textColor="@color/white"
+            android:text="@string/save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            />
+        <ProgressBar
+            android:id="@+id/progress_bar_save"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/white_color_progress_bar_bg"
+            />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Giphy.GifPlayer">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Loading..."
+        android:textColor="@color/color_white"
+        android:textSize="35sp" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/giphyIV"
+
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:transitionName="image" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/poweredby_giphy" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="13dp"
+
+        android:elevation="5dp"
+        android:foreground="@drawable/ripple_selector"
+
+        app:srcCompat="@drawable/com_facebook_close" />
+
+
+</RelativeLayout>

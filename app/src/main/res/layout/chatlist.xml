@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+    <!--No chat available-->
+    <RelativeLayout
+        android:id="@+id/data_not_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/empty_chat_icon"
+                android:contentDescription="@string/simple_image_view"/>
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:layout_marginTop="@dimen/twenty_dp"
+                android:text="@string/no_chat_available"
+                android:layout_gravity="center"
+                android:textSize="@dimen/heading_text_size"
+                android:textColor="@color/heading_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--Data found view-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/dataFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f5f5"
+        android:orientation="vertical">
+        <!--List of chat-->
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/root2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/seperator">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </android.support.design.widget.CoordinatorLayout>
+        <TextView
+            android:id="@+id/notLoggedIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="13dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <com.yelo.com.mqttchat.Utilities.SlackLoadingView
+        android:id="@+id/slack"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+       android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

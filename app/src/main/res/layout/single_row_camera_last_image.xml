@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iV_dotted_image"
+            android:padding="@dimen/ten_dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/rect_gray_color_dotted_line_shape"
+            android:contentDescription="@string/simple_image_view"/>
+
+        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            android:id="@+id/tV_coverPicText"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:textColor="@color/hide_button_border_color"
+            android:textSize="@dimen/heading_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/cover"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

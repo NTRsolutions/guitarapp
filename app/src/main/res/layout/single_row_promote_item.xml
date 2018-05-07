@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rL_single_shell"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/eighty_dp"
+        android:background="@drawable/rect_gray_color_stroke_and_solid_shape">
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.yelo.com.custom_fonts.TextViewRobotoBold
+                android:id="@+id/tV_price"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_price"
+                android:textColor="@color/item_name_color"
+                android:textSize="@dimen/twenty_three_sp"/>
+
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_uniqueViews"
+                android:layout_below="@+id/tV_price"
+                android:textSize="@dimen/fifteen_sp"
+                android:textColor="@color/item_name_color"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unique_click"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

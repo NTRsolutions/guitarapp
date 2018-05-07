@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Action bar -->
+    <RelativeLayout
+        android:id="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bottom_shadow">
+
+        <RelativeLayout
+            android:id="@+id/rL_back_btn"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/back_arrow_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_color"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/rL_back_btn"
+            android:layout_toRightOf="@+id/rL_back_btn"
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:text="@string/Product_category"
+            android:textSize="@dimen/action_bar_text_size"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Other(see description) -->
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_description"
+                android:padding="15dp"
+                android:text="@string/other_see_descriptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/heading_color"
+                android:textSize="@dimen/subheading_text_size"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <!-- For parts -->
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_for_parts"
+                android:padding="15dp"
+                android:text="@string/for_parts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/heading_color"
+                android:textSize="@dimen/subheading_text_size"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <!-- Used normal wear -->
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_normal_wear"
+                android:padding="15dp"
+                android:text="@string/used_normal_wear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/heading_color"
+                android:textSize="@dimen/subheading_text_size"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <!--Open box never used-->
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_open_box"
+                android:padding="15dp"
+                android:text="@string/open_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/heading_color"
+                android:textSize="@dimen/subheading_text_size"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <!--Reconditioned or certified-->
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_reconditioned"
+                android:padding="15dp"
+                android:text="@string/reconditioned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/heading_color"
+                android:textSize="@dimen/subheading_text_size"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <!-- New never used -->
+            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                android:id="@+id/tV_never_used"
+                android:padding="15dp"
+                android:text="@string/new_never_used"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/heading_color"
+                android:textSize="@dimen/subheading_text_size"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

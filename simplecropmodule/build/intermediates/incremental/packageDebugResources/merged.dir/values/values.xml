@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_focused">#77000000</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="white">#ffffff</color>
+    <dimen name="crop__bar_height">66dp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="twenty_five_dp">25dp</dimen>
+    <string name="cancel">Cancel</string>
+    <string name="crop__cancel">CANCEL</string>
+    <string name="crop__done">DONE</string>
+    <string name="done">Done</string>
+    <string name="no_storage_card">No storage card</string>
+    <string name="not_enough_space">Not enough space</string>
+    <string name="preparing_card">Preparing card</string>
+    <string name="saving_image">Saving image</string>
+    <style name="Crop"/>
+    <style name="Crop.ActionButtonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">20dp</item> <!-- Offsets left drawable -->
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textColor">@color/crop__button_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>

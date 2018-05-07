@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!-- close the images -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:alpha="0.5"/>
+        <RelativeLayout
+            android:id="@+id/rL_close"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/white_color_cross_icon"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Shows images count -->
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:alpha="0.5"/>
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1">
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/tV_current_page"
+                android:alpha="1"
+                android:textColor="@color/white"
+                android:text="@string/one"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:textSize="18sp"
+                android:layout_marginStart="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:textColor="@color/white"
+                android:text="@string/of"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/tV_total_pages"
+                android:textSize="18sp"
+                android:layout_marginStart="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:textColor="@color/white"
+                android:text="@string/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
