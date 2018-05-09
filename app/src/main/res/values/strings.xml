@@ -87,7 +87,7 @@
     <string name="followings">Following</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="sold">Sold</string>
-    <string name="favourites">Favourites</string>
+    <string name="favourites">Favorites</string>
     <string name="call">Call</string>
     <string name="Email">Email</string>
     <!-- Explore notification -->
@@ -187,19 +187,19 @@
     <string name="do_you_want_to_sell_it_again">Do you want to sell it again?</string>
     <string name="sell_it_again">Sell it again</string>
     <string name="no_post_yet">No Post Yet!</string>
-    <string name="no_sold_yet">Not Sold Yet!</string>
+    <string name="no_sold_yet">Nothing Sold Yet!</string>
     <string name="no_post_found">No Post Found</string>
     <string name="verified_with">Verified With</string>
     <string name="paypal_me">Paypal.Me</string>
     <string name="payment">Payments</string>
     <string name="my_payment">My Payments</string>
     <string name="no_likes_yet_be_the_first">No Likes Yet! Be the first to like this product</string>
-    <string name="no_ads_yet">No Ads Yet?</string>
+    <string name="no_ads_yet">No Posts yet!</string>
     <string name="snapNpostIn">Snap and post in 30 second to sell stuff!</string>
     <string name="start_selling">Start Selling</string>
     <string name="start_browsing">Start Browsing</string>
-    <string name="found_your_fav_yet">Found Your Favourite Yet</string>
-    <string name="ads_you_love_and_mark">Ads you love &amp; mark as \'favourite\' will appear here</string>
+    <string name="found_your_fav_yet">No Favorites Found Yet!</string>
+    <string name="ads_you_love_and_mark">Ads you love &amp; mark as \'favorite\' will appear here</string>
     <string name="start_discovery">Start Discovering</string>
     <string name="mark_as_sold">Mark As Sold</string>
     <string name="rate_user">Rate User</string>
@@ -311,11 +311,11 @@
     <string name="country_name">Country name</string>
     <string name="select_country">Select Country Code</string>
     <string name="notification">Notifications</string>
-    <string name="min_dist">0 km</string>
+    <string name="min_dist">0 miles</string>
     <string name="max">Max</string>
     <string name="min_price">Min</string>
     <string name="max_price">Max</string>
-    <string name="km">Km</string>
+    <string name="km">miles</string>
     <string name="Followers">Followers</string>
     <string name="Following">Following</string>
     <string name="likes">Likes</string>
@@ -324,8 +324,8 @@
     <string name="double_zero">00</string>
     <string name="reset">Reset</string>
     <string name="apply">Apply</string>
-    <string name="from">From</string>
-    <string name="to">To</string>
+    <string name="from">From:</string>
+    <string name="to">To:</string>
     <string name="remove">Remove</string>
     <string name="one">1</string>
     <string name="of">of</string>

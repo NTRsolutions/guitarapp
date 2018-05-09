@@ -143,6 +143,8 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 String setValue = progress + " " + getResources().getString(R.string.km);
+
+
                 tV_starting_dis.setText(setValue);
             }
 

@@ -125,6 +125,8 @@ public class SoldFrag extends Fragment implements ProductItemClickListener
         ImageView iV_default_icon= (ImageView) view.findViewById(R.id.iV_default_icon);
         iV_default_icon.setImageResource(R.drawable.app_launcher_logo);
 
+
+
         TextView tV_no_ads= (TextView) view.findViewById(R.id.tV_no_ads);
         tV_no_ads.setText(getResources().getString(R.string.no_sold_yet));
 

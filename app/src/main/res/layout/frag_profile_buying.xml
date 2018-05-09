@@ -41,8 +41,9 @@
       <ImageView
           android:id="@+id/iV_default_icon"
           android:layout_centerHorizontal="true"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+          android:layout_width="120dp"
+          android:layout_height="120dp"
+          android:visibility="invisible"
           android:src="@drawable/empty_fav_icon"
           android:contentDescription="@string/simple_image_view"/>
       <com.yelo.com.custom_fonts.TextViewRobotoRegular

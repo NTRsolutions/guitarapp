@@ -126,11 +126,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
 
                         Fragment fragment = new HomeFrag();
+                        HomePageActivity.productcategoryFrag = fragment;
+
                         Bundle bundle = new Bundle();
                         bundle.putString(HomeFrag.KEY_FRAGMENT_FROM_CATGORY, mList.get( position).getName());
                         fragment.setArguments(bundle);
 
-                        transaction.replace( R.id.frame_layout, fragment );
+                        transaction.add( R.id.frame_layout, fragment );
                         transaction.addToBackStack( null );
                         transaction.commitAllowingStateLoss();
 

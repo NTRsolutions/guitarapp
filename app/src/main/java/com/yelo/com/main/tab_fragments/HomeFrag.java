@@ -187,7 +187,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
             mcategoryName= bundle.getString(KEY_FRAGMENT_FROM_CATGORY);
         }
 
-        Log.i( "catgoryName==", mcategoryName );
+//        Log.i( "catgoryName==", mcategoryName );
         getCategoriesService();
         if (!mSessionManager.getIsUserLoggedIn())
             logGuestInfo();
@@ -362,7 +362,10 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
         }
         else rL_no_internet.setVisibility(View.VISIBLE);
 
-        mTvTitle.setText( mcategoryName );
+
+        String upperString = mcategoryName.substring(0,1).toUpperCase() + mcategoryName.substring(1);
+
+        mTvTitle.setText( upperString );
 
         return view;
     }
@@ -402,12 +405,21 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                         case "200" :
                             System.out.println(TAG+" "+"Notification count="+unseenNotifiactionCountPojo.getData());
                             notificationCount=unseenNotifiactionCountPojo.getData();
-                            if (notificationCount>0)
-                            {
-                                tV_notification_count.setVisibility(View.VISIBLE);
-                                tV_notification_count.setText(String.valueOf(notificationCount));
+
+                            try {
+                                if (notificationCount>0)
+                                {
+
+
+                                    tV_notification_count.setVisibility(View.VISIBLE);
+                                    tV_notification_count.setText(String.valueOf(notificationCount));
+                                }
+                                else tV_notification_count.setVisibility(View.GONE);
+                            }catch (Exception e){
+                                e.printStackTrace();
                             }
-                            else tV_notification_count.setVisibility(View.GONE);
+
+
                             break;
                     }
                 }

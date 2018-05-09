@@ -191,7 +191,7 @@
                     android:id="@+id/tV_starting_dis"
                     android:layout_toEndOf="@+id/colon"
                     android:layout_toRightOf="@+id/colon"
-                    android:textAllCaps="true"
+                    android:textAllCaps="false"
                     android:layout_gravity="center_vertical"
                     android:gravity="center_vertical"
                     android:layout_width="wrap_content"
@@ -611,16 +611,16 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     />
-                <TextView
-                    android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/ten_dp"
-                    android:layout_marginLeft="@dimen/ten_dp"
-                    android:textColor="@color/heading_color"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/colon_symbol"/>
+                <!--<TextView-->
+                    <!--android:layout_gravity="center"-->
+                   <!---->
+                   <!---->
+                    <!--android:textColor="@color/heading_color"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/colon_symbol"/>-->
 
                 <RelativeLayout
                     android:layout_gravity="center_vertical"
@@ -686,16 +686,15 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     />
-                <TextView
-                    android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/ten_dp"
-                    android:layout_marginLeft="@dimen/ten_dp"
-                    android:textColor="@color/heading_color"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/colon_symbol"/>
+                <!--<TextView-->
+                    <!--android:layout_gravity="center"-->
+                   <!---->
+                    <!--android:textColor="@color/heading_color"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/colon_symbol"/>-->
 
                 <RelativeLayout
                     android:layout_gravity="center_vertical"

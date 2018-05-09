@@ -59,7 +59,10 @@ public class HomePageActivity extends AppCompatActivity
     public VerifyLoginWithFacebook verifyLoginWithFacebook;
     private Activity mActivity;
     private SessionManager mSessionManager;
-    private Fragment homeFrag,socialFarg,chatFarg,myProfileFrag, productcategoryFrag, buySellFragment;
+    private Fragment homeFrag,socialFarg,chatFarg,myProfileFrag, buySellFragment;
+
+    public  static Fragment  productcategoryFrag;
+
     private boolean isToHighLightTab;
     private NotificationMessageDialog mNotificationMessageDialog;
     public CustomBottomNavigationView bottomNavigationView;
@@ -99,7 +102,7 @@ public class HomePageActivity extends AppCompatActivity
         }
         initBottomNavView();
         /*
-        * Updating the bagged count.*/
+         * Updating the bagged count.*/
         setChatCount(countUnreadChat());
 
 
@@ -136,7 +139,7 @@ public class HomePageActivity extends AppCompatActivity
         }
 
         /*
-        * Updating the bagged count.*/
+         * Updating the bagged count.*/
         setChatCount(countUnreadChat());
     }
 
@@ -166,7 +169,7 @@ public class HomePageActivity extends AppCompatActivity
         bottomNavigationView.setTypeface(font);
         bottomNavigationView.setIconSize(26,26);
         bottomNavigationView.setTextSize(12);
-//        homeFrag=new HomeFrag();
+        homeFrag=new HomeFrag();
         chatFarg=new ChatFrag();
         productcategoryFrag = new ProductPictureFragment();
 
@@ -187,35 +190,46 @@ public class HomePageActivity extends AppCompatActivity
                             // Home frag
                             case R.id.nav_home:
 
-                              if(!mSessionManager.getComingFrom().equals( "signup" )) {
+                                if(!mSessionManager.getComingFrom().equals( "signup" )) {
 
 
-                                  setBottomTabIcon( nav_menu, R.drawable.tabbar_home_onn, R.drawable.tabbar_social_off, R.drawable.tab_bar_chat_off, R.drawable.tabbar_profile_off );
+                                    setBottomTabIcon( nav_menu, R.drawable.tabbar_home_onn, R.drawable.tabbar_social_off, R.drawable.tab_bar_chat_off, R.drawable.tabbar_profile_off );
 //                                System.out.println(TAG+" "+"home frag="+productcategoryFrag.isAdded());
 
-                                  isToHighLightTab = true;
+                                    isToHighLightTab = true;
 
 //                                if (homeFrag.isAdded())
 //                                    transaction.show(homeFrag);
 //                                else
-//                                    transaction.add(R.id.frame_layout,homeFrag,"HomeFragment");
+//                                    transaction.add(R.id.frame_layout,homeFrag);
+
+//
+                                    if (productcategoryFrag.isAdded())
+                                        transaction.show( productcategoryFrag );
+                                    else
+                                        transaction.add( R.id.frame_layout, productcategoryFrag );
+//                                  transaction.replace( R.id.frame_layout, new ProductPictureFragment(), "productcategoryFrag" );
 
 
-                                /*if (productcategoryFrag.isAdded())
-                                    transaction.show(productcategoryFrag);
-                                else*/
-//                                    transaction.add(R.id.frame_layout,productcategoryFrag,"productcategoryFrag");
-                                  transaction.replace( R.id.frame_layout, new ProductPictureFragment(), "productcategoryFrag" );
+                                    if (chatFarg.isAdded())
+                                        transaction.hide( chatFarg );
+                                    if (myProfileFrag.isAdded())
+                                        transaction.hide( myProfileFrag );
 
 
-                                  if (chatFarg.isAdded())
-                                      transaction.hide( chatFarg );
-                                  if (myProfileFrag.isAdded())
-                                      transaction.hide( myProfileFrag );
-                              }else {
+//                                    Fragment mYff = getCurrentFragment();
+//
+//                                    if(mYff != null) {
+//                                        if (mYff instanceof HomeFrag) {
+//
+//                                            transaction.hide( homeFrag );
+//                                        }
+//                                    }
 
-                                  Toast.makeText( HomePageActivity.this, "Please select any of buy or sell option", Toast.LENGTH_SHORT ).show();
-                              }
+                                }else {
+
+                                    Toast.makeText( HomePageActivity.this, "Please select any of buy or sell option", Toast.LENGTH_SHORT ).show();
+                                }
                                 break;
 
 
@@ -243,8 +257,8 @@ public class HomePageActivity extends AppCompatActivity
                                     }
                                 }
                                 else
-                                    {
-                                        if (isToStartActivity) {
+                                {
+                                    if (isToStartActivity) {
                                         isToStartActivity = false;
                                         startActivityForResult(new Intent(mActivity,LandingActivity.class), VariableConstants.LANDING_REQ_CODE);
                                     }}
@@ -261,17 +275,32 @@ public class HomePageActivity extends AppCompatActivity
 
                                         if (chatFarg.isAdded())
                                             transaction.show( chatFarg );
-                                        else transaction.add( R.id.frame_layout, new ChatFrag() );
+                                        else transaction.add( R.id.frame_layout, chatFarg );
+
 
                                         if (myProfileFrag.isAdded())
                                             transaction.hide( myProfileFrag );
+
+
+                                        if (productcategoryFrag.isAdded()) {
+                                            transaction.hide( productcategoryFrag );
+                                        }
+
+//                                        Fragment mYff = getCurrentFragment();
+//
+//                                        if(mYff != null) {
+//                                            if (mYff instanceof HomeFrag) {
+//
+//                                                transaction.hide( homeFrag );
+//                                            }
+//                                        }
+
+
                                     }else {
                                         Toast.makeText( HomePageActivity.this, "Please select any of buy or sell option", Toast.LENGTH_SHORT ).show();
                                     }
-//                                    if (homeFrag.isAdded())
-//                                        transaction.hide(homeFrag);
-//                                    if (productcategoryFrag.isAdded())
-//                                        transaction.hide(productcategoryFrag);
+
+
 
                                 }
                                 else{
@@ -294,23 +323,29 @@ public class HomePageActivity extends AppCompatActivity
                                         if (myProfileFrag.isAdded())
                                             transaction.show( myProfileFrag );
                                         else transaction.add( R.id.frame_layout, myProfileFrag );
+
+
+
+                                        if (chatFarg.isAdded())
+                                            transaction.hide(chatFarg);
+
+                                        if (productcategoryFrag.isAdded())
+                                            transaction.hide(productcategoryFrag);
+//
                                     }else {
                                         Toast.makeText( HomePageActivity.this, "Please select any of buy or sell option", Toast.LENGTH_SHORT ).show();
                                     }
 
-//                                    if (chatFarg.isAdded())
-//                                        transaction.hide(chatFarg);
-//                                    if (productcategoryFrag.isAdded())
-//                                        transaction.hide(productcategoryFrag);
-//
+
+
 //                                    if (productcategoryFrag.isAdded())
 //                                        transaction.hide(productcategoryFrag);
                                 }
                                 else {
                                     if (isToStartActivity) {
-                                    isToStartActivity = false;
-                                    startActivityForResult(new Intent(mActivity,LandingActivity.class), VariableConstants.LANDING_REQ_CODE);
-                                }}
+                                        isToStartActivity = false;
+                                        startActivityForResult(new Intent(mActivity,LandingActivity.class), VariableConstants.LANDING_REQ_CODE);
+                                    }}
                                 break;
                         }
                         transaction.commit();
@@ -321,12 +356,12 @@ public class HomePageActivity extends AppCompatActivity
 
 
         if(mSessionManager.getComingFrom().equals( "login" )){
-            transaction.replace(R.id.frame_layout, productcategoryFrag);
+            transaction.add(R.id.frame_layout, productcategoryFrag);
 //            transaction.replace(R.id.frame_layout, buySellFragment);
         }else if(mSessionManager.getComingFrom().equals( "signup" ) ) {
-            transaction.replace(R.id.frame_layout, buySellFragment);
+            transaction.add(R.id.frame_layout, buySellFragment);
         }else {
-            transaction.replace(R.id.frame_layout, productcategoryFrag);
+            transaction.add(R.id.frame_layout, productcategoryFrag);
         }
         transaction.commit();
 
@@ -462,7 +497,7 @@ public class HomePageActivity extends AppCompatActivity
     }
 
     /*
-    *Collect unread count*/
+     *Collect unread count*/
     private int parseData(@NonNull Map<String, Object> chat_item)
     {
         int count=0;
@@ -522,4 +557,19 @@ public class HomePageActivity extends AppCompatActivity
 
 
     }
+
+
+    private Fragment getCurrentFragment(){
+
+        try {
+            Fragment currentFragment = this.getSupportFragmentManager().findFragmentById(R.id.frame_layout);
+            return currentFragment;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return null;
+
+    }
+
 }

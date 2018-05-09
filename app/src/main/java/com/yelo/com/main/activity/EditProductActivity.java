@@ -101,7 +101,6 @@ public class EditProductActivity extends AppCompatActivity implements View.OnCli
         mSwipeRefreshLayout.setColorSchemeResources(R.color.pink_color);
         arrayListAcceptedOffer=new ArrayList<>();
 
-
         // Back button
         RelativeLayout rL_back_btn= (RelativeLayout) findViewById(R.id.rL_back_btn);
         rL_back_btn.setOnClickListener(this);

@@ -148,6 +148,7 @@
 
                     <!--List of followed images-->
                     <HorizontalScrollView
+                        android:visibility="invisible"
                         android:layout_centerVertical="true"
                         android:layout_toRightOf="@+id/linear_like_product"
                         android:layout_toEndOf="@+id/linear_like_product"

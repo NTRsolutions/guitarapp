@@ -14,11 +14,11 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary">
 
-        <com.yelo.com.custom_fonts.TextViewOrgano
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
             android:id="@+id/textViewProduct"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="CATEGORIES"
+            android:text="Categories"
             android:textSize="@dimen/action_bar_text_size"
             android:textColor="#000"
             android:gravity="center"/>

@@ -24,7 +24,7 @@
                 android:layout_marginStart="@dimen/ten_dp"
                 android:layout_marginLeft="@dimen/ten_dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/cross_icon"
+                android:src="@drawable/cross"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/simple_image_view"/>

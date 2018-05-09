@@ -193,8 +193,14 @@ public class FavouriteFrag extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
-        super.onViewCreated(view, savedInstanceState);
-        BusProvider.getInstance().register(this);
+
+        try {
+            super.onViewCreated(view, savedInstanceState);
+            BusProvider.getInstance().register(this);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     /**

@@ -99,16 +99,25 @@ public class ProfileFrag extends Fragment implements View.OnClickListener, Googl
         mActivity=getActivity();
         mSessionManager=new SessionManager(mActivity);
 
+
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestScopes(new Scope(Scopes.DRIVE_APPFOLDER))
                 .requestServerAuthCode(mActivity.getResources().getString(R.string.servers_client_id))
                 .requestEmail()
                 .build();
 
-        mGoogleApiClient = new GoogleApiClient.Builder(mActivity)
-                .enableAutoManage(getActivity(), this)
-                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
-                .build();
+        try {
+
+            if(mGoogleApiClient == null) {
+                mGoogleApiClient = new GoogleApiClient.Builder( mActivity )
+                        .enableAutoManage( getActivity(), this )
+                        .addApi( Auth.GOOGLE_SIGN_IN_API, gso )
+                        .build();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -124,10 +133,18 @@ public class ProfileFrag extends Fragment implements View.OnClickListener, Googl
 
     }
 
+    View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.frag_profile, container, false);
+
+        if(view!=null){
+            if((ViewGroup)view.getParent()!=null)
+                ((ViewGroup)view.getParent()).removeView(view);
+            return view;
+        }
+
+         view = inflater.inflate(R.layout.frag_profile, container, false);
         progress_bar_profile= (ProgressBar) view.findViewById(R.id.progress_bar_profile);
         appBarLayout= (AppBarLayout) view.findViewById(R.id.appBarLayout);
         appBarLayout.setVisibility(View.GONE);
@@ -711,9 +728,18 @@ public class ProfileFrag extends Fragment implements View.OnClickListener, Googl
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
-        BusProvider.getInstance().unregister(this);
-        mGoogleApiClient.stopAutoManage(getActivity());
-        mGoogleApiClient.disconnect();
+
+        try {
+            super.onDestroy();
+            BusProvider.getInstance().unregister(this);
+
+            if(mGoogleApiClient  != null) {
+                mGoogleApiClient.stopAutoManage( getActivity() );
+                mGoogleApiClient.disconnect();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 }

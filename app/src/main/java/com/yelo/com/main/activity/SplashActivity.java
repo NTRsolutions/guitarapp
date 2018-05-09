@@ -88,6 +88,7 @@ public class SplashActivity extends AppCompatActivity
         setTimerForScreen();
     }
 
+
     public void forceCrash(View view) {
         throw new RuntimeException("This is a crash");
     }
