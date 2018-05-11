@@ -205,7 +205,7 @@ public class ChatMessageScreen extends AppCompatActivity
     private TextView price_Text;
     private TextView product_name,already_sold_tag;
     private RelativeLayout loading_prodcut_details,product_view,productNotexist;
-    private SeftyAleretDialog aleretDialog;
+//    private SeftyAleretDialog aleretDialog;
 
     @SuppressWarnings("TryWithIdenticalCatches")
     private static byte[] convertFileToByteArray(File f)
@@ -373,7 +373,7 @@ public class ChatMessageScreen extends AppCompatActivity
         MessageType = 0;
         status = 0;
         top = "Connecting...";
-        aleretDialog=SeftyAleretDialog.getInstance();
+//        aleretDialog=SeftyAleretDialog.getInstance();
         attachKeyboardListeners();
         recyclerView_chat = (RecyclerView) findViewById(R.id.list_view_messages);
         mChatData = new ArrayList<>();
@@ -4868,10 +4868,10 @@ public class ChatMessageScreen extends AppCompatActivity
         }
         limit = false;
         firstTenLoaded = true;
-        if(isAleretRequired)
-        {
-            aleretDialog.showSefty(this);
-        }
+//        if(isAleretRequired)
+//        {
+//            aleretDialog.showSefty(this);
+//        }
     }
     @SuppressWarnings("TryWithIdenticalCatches")
     @Subscribe

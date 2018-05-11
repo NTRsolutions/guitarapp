@@ -4,7 +4,7 @@
     <!--<color name="colorPrimary">#5c34a3</color>-->
     <!--<color name="colorPrimaryDark">#5c34a3</color>-->
     <color name="colorPrimaryDark">#BABABA</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#BABABA</color>
     <color name="ashcolor">#B2BEB5</color>
     <color name="black80">#3f3d3d</color>
 
@@ -36,7 +36,7 @@
     <color name="red_color">#ff0000</color>
     <color name="tab_unselected_color">#b5a7d4</color>
     <color name="item_name_color">#282828</color>
-    <color name="pink_color">#ff4081</color>
+    <color name="pink_color">#518ef8</color>
     <color name="thick_divider_color">#fbfaff</color>
     <color name="gallery_img_bg">#ece8ddff</color>
     <color name="half_white_transparant">#88ffffff</color>

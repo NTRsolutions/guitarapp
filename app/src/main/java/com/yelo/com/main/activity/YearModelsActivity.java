@@ -9,7 +9,10 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
@@ -59,7 +62,8 @@ public class YearModelsActivity extends AppCompatActivity implements View.OnClic
     private NotificationMessageDialog mNotificationMessageDialog;
     private int CatId;
     List<String> listYear = new ArrayList<>(  );
-
+    EditText mEdSearch;
+    YearCategoryRvAdapter categoryRvAdapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -73,40 +77,51 @@ public class YearModelsActivity extends AppCompatActivity implements View.OnClic
         progress_bar= (ProgressBar) findViewById(R.id.progress_bar);
         rL_rootview= (RelativeLayout) findViewById(R.id.rL_rootview);
         rV_category= (RecyclerView) findViewById(R.id.rV_category);
+        mEdSearch = findViewById( R.id.ed_search );
+
         RelativeLayout rL_back_btn = (RelativeLayout) findViewById(R.id.rL_back_btn);
         rL_back_btn.setOnClickListener(this);
 
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
-        for (int i = 1933; i<=  year; i++ ){
+        for (int i = year; i>= 1934; i-- ){
 
             listYear.add( i+"" );
 
         }
 
 
-        YearCategoryRvAdapter categoryRvAdapter=new YearCategoryRvAdapter(YearModelsActivity.this,listYear);
+
+
+         categoryRvAdapter=new YearCategoryRvAdapter(YearModelsActivity.this,listYear);
         LinearLayoutManager layoutManager=new LinearLayoutManager(mActivity);
 
         rV_category.setLayoutManager(layoutManager);
         rV_category.setAdapter(categoryRvAdapter);
 
-        categoryRvAdapter.setOnItemClick(new ClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                String categoryName=listYear.get(position);
-                if (categoryName!=null && !categoryName.isEmpty())
-                {
-                    categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
-                    Intent intent=new Intent();
-                    intent.putExtra("yearName",categoryName);
-                    setResult(VariableConstants.MODEL_REQUEST_YEAR_CODE,intent);
-                    onBackPressed();
-                    finish();
-                }
-            }
-        });
 
+
+
+        mEdSearch.addTextChangedListener( new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+
+            filter( s.toString() );
+            }
+        } );
+
+        filter("");
 
 //        getCategoriesService();
     }
@@ -239,6 +254,68 @@ public class YearModelsActivity extends AppCompatActivity implements View.OnClic
             case R.id.rL_back_btn :
                 onBackPressed();
                 break;
+        }
+    }
+
+    List<String> temp = null;
+    void filter(String text){
+
+        if(categoryRvAdapter != null) {
+
+
+            if(text.length() == 0){
+                categoryRvAdapter.updateList( listYear );
+
+                categoryRvAdapter.setOnItemClick(new ClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        String categoryName=listYear.get(position);
+                        if (categoryName!=null && !categoryName.isEmpty())
+                        {
+                            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
+                            Intent intent=new Intent();
+                            intent.putExtra("yearName",categoryName);
+                            setResult(VariableConstants.MODEL_REQUEST_YEAR_CODE,intent);
+                            onBackPressed();
+                            finish();
+                        }
+                    }
+                });
+
+            }else {
+
+               temp = new ArrayList();
+                for (String d : listYear) {
+                    //or use .equal(text) with you want equal match
+                    //use .toLowerCase() for better matches
+
+                    if (d.toLowerCase().contains( text.toLowerCase() )) {
+                        temp.add( d );
+                    }
+                }
+                categoryRvAdapter.updateList( temp );
+
+                categoryRvAdapter.setOnItemClick(new ClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        String categoryName=temp.get(position);
+                        if (categoryName!=null && !categoryName.isEmpty())
+                        {
+                            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
+                            Intent intent=new Intent();
+                            intent.putExtra("yearName",categoryName);
+                            setResult(VariableConstants.MODEL_REQUEST_YEAR_CODE,intent);
+                            onBackPressed();
+                            finish();
+                        }
+                    }
+                });
+            }
+            //update recyclerview
+
+
+
+
         }
     }
 }

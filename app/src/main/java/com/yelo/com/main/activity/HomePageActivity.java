@@ -97,8 +97,8 @@ public class HomePageActivity extends AppCompatActivity
             boolean isFromSignup = intent.getBooleanExtra("isFromSignup",false);
             System.out.println(TAG+" "+"isFromSignup first="+isFromSignup);
 
-            if (isFromSignup)
-                new DialogBox(mActivity).startBrowsingDialog();
+//            if (isFromSignup)
+//                new DialogBox(mActivity).startBrowsingDialog();
         }
         initBottomNavView();
         /*
@@ -323,8 +323,6 @@ public class HomePageActivity extends AppCompatActivity
                                         if (myProfileFrag.isAdded())
                                             transaction.show( myProfileFrag );
                                         else transaction.add( R.id.frame_layout, myProfileFrag );
-
-
 
                                         if (chatFarg.isAdded())
                                             transaction.hide(chatFarg);

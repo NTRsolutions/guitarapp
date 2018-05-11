@@ -1,5 +1,8 @@
 package com.yelo.com.Twiter_manager;
 
+import android.content.Intent;
+import android.net.Uri;
+
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
@@ -24,6 +27,8 @@ class TwitterUtil
         Configuration configuration = configurationBuilder.build();
         twitterFactory = new TwitterFactory(configuration);
         twitter = twitterFactory.getInstance();
+
+
     }
 
     public TwitterFactory getTwitterFactory()
@@ -33,7 +38,7 @@ class TwitterUtil
 
      void setTwitterFactory(AccessToken accessToken)
     {
-        twitter = twitterFactory.getInstance(accessToken);
+        twitter = twitterFactory.getInstance();
     }
 
      Twitter getTwitter()
@@ -47,6 +52,8 @@ class TwitterUtil
         {
             try {
                 requestToken = twitterFactory.getInstance().getOAuthRequestToken(TweeterConfig.TWITTER_CALLBACK_URL);
+
+
             } catch (TwitterException e)
             {
                 e.printStackTrace();

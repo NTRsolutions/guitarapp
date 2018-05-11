@@ -18,7 +18,7 @@ public class ApiOnServer
     public static final String CHAT_UPLOAD_PATH = CHAT_UPLOAD_SERVER_URL +"chat/profilePics/";
     public static final String PROFILEPIC_UPLOAD_PATH = CHAT_UPLOAD_SERVER_URL +"chat/profilePics/";
     public static final String DELETE_DOWNLOAD = CHAT_MULTER_UPLOAD_URL +"deleteImage";
-    public static final String HOST = "1883";   //54.23.222.452
+    public static final String HOST = "broker.hivemq.com";   //54.23.222.452
     public static final String PORT = "1883";   //54.23.222.452
     private static final String API_MAIN_LINK ="http://34.209.156.227:5010/";  //http://54.23.222.452:5010/
     public static final String LOGIN_API = API_MAIN_LINK + "User/LoginWithEmail";
@@ -44,7 +44,7 @@ public class ApiOnServer
     public static final String FETCH_MESSAGES = API_MAIN_LINK + "Messages";
     /*
     * Authorization key fro chat */
-    public static final String AUTH_KEY="";//server authorization key
+    public static final String AUTH_KEY="KMajNKHPqGt6kXwUbFN3dU46PjThSNTtrEnPZUefdasdfghsaderf1234567890ghfghsdfghjfghjkswdefrtgyhdfghj";//server authorization key
 
-    public static final String PUSH_KEY="";// firebase legacy server key
+    public static final String PUSH_KEY="AIzaSyCI9dQW9Lxglq83Pj5y4d5VJjEX48pgsYY";// firebase legacy server key
 }

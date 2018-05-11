@@ -136,19 +136,19 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
     private int lastVisibleItem, totalItemCount;
     private HorizontalScrollView scrollViewFilter;
     private int recycleviewPaddingTop;
-   static  HomeFrag homeFrag = null;
+    static  HomeFrag homeFrag = null;
 
-   public  static String KEY_FRAGMENT_FROM_CATGORY = "categoryname";
+    public  static String KEY_FRAGMENT_FROM_CATGORY = "categoryname";
 
-   String mcategoryName , make;
-   AppCompatTextView mTvTitle;
+    String mcategoryName , make;
+    AppCompatTextView mTvTitle;
 
-   public static HomeFrag getInstance(){
+    public static HomeFrag getInstance(){
 
-       if(homeFrag == null){
-           homeFrag = new HomeFrag();
-       }
-       return  homeFrag;
+        if(homeFrag == null){
+            homeFrag = new HomeFrag();
+        }
+        return  homeFrag;
     }
 
 
@@ -442,7 +442,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
      */
     private void getCategoriesService() {
         if (CommonClass.isNetworkAvailable(mActivity)) {
-         String auth = "basicAuth: &jno-@8az=wSo*NHYVGpF^AQ?4yn36ZvW5ToUCUN+XGOuC?sz#SE$oxXVbwQGP|3WFyjcTAj2SIRQnLE|vo^-|-ATV5FZUf2*5A3Oiu|_EOMmG==&iApzQL3R7HHQj?jtb0mc2mT$Y%Isrgrxveld#Z^g3-ul^|0xAITganIuF23J0waSa6z6aP_+%De5LqtuY&ptx?qhZySECdyE^*4R^b*hFjQ-9?cCSJNfROzztEYbRyN=SqDyhhpzSmmP|Eb";
+            String auth = "basicAuth: &jno-@8az=wSo*NHYVGpF^AQ?4yn36ZvW5ToUCUN+XGOuC?sz#SE$oxXVbwQGP|3WFyjcTAj2SIRQnLE|vo^-|-ATV5FZUf2*5A3Oiu|_EOMmG==&iApzQL3R7HHQj?jtb0mc2mT$Y%Isrgrxveld#Z^g3-ul^|0xAITganIuF23J0waSa6z6aP_+%De5LqtuY&ptx?qhZySECdyE^*4R^b*hFjQ-9?cCSJNfROzztEYbRyN=SqDyhhpzSmmP|Eb";
 
 
 
@@ -472,7 +472,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                             {
                                 aL_categoryDatas.addAll(categoryMainPojo.getData());
                             }
-                       break;
+                            break;
 
                         // auth token expired
                         case "401" :
@@ -620,7 +620,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                 e.printStackTrace();
             }
 
-                Log.i( "get guest posts", requestDatas.toString() );
+            Log.i( "get guest posts", requestDatas.toString() );
 
             System.out.println(TAG+" "+"offset in guest post api="+offset+" "+"lat="+lat+" "+"lng="+lng);
 
@@ -1094,7 +1094,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
 
 
                         if (isFromSignup) {
-                            new DialogBox( mActivity ).startBrowsingDialog();
+//                            new DialogBox( mActivity ).startBrowsingDialog();
 
                         }
                     }
@@ -1254,7 +1254,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
         System.out.println(TAG+" "+"array list filter size="+arrayListFilter.size());
         if (arrayListFilter!=null && arrayListFilter.size()>0)
         {
-           // view_filter_divider.setVisibility(View.VISIBLE);
+            // view_filter_divider.setVisibility(View.VISIBLE);
             linear_filter.removeAllViews();
             LayoutInflater layoutInflater=LayoutInflater.from(mActivity);
             linear_filter.removeAllViews();

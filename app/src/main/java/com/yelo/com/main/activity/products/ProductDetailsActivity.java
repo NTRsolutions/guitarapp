@@ -1518,8 +1518,8 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                     boolean isFromSignup = data.getBooleanExtra("isFromSignup",false);
 
                     // open start browsering screen
-                    if (isFromSignup)
-                        new DialogBox(mActivity).startBrowsingDialog();
+//                    if (isFromSignup)
+//                        new DialogBox(mActivity).startBrowsingDialog();
 
                     if (runTimePermission.checkPermissions(permissionsArray))
                     {

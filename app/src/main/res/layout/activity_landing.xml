@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/new_app_bg"
+    android:background="@drawable/bgandroid"
     android:id="@+id/rL_rootview">
 
 <!--
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="50dp"
                 android:orientation="vertical"
 
                 android:layout_width="match_parent"
@@ -77,11 +77,13 @@
                         android:textColor="@color/white"
                         android:textSize="@dimen/fourty_sp"
                         android:text="@string/app_name"
+                        android:visibility="gone"
                         />
 
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:visibility="invisible"
                     android:layout_marginTop="@dimen/twenty_five_dp_new"
                     android:layout_marginLeft="20dp"
                     android:layout_marginStart="20dp"

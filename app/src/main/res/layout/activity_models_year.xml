@@ -38,13 +38,35 @@
             android:textSize="@dimen/action_bar_text_size"/>
     </RelativeLayout>
 
+    <LinearLayout
+        android:layout_below="@+id/rL_action_bar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            android:id="@+id/ed_search"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/Search"
+            android:paddingLeft="7dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:background="@drawable/edittext_bottom_line"
+
+
+            />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rV_category"
-        android:layout_below="@+id/rL_action_bar"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progress_bar"

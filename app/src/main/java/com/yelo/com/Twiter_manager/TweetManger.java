@@ -31,6 +31,7 @@ public class TweetManger
         tweeterSession=new TweeterSession(context);
         TweeterConfig.TWITTER_CONSUMER_KEY=tweeterkey;
         TweeterConfig.TWITTER_CONSUMER_SECRET=tweeterSecrest;
+
     }
 
     public static void initialization(Context context,String key,String secret)
@@ -97,6 +98,8 @@ public class TweetManger
             {
 
                 try {
+
+
                     String tiny_url=getTinnyUrl(params[0]);
                     String caption=params[1];
                     /*

@@ -1415,12 +1415,19 @@ public class AppController extends android.support.multidex.MultiDexApplication 
         String serverUri = "tcp://"+ApiOnServer.HOST +":"+ApiOnServer.PORT;
         mqttAndroidClient = new MqttAndroidClient(mInstance,serverUri,clientId,new MemoryPersistence());
         mqttAndroidClient.setCallback(initMqttListener());
+
         mqttConnectOptions = new MqttConnectOptions();
         mqttConnectOptions.setCleanSession(false);
+        mqttConnectOptions.setMqttVersion(MqttConnectOptions.MQTT_VERSION_3_1);
+
+
         mqttConnectOptions.setUserName(ApiOnServer.MQTTUSER_NAME);
         String password=ApiOnServer.MQTTPASSWORD;
         mqttConnectOptions.setPassword(password.toCharArray());
         mqttConnectOptions.setAutomaticReconnect(true);
+
+
+
         JSONObject obj = new JSONObject();
         try
         {

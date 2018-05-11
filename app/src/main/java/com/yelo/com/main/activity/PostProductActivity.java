@@ -290,6 +290,8 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
+
+//                brstdev@gmail.com
                 if (isChecked)
                 {
                     if(TweetManger.getInstance().isUserLoggedIn())
@@ -897,13 +899,16 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                             if (postProductDatas!=null)
                             {
                                String postId = postProductDatas.getPostId();
+
+
                                 String productName= postProductDatas.getProductName();
                                 if (isTwitterSharingOn)
-                                share_On_Twitter(postId,productName);
-
+//                                share_On_Twitter(postId,productName, );
+                                share_On_Twitter(postProductDatas.getMainUrl(),productName );
                                 if (isFacebookSharingOn)
                                 {
-                                    String post_url=getResources().getString(R.string.share_item_base_url)+postId;
+//                                    String post_url=getResources().getString(R.string.share_item_base_url)+postId;
+                                    String post_url=postProductDatas.getMainUrl();
                                     shareOnFacebook(post_url,postProductDatas.getMainUrl(),productName,postProductDatas.getDescription());
                                 }
 
@@ -973,7 +978,8 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
             {
                 caption = "@"+caption;
             }
-        String post_url=getResources().getString(R.string.share_item_base_url)+postId;
+//        String post_url=getResources().getString(R.string.share_item_base_url)+postId;
+        String post_url=postId;
         Log.d("daste",""+post_url);
         TweetManger.getInstance().updateStatus(caption,post_url, new TweetManger.TweetSuccess()
         {
@@ -1167,7 +1173,9 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
         super.onActivityResult(requestCode, resultCode, data);
         // for facebook
         if (callbackManager.onActivityResult(requestCode,resultCode,data))
-        {}else if (requestCode==VariableConstants.TWEETER_REQUEST_CODE)
+        {
+
+        }else if (requestCode==VariableConstants.TWEETER_REQUEST_CODE)
         {
             // for twitter
             if (resultCode==RESULT_OK)

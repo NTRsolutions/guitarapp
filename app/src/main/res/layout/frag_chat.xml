@@ -9,18 +9,20 @@
     android:background="@color/white">
     <!-- Action bar -->
     <RelativeLayout
+
         android:id="@+id/rL_action_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@drawable/bottom_shadow">
+        android:background="@color/colorPrimaryDark">
 
         <com.yelo.com.custom_fonts.TextViewRobotoMedium
             android:layout_marginStart="@dimen/ten_dp"
             android:layout_marginLeft="@dimen/ten_dp"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
+
             android:textColor="@color/black"
             android:textSize="19sp"
             android:text="@string/Chat"
@@ -47,6 +49,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginLeft="3dp"
             android:layout_marginStart="3dp"
+
             android:foreground="@drawable/ripple_selector">
             <RelativeLayout
                 android:background="?android:selectableItemBackground"
@@ -60,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:id="@+id/refreshButton"
-                    android:tint="#bababa"
+                    android:tint="#000000"
                     android:visibility="visible"
 
                     app:srcCompat="@drawable/ic_refresh_black_24px" />
@@ -77,7 +80,7 @@
                     android:layout_centerInParent="true"
                     android:contentDescription="@string/app_name"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/places_ic_search"
+                    android:src="@drawable/searchnew"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RelativeLayout>

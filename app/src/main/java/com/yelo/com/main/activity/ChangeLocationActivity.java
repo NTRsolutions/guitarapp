@@ -544,7 +544,10 @@ public class ChangeLocationActivity extends AppCompatActivity implements OnMapRe
                 mMap.setMyLocationEnabled(true);
                 mMap.animateCamera(CameraUpdateFactory
                         .newCameraPosition(cameraPosition));
+            }else if (resultCode == RESULT_CANCELED) {
+                // The user canceled the operation.
             }
+
         }
     }
 

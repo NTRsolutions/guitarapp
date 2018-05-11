@@ -164,7 +164,7 @@ public class ProductPictureFragment extends Fragment {
     private void hitApiOnServer(){
         if (CommonClass.isNetworkAvailable(getActivity()))
         {
-            final ProgressDialog pDialog = new ProgressDialog(getActivity(), 0);
+            final ProgressDialog pDialog = new ProgressDialog(getActivity(),0);
 
 
             pDialog.setCancelable(false);

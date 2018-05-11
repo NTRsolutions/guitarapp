@@ -5,7 +5,7 @@
 <!--firebase account push notification &#45;&#45;brstdev20@gmail.com  pass-brstdeveloper20-->
 
 <resources>
-    <string name="app_name">GuitarAmps</string>
+    <string name="app_name">Guitar Amps</string>
     <!-- Landing page -->
     <string name="continue_with_fb">Continue with Facebook</string>
     <string name="continue_with_google">Continue with Google          </string>
@@ -78,7 +78,7 @@
     <string name="daniel_welllington">Daniel Wellington Classic</string>
     <string name="amelia">Amelia Kelly</string>
     <string name="thousasnd_of_buyer">Thousands of buyer are</string>
-    <string name="browsing_yelo">Browsing Yelo right now</string>
+    <string name="browsing_yelo">Browsing Guitam Amps right now</string>
     <string name="no_chat_available">No chats available</string>
     <!--Home Profile chat-->
     <string name="profile">Profile</string>
@@ -97,7 +97,7 @@
     <string name="left_a_review_on">left a review on</string>
     <string name="commented_your_post">left a review on your post</string>
     <string name="startedFollowingYou">started following you</string>
-    <string name="welcome_on_yelo">Welcome to Yelo!</string>
+    <string name="welcome_on_yelo">Welcome to Guitam Amps!</string>
     <string name="make_money_selling">Make money selling What you don\'t need</string>
     <string name="and_find_great">and find great deals nearby</string>
     <string name="no_following_yet">No following yet!</string>
@@ -209,7 +209,7 @@
     <string name="select_the_buyer_to_rate">Select the buyer to rate</string>
     <string name="sold_it_somewhere_else">Sold it somewhere else</string>
     <string name="want_to_sell_somewhere_else">Do you want to sell somewhere else?</string>
-    <string name="i_didnt_sell_it_on_offerup">I didn\'t sell it on Yelo</string>
+    <string name="i_didnt_sell_it_on_offerup">I didn\'t sell it on Guitar Amps</string>
     <string name="select">Select</string>
     <string name="absolutely_not">Absolutely,</string>
     <string name="not">Not.</string>
@@ -218,7 +218,7 @@
     <string name="no">No</string>
     <string name="definitely">Definitely!</string>
     <string name="submit_rating">Submit Rating</string>
-    <string name="you_havnt_received">You havn\'t received any message or offer yet!</string>
+    <string name="you_havnt_received">You haven\'t received any message or offers yet!</string>
     <string name="delete_this_product">Delete this product</string>
     <string name="edit_this_product">Edit this product</string>
     <string name="update">Update</string>
@@ -333,7 +333,7 @@
     <string name="camera_roll">Camera Roll</string>
     <string name="you_can_select_only_upto">You can take only up to a maximum of 5 photos</string>
     <string name="report_email"></string><!--put here report email-->
-    <string name="problem_on_yelo">Problem on Yelo</string>
+    <string name="problem_on_yelo">Problem on Guitar Amps</string>
     <string name="friend_on">Friend on</string>
     <string name="friends_on">Friends on</string>
     <string name="friend">Friend</string>
@@ -366,8 +366,10 @@
     <!-- Special symbol -->
     <string name="colon_symbol">:</string>
     <!-- Keys -->
+    <!--AIzaSyCqd2N4c4vDRU18HGWUdIR_gv0eX80RWwI-->
+    <!--AIzaSyCut_UpCItTRN7Blad2ooEP5x8f3fX-Rq4-->
     <string name="facebook_app_id">2023177354602917</string><!--put your facebook app id-->
-    <string name="google_map_api_key"> AIzaSyCut_UpCItTRN7Blad2ooEP5x8f3fX-Rq4 </string><!--put your google map key from google api console-->
+    <string name="google_map_api_key">AIzaSyD2Cp9HczZQeuJVxdHnxajEJkzdJXlWpCM</string><!--put your google map key from google api console-->
     <string name="servers_client_id">612096447830-v96ehhvmol8jrj44i0ps07dho3lt1cj6.apps.googleusercontent.com</string><!--put server client id from google api console -->
 
     <!--McD8c7RCgP7lLD_viXa_kp1_  google client secret Gogle plus api//-->
@@ -375,7 +377,7 @@
     <!-- Links -->
     <string name="termsNconditionsUrl"></string><!--here terms and condition link -->
     <string name="privacyPolicyUrl"></string><!--here privacy policy link -->
-    <string name="share_item_base_url">/</string><!--here item share link -->
+    <string name="share_item_base_url">https://developers.facebook.com</string><!--here item share link -->
     <!--Country iso code and number-->
     <string-array name="countryCodes">
     <!--Country iso code and number-->
@@ -1115,7 +1117,7 @@
     <string name="AnotherAudio">Audio can\'t be selected,Try another audio!!</string>
     <string name="AllowLocation">Allow location access!!</string>
     <string name="EnableLocation">Enable location services!!</string>
-    <string name="string_803">Yelo File Uploading</string>
+    <string name="string_803">Guitar Amps File Uploading</string>
     <string name="Online">Online</string>
     <string name="Loading">Loading&#8230;</string>
     <string name="updating">Updating&#8230;</string>
@@ -1276,7 +1278,7 @@
     <string name="not_register_task">This product is not register for Chat!</string>
     <string name="stay_safe_text">STAY SAFE</string>
     <string name="seft_hint_one">Meet in person and pay by Paypal.Me</string>
-    <string name="seft_hint_two">Keep conversation in the Yelo chat.</string>
+    <string name="seft_hint_two">Keep conversation in the Guitar Amps chat.</string>
     <string name="seft_hint_three">Too good to be true? Find another buyer/seller.</string>
     <string name="ok_text">OK</string>
     <string name="stay_safe_title">STAY SAFE</string>

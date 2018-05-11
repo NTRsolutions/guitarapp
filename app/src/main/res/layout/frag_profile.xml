@@ -226,6 +226,7 @@
 
                     <!-- Verified by -->
                     <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                        android:visibility="gone"
                         android:layout_marginTop="@dimen/ten_dp"
                         android:textColor="@color/sub_heading"
                         android:textSize="@dimen/small_text_size"
@@ -234,6 +235,7 @@
                         android:layout_height="wrap_content" />
 
                     <LinearLayout
+                        android:visibility="gone"
                         android:layout_marginTop="@dimen/five_dp"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
@@ -314,6 +316,7 @@
 
                     <!-- Post count, follower count & following count -->
                     <LinearLayout
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/fifteen_dp"

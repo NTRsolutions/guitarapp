@@ -37,8 +37,8 @@ public class VariableConstants
     public static final int VERIFY_EMAIL_REQ_CODE=757;
     public static final int SELLING_REQ_CODE=680;
     public static final int PAYPAL_REQ_CODE=979;
-    public static final String TWITTER_KEY = "";//twitter key
-    public static final String TWITTER_SECRET = "";//twitter secret key
+    public static final String TWITTER_KEY = "rcemnSzvjvkBmJqwtnHQFlCYC";//twitter key
+    public static final String TWITTER_SECRET = "aaUBAOi5yxj5Fd3KHb13Qa3zvY74ZBY8Ix9eAoLWXzORQDRMim";//twitter secret key
     public static final int TWEETER_REQUEST_CODE = 478;
     public static boolean IS_TO_SHOW_START_BROWSING=false;
     public static final String GET_PAYPAL_LINK="https://www.paypal.com/paypalme/grab";

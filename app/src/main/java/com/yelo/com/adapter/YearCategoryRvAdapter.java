@@ -120,4 +120,10 @@ public class YearCategoryRvAdapter extends RecyclerView.Adapter<YearCategoryRvAd
     {
         clickListener=listener;
     }
+
+
+    public void updateList(List<String> list){
+        aL_categoryDatas = list;
+        notifyDataSetChanged();
+    }
 }
