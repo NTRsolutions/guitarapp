@@ -170,16 +170,16 @@ public class SelfProfileActivity extends AppCompatActivity implements View.OnCli
         {
             Picasso.with(mActivity)
                     .load(profilePic)
-                    .placeholder(R.drawable.default_profile_image)
-                    .error(R.drawable.default_profile_image)
+                    .placeholder(R.drawable.profile_bg)
+                    .error(R.drawable.profile_bg)
                     .transform(new CircleTransform())
                     .into(iV_profile_pic);
 
             Glide.with(mActivity)
                     .load(profilePic)
                     .transform(new PositionedCropTransformation((mActivity), 0, 0))
-                    .placeholder(R.drawable.default_profile_cover_pic)
-                    .error(R.drawable.default_profile_cover_pic)
+                    .placeholder(R.drawable.default_cover_image)
+                    .error(R.drawable.default_cover_image)
                     .into(iv_background);
         }
 

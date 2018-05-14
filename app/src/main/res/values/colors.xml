@@ -37,7 +37,7 @@
     <color name="tab_unselected_color">#b5a7d4</color>
     <color name="item_name_color">#282828</color>
     <color name="pink_color">#518ef8</color>
-    <color name="thick_divider_color">#fbfaff</color>
+    <color name="thick_divider_color">#FFFFFF</color>
     <color name="gallery_img_bg">#ece8ddff</color>
     <color name="half_white_transparant">#88ffffff</color>
     <color name="snapNpostColor">#b0b0b0</color>
@@ -85,7 +85,7 @@
     <color name="change_location">#484848</color>
     <color name="hide_button_border_color">#b7b7b7</color>
     <color name="reset_button_bg">#c4c4c4</color>
-    <color name="price_fill_color">#f9f6ff</color>
+    <color name="price_fill_color">#E1ffff</color>
     <!--<color name="price_text_color">#6d3ec1</color>-->
     <color name="price_text_color">#BABABA</color>
     <!-- Post product -->

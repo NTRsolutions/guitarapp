@@ -76,7 +76,7 @@
             android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:background="@color/gallery_img_bg">
+            android:background="@color/light_blue_color">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rV_capturedImages"

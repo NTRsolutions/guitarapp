@@ -19,7 +19,7 @@
             android:id="@+id/iV_profilePicUrl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/default_circle_img"
+            android:src="@drawable/app_launcher_logo"
             android:contentDescription="@string/simple_image_view"
             />
         <RelativeLayout

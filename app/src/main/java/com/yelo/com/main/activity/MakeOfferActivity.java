@@ -306,7 +306,39 @@ public class MakeOfferActivity extends AppCompatActivity implements View.OnClick
                 onBackPressed();
                 break;
             case R.id.make_offer:
-                makeOffer();
+//                makeOffer();
+
+
+                // new code
+                if(receiverMqttId==null||receiverMqttId.isEmpty())
+                {
+                    Toast.makeText(this, R.string.mqtt_user_not_text,Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                String digivalue;
+                String priceValue=tV_price.getText().toString();
+                if(!priceValue.isEmpty())
+                {
+                    priceValue = priceValue.replaceAll("[^a-zA-Z0-9 .,]|(?<!\\d)[.,]|[.,](?!\\d)", "");
+                    Log.d("amountvalue",""+priceValue);
+                    //priceValue = priceValue.replaceAll("\\D+","");
+                    digivalue=priceValue.trim();
+                    if(digivalue.length()<1)
+                    {
+                        return;
+                    }
+                }else
+                {
+                    return;
+                }
+
+
+               Intent intent = new Intent(mActivity, PaymentActivity.class);
+               intent.putExtra( PaymentActivity.KEY_PRICE, digivalue+"/"+postId );
+               startActivity(intent);
+//                        isToStartActivity = false;
+
+
                 break;
         }
     }
@@ -373,6 +405,16 @@ public class MakeOfferActivity extends AppCompatActivity implements View.OnClick
                 requestDats.put("type","0");
                 requestDats.put("membername",member_name);
                 requestDats.put("sendchat",createMessageObject(digivalue));
+
+
+
+//                requestDats.put("auth_token",sessionManager.getAuthToken());
+//                requestDats.put("type","0");
+//                requestDats.put("postId",postId);
+//                requestDats.put("price",digivalue);
+//
+//                requestDats.put("membername",member_name);
+//                requestDats.put("sendchat",createMessageObject(digivalue));
             } catch (Exception e)
             {
                 e.printStackTrace();

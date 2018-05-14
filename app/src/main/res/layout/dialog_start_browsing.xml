@@ -21,7 +21,7 @@
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/start_broswing_icon"
+            android:src="@drawable/complete_browse_image"
             android:contentDescription="@string/simple_image_view"/>
 
         <com.yelo.com.custom_fonts.TextViewRobotoMedium

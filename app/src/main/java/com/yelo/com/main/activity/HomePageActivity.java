@@ -97,8 +97,8 @@ public class HomePageActivity extends AppCompatActivity
             boolean isFromSignup = intent.getBooleanExtra("isFromSignup",false);
             System.out.println(TAG+" "+"isFromSignup first="+isFromSignup);
 
-//            if (isFromSignup)
-//                new DialogBox(mActivity).startBrowsingDialog();
+            if (isFromSignup)
+                new DialogBox(mActivity).startBrowsingDialog();
         }
         initBottomNavView();
         /*

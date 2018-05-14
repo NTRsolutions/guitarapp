@@ -143,11 +143,11 @@
             android:layout_height="45dp"
             android:background="@color/price_fill_color"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/colorPrimaryDark"
+            app:tabIndicatorColor="@color/pink_color"
             app:tabIndicatorHeight="2.5dp"
             app:tabMaxWidth="0dp"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/black"
+            app:tabSelectedTextColor="@color/pink_color"
             app:tabTextAppearance="@style/AppTabTextAppearance"
             app:tabTextColor="@color/colorPrimaryDark" />
     </android.support.design.widget.AppBarLayout>

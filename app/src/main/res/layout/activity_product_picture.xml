@@ -26,14 +26,16 @@
     </android.support.v7.widget.Toolbar>
 
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
 
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerViewProductPicture"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
             android:layout_marginTop="30dp"
             app:layoutManager="android.support.v7.widget.GridLayoutManager"
             app:spanCount="2"/>
@@ -41,15 +43,18 @@
 
         <RelativeLayout
             android:id="@+id/rL_sell_stuff"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:paddingLeft="@dimen/twenty_dp"
             android:paddingRight="@dimen/twenty_dp"
             android:paddingTop="@dimen/eight_dp"
+            android:layout_gravity="center"
             android:paddingBottom="@dimen/eight_dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
 
             android:background="@drawable/rounded_rectangular_purple_color_with_solid_shape">
             <ImageView
@@ -68,10 +73,10 @@
                 android:layout_toEndOf="@+id/camera_icon"
                 android:layout_toRightOf="@+id/camera_icon"
                 android:text="@string/sell_your_stuff"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/subheading_text_size" />
         </RelativeLayout>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

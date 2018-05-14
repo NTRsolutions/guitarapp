@@ -178,13 +178,13 @@
                     android:layout_toRightOf="@+id/distance"
                     android:textAllCaps="true"
                     android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
+                    android:gravity="left|center"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/fourty_five_dp"
                     android:text="@string/colon_symbol"
                     android:textSize="@dimen/small_text_size"
-                    android:layout_marginStart="@dimen/five_dp"
-                    android:layout_marginLeft="@dimen/five_dp"
+
+
                     android:textColor="@color/heading_color"
                     />
                 <com.yelo.com.custom_fonts.TextViewRobotoRegular

@@ -24,9 +24,9 @@
 
         <ImageView
             android:id="@+id/tV_delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/cross_purple_color"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:src="@drawable/cross"
             android:layout_marginStart="-8dp"
             android:layout_marginLeft="-8dp"
             android:layout_toEndOf="@+id/tV_filter"

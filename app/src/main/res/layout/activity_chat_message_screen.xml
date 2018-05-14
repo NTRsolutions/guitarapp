@@ -195,7 +195,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp">
                 <RelativeLayout
-                    android:background="@color/gallery_img_bg"
+                    android:background="@color/light_blue_color"
                     android:id="@+id/product_view"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -207,7 +207,9 @@
                         android:layout_height="match_parent"
                         app:cardCornerRadius="3dp"
                         android:layout_margin="5dp"
-                        android:elevation="2dp">
+                        android:elevation="2dp"
+                        android:visibility="gone"
+                        >
                         <ImageView
                             android:contentDescription="@string/app_name"
                             android:id="@+id/round_image_view"
@@ -215,9 +217,11 @@
                             android:layout_height="match_parent"
                             android:src="@drawable/start_broswing_icon"
                             android:background="@color/white"
+
                             android:scaleType="centerCrop" />
                     </android.support.v7.widget.CardView>
                     <RelativeLayout
+                        android:layout_marginLeft="10dp"
                         android:layout_toRightOf="@+id/round_corner_img"
                         android:layout_toEndOf="@+id/round_corner_img"
                         android:id="@+id/product_details"
@@ -258,7 +262,7 @@
                             android:padding="2dp"
                             android:layout_width="60dp"
                             android:text="@string/detailsText"
-                            android:textColor="@color/google_bg_color"
+                            android:textColor="@color/black"
                             android:layout_height="match_parent" />
                         <TextView
                             android:visibility="gone"

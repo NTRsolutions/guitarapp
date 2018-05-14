@@ -156,8 +156,8 @@ public class DiscoveryPeopleRvAdapter extends RecyclerView.Adapter<RecyclerView.
                 Picasso.with(mActivity)
                         .load(profilePicUrl)
                         .transform(new CircleTransform())
-                        .placeholder(R.drawable.default_circle_img)
-                        .error(R.drawable.default_circle_img)
+                        .placeholder(R.drawable.app_launcher_logo)
+                        .error(R.drawable.app_launcher_logo)
                         .into(itemViewHolder.iV_profilePicUrl);
 
             // follow and following icon
@@ -258,8 +258,8 @@ public class DiscoveryPeopleRvAdapter extends RecyclerView.Adapter<RecyclerView.
                         Picasso.with(mActivity)
                                 .load(thumbnailImageUrl)
                                 .transform(new RoundedCornersTransform())
-                                .placeholder(R.drawable.default_image)
-                                .error(R.drawable.default_image)
+                                .placeholder(R.drawable.app_launcher_logo)
+                                .error(R.drawable.app_launcher_logo)
                                 .into(iV_thumbnailImage);
                     itemViewHolder.linear_postData.addView(view);
                 }

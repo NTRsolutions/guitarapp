@@ -89,6 +89,12 @@ public class ProfileSettingActivity extends Activity implements View.OnClickList
         RelativeLayout rL_termsNcondition= (RelativeLayout) findViewById(R.id.rL_termsNcondition);
         rL_termsNcondition.setOnClickListener(this);
 
+        // Terms and condition
+        RelativeLayout rL_Payment= (RelativeLayout) findViewById(R.id.rL_payment);
+        rL_Payment.setOnClickListener(this);
+
+
+
         // set app version
         TextView tV_version= (TextView) findViewById(R.id.tV_version);
         try {
@@ -199,6 +205,20 @@ public class ProfileSettingActivity extends Activity implements View.OnClickList
                     startActivity(browserIntent);
                     isToStartActivity = false;
                 }
+                }
+                break;
+
+
+            case R.id.rL_payment :
+                if (isToStartActivity) {
+
+
+//                        intent = new Intent(mActivity, PaymentActivity.class);
+//                        startActivity(intent);
+//                        isToStartActivity = false;
+
+
+
                 }
                 break;
         }

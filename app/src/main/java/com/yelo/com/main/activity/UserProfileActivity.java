@@ -621,8 +621,8 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
                     boolean isFromSignup = data.getBooleanExtra("isFromSignup",false);
 
                     // open start browsering screen
-//                    if (isFromSignup)
-//                        new DialogBox(mActivity).startBrowsingDialog();
+                    if (isFromSignup)
+                        new DialogBox(mActivity).startBrowsingDialog();
 
                     break;
 

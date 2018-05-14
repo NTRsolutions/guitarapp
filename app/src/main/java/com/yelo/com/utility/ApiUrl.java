@@ -381,4 +381,9 @@ public class ApiUrl
   */
  public static final String SEARCH_MODELS_MANUFACTURER=BASE_URL+"getManufacturerModel";
 
+ /**
+  * search models of manufacturere
+  */
+ public static final String PAYMENT=BASE_URL+"MakePayment";
+
 }

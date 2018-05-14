@@ -4827,7 +4827,16 @@ public class ChatMessageScreen extends AppCompatActivity
          */
         top = "";
         opponentOnline = false;
-        AppController.getInstance().subscribeToTopic(MqttEvents.OnlineStatus.value+"/"+receiverUid, 0);
+
+        try {
+            AppController.getInstance().subscribeToTopic(MqttEvents.OnlineStatus.value+"/"+receiverUid, 0);
+        }catch (Exception e){
+            e.printStackTrace();
+
+        }
+
+
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {

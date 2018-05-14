@@ -116,7 +116,7 @@ public class ImagesHorizontalRvAdap extends RecyclerView.Adapter<RecyclerView.Vi
                             .load(path)
                             .asBitmap()
                             .transform(new MyTransformation(mActivity, image.getRotateAngle(), String.valueOf(System.currentTimeMillis())), new FitCenter(mActivity))
-                            .placeholder(R.drawable.default_image)
+                            .placeholder(R.drawable.app_launcher_logo)
                             .into(myViewHolder.iV_captured_img);
 
                 } catch (OutOfMemoryError e) {

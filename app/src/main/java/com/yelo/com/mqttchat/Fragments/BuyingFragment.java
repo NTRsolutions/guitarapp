@@ -125,6 +125,8 @@ public class BuyingFragment extends Fragment
                 if (position >= 0)
                 {
                     final ChatlistItem item = mAdapter.getList().get(position);
+
+
                     Intent intent;
                     intent = new Intent(view.getContext(), ChatMessageScreen.class);
                     intent.putExtra("isNew", false);

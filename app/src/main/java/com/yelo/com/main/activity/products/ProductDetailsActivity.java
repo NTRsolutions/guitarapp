@@ -510,6 +510,9 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                             productResponse=productDetailsMain.getData().get(0);
                             isToMakeOffer=true;
                             receiverMqttId =productResponse.getMemberMqttId();
+
+
+
                             tV_makeoffer.setBackgroundColor(ContextCompat.getColor(mActivity,R.color.status_bar_color));
                             productName=productResponse.getProductName();
                             productImage=productResponse.getMainUrl();
@@ -1268,11 +1271,18 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                 break;
 
             case R.id.rL_chat_icon :
-                if (isToMakeOffer ) {
-                    if (mSessionManager.getIsUserLoggedIn()) {
-                        initiateChat();
-                    } else startActivityForResult(new Intent(mActivity,LandingActivity.class), VariableConstants.LANDING_REQ_CODE);
+
+
+                try {
+                    if (isToMakeOffer ) {
+                        if (mSessionManager.getIsUserLoggedIn()) {
+                            initiateChat();
+                        } else startActivityForResult(new Intent(mActivity,LandingActivity.class), VariableConstants.LANDING_REQ_CODE);
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
+
                 break;
         }
     }
@@ -1518,8 +1528,8 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                     boolean isFromSignup = data.getBooleanExtra("isFromSignup",false);
 
                     // open start browsering screen
-//                    if (isFromSignup)
-//                        new DialogBox(mActivity).startBrowsingDialog();
+                    if (isFromSignup)
+                        new DialogBox(mActivity).startBrowsingDialog();
 
                     if (runTimePermission.checkPermissions(permissionsArray))
                     {
@@ -1559,40 +1569,47 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
      *initiate chat with out offer. */
     private void initiateChat()
     {
-        if(receiverMqttId==null||receiverMqttId.isEmpty())
-        {
-            Toast.makeText(this, R.string.not_register_task,Toast.LENGTH_SHORT).show();
-            return;
+
+        try {
+            if(receiverMqttId==null||receiverMqttId.isEmpty())
+            {
+                Toast.makeText(this, R.string.not_register_task,Toast.LENGTH_SHORT).show();
+                return;
+            }
+            String doucumentId = AppController.getInstance().findDocumentIdOfReceiver(receiverMqttId,postId);
+            boolean isChatNotExist;
+            if (doucumentId.isEmpty())
+            {
+                doucumentId=null;
+                isChatNotExist=true;
+            }else
+            {
+                isChatNotExist=false;
+                AppController.getInstance().getDbController().updateChatDetails(doucumentId,membername,memberProfilePicUrl);
+            }
+            Intent intent;
+            intent = new Intent(this,ChatMessageScreen.class);
+            intent.putExtra("isChatNotExist",isChatNotExist);
+            intent.putExtra("productId", postId);
+            intent.putExtra("receiverUid", receiverMqttId);
+            intent.putExtra("receiverName",membername);
+            intent.putExtra("documentId",doucumentId);
+            intent.putExtra("receiverIdentifier",AppController.getInstance().getUserIdentifier());
+            intent.putExtra("receiverImage",memberProfilePicUrl);
+            intent.putExtra("colorCode", AppController.getInstance().getColorCode(1% 19));
+            intent.putExtra("isFromOfferPage",false);
+            if(fromChatScreen.equals("0"))
+            {
+                startActivity(intent);
+            }else
+            {
+                mActivity.finish();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
-        String doucumentId = AppController.getInstance().findDocumentIdOfReceiver(receiverMqttId,postId);
-        boolean isChatNotExist;
-        if (doucumentId.isEmpty())
-        {
-            doucumentId=null;
-            isChatNotExist=true;
-        }else
-        {
-            isChatNotExist=false;
-            AppController.getInstance().getDbController().updateChatDetails(doucumentId,membername,memberProfilePicUrl);
-        }
-        Intent intent;
-        intent = new Intent(this,ChatMessageScreen.class);
-        intent.putExtra("isChatNotExist",isChatNotExist);
-        intent.putExtra("productId", postId);
-        intent.putExtra("receiverUid", receiverMqttId);
-        intent.putExtra("receiverName",membername);
-        intent.putExtra("documentId",doucumentId);
-        intent.putExtra("receiverIdentifier",AppController.getInstance().getUserIdentifier());
-        intent.putExtra("receiverImage",memberProfilePicUrl);
-        intent.putExtra("colorCode", AppController.getInstance().getColorCode(1% 19));
-        intent.putExtra("isFromOfferPage",false);
-        if(fromChatScreen.equals("0"))
-        {
-            startActivity(intent);
-        }else
-        {
-            mActivity.finish();
-        }
+
+
     }
 
     private void checkForPermission()

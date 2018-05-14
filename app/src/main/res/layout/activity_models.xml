@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+
     android:id="@+id/rL_rootview">
 
     <!--action bar-->
@@ -38,6 +39,22 @@
             android:textSize="@dimen/action_bar_text_size"/>
     </RelativeLayout>
 
+
+    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+        android:id="@+id/ed_search"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/make"
+        android:paddingLeft="7dp"
+        android:gravity="center"
+        android:inputType="text"
+        android:background="@drawable/edittext_bottom_line"
+
+
+        />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rV_category"
         android:layout_below="@+id/rL_action_bar"
@@ -57,4 +74,4 @@
         />
 
 
-</RelativeLayout>
+</LinearLayout>

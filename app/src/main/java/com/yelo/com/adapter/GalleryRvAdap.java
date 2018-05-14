@@ -91,7 +91,7 @@ public class GalleryRvAdap extends RecyclerView.Adapter<GalleryRvAdap.MyViewHold
                     .load("file://"+imageUrl)
                     .asBitmap()
                     .transform(new MyTransformation(mActivity, rotationAngle, String.valueOf(System.currentTimeMillis())), new FitCenter(mActivity))
-                    .placeholder(R.drawable.default_image)
+                    .placeholder(R.drawable.app_launcher_logo)
                     // .fitCenter()
                     .into(holder.imageView);
 

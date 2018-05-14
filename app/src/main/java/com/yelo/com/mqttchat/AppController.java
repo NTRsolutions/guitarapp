@@ -3164,6 +3164,8 @@ public class AppController extends android.support.multidex.MultiDexApplication 
                 pushMessage = "Gif";
         }
         sendPushToSingleInstance(to,title,pushMessage,productId,receiverId);
+
+//        FirebaseMessaging.getInstance().subscribeToTopic(to);
     }
     /*
      * Sending message to the FCM*/

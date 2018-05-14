@@ -130,7 +130,7 @@
             android:layout_toEndOf="@+id/ts"
             android:layout_toRightOf="@+id/ts"
             android:tint="@color/white"
-            android:background="@drawable/ic_double_tick"
+            android:background="@drawable/ic_single_tick"
             android:visibility="gone" />
 
         <android.support.v7.widget.AppCompatImageView
@@ -146,7 +146,7 @@
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@+id/ts"
             android:layout_toRightOf="@+id/ts"
-            android:src="@drawable/ic_double_tick"
+            android:src="@drawable/ic_single_tick"
             android:tint="@color/white"
             android:visibility="gone" />
     </RelativeLayout>

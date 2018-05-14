@@ -94,6 +94,11 @@ public class MeksCategoryRvAdapter extends RecyclerView.Adapter<MeksCategoryRvAd
         return aL_categoryDatas.size();
     }
 
+    public void updateList(List<AllMakes> testList) {
+        aL_categoryDatas  = testList;
+        notifyDataSetChanged();
+    }
+
     /**
      * <h>MyViewHolder</h>
      * <p>

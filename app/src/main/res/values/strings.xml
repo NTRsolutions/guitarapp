@@ -178,7 +178,7 @@
     <string name="search_text">Search…</string>
     <string name="search_post">Search Posts</string>
     <string name="search_people">Search Peoples</string>
-    <string name="no_post">No Post</string>
+    <string name="no_post">No Posts</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="termsNcondition">Terms &amp; Conditions</string>
     <string name="logout">Logout</string>
@@ -263,9 +263,9 @@
     <string name="please_enter_price">Please enter price</string>
     <string name="please_enter_location">Please enter location</string>
     <string name="at_least_one_image_is">At least one photo is mandatory</string>
-    <string name="add_upto_4_more_img">Add up to 4 more photo(optional)</string>
-    <string name="add_upto_3_more_img">Add up to 3 more photo(optional)</string>
-    <string name="add_upto_2_more_img">Add up to 2 more photo(optional)</string>
+    <string name="add_upto_4_more_img">Add up to 4 more photos(optional)</string>
+    <string name="add_upto_3_more_img">Add up to 3 more photos(optional)</string>
+    <string name="add_upto_2_more_img">Add up to 2 more photos(optional)</string>
     <string name="add_upto_1_more_img">Add up to 1 more photo(optional)</string>
     <string name="congratulation">Congratulations !</string>
     <string name="successfully_posted">Successfully posted your listing.</string>
@@ -311,11 +311,11 @@
     <string name="country_name">Country name</string>
     <string name="select_country">Select Country Code</string>
     <string name="notification">Notifications</string>
-    <string name="min_dist">0 miles</string>
+    <string name="min_dist">0 Miles</string>
     <string name="max">Max</string>
     <string name="min_price">Min</string>
     <string name="max_price">Max</string>
-    <string name="km">miles</string>
+    <string name="km">Miles</string>
     <string name="Followers">Followers</string>
     <string name="Following">Following</string>
     <string name="likes">Likes</string>

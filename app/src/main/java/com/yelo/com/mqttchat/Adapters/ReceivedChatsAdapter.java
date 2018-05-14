@@ -181,7 +181,8 @@ public class ReceivedChatsAdapter extends RecyclerView.Adapter<RecyclerView.View
             }
             Log.d("log14", chat.isShowTick() + "" + chat.getTickStatus());
             vh.tick.clearColorFilter();
-            vh.tick.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_double_tick));
+//            vh.tick.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_double_tick));
+            vh.tick.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_single_tick));
             vh.tick.setVisibility(View.GONE);
             if(chat.isSold())
             {
@@ -204,10 +205,12 @@ public class ReceivedChatsAdapter extends RecyclerView.Adapter<RecyclerView.View
                         vh.tick.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_single_tick));
                     } else if (chat.getTickStatus() == 2) {
                         vh.tick.clearColorFilter();
-                        vh.tick.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_double_tick));
+//                        vh.tick.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_double_tick));
+                        vh.tick.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_single_tick));
                     } else if (chat.getTickStatus() == 3) {
                         vh.tick.setColorFilter(ContextCompat.getColor(mContext, R.color.chat_blue_tick), PorterDuff.Mode.SRC_IN);
-                        vh.tick.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_double_tick));
+//                        vh.tick.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_double_tick));
+                        vh.tick.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_single_tick));
                     }
                 } else {
                     vh.tick.setVisibility(View.GONE);

@@ -61,9 +61,16 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
-        String upperString = mList.get( position ).getName().substring(0,1).toUpperCase() + mList.get( position ).getName().substring(1);
+        StringBuffer res = new StringBuffer();
+        String[] strArr = mList.get( position ).getName().split(" ");
+        for (String str : strArr) {
+            char[] stringArray = str.trim().toCharArray();
+            stringArray[0] = Character.toUpperCase(stringArray[0]);
+            str = new String(stringArray);
 
-        holder.textViewProduct.setText( upperString);
+            res.append(str).append(" ");
+        }
+        holder.textViewProduct.setText(res);
 
         Glide.with( AppController.getInstance() ).load(  mList.get( position ).getActiveimage() ).into( holder.imageViewProduct );
 

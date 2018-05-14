@@ -9,7 +9,11 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
@@ -21,6 +25,7 @@ import com.yelo.com.fcm_push_notification.Config;
 import com.yelo.com.fcm_push_notification.NotificationMessageDialog;
 import com.yelo.com.fcm_push_notification.NotificationUtils;
 import com.yelo.com.pojo_class.productcategory.AllMakes;
+import com.yelo.com.pojo_class.productcategory.AllModels;
 import com.yelo.com.pojo_class.productcategory.Homecat;
 import com.yelo.com.pojo_class.productcategory.Searchamp;
 import com.yelo.com.pojo_class.productcategory.YearsForManufacturer;
@@ -33,6 +38,7 @@ import com.yelo.com.utility.VariableConstants;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -51,11 +57,13 @@ public class MakeModelsActivity extends AppCompatActivity implements View.OnClic
     private static final String TAG = MakeModelsActivity.class.getSimpleName();
     private ProgressBar progress_bar;
     private Activity mActivity;
-    private RelativeLayout rL_rootview;
+    private LinearLayout rL_rootview;
     private RecyclerView rV_category;
     private NotificationMessageDialog mNotificationMessageDialog;
     int CatId ;
-
+    EditText mEdSearch;
+    MeksCategoryRvAdapter categoryRvAdapter;
+     List<AllMakes> aL_categoryDatas = new ArrayList<>(  );
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -67,10 +75,33 @@ public class MakeModelsActivity extends AppCompatActivity implements View.OnClic
         mNotificationMessageDialog=new NotificationMessageDialog(mActivity);
         CommonClass.statusBarColor(mActivity);
         progress_bar= (ProgressBar) findViewById(R.id.progress_bar);
-        rL_rootview= (RelativeLayout) findViewById(R.id.rL_rootview);
+        rL_rootview= (LinearLayout) findViewById(R.id.rL_rootview);
         rV_category= (RecyclerView) findViewById(R.id.rV_category);
         RelativeLayout rL_back_btn = (RelativeLayout) findViewById(R.id.rL_back_btn);
         rL_back_btn.setOnClickListener(this);
+
+        mEdSearch = findViewById( R.id.ed_search );
+
+
+        mEdSearch.addTextChangedListener( new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+
+                filter( s.toString() );
+            }
+        } );
+
 
         getCategoriesService();
     }
@@ -142,30 +173,32 @@ public class MakeModelsActivity extends AppCompatActivity implements View.OnClic
 
                         // success
                         case 200 :
-                            final List<AllMakes> aL_categoryDatas=homecat.getAllMakes();
+                         aL_categoryDatas=homecat.getAllMakes();
                             if (aL_categoryDatas!=null && aL_categoryDatas.size()>0)
                             {
-                                MeksCategoryRvAdapter categoryRvAdapter=new MeksCategoryRvAdapter(MakeModelsActivity.this,aL_categoryDatas);
+                                 categoryRvAdapter=new MeksCategoryRvAdapter(MakeModelsActivity.this,aL_categoryDatas);
                                 LinearLayoutManager layoutManager=new LinearLayoutManager(mActivity);
 
                                 rV_category.setLayoutManager(layoutManager);
                                 rV_category.setAdapter(categoryRvAdapter);
 
-                                categoryRvAdapter.setOnItemClick(new ClickListener() {
-                                    @Override
-                                    public void onItemClick(View view, int position) {
-                                        String categoryName=aL_categoryDatas.get(position).getModel().toString();
-                                        if (categoryName!=null && !categoryName.isEmpty())
-                                        {
-                                            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
-                                            Intent intent=new Intent();
-                                            intent.putExtra("make_name",categoryName);
-                                            setResult(VariableConstants.MODEL_REQUEST_MAKE_CODE,intent);
-                                            onBackPressed();
-                                            finish();
-                                        }
-                                    }
-                                });
+                                filter("");
+//
+//                                categoryRvAdapter.setOnItemClick(new ClickListener() {
+//                                    @Override
+//                                    public void onItemClick(View view, int position) {
+//                                        String categoryName=aL_categoryDatas.get(position).getModel().toString();
+//                                        if (categoryName!=null && !categoryName.isEmpty())
+//                                        {
+//                                            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
+//                                            Intent intent=new Intent();
+//                                            intent.putExtra("make_name",categoryName);
+//                                            setResult(VariableConstants.MODEL_REQUEST_MAKE_CODE,intent);
+//                                            onBackPressed();
+//                                            finish();
+//                                        }
+//                                    }
+//                                });
 
                             }
                             break;
@@ -202,4 +235,68 @@ public class MakeModelsActivity extends AppCompatActivity implements View.OnClic
                 break;
         }
     }
+
+
+    List<AllMakes> temp = null;
+    void filter(String text){
+
+        if(    categoryRvAdapter != null) {
+
+
+            if(text.length() == 0){
+                categoryRvAdapter.updateList( aL_categoryDatas );
+
+                categoryRvAdapter.setOnItemClick(new ClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        String categoryName=   aL_categoryDatas.get(position).getModel();
+                        if (categoryName!=null && !categoryName.isEmpty())
+                        {
+                            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
+                            Intent intent=new Intent();
+                            intent.putExtra("make_name",categoryName);
+                            setResult(VariableConstants.MODEL_REQUEST_MAKE_CODE,intent);
+                            onBackPressed();
+                            finish();
+                        }
+                    }
+                });
+
+            }else {
+
+                temp = new ArrayList();
+                for (AllMakes d : aL_categoryDatas) {
+                    //or use .equal(text) with you want equal match
+                    //use .toLowerCase() for better matches
+
+                    if (d.getModel().toLowerCase().contains( text.toLowerCase() )) {
+                        temp.add( d );
+                    }
+                }
+                categoryRvAdapter.updateList( temp );
+
+                categoryRvAdapter.setOnItemClick(new ClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        String categoryName=temp.get(position).getModel();
+                        if (categoryName!=null && !categoryName.isEmpty())
+                        {
+                            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
+                            Intent intent=new Intent();
+                            intent.putExtra("make_name",categoryName);
+                            setResult(VariableConstants.MODEL_REQUEST_MAKE_CODE,intent);
+                            onBackPressed();
+                            finish();
+                        }
+                    }
+                });
+            }
+            //update recyclerview
+
+
+
+
+        }
+    }
+
 }

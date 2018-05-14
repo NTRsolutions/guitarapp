@@ -31,36 +31,65 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = MyFirebaseMessagingService.class.getSimpleName();
     private NotificationUtils notificationUtils;
 
+
+    private SessionManager mSessionManager;
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         Log.e(TAG, "From: " + remoteMessage.getFrom());
-
+        mSessionManager = new SessionManager(getApplicationContext());
+        String id = mSessionManager.getmqttId()+"/"+remoteMessage.getFrom();
         // Check if message contains a notification payload.
-        if (remoteMessage.getNotification() != null) {
-            Log.e(TAG, "Notification Body: " + remoteMessage.getNotification().getBody());
-            //handleNotification(remoteMessage.getNotification().getBody());
-            //sendNotification(remoteMessage.getNotification().getBody());
 
-            Intent resultIntent = new Intent(getApplicationContext(), NotificationActivity.class);//MainActivity
-            resultIntent.putExtra("message", "message");
-            resultIntent.putExtra("isFromNotification",true);
-            tempShowNotificationMessage(getApplicationContext(), getResources().getString(R.string.app_name), remoteMessage.getNotification().getBody(), "", resultIntent);
+        if(mSessionManager != null) {
 
-            // app is in foreground, broadcast the push message
-            Intent pushNotification = new Intent(Config.PUSH_NOTIFICATION);
-            pushNotification.putExtra("message", remoteMessage.getNotification().getBody());
-            LocalBroadcastManager.getInstance(this).sendBroadcast(pushNotification);
-        }
+            JSONObject json = null;
+            String ComingFromId = "";
+            if (remoteMessage.getData().size() > 0) {
+                Log.e( TAG, "Data Payload: " + remoteMessage.getData().toString() );
 
-        // Check if message contains a data payload.
-        if (remoteMessage.getData().size() > 0) {
-            Log.e(TAG, "Data Payload: " + remoteMessage.getData().toString());
+                try {
+                     json = new JSONObject( remoteMessage.getData().toString() );
 
-            try {
-                JSONObject json = new JSONObject(remoteMessage.getData().toString());
-                handleDataMessage(json);
-            } catch (Exception e) {
-                Log.e(TAG, "Exception: " + e.getMessage());
+                     JSONObject body = new JSONObject(  );
+                     body = json.getJSONObject( "body" );
+
+                     ComingFromId = body.optString( "receiverID" );
+                } catch (Exception e) {
+                    Log.e( TAG, "Exception: " + e.getMessage() );
+                }
+            }else {
+                return;
+            }
+
+            if (!ComingFromId.equalsIgnoreCase( mSessionManager.getmqttId() )) {
+
+                if (remoteMessage.getNotification() != null) {
+                    Log.e( TAG, "Notification Body: " + remoteMessage.getNotification().getBody() );
+                    //handleNotification(remoteMessage.getNotification().getBody());
+                    //sendNotification(remoteMessage.getNotification().getBody());
+
+                    Intent resultIntent = new Intent( getApplicationContext(), NotificationActivity.class );//MainActivity
+                    resultIntent.putExtra( "message", "message" );
+                    resultIntent.putExtra( "isFromNotification", true );
+                    tempShowNotificationMessage( getApplicationContext(), getResources().getString( R.string.app_name ), remoteMessage.getNotification().getBody(), "", resultIntent );
+
+                    // app is in foreground, broadcast the push message
+                    Intent pushNotification = new Intent( Config.PUSH_NOTIFICATION );
+                    pushNotification.putExtra( "message", remoteMessage.getNotification().getBody() );
+                    LocalBroadcastManager.getInstance( this ).sendBroadcast( pushNotification );
+                }
+
+                // Check if message contains a data payload.
+                if (remoteMessage.getData().size() > 0) {
+                    Log.e( TAG, "Data Payload: " + remoteMessage.getData().toString() );
+
+                    try {
+
+                        handleDataMessage( json );
+                    } catch (Exception e) {
+                        Log.e( TAG, "Exception: " + e.getMessage() );
+                    }
+                }
             }
         }
     }

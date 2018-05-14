@@ -103,8 +103,8 @@ public class PhoneContactRvAdapter extends RecyclerView.Adapter<PhoneContactRvAd
             Picasso.with(mActivity)
                     .load(profilePicUrl)
                     .transform(new CircleTransform())
-                    .placeholder(R.drawable.default_circle_img)
-                    .error(R.drawable.default_circle_img)
+                    .placeholder(R.drawable.app_launcher_logo)
+                    .error(R.drawable.app_launcher_logo)
                     .into(holder.iV_profilePicUrl);
 
         // follow and following icon

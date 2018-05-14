@@ -95,6 +95,12 @@ public class ModelCategoryRvAdapter extends RecyclerView.Adapter<ModelCategoryRv
         return aL_categoryDatas.size();
     }
 
+    public void updateList(List<AllModels> temp) {
+
+        aL_categoryDatas = temp;
+        notifyDataSetChanged();
+    }
+
     /**
      * <h>MyViewHolder</h>
      * <p>

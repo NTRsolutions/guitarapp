@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/empty_chat_icon"
+                android:src="@drawable/messages"
                 android:contentDescription="@string/simple_image_view"/>
             <com.yelo.com.custom_fonts.TextViewRobotoRegular
                 android:layout_marginTop="@dimen/twenty_dp"

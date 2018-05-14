@@ -1094,7 +1094,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
 
 
                         if (isFromSignup) {
-//                            new DialogBox( mActivity ).startBrowsingDialog();
+                            new DialogBox( mActivity ).startBrowsingDialog();
 
                         }
                     }

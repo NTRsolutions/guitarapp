@@ -36,6 +36,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.yelo.com.Face_book_manger.Facebook_login;
 import com.yelo.com.Face_book_manger.Facebook_share_mamager;
@@ -132,6 +133,10 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         overridePendingTransition(R.anim.activity_open_translate, R.anim.activity_close_scale);
         initializeVariable();
+
+        String iaa= mSessionManager.getmqttId();
+
+         Log.i( "tag", iaa );
     }
 
     /**
@@ -735,6 +740,7 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                 // type 0 for image & 1 for video
                 requestDatas.put("type", "0");
 
+
                 // main url
                 requestDatas.put("mainUrl",data_list.get(0).getMainUrl());
                 requestDatas.put("thumbnailUrl", data_list.get(0).getThumbnailUrl());
@@ -901,6 +907,7 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                                String postId = postProductDatas.getPostId();
 
 
+
                                 String productName= postProductDatas.getProductName();
                                 if (isTwitterSharingOn)
 //                                share_On_Twitter(postId,productName, );
@@ -915,6 +922,12 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                                 if(isInstagramSharingOn){
                                     shareOnInsta(arrayListImgPath.get(0),productName);
                                 }
+
+
+                                // subscribe user to on topic to recieve push notification
+
+
+                                FirebaseMessaging.getInstance().subscribeToTopic("/topics/" + mSessionManager.getmqttId() );
                             }
                             new DialogBox(mActivity).postedSuccessDialog();
                             //deleteAllCapturedImages(arrayListImgPath);

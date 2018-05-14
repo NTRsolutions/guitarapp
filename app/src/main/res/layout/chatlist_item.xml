@@ -92,7 +92,7 @@
                 android:layout_marginStart="4dp"
                 android:visibility="visible"
                 android:layout_marginTop="3dp"
-                app:srcCompat="@drawable/ic_double_tick" />
+                app:srcCompat="@drawable/ic_single_tick" />
             <TextView
                 android:id="@+id/newMessage"
                 android:layout_width="match_parent"

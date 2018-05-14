@@ -87,7 +87,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:alpha="0.8"
-                        android:background="@drawable/default_profile_cover_pic"
+                        android:background="@drawable/default_cover_image"
                         android:contentDescription="@string/simple_image_view" />
 
                     <View
@@ -151,7 +151,7 @@
                         android:layout_height="100dp"
                         android:layout_marginStart="@dimen/fifteen_dp"
                         android:layout_marginLeft="@dimen/fifteen_dp"
-                        android:src="@drawable/default_profile_image"
+                        android:src="@drawable/profile_bg"
                         app:civ_border_color="@color/white"
                         app:civ_border_width="3dp" />
 
@@ -201,7 +201,7 @@
                         android:layout_marginTop="@dimen/ten_dp"
                         android:orientation="horizontal">
                         <RatingBar
-                            android:visibility="gone"
+
                             android:layout_gravity="center"
                             android:id="@+id/ratingBar"
                             android:layout_width="wrap_content"
@@ -211,7 +211,7 @@
                             android:theme="@style/RatingBar"
                             style="@style/Widget.AppCompat.RatingBar.Small" />
                         <com.yelo.com.custom_fonts.TextViewRobotoMedium
-                            android:visibility="gone"
+
                             android:id="@+id/tV_ratedBy"
                             android:gravity="center"
                             android:paddingLeft="@dimen/five_dp"
@@ -235,7 +235,7 @@
                         android:layout_height="wrap_content" />
 
                     <LinearLayout
-                        android:visibility="gone"
+
                         android:layout_marginTop="@dimen/five_dp"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
@@ -316,7 +316,7 @@
 
                     <!-- Post count, follower count & following count -->
                     <LinearLayout
-                        android:visibility="gone"
+                        android:visibility="visible"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/fifteen_dp"
@@ -463,11 +463,11 @@
             android:layout_height="45dp"
             android:background="@color/tab_bg"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/colorPrimaryDark"
+            app:tabIndicatorColor="@color/pink_color"
             app:tabIndicatorHeight="2.5dp"
             app:tabMaxWidth="0dp"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/black"
+            app:tabSelectedTextColor="@color/pink_color"
             app:tabTextAppearance="@style/AppTabTextAppearance"
             app:tabTextColor="@color/colorPrimaryDark" />
 

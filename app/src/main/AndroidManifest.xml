@@ -134,6 +134,12 @@
             android:launchMode="standard"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+        <!--Self Profile Activity-->
+        <activity android:name=".main.activity.PaymentActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <!-- Product Details Activity -->
         <activity android:name=".main.activity.products.ProductDetailsActivity"
             android:screenOrientation="portrait"
@@ -410,11 +416,11 @@
         <!--FCM notification icon.-->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/ic_launcher" />
+            android:resource="@drawable/app_launcher_logo" />
         <!--FCM text color-->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/purple_color" />
+            android:resource="@color/light_blue_color" />
 
         <!-- Chat related -->
         <activity

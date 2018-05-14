@@ -52,7 +52,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
-                android:background="@color/background_color">
+                android:background="@color/light_blue_color">
                 <com.yelo.com.custom_fonts.TextViewRobotoRegular
                     android:textAllCaps="true"
                     android:layout_gravity="center_vertical"
@@ -164,7 +164,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
-                android:background="@color/background_color">
+                android:background="@color/light_blue_color">
                 <com.yelo.com.custom_fonts.TextViewRobotoRegular
                     android:textAllCaps="true"
                     android:layout_gravity="center_vertical"
@@ -231,12 +231,86 @@
                 android:layout_height="0.5dp"
                 android:background="@color/news_divider_color"/>
 
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp"
+                android:background="@color/light_blue_color">
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty_five_dp"
+                    android:text="@string/payment"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:textSize="@dimen/eleven_sp"
+                    android:textColor="@color/follow_people_color"
+                    />
+
+            </RelativeLayout>
+
+            <!--
+                        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                            android:textAllCaps="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/account"
+                            android:textSize="@dimen/small_text_size"
+                            android:textColor="@color/heading_color"
+                            android:background="@color/background_color"
+                            android:padding="10dp"/>
+            -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <RelativeLayout
+                android:id="@+id/rL_payment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty_five_dp">
+
+                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_toLeftOf="@+id/iV_edit_payment"
+                    android:layout_toStartOf="@+id/iV_edit_payment"
+                    android:text="Payment"
+                    android:textColor="@color/heading_color"
+                    android:textSize="@dimen/subheading_text_size" />
+
+                <ImageView
+                    android:id="@+id/iV_edit_payment"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/forward_arrow"
+                    android:contentDescription="@string/simple_image_view"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+
+
             <!-- Support -->
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
-                android:background="@color/background_color">
+                android:background="@color/light_blue_color">
                 <com.yelo.com.custom_fonts.TextViewRobotoRegular
                     android:textAllCaps="true"
                     android:layout_gravity="center_vertical"
@@ -297,7 +371,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
-                android:background="@color/background_color">
+                android:background="@color/light_blue_color">
                 <com.yelo.com.custom_fonts.TextViewRobotoRegular
                     android:textAllCaps="true"
                     android:layout_gravity="center_vertical"
@@ -468,7 +542,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@color/background_color" />
+                android:background="@color/light_blue_color" />
 
             <!--Logout-->
 
