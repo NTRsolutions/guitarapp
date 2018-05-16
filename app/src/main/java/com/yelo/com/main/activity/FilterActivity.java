@@ -13,10 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -71,6 +73,10 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
     private SessionManager mSessionManager;
     private boolean isToStartActivity;
 
+    RadioGroup rdgFirst, rdgHours;
+
+    boolean isCheckedWork = true;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,6 +129,7 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
         CommonClass.statusBarColor(mActivity);
         rL_rootElement = (RelativeLayout) findViewById(R.id.rL_rootElement);
         tV_save = (TextView) findViewById(R.id.tV_save);
+
         TextView tV_reset = (TextView) findViewById(R.id.tV_reset);
         tV_reset.setOnClickListener(this);
         progress_bar_save = (ProgressBar) findViewById(R.id.progress_bar_save);
@@ -159,11 +166,118 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
             }
         });
 
+
+        rdgFirst = findViewById(R.id.rdg_first);
+        rdgHours = findViewById(R.id.rdg_hours);
+
+        rdgFirst.setOnCheckedChangeListener( new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                switch (checkedId){
+                    case R.id.radio_NewestFirst:
+
+                        if(isCheckedWork) {
+                            radio_NewestFirst.setChecked( true );
+                            radio_ClosestFirst.setChecked( false );
+                            radio_highToLow.setChecked( false );
+                            radio_lowToHigh.setChecked( false );
+                        }
+
+
+
+                        break;
+
+                    case R.id.radio_ClosestFirst:
+                        if(isCheckedWork) {
+                            radio_NewestFirst.setChecked( false );
+                            radio_ClosestFirst.setChecked( true );
+                            radio_highToLow.setChecked( false );
+                            radio_lowToHigh.setChecked( false );
+                        }
+                        break;
+
+                    case R.id.radio_highToLow:
+                        if(isCheckedWork) {
+                            radio_NewestFirst.setChecked( false );
+                            radio_ClosestFirst.setChecked( false );
+                            radio_highToLow.setChecked( true );
+                            radio_lowToHigh.setChecked( false );
+                        }
+                        break;
+                    case R.id.radio_lowToHigh:
+
+                        if(isCheckedWork) {
+                            radio_NewestFirst.setChecked( false );
+                            radio_ClosestFirst.setChecked( false );
+                            radio_highToLow.setChecked( false );
+                            radio_lowToHigh.setChecked( true );
+                        }
+                        break;
+
+                }
+
+            }
+        } );
+
+
+        rdgHours.setOnCheckedChangeListener( new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                switch (checkedId){
+                    case R.id.radio_last24hr:
+
+                        // posted within
+                        if(isCheckedWork) {
+                            radio_last24hr.setChecked( true );
+                            radio_last7day.setChecked( false );
+                            radio_last30day.setChecked( false );
+                            radio_allProduct.setChecked( false );
+                        }
+                        break;
+
+                    case R.id.radio_last7day:
+                        if(isCheckedWork) {
+                            radio_last24hr.setChecked( false );
+                            radio_last7day.setChecked( true );
+                            radio_last30day.setChecked( false );
+                            radio_allProduct.setChecked( false );
+                        }
+                        break;
+
+                    case R.id.radio_last30day:
+                        if(isCheckedWork) {
+                            radio_last24hr.setChecked( false );
+                            radio_last7day.setChecked( false );
+                            radio_last30day.setChecked( true );
+                            radio_allProduct.setChecked( false );
+                        }
+                        break;
+                    case R.id.radio_allProduct:
+                        if(isCheckedWork) {
+                            radio_last24hr.setChecked( false );
+                            radio_last7day.setChecked( false );
+                            radio_last30day.setChecked( false );
+                            radio_allProduct.setChecked( true );
+                        }
+                        break;
+
+                }
+
+            }
+        } );
+
+
         // sorted by value
         radio_NewestFirst = (RadioButton) findViewById(R.id.radio_NewestFirst);
         radio_ClosestFirst = (RadioButton) findViewById(R.id.radio_ClosestFirst);
         radio_highToLow = (RadioButton) findViewById(R.id.radio_highToLow);
         radio_lowToHigh = (RadioButton) findViewById(R.id.radio_lowToHigh);
+
+
+
+
 
         // posted within
         radio_last24hr = (RadioButton) findViewById(R.id.radio_last24hr);
@@ -268,6 +382,8 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
 
         if (maxPrice!=null && !maxPrice.isEmpty())
             eT_maxprice.setText(maxPrice);
+
+        isCheckedWork = true;
     }
 
     /**
@@ -484,6 +600,9 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
         // set distance
         setDistanceValue=getResources().getString(R.string.zero);
 
+        isCheckedWork = false;
+        rdgFirst.clearCheck();
+        rdgHours.clearCheck();
         // sort by
         sortBy="";
         radio_NewestFirst.setChecked(false);

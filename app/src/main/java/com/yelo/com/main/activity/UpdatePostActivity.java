@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.yelo.com.R;
@@ -80,7 +81,10 @@ public class UpdatePostActivity extends AppCompatActivity implements View.OnClic
     private SessionManager mSessionManager;
     private ArrayList<Integer> rotationAngles;
     private DialogBox mDialogBox;
-
+    TextView mTxtCancel;
+    RelativeLayout mRlModels,mRlModelsYear,mRlMake;
+    TextView mTvcategoryModels, mTvCategoryYears, mTvMakes;
+    int ManufactrerId = -1;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +113,30 @@ public class UpdatePostActivity extends AppCompatActivity implements View.OnClic
         linear_share.setVisibility(View.GONE);
         TextView tV_actionBarTitle = (TextView) findViewById(R.id.tV_actionBarTitle);
         tV_actionBarTitle.setText(getResources().getString(R.string.update_post));
+
+        TextView mTxtCancel = (TextView) findViewById(R.id.btn_cancel);
+
+        mRlModels = findViewById( R.id.rL_product_model );
+        mRlModelsYear = findViewById( R.id.rL_product_model_year );
+        mRlMake = findViewById( R.id.rL_product_model_make );
+
+        mRlModels.setOnClickListener(this);
+        mRlModelsYear.setOnClickListener(this);
+        mRlMake.setOnClickListener(this);
+
+
+        mTvcategoryModels = findViewById( R.id.tV_category_model );
+        mTvCategoryYears = findViewById( R.id.tV_category_model_year );
+        mTvMakes  = findViewById( R.id.tV_category_model_make );
+
+        mTxtCancel.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
+            }
+        } );
+
 
         // receive datas
         Bundle bundlePostItem = getIntent().getExtras();
@@ -325,6 +353,49 @@ public class UpdatePostActivity extends AppCompatActivity implements View.OnClic
             case R.id.rL_back_btn :
                 onBackPressed();
                 break;
+
+
+
+            // category
+            case R.id.rL_product_model :
+
+                    intent = new Intent(mActivity, ProductModelsActivity.class);
+                    startActivityForResult(intent, VariableConstants.MODEL_REQUEST_CODE);
+
+                break;
+
+            // conditions
+            case R.id.rL_product_model_year :
+
+
+                    if(ManufactrerId != -1) {
+                        intent = new Intent( mActivity, YearModelsActivity.class );
+                        intent.putExtra( "model_id", ManufactrerId );
+                        startActivityForResult( intent, VariableConstants.MODEL_REQUEST_YEAR_CODE );
+                    }else {
+                        Toast.makeText( mActivity, "Please select make first.", Toast.LENGTH_SHORT ).show();
+                    }
+
+                break;
+
+            // currency
+            case R.id.rL_product_model_make:
+
+
+
+
+                    if(ManufactrerId != -1) {
+                        String str = mTvcategoryModels.getText().toString();
+                        intent = new Intent( mActivity, MakeModelsActivity.class );
+                        intent.putExtra( "model_id", ManufactrerId );
+                        startActivityForResult( intent, VariableConstants.MODEL_REQUEST_MAKE_CODE );
+                    }else {
+                        Toast.makeText( mActivity, "Please select make first.", Toast.LENGTH_SHORT ).show();
+                    }
+
+
+                break;
+
 
             // category
             case R.id.rL_product_category :
@@ -619,6 +690,43 @@ public class UpdatePostActivity extends AppCompatActivity implements View.OnClic
                             aLProductImageDatases.add(productImageDatas);
                         }
                         imagesHorizontalRvAdap.notifyDataSetChanged();
+                    }
+                    break;
+
+
+
+                // modelName
+                case VariableConstants.MODEL_REQUEST_CODE :
+                    String modelName=data.getStringExtra("modelName");
+                    String[] arr = modelName.split( "/" );
+
+                    if (modelName!=null)
+                    {
+                        mTvcategoryModels.setText(arr[0]);
+                        mTvcategoryModels.requestFocus();
+
+                        ManufactrerId = Integer.parseInt(arr[1]);
+                    }
+                    break;
+
+
+                // modelName  MODEL_REQUEST_MAKE_CODE
+                case VariableConstants.MODEL_REQUEST_YEAR_CODE :
+                    String yearName=data.getStringExtra("yearName");
+                    if (yearName!=null)
+                    {
+                        mTvCategoryYears.setText(yearName);
+                        mTvCategoryYears.requestFocus();
+                    }
+                    break;
+
+
+                case VariableConstants.MODEL_REQUEST_MAKE_CODE :
+                    String makeName=data.getStringExtra("make_name");
+                    if (makeName!=null)
+                    {
+                        mTvMakes.setText(makeName);
+                        mTvMakes.requestFocus();
                     }
                     break;
 

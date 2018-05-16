@@ -83,7 +83,7 @@ public class SearchAmpsActivity extends AppCompatActivity implements View.OnClic
             RelativeLayout rL_close= (RelativeLayout) findViewById(R.id.rL_close);
             rL_close.setOnClickListener(this);
             eT_search_users= (EditText) findViewById(R.id.eT_search_users);
-            eT_search_users.setHint("Search amps");
+            eT_search_users.setHint("Search Amps");
 
 
             eT_search_users.addTextChangedListener( new TextWatcher() {

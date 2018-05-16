@@ -229,14 +229,19 @@ public class CropImage extends MonitoredActivity {
             in.close();
 
             int scale = 1;
-            if (o.outHeight > IMAGE_MAX_SIZE || o.outWidth > IMAGE_MAX_SIZE) {
-                scale = (int) Math.pow(2, (int) Math.round(Math.log(IMAGE_MAX_SIZE / (double) Math.max(o.outHeight, o.outWidth)) / Math.log(0.5)));
-            }
+//            if (o.outHeight > IMAGE_MAX_SIZE || o.outWidth > IMAGE_MAX_SIZE) {
+//                scale = (int) Math.pow(2, (int) Math.round(Math.log(IMAGE_MAX_SIZE / (double) Math.max(o.outHeight, o.outWidth)) / Math.log(0.5)));
+//            }
 
             BitmapFactory.Options o2 = new BitmapFactory.Options();
             o2.inSampleSize = scale;
             in = mContentResolver.openInputStream(uri);
             Bitmap b = BitmapFactory.decodeStream(in, null, o2);
+
+            Matrix matrix = new Matrix();
+            matrix.postRotate(90);
+            b = Bitmap.createBitmap(b, 0, 0, b.getWidth(), b.getHeight(), matrix, true);
+
             in.close();
 
             return b;

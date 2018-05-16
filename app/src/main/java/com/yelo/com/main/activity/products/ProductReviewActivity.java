@@ -421,7 +421,10 @@ public class ProductReviewActivity extends AppCompatActivity implements View.OnC
 
             // send
             case R.id.rL_send_message :
-                addReviewComment(eT_add_review.getText().toString(),postId);
+
+                if(eT_add_review.getText().toString().trim().length() > 0) {
+                    addReviewComment( eT_add_review.getText().toString(), postId );
+                }
                 break;
         }
     }

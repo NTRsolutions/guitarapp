@@ -137,6 +137,7 @@ public class LoginOrSignupActivity extends AppCompatActivity implements View.OnC
     public  static boolean is_market = false;
 
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,6 +147,8 @@ public class LoginOrSignupActivity extends AppCompatActivity implements View.OnC
         mActivity=LoginOrSignupActivity.this;
         isToStartActivity = true;
         mSessionManager=new SessionManager(mActivity);
+
+
 
         permissionsArray =new String[]{ACCESS_FINE_LOCATION,ACCESS_COARSE_LOCATION};
         runTimePermission=new RunTimePermission(mActivity, permissionsArray,false);

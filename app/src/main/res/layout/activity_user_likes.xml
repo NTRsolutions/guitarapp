@@ -60,9 +60,9 @@
         <ImageView
             android:id="@+id/no_product_found"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/empty_fav_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:src="@drawable/like_user"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:contentDescription="@string/no_post_yet"/>
         <com.yelo.com.custom_fonts.TextViewRobotoMedium
             android:layout_marginTop="@dimen/eight_dp"

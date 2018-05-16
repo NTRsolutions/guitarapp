@@ -352,8 +352,8 @@ public class ProfileFrag extends Fragment implements View.OnClickListener, Googl
                                 if (profilePicUrl != null && !profilePicUrl.isEmpty()) {
                                     Picasso.with(mActivity)
                                             .load(profilePicUrl)
-                                            .placeholder(R.drawable.default_profile_image)
-                                            .error(R.drawable.default_profile_image)
+                                            .placeholder(R.drawable.profile_bg)
+                                            .error(R.drawable.profile_bg)
                                             .transform(new CircleTransform())
                                             .into(iV_profile_pic);
 
@@ -361,8 +361,8 @@ public class ProfileFrag extends Fragment implements View.OnClickListener, Googl
                                     Glide.with(mActivity)
                                             .load(profilePicUrl)
                                             .transform(new PositionedCropTransformation((mActivity), 0, 0))
-                                            .placeholder(R.drawable.default_profile_cover_pic)
-                                            .error(R.drawable.default_profile_cover_pic)
+                                            .placeholder(R.drawable.default_cover_image)
+                                            .error(R.drawable.default_cover_image)
                                             .into(iv_background);
                                 }
 
@@ -578,8 +578,8 @@ public class ProfileFrag extends Fragment implements View.OnClickListener, Googl
                         // profile pic
                         Picasso.with(mActivity)
                                 .load(profilePicUrl)
-                                .placeholder(R.drawable.default_profile_image)
-                                .error(R.drawable.default_profile_image)
+                                .placeholder(R.drawable.profile_bg)
+                                .error(R.drawable.profile_bg)
                                 .transform(new CircleTransform())
                                 .into(iV_profile_pic);
 
@@ -587,14 +587,14 @@ public class ProfileFrag extends Fragment implements View.OnClickListener, Googl
                         Glide.with(mActivity)
                                 .load(profilePicUrl)
                                 .transform(new PositionedCropTransformation((mActivity), 0, 0))
-                                .placeholder(R.drawable.default_profile_cover_pic)
-                                .error(R.drawable.default_profile_cover_pic)
+                                .placeholder(R.drawable.default_cover_image)
+                                .error(R.drawable.default_cover_image)
                                 .into(iv_background);
                     }
                     else
                     {
-                        iV_profile_pic.setImageResource(R.drawable.default_profile_image);
-                        iv_background.setImageResource(R.drawable.default_profile_cover_pic);
+                        iV_profile_pic.setImageResource(R.drawable.profile_bg);
+                        iv_background.setImageResource(R.drawable.default_cover_image);
                     }
 
                     // Full name
@@ -675,8 +675,8 @@ public class ProfileFrag extends Fragment implements View.OnClickListener, Googl
                 // profile pic
                 Picasso.with(mActivity)
                         .load(profilePicUrl)
-                        .placeholder(R.drawable.default_profile_image)
-                        .error(R.drawable.default_profile_image)
+                        .placeholder(R.drawable.profile_bg)
+                        .error(R.drawable.profile_bg)
                         .transform(new CircleTransform())
                         .into(iV_profile_pic);
 
@@ -684,14 +684,14 @@ public class ProfileFrag extends Fragment implements View.OnClickListener, Googl
                 Glide.with(mActivity)
                         .load(profilePicUrl)
                         .transform(new PositionedCropTransformation((mActivity), 0, 0))
-                        .placeholder(R.drawable.default_profile_cover_pic)
-                        .error(R.drawable.default_profile_cover_pic)
+                        .placeholder(R.drawable.default_cover_image)
+                        .error(R.drawable.default_cover_image)
                         .into(iv_background);
             }
             else
             {
-                iV_profile_pic.setImageResource(R.drawable.default_profile_image);
-                iv_background.setImageResource(R.drawable.default_profile_cover_pic);
+                iV_profile_pic.setImageResource(R.drawable.profile_bg);
+                iv_background.setImageResource(R.drawable.default_cover_image);
             }
 
             // Full name

@@ -29,6 +29,8 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.yelo.com.R;
@@ -293,14 +295,13 @@ public class EditProfileActivity extends Activity implements View.OnClickListene
                                 {
                                     isPictureTaken=false;
                                     iv_edit_icon.setVisibility(View.VISIBLE);
-                                    Picasso.with(mActivity)
+                                    Glide.with(mActivity)
                                             .load(profilePicUrl)
-                                            .transform(new CircleTransform())
-                                            .placeholder(R.drawable.default_profile_image)
-                                            .error(R.drawable.default_profile_image)
+//                                            .transform(new CircleTransform())
+                                            .placeholder(R.drawable.profile_bg)
                                             .into(iV_profile_pic);
                                 }
-                                else iv_edit_icon.setVisibility(View.GONE);
+                                else iv_edit_icon.setVisibility(View.VISIBLE);
 
                                 // user name
                                 if (username!=null && !username.isEmpty())
@@ -489,13 +490,13 @@ public class EditProfileActivity extends Activity implements View.OnClickListene
                 if (isPictureTaken)
                 {
                     rL_pBar.setVisibility(View.VISIBLE);
-                    tV_save.setVisibility(View.GONE);
+                    tV_save.setVisibility(View.INVISIBLE);
                     getCloudinaryDetailsApi();
                 }
                 else
                 {
                     rL_pBar.setVisibility(View.VISIBLE);
-                    tV_save.setVisibility(View.GONE);
+                    tV_save.setVisibility(View.INVISIBLE);
                     updateProfileApi();
                 }
                 break;
@@ -542,7 +543,7 @@ public class EditProfileActivity extends Activity implements View.OnClickListene
         RelativeLayout rL_remove_pic= (RelativeLayout) selectImgDialog.findViewById(R.id.rL_remove_pic);
         if (profilePicUrl.isEmpty())
         {
-            iv_edit_icon.setVisibility(View.GONE);
+            iv_edit_icon.setVisibility(View.VISIBLE);
             rL_remove_pic.setVisibility(View.GONE);
         }
         else {
@@ -565,8 +566,8 @@ public class EditProfileActivity extends Activity implements View.OnClickListene
     {
         profilePicUrl="";
         isPictureTaken=false;
-        iv_edit_icon.setVisibility(View.GONE);
-        iV_profile_pic.setImageResource(R.drawable.default_profile_image);
+        iv_edit_icon.setVisibility(View.VISIBLE);
+        iV_profile_pic.setImageResource(R.drawable.profile_bg);
     }
 
     /**

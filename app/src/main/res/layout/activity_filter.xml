@@ -19,8 +19,8 @@
             android:layout_height="match_parent">
             <ImageView
                 android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/cross_icon"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
@@ -288,6 +288,7 @@
                 android:background="@color/news_divider_color"/>
 
             <RadioGroup
+                android:id="@+id/rdg_first"
                 android:visibility="visible"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -409,6 +410,7 @@
                 android:background="@color/news_divider_color"/>
 
             <RadioGroup
+                android:id="@+id/rdg_hours"
                 android:visibility="visible"
                 android:orientation="vertical"
                 android:layout_width="match_parent"

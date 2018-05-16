@@ -87,8 +87,8 @@ public class ProductReviewRvAdap extends RecyclerView.Adapter<ProductReviewRvAda
             Picasso.with(mActivity)
             .load(profilePic)
             .transform(new CircleTransform())
-            .placeholder(R.drawable.default_circle_img)
-            .error(R.drawable.default_circle_img)
+            .placeholder(R.drawable.profile_bg)
+            .error(R.drawable.profile_bg)
             .into(holder.iV_userPic);
 
         // user name

@@ -2,6 +2,8 @@ package com.yelo.com.main.activity;
 
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Typeface;
@@ -13,6 +15,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -21,6 +24,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.squareup.otto.Subscribe;
 import com.yelo.com.R;
 import com.yelo.com.badgeView.Badge;
@@ -36,11 +40,16 @@ import com.yelo.com.mqttchat.AppController;
 import com.yelo.com.mqttchat.Database.CouchDbController;
 import com.yelo.com.mqttchat.Utilities.MqttEvents;
 import com.yelo.com.mqttchat.Utilities.TimestampSorter;
+import com.yelo.com.pojo_class.product_category.ProductCategoryMainPojo;
+import com.yelo.com.utility.ApiUrl;
 import com.yelo.com.utility.CommonClass;
 import com.yelo.com.utility.CustomBottomNavigationView;
 import com.yelo.com.utility.DialogBox;
+import com.yelo.com.utility.OkHttp3Connection;
 import com.yelo.com.utility.SessionManager;
 import com.yelo.com.utility.VariableConstants;
+
+import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -176,7 +185,8 @@ public class HomePageActivity extends AppCompatActivity
         buySellFragment = BuySellFragment.getInstance( this );
 
         myProfileFrag=new ProfileFrag();
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        android.support.v4.app.FragmentManager manager =this.getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
         final Menu nav_menu = bottomNavigationView.getMenu();
         nav_menu.getItem(0).setIcon(R.drawable.tabbar_home_onn);
         bottomNavigationView.setOnNavigationItemSelectedListener
@@ -203,18 +213,20 @@ public class HomePageActivity extends AppCompatActivity
 //                                else
 //                                    transaction.add(R.id.frame_layout,homeFrag);
 
-//
-                                    if (productcategoryFrag.isAdded())
-                                        transaction.show( productcategoryFrag );
-                                    else
-                                        transaction.add( R.id.frame_layout, productcategoryFrag );
+
+
+
+//                                    if (productcategoryFrag.isAdded())
+//                                        transaction.show( productcategoryFrag );
+//                                    else
+                                        transaction.replace( R.id.frame_layout, new ProductPictureFragment() );
 //                                  transaction.replace( R.id.frame_layout, new ProductPictureFragment(), "productcategoryFrag" );
 
 
-                                    if (chatFarg.isAdded())
-                                        transaction.hide( chatFarg );
-                                    if (myProfileFrag.isAdded())
-                                        transaction.hide( myProfileFrag );
+//                                    if (chatFarg.isAdded())
+//                                        transaction.hide( chatFarg );
+//                                    if (myProfileFrag.isAdded())
+//                                        transaction.hide( myProfileFrag );
 
 
 //                                    Fragment mYff = getCurrentFragment();
@@ -241,17 +253,20 @@ public class HomePageActivity extends AppCompatActivity
                                 {
 
                                     if(!mSessionManager.getComingFrom().equals( "signup" )) {
-                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                                            if (isToStartActivity) {
-                                                startActivity( new Intent( mActivity, Camera2Activity.class ) );
-                                                isToStartActivity = false;
-                                            }
-                                        } else {
-                                            if (isToStartActivity) {
-                                                isToStartActivity = false;
-                                                startActivity( new Intent( mActivity, CameraActivity.class ) );
-                                            }
-                                        }
+
+                                        hitApiOnServerToCheckUserAccount();
+
+//                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                                            if (isToStartActivity) {
+//                                                startActivity( new Intent( mActivity, Camera2Activity.class ) );
+//                                                isToStartActivity = false;
+//                                            }
+//                                        } else {
+//                                            if (isToStartActivity) {
+//                                                isToStartActivity = false;
+//                                                startActivity( new Intent( mActivity, CameraActivity.class ) );
+//                                            }
+//                                        }
                                     }else {
                                         Toast.makeText( HomePageActivity.this, "Please select any of buy or sell option", Toast.LENGTH_SHORT ).show();
                                     }
@@ -273,18 +288,18 @@ public class HomePageActivity extends AppCompatActivity
                                         setBottomTabIcon( nav_menu, R.drawable.tabbar_home_off, R.drawable.tabbar_social_off, R.drawable.tab_bar_chat_onn, R.drawable.tabbar_profile_off );
                                         isToHighLightTab = true;
 
-                                        if (chatFarg.isAdded())
-                                            transaction.show( chatFarg );
-                                        else transaction.add( R.id.frame_layout, chatFarg );
+//                                        if (chatFarg.isAdded())
+//                                            transaction.show( chatFarg );
+//                                        else transaction.add( R.id.frame_layout, chatFarg );
+                                        transaction.replace( R.id.frame_layout, new ChatFrag() );
 
-
-                                        if (myProfileFrag.isAdded())
-                                            transaction.hide( myProfileFrag );
-
-
-                                        if (productcategoryFrag.isAdded()) {
-                                            transaction.hide( productcategoryFrag );
-                                        }
+//                                        if (myProfileFrag.isAdded())
+//                                            transaction.hide( myProfileFrag );
+//
+//
+//                                        if (productcategoryFrag.isAdded()) {
+//                                            transaction.hide( productcategoryFrag );
+//                                        }
 
 //                                        Fragment mYff = getCurrentFragment();
 //
@@ -320,16 +335,18 @@ public class HomePageActivity extends AppCompatActivity
                                         setBottomTabIcon( nav_menu, R.drawable.tabbar_home_off, R.drawable.tabbar_social_off, R.drawable.tab_bar_chat_off, R.drawable.tabbar_profile_on );
                                         isToHighLightTab = true;
 
-                                        if (myProfileFrag.isAdded())
-                                            transaction.show( myProfileFrag );
-                                        else transaction.add( R.id.frame_layout, myProfileFrag );
+//                                        if (myProfileFrag.isAdded())
+//                                            transaction.show( myProfileFrag );
+//                                        else transaction.add( R.id.frame_layout, myProfileFrag );
 
-                                        if (chatFarg.isAdded())
-                                            transaction.hide(chatFarg);
-
-                                        if (productcategoryFrag.isAdded())
-                                            transaction.hide(productcategoryFrag);
+                                        transaction.replace( R.id.frame_layout, new ProfileFrag() );
 //
+//                                        if (chatFarg.isAdded())
+//                                            transaction.hide(chatFarg);
+//
+//                                        if (productcategoryFrag.isAdded())
+//                                            transaction.hide(productcategoryFrag);
+////
                                     }else {
                                         Toast.makeText( HomePageActivity.this, "Please select any of buy or sell option", Toast.LENGTH_SHORT ).show();
                                     }
@@ -568,6 +585,110 @@ public class HomePageActivity extends AppCompatActivity
 
         return null;
 
+    }
+
+
+    private void hitApiOnServerToCheckUserAccount(){
+        if (CommonClass.isNetworkAvailable(this))
+        {
+            final ProgressDialog pDialog = new ProgressDialog(this,0);
+
+
+            pDialog.setCancelable(false);
+
+//        pDialog.setTitle(R.string.string_351);
+
+            pDialog.setMessage("Get categories");
+            pDialog.show();
+            JSONObject request_param=new JSONObject();
+            try {
+                request_param.put( "user_name", mSessionManager.getUserName() );
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+            OkHttp3Connection.doOkHttp3Connection(TAG, ApiUrl.CHECK_USER_ACCOUNT_STATUS, OkHttp3Connection.Request_type.POST, request_param, new OkHttp3Connection.OkHttp3RequestCallback()
+            {
+                @Override
+                public void onSuccess(String result, String user_tag) {
+
+
+                    if(pDialog != null){
+                        if (pDialog.isShowing()){
+                            pDialog.dismiss();
+                        }
+                    }
+
+                    ProductCategoryMainPojo categoryMainPojo;
+                    Gson gson=new Gson();
+                    categoryMainPojo=gson.fromJson(result,ProductCategoryMainPojo.class);
+
+                    switch (categoryMainPojo.getCode())
+                    {
+                        // success i.e email is not registered
+                        case "200" :
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                if (isToStartActivity) {
+                                    startActivity( new Intent( mActivity, Camera2Activity.class ) );
+                                    isToStartActivity = false;
+                                }
+                            } else {
+                                if (isToStartActivity) {
+                                    isToStartActivity = false;
+                                    startActivity( new Intent( mActivity, CameraActivity.class ) );
+                                }
+                            }
+                            break;
+
+
+                        case "204" :
+                            AlertDialog.Builder builder = new AlertDialog.Builder(mActivity,
+                                    R.style.CustomPopUpThemeBlue);
+                            builder.setMessage("You have not configured your account detail yet, Please click ok to configure");
+                            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                    startActivity(new Intent(mActivity, AddPaymentActivity.class));
+                                }
+                            });
+
+                            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                            builder.setCancelable(false);
+                            builder.show();
+
+
+                            break;
+
+                        // auth token expired
+                        case "401" :
+                            CommonClass.sessionExpired(mActivity);
+                            break;
+                        // error like email is already registered
+                        default:
+
+                            break;
+                    }
+                }
+
+                @Override
+                public void onError(String error, String user_tag) {
+                    if(pDialog != null){
+                        if (pDialog.isShowing()){
+                            pDialog.dismiss();
+                        }
+                    }
+                }
+            });
+        }
     }
 
 }

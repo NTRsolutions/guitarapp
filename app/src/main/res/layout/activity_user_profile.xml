@@ -59,7 +59,7 @@
                         android:adjustViewBounds="true"
                         android:scaleType="fitXY"
                         android:alpha="0.8"
-                        android:background="@drawable/default_profile_cover_pic"
+                        android:background="@drawable/default_cover_image"
                         android:contentDescription="@string/simple_image_view" />
 
                     <View
@@ -117,7 +117,7 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="@dimen/fifteen_sp"
                         android:layout_marginStart="@dimen/fifteen_dp"
-                        android:src="@drawable/default_profile_image"
+                        android:src="@drawable/profile_bg"
                         app:civ_border_color="@color/white"
                         app:civ_border_width="2dp" />
 

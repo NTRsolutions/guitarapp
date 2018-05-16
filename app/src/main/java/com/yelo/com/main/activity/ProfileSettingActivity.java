@@ -213,9 +213,9 @@ public class ProfileSettingActivity extends Activity implements View.OnClickList
                 if (isToStartActivity) {
 
 
-//                        intent = new Intent(mActivity, PaymentActivity.class);
-//                        startActivity(intent);
-//                        isToStartActivity = false;
+                        intent = new Intent(mActivity, AddPaymentActivity.class);
+                        startActivity(intent);
+                        isToStartActivity = false;
 
 
 

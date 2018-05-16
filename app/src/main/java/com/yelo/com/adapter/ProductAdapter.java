@@ -139,7 +139,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
                         bundle.putString(HomeFrag.KEY_FRAGMENT_FROM_CATGORY, mList.get( position).getName());
                         fragment.setArguments(bundle);
 
-                        transaction.add( R.id.frame_layout, fragment );
+                        transaction.replace( R.id.frame_layout, fragment);
                         transaction.addToBackStack( null );
                         transaction.commitAllowingStateLoss();
 

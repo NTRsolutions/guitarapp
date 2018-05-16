@@ -60,6 +60,7 @@ import com.yelo.com.main.activity.EditProductActivity;
 import com.yelo.com.main.activity.HomePageActivity;
 import com.yelo.com.main.activity.LandingActivity;
 import com.yelo.com.main.activity.MakeOfferActivity;
+import com.yelo.com.main.activity.PaymentActivity;
 import com.yelo.com.main.activity.SelfProfileActivity;
 import com.yelo.com.main.activity.UserLikesActivity;
 import com.yelo.com.main.activity.UserProfileActivity;
@@ -135,7 +136,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     private LinearLayout linear_like_product;
     private RelativeLayout rL_follow;
     private TextView tV_productname,tV_category,tV_postedOn,tV_posted_by,tV_follow,tV_description,tV_condition,
-            tV_location,tV_currency,tV_productprice,tV_like_count,tV_view_count,tV_makeoffer;
+            tV_location,tV_currency,tV_productprice,tV_like_count,tV_view_count,tV_makeoffer, tv_buy;
     private ImageView iV_soldby,like_item_icon,iV_followed_list,iv_staticMap;
     private LinearLayout linear_followed_images;
     private NotificationMessageDialog mNotificationMessageDialog;
@@ -222,6 +223,10 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         tV_makeoffer= (TextView)findViewById(R.id.tV_makeoffer);
         tV_makeoffer.setOnClickListener(this);
 
+        // make buy
+        tv_buy= (TextView)findViewById(R.id.tV_buy);
+        tv_buy.setOnClickListener(this);
+
         // currency and price
         tV_currency= (TextView)findViewById(R.id.tV_currency);
         tV_productprice= (TextView)findViewById(R.id.tV_productprice);
@@ -279,6 +284,9 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
             isToSellItAgain = false;
             tV_makeoffer.setText(getResources().getString(R.string.mark_as_sold));
             rL_chat_icon.setVisibility(View.GONE);
+            tv_buy.setVisibility( View.GONE );
+        }else {
+            tv_buy.setVisibility( View.VISIBLE );
         }
 
         // set animation when user click on back button
@@ -812,6 +820,44 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                 tV_makeoffer.setText(getResources().getString(R.string.sold));
             }
         }
+
+
+
+        tv_buy.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // new code
+                if(receiverMqttId==null||receiverMqttId.isEmpty())
+                {
+                    Toast.makeText(ProductDetailsActivity.this, R.string.mqtt_user_not_text,Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                String digivalue;
+                String priceValue=tV_productprice.getText().toString();
+                if(!priceValue.isEmpty())
+                {
+                    priceValue = priceValue.replaceAll("[^a-zA-Z0-9 .,]|(?<!\\d)[.,]|[.,](?!\\d)", "");
+                    Log.d("amountvalue",""+priceValue);
+                    //priceValue = priceValue.replaceAll("\\D+","");
+                    digivalue=priceValue.trim();
+                    if(digivalue.length()<1)
+                    {
+                        return;
+                    }
+                }else
+                {
+                    return;
+                }
+
+
+                Intent intent = new Intent(mActivity, PaymentActivity.class);
+                intent.putExtra( PaymentActivity.KEY_PRICE, digivalue+"/"+postId );
+                startActivity(intent);
+                finish();
+            }
+        } );
+
+
 
         // Make offer
         tV_makeoffer.setOnClickListener(new View.OnClickListener() {

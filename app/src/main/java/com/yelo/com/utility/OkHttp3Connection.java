@@ -141,9 +141,9 @@ public class OkHttp3Connection
             try
             {
                 OkHttpClient.Builder builder=new OkHttpClient.Builder();
-                builder.connectTimeout(30, TimeUnit.SECONDS);
-                builder.readTimeout(30, TimeUnit.SECONDS);
-                builder.writeTimeout(30, TimeUnit.SECONDS);
+                builder.connectTimeout(60, TimeUnit.SECONDS);
+                builder.readTimeout(60, TimeUnit.SECONDS);
+                builder.writeTimeout(60, TimeUnit.SECONDS);
 //                builder.addInterceptor(new BasicAuthInterceptor(VariableConstants.BODY_AUT_KEY,VariableConstants.BODY_AUT_PASSWORD));
                 OkHttpClient httpClient=getSafeOkHttpClient( builder);
                 Request request;

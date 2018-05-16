@@ -194,7 +194,7 @@ public class GalleryActivity extends AppCompatActivity implements View.OnClickLi
                 {
                     if (cameraImgPath.equals(galleryImagePojo.getGalleryImagePath()))
                     {
-                        galleryImagePojo.setSelected(true);
+//                        galleryImagePojo.setSelected(true);
                         galleryImagePojo.setRotationAngle(rotationAngles.get(0));
                     }
                 }
@@ -245,11 +245,12 @@ public class GalleryActivity extends AppCompatActivity implements View.OnClickLi
             // back button
             case R.id.rL_back_btn :
                 onBackPressed();
+                finish();
                 break;
 
             // done button
             case R.id.rL_done :
-                moveToCameraScreen();
+                moveToCameraScreen1();
                 break;
 
             // camera icon
@@ -269,8 +270,20 @@ public class GalleryActivity extends AppCompatActivity implements View.OnClickLi
     private void moveToCameraScreen()
     {
         Intent intent=new Intent();
+//        intent.putExtra("arrayListImgPath",aL_cameraImgPath);
+//        setResult(VariableConstants.SELECT_GALLERY_IMG_REQ_CODE,intent);
+        onBackPressed();
+        finish();
+    }
+
+
+    private void moveToCameraScreen1()
+    {
+        Intent intent=new Intent();
         intent.putExtra("arrayListImgPath",aL_cameraImgPath);
         setResult(VariableConstants.SELECT_GALLERY_IMG_REQ_CODE,intent);
         onBackPressed();
+        finish();
     }
+
 }

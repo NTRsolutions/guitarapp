@@ -44,7 +44,8 @@
             android:layout_centerVertical="true"
             android:textColor="@color/black"
             android:textSize="19sp"
-
+            android:inputType="textCapSentences"
+            android:capitalize="sentences"
             android:text="@string/app_name"
             />
 

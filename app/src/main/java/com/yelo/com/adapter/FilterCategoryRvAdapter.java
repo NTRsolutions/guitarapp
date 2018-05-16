@@ -147,8 +147,20 @@ public class FilterCategoryRvAdapter extends RecyclerView.Adapter<FilterCategory
         if (categoryName!=null)
         {
             // make first character of character is uppercase
-            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
-            tV_category.setText(categoryName);
+//            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
+
+            StringBuffer res = new StringBuffer();
+            String[] strArr = categoryName.split(" ");
+            for (String str : strArr) {
+                char[] stringArray = str.trim().toCharArray();
+                stringArray[0] = Character.toUpperCase(stringArray[0]);
+                str = new String(stringArray);
+
+                res.append(str).append(" ");
+            }
+
+
+            tV_category.setText(res);
             tV_category.setTextColor(color);
         }
     }

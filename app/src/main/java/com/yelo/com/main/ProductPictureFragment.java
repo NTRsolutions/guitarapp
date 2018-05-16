@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -33,6 +35,7 @@ import com.google.gson.Gson;
 import com.yelo.com.BuildConfig;
 import com.yelo.com.R;
 import com.yelo.com.adapter.ProductAdapter;
+import com.yelo.com.main.activity.AddPaymentActivity;
 import com.yelo.com.main.activity.Camera2Activity;
 import com.yelo.com.main.activity.CameraActivity;
 import com.yelo.com.main.activity.LandingActivity;
@@ -145,11 +148,8 @@ public class ProductPictureFragment extends Fragment {
                 if (mSessionManager.getIsUserLoggedIn())
                 {
                     // startActivity(new Intent(mActivity, CameraActivity.class));
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-                        startActivity(new Intent(getActivity(), Camera2Activity.class));
-                    else
-                        startActivity(new Intent(getActivity(), CameraActivity.class));
 
+                    hitApiOnServerToCheckUserAccount();
                 }
                 else ProductPictureFragment.this.startActivityForResult(new Intent(getActivity(),LandingActivity.class), VariableConstants.LANDING_REQ_CODE);
 
@@ -243,4 +243,103 @@ public class ProductPictureFragment extends Fragment {
 
 
     }
+
+
+    private void hitApiOnServerToCheckUserAccount(){
+        if (CommonClass.isNetworkAvailable(getActivity()))
+        {
+            final ProgressDialog pDialog = new ProgressDialog(getActivity(),0);
+
+
+            pDialog.setCancelable(false);
+
+//        pDialog.setTitle(R.string.string_351);
+
+            pDialog.setMessage("Get categories");
+            pDialog.show();
+            JSONObject request_param=new JSONObject();
+            try {
+                request_param.put( "user_name", mSessionManager.getUserName() );
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+            OkHttp3Connection.doOkHttp3Connection(TAG, ApiUrl.CHECK_USER_ACCOUNT_STATUS, OkHttp3Connection.Request_type.POST, request_param, new OkHttp3Connection.OkHttp3RequestCallback()
+            {
+                @Override
+                public void onSuccess(String result, String user_tag) {
+
+
+                    if(pDialog != null){
+                        if (pDialog.isShowing()){
+                            pDialog.dismiss();
+                        }
+                    }
+
+                    ProductCategoryMainPojo categoryMainPojo;
+                    Gson gson=new Gson();
+                    categoryMainPojo=gson.fromJson(result,ProductCategoryMainPojo.class);
+
+                    switch (categoryMainPojo.getCode())
+                    {
+                        // success i.e email is not registered
+                        case "200" :
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                                startActivity(new Intent(getActivity(), Camera2Activity.class));
+                            else
+                                startActivity(new Intent(getActivity(), CameraActivity.class));
+
+                            break;
+
+
+                        case "204" :
+                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),
+                                    R.style.CustomPopUpThemeBlue);
+                            builder.setMessage("You have not configured your account detail yet, Please click ok to configure");
+                            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                    startActivity(new Intent(getActivity(), AddPaymentActivity.class));
+                                }
+                            });
+
+                            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                            builder.setCancelable(false);
+                            builder.show();
+
+
+                            break;
+
+                        // auth token expired
+                        case "401" :
+                            CommonClass.sessionExpired(getActivity());
+                            break;
+                        // error like email is already registered
+                        default:
+
+                            break;
+                    }
+                }
+
+                @Override
+                public void onError(String error, String user_tag) {
+                    if(pDialog != null){
+                        if (pDialog.isShowing()){
+                            pDialog.dismiss();
+                        }
+                    }
+                }
+            });
+        }
+    }
+
 }

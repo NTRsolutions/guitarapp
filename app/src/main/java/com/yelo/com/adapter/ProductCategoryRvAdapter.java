@@ -74,11 +74,24 @@ public class ProductCategoryRvAdapter extends RecyclerView.Adapter<ProductCatego
     public void onBindViewHolder(MyViewHolder holder, int position)
     {
         String categoryName=aL_categoryDatas.get(position).getName();
+
+
+
         System.out.println(TAG+" "+"categoryName="+categoryName);
         if (categoryName!=null && !categoryName.isEmpty())
         {
-            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
-            holder.tV_category.setText(categoryName);
+//            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
+
+            StringBuffer res = new StringBuffer();
+            String[] strArr =categoryName.split(" ");
+            for (String str : strArr) {
+                char[] stringArray = str.trim().toCharArray();
+                stringArray[0] = Character.toUpperCase(stringArray[0]);
+                str = new String(stringArray);
+
+                res.append(str).append(" ");
+            }
+            holder.tV_category.setText(res);
         }
     }
 

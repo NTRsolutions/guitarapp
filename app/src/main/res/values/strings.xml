@@ -118,8 +118,8 @@
     <string name="priceDsc">priceDsc</string>
     <string name="newest_first">Newest First</string>
     <string name="closest_first">Closest First</string>
-    <string name="price_low_to_high">Price : low to high</string>
-    <string name="price_high_to_low">Price : high to low</string>
+    <string name="price_low_to_high">Price : Low to High</string>
+    <string name="price_high_to_low">Price : High to Low</string>
     <string name="posted_within">Posted Within</string>
     <string name="the_last_24hr">The Last 24 hour</string>
     <string name="the_last_7day">The Last 7 days</string>
@@ -188,7 +188,7 @@
     <string name="sell_it_again">Sell it again</string>
     <string name="no_post_yet">No Post Yet!</string>
     <string name="no_sold_yet">Nothing Sold Yet!</string>
-    <string name="no_post_found">No Post Found</string>
+    <string name="no_post_found">No Posts Found</string>
     <string name="verified_with">Verified With</string>
     <string name="paypal_me">Paypal.Me</string>
     <string name="payment">Payments</string>

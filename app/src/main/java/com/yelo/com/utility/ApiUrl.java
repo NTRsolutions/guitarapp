@@ -382,8 +382,20 @@ public class ApiUrl
  public static final String SEARCH_MODELS_MANUFACTURER=BASE_URL+"getManufacturerModel";
 
  /**
-  * search models of manufacturere
+  * MakePayment
   */
  public static final String PAYMENT=BASE_URL+"MakePayment";
+
+
+ /**
+  * Add Payyye
+  */
+ public static final String PAYMENT_SETTING=BASE_URL+"PaymentSetting";
+
+
+ /**
+  * Add Payyye
+  */
+ public static final String CHECK_USER_ACCOUNT_STATUS=BASE_URL+"getAccontstatus";
 
 }

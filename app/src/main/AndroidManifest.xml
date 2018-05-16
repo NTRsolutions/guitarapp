@@ -49,6 +49,11 @@
             android:launchMode="standard"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity android:name=".main.activity.AddPaymentActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <!--<activity android:name=".main.activity.BuySellFragment"-->
             <!--android:screenOrientation="portrait"-->
             <!--android:launchMode="standard"-->

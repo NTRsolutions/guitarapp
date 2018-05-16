@@ -146,4 +146,14 @@
 
     </style>
 
+    <style name="CustomPopUpThemeBlue" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:state_enabled">false</item>
+        <item name="android:state_pressed">false</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/pink_color</item>
+    </style>
+
 </resources>

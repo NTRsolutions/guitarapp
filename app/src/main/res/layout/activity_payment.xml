@@ -33,13 +33,67 @@
     </LinearLayout>
 
 
-    <com.stripe.android.view.CardInputWidget
-        android:id="@+id/card_input_widget"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:theme="@style/CardWidgetStyle"
-        />
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edit_card_number"
+            android:inputType="number"
+            android:hint="Card Number"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_edit_text"
+            android:drawableEnd="@mipmap/credit_card"
+            android:drawablePadding="5dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="5dp"
+            android:maxLength="16"
+            />
 
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:id="@+id/ed_expiry_date"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="50dp"
+                android:hint="YYYY-MM"
+                android:inputType="text"
+                android:maxLength="7"
+                android:imeOptions="actionNext"
+                android:background="@drawable/border_edit_text"
+                android:paddingLeft="5dp"
+                />
+
+            <EditText
+                android:id="@+id/edit_cvv"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="50dp"
+                android:hint="CVV "
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:background="@drawable/border_edit_text"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"
+                android:maxLength="4"
+                />
+        </LinearLayout>
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/rL_do_buy"
