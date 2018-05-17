@@ -4230,7 +4230,10 @@ public class ChatMessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
 
     private String findOverlayDate(String date) {
+
         try {
+
+
 
             SimpleDateFormat sdf = new SimpleDateFormat("EEE dd/MMM/yyyy");
 
@@ -4334,7 +4337,21 @@ public class ChatMessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 d2 = null;
                 d1 = null;
                 sdf = null;
-                return date;
+
+
+                SimpleDateFormat inputFormat = new SimpleDateFormat("EEE dd/MMM/yyyy");
+                SimpleDateFormat outputFormat = new SimpleDateFormat("MMM dd, yyyy");
+
+                Date date1 = null;
+                String str = null;
+
+                try {
+                    date1 = inputFormat.parse(date);
+                    str = outputFormat.format(date1);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                return str;
             }
 
         } catch (Exception e) {

@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/circle_with_tick_icon"
+            android:src="@mipmap/circle_with_tick_icon"
             android:contentDescription="@string/simple_image_view"
             android:layout_gravity="center"/>
 

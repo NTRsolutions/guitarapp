@@ -133,16 +133,16 @@
                         <!-- Call icon -->
                         <ImageView
                             android:id="@+id/iV_call_mail"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:contentDescription="@string/simple_image_view"
                             android:src="@drawable/call_msg_icon" />
 
                         <!-- Email icon -->
                         <ImageView
                             android:id="@+id/iV_follow"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:layout_marginLeft="@dimen/fifteen_sp"
                             android:layout_marginStart="@dimen/fifteen_dp"
                             android:layout_toEndOf="@+id/iV_call_mail"

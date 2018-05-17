@@ -175,7 +175,7 @@
     <!-- Sell your stuff -->
     <RelativeLayout
         android:id="@+id/rL_sell_stuff"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="5dp"
         android:paddingLeft="@dimen/twenty_dp"
         android:paddingRight="@dimen/twenty_dp"
         android:paddingTop="@dimen/eight_dp"

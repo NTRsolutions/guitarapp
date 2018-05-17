@@ -296,7 +296,7 @@ public class ProductPictureFragment extends Fragment {
                         case "204" :
                             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),
                                     R.style.CustomPopUpThemeBlue);
-                            builder.setMessage("You have not configured your account detail yet, Please click ok to configure");
+                            builder.setMessage("Please setup your payment details to receive payments, click ok to setup.");
                             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
                                 @Override

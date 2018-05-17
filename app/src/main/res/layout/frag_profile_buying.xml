@@ -39,12 +39,13 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content">
       <ImageView
+
           android:id="@+id/iV_default_icon"
           android:layout_centerHorizontal="true"
           android:layout_width="120dp"
           android:layout_height="120dp"
           android:visibility="invisible"
-          android:src="@drawable/empty_fav_icon"
+          android:src="@drawable/product_view_chat_icon"
           android:contentDescription="@string/simple_image_view"/>
       <com.yelo.com.custom_fonts.TextViewRobotoRegular
           android:id="@+id/tV_no_ads"

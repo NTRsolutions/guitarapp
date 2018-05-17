@@ -52,6 +52,7 @@ import com.yelo.com.mqttchat.Utilities.ApiOnServer;
 import com.yelo.com.mqttchat.Utilities.DeviceUuidFactory;
 import com.yelo.com.mqttchat.Utilities.MqttEvents;
 import com.yelo.com.mqttchat.Utilities.Utilities;
+import com.yelo.com.utility.SessionManager;
 import com.yelo.com.utility.VariableConstants;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
@@ -134,6 +135,7 @@ public class AppController extends android.support.multidex.MultiDexApplication 
     private static final int NOTIFICATION_SIZE = 5;
     private ArrayList<Map<String, Object>> notifications = new ArrayList<>();
     private String apiToken;
+    SessionManager mSessionManager;
 
     public static Context AppContext;
 
@@ -1419,7 +1421,6 @@ public class AppController extends android.support.multidex.MultiDexApplication 
         mqttConnectOptions = new MqttConnectOptions();
         mqttConnectOptions.setCleanSession(false);
         mqttConnectOptions.setMqttVersion(MqttConnectOptions.MQTT_VERSION_3_1);
-
 
         mqttConnectOptions.setUserName(ApiOnServer.MQTTUSER_NAME);
         String password=ApiOnServer.MQTTPASSWORD;
@@ -3171,6 +3172,10 @@ public class AppController extends android.support.multidex.MultiDexApplication 
      * Sending message to the FCM*/
     private void sendPushToSingleInstance(final String topicName, final String title, final String message, final String productId, final String receiverID) {
 
+        if(mSessionManager == null){
+            mSessionManager = new SessionManager( getApplicationContext());
+        }
+
         final String url = "https://fcm.googleapis.com/fcm/send";
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
                 url, null, new com.android.volley.Response.Listener<JSONObject>() {
@@ -3206,8 +3211,10 @@ public class AppController extends android.support.multidex.MultiDexApplication 
                     data.put("body",body);
                     root.put("notification",notification);
                     root.put("data",data);
-                    root.put("to",topicName);  //"condition": "'\(topic)' in topics"
+//                    root.put("to",topicName);  //"condition": "'\(topic)' in topics"
+                    root.put("to",mSessionManager.getOtherUserPushToken( ));
                 } catch (JSONException e)
+
                 {
                     e.printStackTrace();
                 }

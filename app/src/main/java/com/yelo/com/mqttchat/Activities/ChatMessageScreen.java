@@ -79,9 +79,11 @@ import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.gson.Gson;
 import com.squareup.otto.Bus;
 import com.squareup.otto.Subscribe;
+import com.stripe.android.model.Token;
 import com.yelo.com.R;
 import com.yelo.com.aleret.SeftyAleretDialog;
 import com.yelo.com.main.activity.HomePageActivity;
+import com.yelo.com.main.activity.PaymentActivity;
 import com.yelo.com.main.activity.UserProfileActivity;
 import com.yelo.com.main.activity.products.ProductDetailsActivity;
 import com.yelo.com.mqttchat.Adapters.ChatMessageAdapter;
@@ -205,6 +207,8 @@ public class ChatMessageScreen extends AppCompatActivity
     private TextView price_Text;
     private TextView product_name,already_sold_tag;
     private RelativeLayout loading_prodcut_details,product_view,productNotexist;
+
+    String mPushToken = null;
 //    private SeftyAleretDialog aleretDialog;
 
     @SuppressWarnings("TryWithIdenticalCatches")
@@ -3334,6 +3338,8 @@ public class ChatMessageScreen extends AppCompatActivity
     @Override
     public void onBackPressed()
     {
+
+        sessionManager.setOtherUserPushToken( null );
         if(isKeypadOpen)
         {
             closingAct=true;
@@ -4881,6 +4887,8 @@ public class ChatMessageScreen extends AppCompatActivity
 //        {
 //            aleretDialog.showSefty(this);
 //        }
+
+        getTokenFcm();
     }
     @SuppressWarnings("TryWithIdenticalCatches")
     @Subscribe
@@ -5915,4 +5923,86 @@ public class ChatMessageScreen extends AppCompatActivity
             mAdapter.notifyDataSetChanged();
         }
     }
+
+
+
+    private void getTokenFcm()
+    {
+
+        if (CommonClass.isNetworkAvailable(this))
+        {
+           ProgressDialog pDialog = new ProgressDialog(this,0);
+            JSONObject request_datas = new JSONObject();
+            try {
+                request_datas.put("user_name",receiverName);
+
+                Log.i( "request payment", request_datas.toString() );
+//
+            }
+            catch (JSONException e)
+            {
+                e.printStackTrace();
+                pDialog.dismiss();
+            }
+
+            OkHttp3Connection.doOkHttp3Connection("TAG", ApiUrl.GET_USER_PUSH_TOKEN, OkHttp3Connection.Request_type.POST, request_datas, new OkHttp3Connection.OkHttp3RequestCallback() {
+                @Override
+                public void onSuccess(String result, String user_tag)
+                {
+                    try
+                    {
+
+                        handelResponse(result);
+                    } catch (Exception e)
+                    {
+                        e.printStackTrace();
+                    }
+                    pDialog.dismiss();
+                }
+
+                @Override
+                public void onError(String error, String user_tag) {
+                    Toast.makeText( ChatMessageScreen.this, error.toString(), Toast.LENGTH_SHORT ).show();
+                    pDialog.dismiss();
+                }
+            });
+        }
+//        else CommonClass.showSnackbarMessage(rL_rootview,getResources().getString(R.string.NoInternetAccess));
+    }
+
+    private void handelResponse(String resaponse) throws Exception
+    {
+        JSONObject jsonObject = new JSONObject(resaponse);
+        String code_Data = jsonObject.getString("code");
+        switch (code_Data) {
+            // success
+            case "200":
+//                AppController.getInstance().sendMessageToFcm( MqttEvents. OfferMessage+"/"+requestDats.getJSONObject("sendchat").getString("to"),requestDats.getJSONObject("sendchat"));
+//                Intent intent;
+
+
+                  JSONArray jsonArray = jsonObject.optJSONArray( "pushtoken" );
+
+                  if(jsonArray.length() > 0){
+
+                      mPushToken = jsonArray.optJSONObject( 0 ).optString( "pushToken" );
+                      Log.i( "FCM Token", mPushToken );
+                      sessionManager.setOtherUserPushToken( mPushToken );
+                  }
+                break;
+            // auth token expired
+            case "401":
+                CommonClass.sessionExpired(this);
+                break;
+            case "409":
+                Toast.makeText( this, jsonObject.optString( "message" ), Toast.LENGTH_SHORT ).show();
+                break;
+            // error
+            default:
+                Toast.makeText( this, jsonObject.optString( "message" ), Toast.LENGTH_SHORT ).show();
+                break;
+        }
+    }
+
+
 }

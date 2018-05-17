@@ -41,7 +41,7 @@ public class SessionManager
 
     private static final String USER_MARKET_OWNER="userMarketOwner";
     private static final String COMING_FROM="coming_from";
-
+    private static final String OTHER_USER_PUSH_TOKEN="other_user_push_token";
 
 
     public SessionManager(Context mActivity) {
@@ -284,4 +284,12 @@ public class SessionManager
     }
 
 
+    public void setOtherUserPushToken(String comingFrom){
+
+        editor.putString(OTHER_USER_PUSH_TOKEN,comingFrom);
+        editor.apply();
+    }
+    public  String getOtherUserPushToken() {
+        return sharedpreferences.getString(OTHER_USER_PUSH_TOKEN,"");
+    }
 }

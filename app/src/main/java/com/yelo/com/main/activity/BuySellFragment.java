@@ -1,6 +1,8 @@
 package com.yelo.com.main.activity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -8,16 +10,25 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.yelo.com.R;
 import com.yelo.com.main.ProductPictureFragment;
+import com.yelo.com.pojo_class.product_category.ProductCategoryMainPojo;
+import com.yelo.com.utility.ApiUrl;
+import com.yelo.com.utility.CommonClass;
+import com.yelo.com.utility.OkHttp3Connection;
 import com.yelo.com.utility.SessionManager;
 import com.yelo.com.utility.VariableConstants;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class BuySellFragment extends Fragment {
 
@@ -96,24 +107,13 @@ public class BuySellFragment extends Fragment {
                     if (mSessionManager.getIsUserLoggedIn())
                     {
 
-                        mSessionManager.setComingFrom("login");
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-                        {
+                        hitApiOnServerToCheckUserAccount();
 
-                            startActivity(new Intent(getActivity(), Camera2Activity.class));
-
-                        }
-                        else
-                        {
-
-                            startActivity(new Intent(getActivity(), CameraActivity.class));
-
-                        }
                     }
                     else
                     {
 
-                            startActivityForResult(new Intent(getActivity(),LandingActivity.class), VariableConstants.LANDING_REQ_CODE);
+                        startActivityForResult(new Intent(getActivity(),LandingActivity.class), VariableConstants.LANDING_REQ_CODE);
 
                     }
 
@@ -131,6 +131,111 @@ public class BuySellFragment extends Fragment {
     }
 
 
+    private void hitApiOnServerToCheckUserAccount(){
+        if (CommonClass.isNetworkAvailable(getActivity()))
+        {
+            final ProgressDialog pDialog = new ProgressDialog(getActivity(),0);
+
+
+            pDialog.setCancelable(false);
+
+//        pDialog.setTitle(R.string.string_351);
+
+            pDialog.setMessage("Please wait checking status");
+            pDialog.show();
+            JSONObject request_param=new JSONObject();
+            try {
+                request_param.put( "user_name", mSessionManager.getUserName() );
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+            OkHttp3Connection.doOkHttp3Connection(TAG, ApiUrl.CHECK_USER_ACCOUNT_STATUS, OkHttp3Connection.Request_type.POST, request_param, new OkHttp3Connection.OkHttp3RequestCallback()
+            {
+                @Override
+                public void onSuccess(String result, String user_tag) {
+
+
+                    if(pDialog != null){
+                        if (pDialog.isShowing()){
+                            pDialog.dismiss();
+                        }
+                    }
+
+                    ProductCategoryMainPojo categoryMainPojo;
+                    Gson gson=new Gson();
+                    categoryMainPojo=gson.fromJson(result,ProductCategoryMainPojo.class);
+
+                    switch (categoryMainPojo.getCode())
+                    {
+                        // success i.e email is not registered
+                        case "200" :
+                            mSessionManager.setComingFrom("login");
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                            {
+
+                                startActivity(new Intent(getActivity(), Camera2Activity.class));
+
+                            }
+                            else
+                            {
+
+                                startActivity(new Intent(getActivity(), CameraActivity.class));
+
+                            }
+
+                            break;
+
+
+                        case "204" :
+                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),
+                                    R.style.CustomPopUpThemeBlue);
+                            builder.setMessage("Please setup your payment details to receive payments, click ok to setup.");
+                            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                    startActivity(new Intent(getActivity(), AddPaymentActivity.class));
+                                }
+                            });
+
+                            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                            builder.setCancelable(false);
+                            builder.show();
+
+
+                            break;
+
+                        // auth token expired
+                        case "401" :
+                            CommonClass.sessionExpired(getActivity());
+                            break;
+                        // error like email is already registered
+                        default:
+
+                            break;
+                    }
+                }
+
+                @Override
+                public void onError(String error, String user_tag) {
+                    if(pDialog != null){
+                        if (pDialog.isShowing()){
+                            pDialog.dismiss();
+                        }
+                    }
+                }
+            });
+        }
+    }
 
 
 

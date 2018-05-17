@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -12,11 +13,16 @@ import android.view.WindowManager;
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.yelo.com.R;
+import com.yelo.com.mqttchat.AppController;
 import com.yelo.com.utility.CommonClass;
 import com.yelo.com.utility.OkHttp3Connection;
 import com.yelo.com.utility.SessionManager;
 
 import org.json.JSONObject;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -46,6 +52,7 @@ public class SplashActivity extends AppCompatActivity
 
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_splash);
+
         mActivity=SplashActivity.this;
 
         // change status bar color
@@ -135,4 +142,6 @@ public class SplashActivity extends AppCompatActivity
             }
         }, TIME_OUT);
     }
+
+
 }

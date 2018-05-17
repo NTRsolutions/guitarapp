@@ -398,4 +398,9 @@ public class ApiUrl
   */
  public static final String CHECK_USER_ACCOUNT_STATUS=BASE_URL+"getAccontstatus";
 
+ /**
+  * Add Payyye
+  */
+ public static final String GET_USER_PUSH_TOKEN=BASE_URL+"getLoginUserToken";
+
 }

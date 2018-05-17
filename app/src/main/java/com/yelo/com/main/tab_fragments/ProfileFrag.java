@@ -398,15 +398,22 @@ public class ProfileFrag extends Fragment implements View.OnClickListener, Googl
                                 rL_edit_people.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        Intent editProfileIntent=new Intent(mActivity, EditProfileActivity.class);
-                                        editProfileIntent.putExtra("profilePicUrl",profilePicUrl);
-                                        editProfileIntent.putExtra("username",userName);
-                                        editProfileIntent.putExtra("fullName",fullName);
-                                        editProfileIntent.putExtra("email",email);
-                                        editProfileIntent.putExtra("phoneNumber",phoneNumber);
-                                        editProfileIntent.putExtra("website",website);
-                                        editProfileIntent.putExtra("bio",bio);
-                                        ProfileFrag.this.startActivityForResult(editProfileIntent, VariableConstants.PROFILE_REQUEST_CODE);
+
+                                        try {
+                                            Intent editProfileIntent=new Intent(mActivity, EditProfileActivity.class);
+                                            editProfileIntent.putExtra("profilePicUrl",profilePicUrl);
+                                            editProfileIntent.putExtra("username",userName);
+                                            editProfileIntent.putExtra("fullName",fullName);
+                                            editProfileIntent.putExtra("email",email);
+                                            editProfileIntent.putExtra("phoneNumber",phoneNumber);
+                                            editProfileIntent.putExtra("website",website);
+                                            editProfileIntent.putExtra("bio",bio);
+                                            ProfileFrag.this.startActivityForResult(editProfileIntent, VariableConstants.PROFILE_REQUEST_CODE);
+                                        }catch (Exception e){
+                                            e.printStackTrace();
+                                        }
+
+
                                     }
                                 });
 

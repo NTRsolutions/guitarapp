@@ -133,9 +133,9 @@
                         android:layout_marginLeft="@dimen/minus_twenty_five"
                         android:layout_toEndOf="@+id/iV_profile_pic"
                         android:layout_toRightOf="@+id/iV_profile_pic"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/edit_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/edit"
                         android:contentDescription="@string/simple_image_view"/>
 
                 </RelativeLayout>

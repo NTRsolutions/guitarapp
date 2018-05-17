@@ -927,7 +927,7 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                                 // subscribe user to on topic to recieve push notification
 
 
-                                FirebaseMessaging.getInstance().subscribeToTopic("/topics/" + mSessionManager.getmqttId() );
+//                                FirebaseMessaging.getInstance().subscribeToTopic("/topics/" + mSessionManager.getmqttId() );
                             }
                             new DialogBox(mActivity).postedSuccessDialog();
                             //deleteAllCapturedImages(arrayListImgPath);

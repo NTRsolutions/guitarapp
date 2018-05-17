@@ -17,6 +17,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -80,22 +82,26 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
 {
     private static final String TAG = PaymentActivity.class.getSimpleName();
 
-    RelativeLayout mRlPayment;
+    Button mRlPayment;
     private SessionManager mSessionManager;
     public static String KEY_PRICE = "key_price";
     Intent I = null;
     String mPriceValue;
     String postId;
     EditText mEdCardNumber, mEdExirationdate, mEdCvv;
+    CheckBox mCheckBox;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment);
+        setContentView(R.layout.activity_card_view);
         overridePendingTransition(R.anim.slide_up, R.anim.stay );
 
         mEdCardNumber = (EditText)findViewById(R.id.edit_card_number);
         mEdExirationdate = (EditText)findViewById(R.id.ed_expiry_date);
         mEdCvv =  (EditText)findViewById(R.id.edit_cvv);
+        mCheckBox = findViewById( R.id.mCheckSavecard );
+
+
 
         mEdExirationdate.addTextChangedListener(new TextWatcher() {
             int len=0;
@@ -134,6 +140,8 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
             arr = I.getStringExtra( KEY_PRICE ).split( "/" );
             mPriceValue =  arr[0];
             postId = arr[1];
+
+            mRlPayment.setText( "Pay $"+mPriceValue );
 
 
         }
@@ -206,14 +214,14 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
             pDialog.setMessage("Please wait payment is in process...");
             pDialog.show();
 
-            Stripe stripe = new Stripe(this, "pk_test_zPoqoYJhjsNSowDPXvTAIPyu");
+            Stripe stripe = new Stripe(this, "pk_test_nKU62kAjMq5ldNtw420NHgBg");
             stripe.createToken(
                     card,
                     new TokenCallback() {
                         public void onSuccess(Token token) {
                             // Send token to your server
                             paymentApi( token );
-                            Toast.makeText(PaymentActivity.this, "Token"+token.getId(), Toast.LENGTH_LONG ).show();
+//                            Toast.makeText(PaymentActivity.this, "Token"+token.getId(), Toast.LENGTH_LONG ).show();
                         }
                         public void onError(Exception error) {
                             // Show localized error message

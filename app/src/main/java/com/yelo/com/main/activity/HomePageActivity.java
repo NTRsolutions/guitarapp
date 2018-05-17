@@ -416,7 +416,7 @@ public class HomePageActivity extends AppCompatActivity
                         .setBadgeTextSize(8, true)
                         .setBadgeTextColor(ContextCompat.getColor(this, R.color.white))
                         .setBadgeBackgroundColor(ContextCompat.getColor(this, R.color.pink_color))
-                        .bindTarget(bottomNavigationView.getBottomNavigationItemView(3));
+                        .bindTarget(bottomNavigationView.getBottomNavigationItemView(2));
             }
         }
     }
@@ -645,7 +645,7 @@ public class HomePageActivity extends AppCompatActivity
                         case "204" :
                             AlertDialog.Builder builder = new AlertDialog.Builder(mActivity,
                                     R.style.CustomPopUpThemeBlue);
-                            builder.setMessage("You have not configured your account detail yet, Please click ok to configure");
+                            builder.setMessage("Please setup your payment details to receive payments, click ok to setup.");
                             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
                                 @Override
