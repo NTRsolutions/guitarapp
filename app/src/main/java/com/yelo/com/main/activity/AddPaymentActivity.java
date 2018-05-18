@@ -15,16 +15,21 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 import com.yelo.com.R;
 
 import com.yelo.com.pojo_class.CitiesPojo;
 import com.yelo.com.pojo_class.CountryPojo;
+import com.yelo.com.pojo_class.EditProfilePojo;
 import com.yelo.com.pojo_class.StatePojo;
+import com.yelo.com.pojo_class.edit_profile_pojo.EditProfileData;
 import com.yelo.com.utility.ApiUrl;
 import com.yelo.com.utility.CommonClass;
 import com.yelo.com.utility.OkHttp3Connection;
@@ -55,6 +60,7 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
 
     RelativeLayout mRlPayment;
     private SessionManager mSessionManager;
+    LinearLayout linear_rootElement;
 
 
     EditText mEdFirstName, mEdLastname, mEdSocialNumber, mEdBusinessType, mEdTxId, mEdPhone, mEdAddress,
@@ -76,7 +82,7 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
     List<StatePojo> listState;
     List<CitiesPojo> listCity;
 
-    String mCountryValue = "country";
+    String mCountryValue = "country", mDateOfBirth;
 
     String[] arrayState = null;
     String[] arrayCity = null;
@@ -95,6 +101,7 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
 
         initVariables();
 
+
     }
 
     /**
@@ -112,7 +119,9 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
                     Toast.makeText( AddPaymentActivity.this, "Please enter age greater than 13", Toast.LENGTH_SHORT ).show();
                 }else {
 
-                    mEdDateOfBirth.setText( dayOfMonth + "/" + monthOfYear + "/" + year );
+                    mEdDateOfBirth.setText( monthOfYear + "-" + dayOfMonth + "-" + year );
+                    mDateOfBirth = "";
+                    mDateOfBirth = dayOfMonth+"/"+monthOfYear+"/"+year;
                 }
             }};
         DatePickerDialog dpDialog=new DatePickerDialog(this, listener, year, month, day);
@@ -131,7 +140,7 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
                     DateDialog();
                 }
             } );
-
+            linear_rootElement= (LinearLayout) findViewById(R.id.linear_rootElement);
             mEdFirstName = findViewById( R.id.eT_Name );
             mEdLastname = findViewById( R.id.eT_last_name );
             mEdSocialNumber = findViewById( R.id.eT_re_ssn_number );
@@ -258,6 +267,10 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
             } );
 
 
+            getProfileDatasApi();
+
+
+
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -297,7 +310,7 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
 
             Toast.makeText( this, "Please enter last name.", Toast.LENGTH_SHORT ).show();
             return false;
-        }else  if(mEdDateOfBirth.getText().toString().equalsIgnoreCase( "dd-mm-yyyy" )){
+        }else  if(mDateOfBirth.length() < 0 || mDateOfBirth.isEmpty()){
 
             Toast.makeText( this, "Please select date of birth", Toast.LENGTH_SHORT ).show();
             return false;
@@ -476,7 +489,9 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
 //                AppController.getInstance().sendMessageToFcm( MqttEvents. OfferMessage+"/"+requestDats.getJSONObject("sendchat").getString("to"),requestDats.getJSONObject("sendchat"));
 //                Intent intent;
 
-                Toast.makeText( this, "Account added successfuly", Toast.LENGTH_SHORT ).show();
+                Toast.makeText( this,  jsonObject.getString("message"), Toast.LENGTH_LONG ).show();
+
+
 
                 finish();
                 break;
@@ -673,5 +688,96 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
 
 
         return ageInt;
+    }
+
+
+    private void getProfileDatasApi()
+    {
+        if (CommonClass.isNetworkAvailable(this))
+        {
+            pDialog = new ProgressDialog(this,0);
+
+
+            pDialog.setCancelable(false);
+
+//        pDialog.setTitle(R.string.string_351);
+
+            pDialog.setMessage("Please wait...");
+            pDialog.show();
+
+            JSONObject request_datas = new JSONObject();
+            try {
+                request_datas.put("token", mSessionManager.getAuthToken());
+            } catch (JSONException e) {
+                e.printStackTrace();
+                pDialog.dismiss();
+            }
+
+            OkHttp3Connection.doOkHttp3Connection(TAG, ApiUrl.EDIT_PROFILE, OkHttp3Connection.Request_type.POST, request_datas, new OkHttp3Connection.OkHttp3RequestCallback() {
+                @Override
+                public void onSuccess(String result, String user_tag)
+                {
+                    System.out.println(TAG + " " + "edit profile res=" + result);
+                    pDialog.dismiss();
+                    EditProfilePojo editProfilePojo;
+                    Gson gson=new Gson();
+                    editProfilePojo=gson.fromJson(result,EditProfilePojo.class);
+
+                    switch (editProfilePojo.getCode())
+                    {
+                        // success
+                        case "200" :
+
+                            EditProfileData editProfileData=editProfilePojo.getData();
+                            if (editProfileData!=null)
+                            {
+                                String fullName,username,websiteUrl,bio,email,phoneNumber,gender, place;
+                                fullName=editProfileData.getFullName();
+
+                                email=editProfileData.getEmail();
+                                phoneNumber=editProfileData.getPhoneNumber();
+                                // Full name
+                                if (fullName!=null && !fullName.isEmpty())
+                                    mEdFirstName.setText(fullName);
+
+
+
+
+                                // Email-Id
+                                if (email!=null && !email.isEmpty())
+                                    mEdEmail.setText(email);
+
+                                // phone number
+                                if (phoneNumber!=null && !phoneNumber.isEmpty())
+                                    mEdPhone.setText(phoneNumber);
+
+
+
+
+                            }
+                            break;
+
+                        // auth token expired
+                        case "401" :
+                            pDialog.dismiss();
+                            CommonClass.sessionExpired(AddPaymentActivity.this);
+                            break;
+
+                        // error
+                        default:
+                            pDialog.dismiss();
+                            CommonClass.showSnackbarMessage(linear_rootElement,editProfilePojo.getMessage());
+                            break;
+                    }
+                }
+
+                @Override
+                public void onError(String error, String user_tag) {
+                    pDialog.dismiss();
+                }
+            });
+        }
+        else CommonClass.showSnackbarMessage(linear_rootElement,getResources().getString(R.string.NoInternetAccess));
+
     }
 }

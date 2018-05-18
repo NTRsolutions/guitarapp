@@ -27,7 +27,7 @@
             android:textColor="@color/black"
             android:textSize="19sp"
 
-            android:text="Payment"
+            android:text="Receiving Payment"
             />
 
     </LinearLayout>
@@ -71,7 +71,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="5"
                 android:layout_height="50dp"
-                android:hint="YYYY-MM"
+                android:hint="yyyy-mm"
                 android:inputType="text"
                 android:maxLength="7"
                 android:imeOptions="actionNext"

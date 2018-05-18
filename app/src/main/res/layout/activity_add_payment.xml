@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:stripe="http://schemas.android.com/apk/res-auto"
-
+    android:id="@+id/linear_rootElement"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -45,46 +45,64 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <com.yelo.com.custom_fonts.EditTextRobotoMedium
-            android:id="@+id/eT_Name"
-            android:inputType="text"
-            android:maxLines="1"
 
-            android:textSize="@dimen/fifteen_sp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/border_edit_text"
-            android:hint="First Name"
-            android:textColorHint="@color/hint_color"
-            android:textColor="@color/black"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:drawablePadding="10dp"
-            android:paddingLeft="7dp"
-            android:imeOptions="actionNext"
-
-            />
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
 
 
-        <com.yelo.com.custom_fonts.EditTextRobotoMedium
-            android:id="@+id/eT_last_name"
-            android:inputType="text"
-            android:maxLines="1"
-            android:background="@drawable/border_edit_text"
-            android:textSize="@dimen/fifteen_sp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_toStartOf="@+id/linear_search"
+                android:layout_toLeftOf="@+id/linear_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:padding="3dp"
+                android:text="Information is required to verify your account to receive payments, all fields are required."
+                />
 
-            android:hint="Last Name"
-            android:textColorHint="@color/hint_color"
-            android:textColor="@color/black"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:drawablePadding="10dp"
-            android:paddingLeft="7dp"
-            android:layout_marginTop="10dp"
-            android:imeOptions="actionNext"
-            />
+
+            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                android:id="@+id/eT_Name"
+                android:inputType="text"
+                android:maxLines="1"
+
+                android:textSize="@dimen/fifteen_sp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_edit_text"
+                android:hint="First Name"
+                android:textColorHint="@color/hint_color"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:paddingLeft="7dp"
+                android:layout_marginTop="15dp"
+                android:imeOptions="actionNext"
+
+                />
+
+
+            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                android:id="@+id/eT_last_name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:background="@drawable/border_edit_text"
+                android:textSize="@dimen/fifteen_sp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:hint="Last Name"
+                android:textColorHint="@color/hint_color"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:paddingLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:imeOptions="actionNext"
+                />
 
 
             <com.yelo.com.custom_fonts.TextViewRobotoRegular
@@ -96,15 +114,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/border_edit_text"
-                android:hint="dd-mm-yyyy"
+                android:hint="Date of Birth"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:drawablePadding="10dp"
                 android:paddingLeft="7dp"
-                android:text="dd-mm-yyyy"
-                
+                android:text=""
+
                 android:layout_marginTop="10dp"
                 />
 
@@ -114,9 +132,8 @@
 
             <com.yelo.com.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_re_ssn_number"
-                android:inputType="number"
+                android:inputType="numberPassword"
                 android:maxLines="1"
-
                 android:textSize="@dimen/fifteen_sp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -128,7 +145,8 @@
                 android:drawablePadding="10dp"
                 android:paddingLeft="7dp"
                 android:maxLength="4"
-                android:hint="Social Security Number"
+
+                android:hint="Last Four Of SSN"
                 android:layout_marginTop="10dp"
                 android:imeOptions="actionNext"
                 />
@@ -347,12 +365,6 @@
                 android:visibility="gone"
                 />
 
-
-
-
-
-
-
             <com.yelo.com.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_postal_code"
                 android:inputType="number"
@@ -477,32 +489,32 @@
                 />
 
             <RelativeLayout
-            android:id="@+id/rL_do_submit"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="@dimen/fifteen_dp"
-            android:layout_marginStart="@dimen/fifteen_dp"
-            android:layout_marginRight="@dimen/fifteen_dp"
-            android:layout_marginEnd="@dimen/fifteen_dp"
-            android:layout_width="180dp"
-            android:layout_gravity="center"
-            android:layout_height="40dp"
-            android:background="@drawable/button_rounded_corner_payment"
-            >
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                android:id="@+id/rL_do_submit"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginRight="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_width="180dp"
+                android:layout_gravity="center"
+                android:layout_height="40dp"
+                android:background="@drawable/button_rounded_corner_payment"
+                >
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
 
-                android:gravity="center"
-                android:textSize="@dimen/nineteen_sp"
-                android:textColor="@color/white"
-                android:text="@string/submit"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                />
+                    android:gravity="center"
+                    android:textSize="@dimen/nineteen_sp"
+                    android:textColor="@color/white"
+                    android:text="@string/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    />
 
 
 
-        </RelativeLayout>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 
-    </LinearLayout>
+</LinearLayout>

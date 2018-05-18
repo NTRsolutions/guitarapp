@@ -189,6 +189,7 @@ public class HomePageActivity extends AppCompatActivity
         FragmentTransaction transaction = manager.beginTransaction();
         final Menu nav_menu = bottomNavigationView.getMenu();
         nav_menu.getItem(0).setIcon(R.drawable.tabbar_home_onn);
+
         bottomNavigationView.setOnNavigationItemSelectedListener
                 (new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
