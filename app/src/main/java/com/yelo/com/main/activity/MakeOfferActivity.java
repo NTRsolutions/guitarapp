@@ -381,15 +381,7 @@ public class MakeOfferActivity extends AppCompatActivity implements View.OnClick
                 requestDats.put("sendchat",createMessageObject(digivalue));
 
 
-
-//                requestDats.put("auth_token",sessionManager.getAuthToken());
-//                requestDats.put("type","0");
-//                requestDats.put("postId",postId);
-//                requestDats.put("price",digivalue);
-//
-//                requestDats.put("membername",member_name);
-//                requestDats.put("sendchat",createMessageObject(digivalue));
-            } catch (Exception e)
+                } catch (Exception e)
             {
                 e.printStackTrace();
                 handelButton(false);
