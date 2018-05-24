@@ -71,11 +71,11 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/iV_following_icon"
-            android:visibility="gone"
+
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/empty_follower"
+            android:src="@drawable/no_following_yet"
             android:contentDescription="@string/simple_image_view"/>
         <com.yelo.com.custom_fonts.TextViewRobotoRegular
             android:id="@+id/tV_no_following"

@@ -102,13 +102,13 @@ public class SelfFollowingActivity extends Activity implements View.OnClickListe
         if (isFollower)
         {
             apiUrl=ApiUrl.GET_FOLLOWER;
-            iV_following_icon.setImageResource(R.drawable.empty_follower);
+            iV_following_icon.setImageResource(R.drawable.no_follower_yet);
             tV_no_following.setText(getResources().getString(R.string.no_follower_yet));
         }
         else
         {
             apiUrl=ApiUrl.GET_FOLLOWING;
-            iV_following_icon.setImageResource(R.drawable.empty_following);
+            iV_following_icon.setImageResource(R.drawable.no_following_yet);
             tV_no_following.setText(getResources().getString(R.string.no_following_yet));
         }
 

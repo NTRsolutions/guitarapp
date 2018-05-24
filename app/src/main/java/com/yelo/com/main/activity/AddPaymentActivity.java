@@ -66,7 +66,7 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
     EditText mEdFirstName, mEdLastname, mEdSocialNumber, mEdBusinessType, mEdTxId, mEdPhone, mEdAddress,
             mEdCity, mEdState, mEdPostalCode, mEdEmail, mEdAccountHolderName, mEdRoutingNumber,mEdAccountNumber, mEdAccntConfirm;
 
-    AppCompatSpinner mCountrySpinner, mStateSpinner, mCitySpinner;
+    AppCompatSpinner mCountrySpinner, mStateSpinner, mCitySpinner, mBusinessTypeSpinner;
     TextView mEdDateOfBirth;
     private Calendar mcalendar;
 
@@ -77,15 +77,19 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
     android.widget.ArrayAdapter<String> arrayAdapterCountry;
     ArrayAdapter<String> arrayAdapterState;
     ArrayAdapter<String> arrayAdapterCity;
+
+    ArrayAdapter<String> mAdapterBusinessType;
     String[] arrayCountry = null;
     List<CountryPojo> listCountry;
     List<StatePojo> listState;
     List<CitiesPojo> listCity;
 
-    String mCountryValue = "country", mDateOfBirth;
+    String mCountryValue = "Country", mDateOfBirth;
 
     String[] arrayState = null;
     String[] arrayCity = null;
+
+    String[] arrayBusinessType = {"--Type of account--","Individual","Music Store"};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -154,6 +158,7 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
             mCountrySpinner = findViewById( R.id.et_Country );
             mStateSpinner = findViewById( R.id.et_state );
             mCitySpinner = findViewById( R.id.et_city );
+            mBusinessTypeSpinner = findViewById( R.id.et_businessType );
 
             mEdPostalCode = findViewById( R.id.eT_postal_code );
             mEdEmail = findViewById( R.id.eT_email );
@@ -166,6 +171,38 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
 
             mRlPayment =findViewById(R.id.rL_do_submit);
             mRlPayment.setOnClickListener( this );
+
+            mEdTxId.setVisibility( View.INVISIBLE );
+
+            mAdapterBusinessType = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_spinner_dropdown_item,arrayBusinessType);
+
+
+            mBusinessTypeSpinner.setAdapter( mAdapterBusinessType );
+
+            mBusinessTypeSpinner.setOnItemSelectedListener( new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    if(position > 0){
+                        mEdBusinessType.setText( arrayBusinessType[position].trim());
+
+                        if(position == 1){
+                            mEdTxId.setVisibility( View.INVISIBLE );
+                        }else {
+                            mEdTxId.setVisibility( View.VISIBLE );
+                        }
+
+                    }else {
+
+                        mEdBusinessType.setText("");
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            } );
 
             arrayCountry = new String[getCountries(this).size()];
 
@@ -302,90 +339,95 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
 
     private boolean validation(){
 
+
+
         if(isvalidEditText( mEdFirstName )){
 
             Toast.makeText( this, "Please enter first name.", Toast.LENGTH_SHORT ).show();
             return false;
-        }else  if(isvalidEditText( mEdLastname )){
+        }  if(isvalidEditText( mEdLastname )){
 
             Toast.makeText( this, "Please enter last name.", Toast.LENGTH_SHORT ).show();
             return false;
-        }else  if(mDateOfBirth.length() < 0 || mDateOfBirth.isEmpty()){
+        }  if(mDateOfBirth.length() < 0 || mDateOfBirth.isEmpty()){
 
             Toast.makeText( this, "Please select date of birth", Toast.LENGTH_SHORT ).show();
             return false;
-        } else  if(isvalidEditText( mEdSocialNumber )){
+        }  if(isvalidEditText( mEdPhone )){
+
+            Toast.makeText( this, "Please enter phone number.", Toast.LENGTH_SHORT ).show();
+        }  if(isvalidEditText( mEdAddress )){
+
+            Toast.makeText( this, "Please enter address", Toast.LENGTH_SHORT ).show();
+            return false;
+        }
+        if(mCountryValue.equals( "Country" ) || mCountryValue.equals( "--Country--" )){
+
+            Toast.makeText( this, "Please select country.", Toast.LENGTH_SHORT ).show();
+            return false;
+        }
+        if(isvalidEditText( mEdPostalCode )){
+
+            Toast.makeText( this, "Please enter postal code.", Toast.LENGTH_SHORT ).show();
+            return false;
+        }  if(isvalidEditText( mEdEmail )){
+
+            Toast.makeText( this, "Please enter email", Toast.LENGTH_SHORT ).show();
+            return false;
+        }  if(!isValidEmailId( mEdEmail.getText().toString().trim() )){
+
+            Toast.makeText( this, "Please enter valid email.", Toast.LENGTH_SHORT ).show();
+            return false;
+        }
+
+        if(isvalidEditText( mEdSocialNumber )){
 
             Toast.makeText( this, "Please enter Social number.", Toast.LENGTH_SHORT ).show();
             return false;
-        }else  if(mEdSocialNumber.getText().toString().trim().length() !=4  ){
+        }  if(mEdSocialNumber.getText().toString().trim().length() !=4  ){
 
             Toast.makeText( this, "Please enter Social number of only four digit", Toast.LENGTH_SHORT ).show();
             return false;
         }
 
-        else  if(isvalidEditText( mEdBusinessType )){
+        if(isvalidEditText( mEdBusinessType )){
+
 
             Toast.makeText( this, "Please enter business type.", Toast.LENGTH_SHORT ).show();
             return false;
-        }else  if(isvalidEditText( mEdTxId )){
-
-            Toast.makeText( this, "Please enter tax id.", Toast.LENGTH_SHORT ).show();
-            return false;
-        }else  if(isvalidEditText( mEdPhone )){
-
-            Toast.makeText( this, "Please enter phone number.", Toast.LENGTH_SHORT ).show();
-        }
-//        else  if(isvalidEditText( mEdCity )){
-//
-//            Toast.makeText( this, "Please enter city.", Toast.LENGTH_SHORT ).show();
-//            return false;
-//        }else  if(isvalidEditText( mEdState )){
-//
-//            Toast.makeText( this, "Please enter state", Toast.LENGTH_SHORT ).show();
-//            return false;
-//        }
-
-
-        else if(mCountryValue.equalsIgnoreCase( "--Country--" ) ){
-
-            Toast.makeText( this, "Please select country.", Toast.LENGTH_SHORT ).show();
-            return false;
-        }else
-          if(isvalidEditText( mEdPostalCode )){
-
-            Toast.makeText( this, "Please enter postal code.", Toast.LENGTH_SHORT ).show();
-              return false;
-        }else  if(isvalidEditText( mEdEmail )){
-
-            Toast.makeText( this, "Please enter email", Toast.LENGTH_SHORT ).show();
-              return false;
-        }else  if(!isValidEmailId( mEdEmail.getText().toString().trim() )){
-
-            Toast.makeText( this, "Please enter valid email.", Toast.LENGTH_SHORT ).show();
-              return false;
         }
 
-        else  if(isvalidEditText( mEdAccountHolderName )){
+        if(mEdBusinessType.getText().toString().length() > 0) {
+
+            if(mEdBusinessType.getText().toString().trim().equalsIgnoreCase( "Music Store" )){
+                if(isvalidEditText( mEdTxId )){
+                    Toast.makeText( this, "Please enter tax id.", Toast.LENGTH_SHORT ).show();
+                    return false;
+                }
+            }
+
+        }
+
+        if(isvalidEditText( mEdAccountHolderName )){
 
             Toast.makeText( this, "Please enter account holder name.", Toast.LENGTH_SHORT ).show();
-              return false;
-        }else  if(isvalidEditText( mEdRoutingNumber )){
+            return false;
+        }  if(isvalidEditText( mEdRoutingNumber )){
 
             Toast.makeText( this, "Please enter rounting number.", Toast.LENGTH_SHORT ).show();
-              return false;
-        }else  if(isvalidEditText( mEdAccountNumber )){
+            return false;
+        }  if(isvalidEditText( mEdAccountNumber )){
 
             Toast.makeText( this, "Please enter account number.", Toast.LENGTH_SHORT ).show();
-              return false;
-        }else  if(isvalidEditText( mEdAccntConfirm )){
+            return false;
+        }  if(isvalidEditText( mEdAccntConfirm )){
 
             Toast.makeText( this, "Please enter confirm account number.", Toast.LENGTH_SHORT ).show();
-              return false;
-        }else  if(isValidPassword( mEdAccntConfirm.getText().toString().trim(), mEdAccountNumber.getText().toString().trim() )){
+            return false;
+        }  if(isValidPassword( mEdAccntConfirm.getText().toString().trim(), mEdAccountNumber.getText().toString().trim() )){
 
             Toast.makeText( this, "Account number and confirm account not matches", Toast.LENGTH_SHORT ).show();
-              return false;
+            return false;
         }
 
 
@@ -426,7 +468,7 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
 
                 request_datas.put("First_name",getText(mEdFirstName));
                 request_datas.put("Last_name",getText(mEdLastname));
-                request_datas.put("Date_of_birth",mEdDateOfBirth.getText().toString().trim());
+                request_datas.put("Date_of_birth",mDateOfBirth);
                 request_datas.put("SSN",getText(mEdSocialNumber));
                 request_datas.put("business", "NA");
                 request_datas.put("type", "individual");

@@ -698,8 +698,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                 requestDatas.put("offset", offset);
                 requestDatas.put("limit",limit);
                 requestDatas.put("token", mSessionManager.getAuthToken());
-                requestDatas.put("latitude",lat);
-                requestDatas.put("longitude",lng);
+                requestDatas.put("latitude",40.758018);
+                requestDatas.put("longitude",-73.974976);
                 requestDatas.put( "category_name", mcategoryName );
                 requestDatas.put( "make", make );
                 requestDatas.put("pushToken",mSessionManager.getPushToken());

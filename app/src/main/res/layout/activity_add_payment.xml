@@ -27,7 +27,7 @@
             android:textColor="@color/black"
             android:textSize="19sp"
 
-            android:text="Add Your Account"
+            android:text="Create your Account"
             />
 
 
@@ -62,6 +62,24 @@
                 />
 
 
+
+
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+
+
+                android:gravity="center_vertical"
+                android:layout_toStartOf="@+id/linear_search"
+                android:layout_toLeftOf="@+id/linear_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="PERSONAL INFORMATION"
+                />
+
             <com.yelo.com.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_Name"
                 android:inputType="text"
@@ -71,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/border_edit_text"
-                android:hint="First Name"
+                android:hint="First name"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
@@ -93,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
 
-                android:hint="Last Name"
+                android:hint="Last name"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
@@ -114,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/border_edit_text"
-                android:hint="Date of Birth"
+                android:hint="Date of birth"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
@@ -126,74 +144,6 @@
                 android:layout_marginTop="10dp"
                 />
 
-
-
-
-
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
-                android:id="@+id/eT_re_ssn_number"
-                android:inputType="numberPassword"
-                android:maxLines="1"
-                android:textSize="@dimen/fifteen_sp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/border_edit_text"
-                android:textColorHint="@color/hint_color"
-                android:textColor="@color/black"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:drawablePadding="10dp"
-                android:paddingLeft="7dp"
-                android:maxLength="4"
-
-                android:hint="Last Four Of SSN"
-                android:layout_marginTop="10dp"
-                android:imeOptions="actionNext"
-                />
-
-
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
-                android:id="@+id/eT_business"
-                android:inputType="text"
-                android:maxLines="1"
-
-                android:textSize="@dimen/fifteen_sp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/border_edit_text"
-                android:hint="Business Type"
-                android:textColorHint="@color/hint_color"
-                android:textColor="@color/black"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:drawablePadding="10dp"
-                android:paddingLeft="7dp"
-                android:layout_marginTop="10dp"
-                android:imeOptions="actionNext"
-                />
-
-
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
-                android:id="@+id/eT_tx_id"
-                android:inputType="text"
-                android:maxLines="1"
-
-                android:textSize="@dimen/fifteen_sp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/border_edit_text"
-                android:hint="Tax Id"
-                android:textColorHint="@color/hint_color"
-                android:textColor="@color/black"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:drawablePadding="10dp"
-                android:paddingLeft="7dp"
-                android:layout_marginTop="10dp"
-                android:imeOptions="actionNext"
-                />
-
-
             <com.yelo.com.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_phone_number"
                 android:inputType="number"
@@ -203,7 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/border_edit_text"
-                android:hint="Phone Number"
+                android:hint="Phone number"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
@@ -214,6 +164,23 @@
                 android:imeOptions="actionNext"
                 />
 
+
+
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+
+
+                android:gravity="center_vertical"
+                android:layout_toStartOf="@+id/linear_search"
+                android:layout_toLeftOf="@+id/linear_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginTop="7dp"
+                android:paddingLeft="10dp"
+                android:text="ADDRESS INFORMATION"
+                />
             <com.yelo.com.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_address"
                 android:inputType="text"
@@ -230,7 +197,7 @@
                 android:layout_marginRight="10dp"
                 android:drawablePadding="10dp"
                 android:paddingLeft="7dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:imeOptions="actionNext"
                 />
 
@@ -374,7 +341,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/border_edit_text"
-                android:hint="Postal Code"
+                android:hint="Postal code"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
@@ -405,6 +372,117 @@
                 android:imeOptions="actionNext"
                 />
 
+            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                android:id="@+id/eT_re_ssn_number"
+                android:inputType="numberPassword"
+                android:maxLines="1"
+                android:textSize="@dimen/fifteen_sp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_edit_text"
+                android:textColorHint="@color/hint_color"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:paddingLeft="7dp"
+                android:maxLength="4"
+
+                android:hint="Last four of social"
+                android:layout_marginTop="10dp"
+                android:imeOptions="actionNext"
+                />
+
+
+            <FrameLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="40dp">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/et_businessType"
+                    android:background="@drawable/border_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:textColorHint="#000"
+                    />
+                <ImageView
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/dd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+
+            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                android:id="@+id/eT_business"
+                android:inputType="text"
+                android:maxLines="1"
+
+                android:textSize="@dimen/fifteen_sp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_edit_text"
+                android:hint="Business Type"
+                android:textColorHint="@color/hint_color"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:paddingLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:imeOptions="actionNext"
+                android:visibility="gone"
+                />
+
+
+            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                android:id="@+id/eT_tx_id"
+                android:inputType="text"
+                android:maxLines="1"
+
+                android:textSize="@dimen/fifteen_sp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_edit_text"
+                android:hint="Tax Id"
+                android:textColorHint="@color/hint_color"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:paddingLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:imeOptions="actionNext"
+                />
+
+
+
+
+
+            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+
+
+                android:gravity="center_vertical"
+                android:layout_toStartOf="@+id/linear_search"
+                android:layout_toLeftOf="@+id/linear_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginTop="7dp"
+                android:paddingLeft="10dp"
+                android:text="BANK INFORMATION"
+                />
 
             <com.yelo.com.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_account_holder_name"
@@ -415,14 +493,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/border_edit_text"
-                android:hint="Account Holder Name"
+                android:hint="Account holder name"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:drawablePadding="10dp"
                 android:paddingLeft="7dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:imeOptions="actionNext"
                 />
 
@@ -435,7 +513,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/border_edit_text"
-                android:hint="Routing Number"
+                android:hint="Routing number"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
@@ -456,7 +534,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/border_edit_text"
-                android:hint="Account Number"
+                android:hint="Account number"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
@@ -477,7 +555,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/border_edit_text"
-                android:hint="Confirm Account Number"
+                android:hint="Confirm account number"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
@@ -510,9 +588,6 @@
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     />
-
-
-
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>

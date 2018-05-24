@@ -111,7 +111,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     private String receiverMqttId ="",likeStatus="",postId="",postsType="",productImage="",thumbnailImageUrl="",productName="",membername,followRequestStatus="",likesCount="",
             currency="",price="",postedOn="",description="",condition="",place="",latitude="",longitude="",cityName="",countryCode="",currentLat="",currentLng="",
             category="", containerWidth="",containerHeight="",image1 ="",image1thumbnail="", image2 ="", image2thumbnail="",image3 ="", image3thumbnail="",image4 ="",image4thumbnail="",memberProfilePicUrl="",clickCount="",negotiable="",
-            cloudinaryPublicId="",cloudinaryPublicId1="",cloudinaryPublicId2="",cloudinaryPublicId3="",cloudinaryPublicId4="",getCityName="",getCountryName="";
+            cloudinaryPublicId="",cloudinaryPublicId1="",cloudinaryPublicId2="",cloudinaryPublicId3="",cloudinaryPublicId4="",getCityName="",getCountryName="", mStMake, mStYear, mStModel;
     private int sold;
     private ArrayList<ExploreLikedByUsersDatas> aL_likedByUsers;
     private FusedLocationService locationService;
@@ -136,7 +136,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     private LinearLayout linear_like_product;
     private RelativeLayout rL_follow;
     private TextView tV_productname,tV_category,tV_postedOn,tV_posted_by,tV_follow,tV_description,tV_condition,
-            tV_location,tV_currency,tV_productprice,tV_like_count,tV_view_count,tV_makeoffer, tv_buy;
+            tV_location,tV_currency,tV_productprice,tV_like_count,tV_view_count,tV_makeoffer, tv_buy, mTvMake, mTvYear, mTvModel;
     private ImageView iV_soldby,like_item_icon,iV_followed_list,iv_staticMap;
     private LinearLayout linear_followed_images;
     private NotificationMessageDialog mNotificationMessageDialog;
@@ -391,6 +391,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         mProgress_bar= (ProgressBar) contentView.findViewById(R.id.progress_bar);
         mProgress_bar.setVisibility(View.VISIBLE);
 
+
         // sold by profile
         RelativeLayout rL_sold_by = (RelativeLayout)contentView.findViewById(R.id.rL_sold_by);
         rL_sold_by.setOnClickListener(this);
@@ -404,6 +405,13 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         rL_addToReview.setOnClickListener(this);
         tV_productname= (TextView)contentView.findViewById(R.id.tV_productname);
         tV_category= (TextView) contentView.findViewById(R.id.tV_category);
+
+        mTvMake= (TextView) contentView.findViewById(R.id.tV_make);
+        mTvYear= (TextView) contentView.findViewById(R.id.tV_year);
+        mTvModel= (TextView) contentView.findViewById(R.id.tV_model);
+
+
+
         tV_postedOn= (TextView) contentView.findViewById(R.id.tV_postedOn);
         tV_like_count= (TextView) contentView.findViewById(R.id.tV_like_count);
         tV_view_count= (TextView) contentView.findViewById(R.id.tV_view_count);
@@ -560,6 +568,10 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                             sold=productResponse.getSold();
                             getCityName=productResponse.getCity();
 
+                            mStMake = productResponse.getMake();
+                            mStYear = productResponse.getYear();
+                            mStModel = productResponse.getModel();
+
 
                             // To show liked By Users
                             aL_likedByUsers=productResponse.getLikedByUsers();
@@ -626,6 +638,26 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                 startActivity(intent);
             }
         });
+
+        // make name
+        if (mStMake!=null && !mStMake.isEmpty())
+        {
+
+            mTvMake.setText(mStMake);
+        }
+
+        if (mStYear!=null && !mStYear.isEmpty())
+        {
+
+            mTvYear.setText(mStMake);
+        }
+
+        if (mStModel!=null && !mStModel.isEmpty())
+        {
+
+            mTvModel.setText(mStModel);
+        }
+
 
         // product name
         if (productName!=null && !productName.isEmpty())

@@ -72,6 +72,7 @@ public class ProductResponseDatas
             cloudinaryPublicId="",cloudinaryPublicId1="",cloudinaryPublicId2="",cloudinaryPublicId3="",cloudinaryPublicId4="";
 
     private String userMqttId="";
+    String make,year,model;
     private int offerAccepted;
 
     public int getOfferAccepted()
@@ -601,5 +602,29 @@ public class ProductResponseDatas
 
     public void setCloudinaryPublicId4(String cloudinaryPublicId4) {
         this.cloudinaryPublicId4 = cloudinaryPublicId4;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 }
