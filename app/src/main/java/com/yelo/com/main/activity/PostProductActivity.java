@@ -1,6 +1,7 @@
 package com.yelo.com.main.activity;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -15,6 +16,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.speech.RecognizerIntent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.IntentCompat;
@@ -30,6 +32,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -82,6 +85,7 @@ import java.util.Locale;
 import java.util.Map;
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.Manifest.permission.RECORD_AUDIO;
 
 /**
  * <h>PostProductActivity</h>
@@ -120,8 +124,13 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
     private TextView btn_cancel;
     RelativeLayout mRlModels,mRlModelsYear,mRlMake;
     TextView mTvcategoryModels, mTvCategoryYears, mTvMakes;
-
+    LinearLayout mLiTitleSpeach, mLiDescSpeach, mLiPriceSpeach;
+    private static final int REQ_CODE_SPEECH_INPUT_TITLE = 100;
+    private static final int REQ_CODE_SPEECH_INPUT_DESCRIPTION = 101;
+    private static final int REQ_CODE_SPEECH_INPUT_PRICE = 102;
     int ManufactrerId = -1;
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -218,6 +227,17 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
         mRlModelsYear = findViewById( R.id.rL_product_model_year );
         mRlMake = findViewById( R.id.rL_product_model_make );
 
+        mLiTitleSpeach = findViewById( R.id.layout_title );
+        mLiDescSpeach = findViewById( R.id.layout_description );
+        mLiPriceSpeach = findViewById( R.id.layout_price );
+
+
+
+        mLiTitleSpeach.setOnClickListener(this);
+        mLiDescSpeach.setOnClickListener(this);
+        mLiPriceSpeach.setOnClickListener(this);
+
+
         mRlModels.setOnClickListener(this);
         mRlModelsYear.setOnClickListener(this);
         mRlMake.setOnClickListener(this);
@@ -227,7 +247,7 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
         mTvCategoryYears = findViewById( R.id.tV_category_model_year );
         mTvMakes  = findViewById( R.id.tV_category_model_make );
 
-        permissionsArray = new String[]{ACCESS_FINE_LOCATION,ACCESS_COARSE_LOCATION};
+        permissionsArray = new String[]{ACCESS_FINE_LOCATION,ACCESS_COARSE_LOCATION,RECORD_AUDIO};
         runTimePermission = new RunTimePermission(mActivity, permissionsArray,false);
         if (runTimePermission.checkPermissions(permissionsArray))
         {
@@ -1100,7 +1120,7 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                 }
                 break;
 
-            // conditions
+            // year
             case R.id.rL_product_model_year :
                 if (isToPostItem) {
 
@@ -1114,7 +1134,7 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                 }
                 break;
 
-            // currency
+            // make
             case R.id.rL_product_model_make:
                 if (isToPostItem) {
 
@@ -1178,6 +1198,23 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                // intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
                 mActivity.startActivity(intent1);
                 break;
+
+
+            // title speach recognition
+            case R.id.layout_title :
+                startVoiceInput(REQ_CODE_SPEECH_INPUT_TITLE);
+                break;
+
+            // description speach recognition
+            case R.id.layout_description :
+                startVoiceInput(REQ_CODE_SPEECH_INPUT_DESCRIPTION);
+                break;
+
+            // description speach recognition
+            case R.id.layout_price :
+                startVoiceInput(REQ_CODE_SPEECH_INPUT_PRICE);
+                break;
+
         }
     }
 
@@ -1216,6 +1253,9 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                         mTvcategoryModels.requestFocus();
 
                         ManufactrerId = Integer.parseInt(arr[1]);
+
+                        mRlModelsYear.performClick();
+
                     }
                     break;
 
@@ -1227,6 +1267,8 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                     {
                         mTvCategoryYears.setText(yearName);
                         mTvCategoryYears.requestFocus();
+
+                        mRlMake.performClick();
                     }
                     break;
 
@@ -1297,6 +1339,29 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
                     }
                     break;
 
+                case REQ_CODE_SPEECH_INPUT_TITLE:
+                    if (resultCode == RESULT_OK && null != data) {
+                        ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                        eT_title.setText(result.get(0));
+                    }
+                    break;
+
+
+
+                case REQ_CODE_SPEECH_INPUT_DESCRIPTION:
+                    if (resultCode == RESULT_OK && null != data) {
+                        ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                        eT_description.setText(result.get(0));
+                    }
+                    break;
+
+                case REQ_CODE_SPEECH_INPUT_PRICE:
+                    if (resultCode == RESULT_OK && null != data) {
+                        ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                        eT_price.setText(result.get(0));
+                    }
+                    break;
+
 
             }
         }
@@ -1343,5 +1408,26 @@ public class PostProductActivity extends AppCompatActivity implements View.OnCli
 
         return Bitmap.createBitmap(bitmap, 0, 0, w, h, mtx, true);
     }
+
+
+    private void startVoiceInput(int requestCode) {
+        Intent intent = new Intent( RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+
+        if (REQ_CODE_SPEECH_INPUT_TITLE == requestCode) {
+            intent.putExtra( RecognizerIntent.EXTRA_PROMPT, "Please say some title of product" );
+        }else if(REQ_CODE_SPEECH_INPUT_DESCRIPTION == requestCode){
+            intent.putExtra( RecognizerIntent.EXTRA_PROMPT, "Please say some description of product" );
+        }else if(REQ_CODE_SPEECH_INPUT_PRICE == requestCode){
+            intent.putExtra( RecognizerIntent.EXTRA_PROMPT, "Please say some price of product" );
+        }
+        try {
+            startActivityForResult(intent, requestCode);
+        } catch (ActivityNotFoundException a) {
+
+        }
+    }
+
 
 }

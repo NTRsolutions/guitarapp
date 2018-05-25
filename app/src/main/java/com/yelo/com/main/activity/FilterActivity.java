@@ -22,6 +22,8 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.yelo.com.R;
 import com.yelo.com.adapter.FilterCategoryRvAdapter;
 import com.yelo.com.fcm_push_notification.Config;
@@ -76,6 +78,9 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
     RadioGroup rdgFirst, rdgHours;
 
     boolean isCheckedWork = true;
+    RelativeLayout mRlModels,mRlModelsYear,mRlMake;
+    int ManufactrerId = -1;
+    TextView mTvcategoryModels, mTvCategoryYears, mTvMakes;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -142,6 +147,19 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
         eT_minprice= (EditText) findViewById(R.id.eT_minprice);
         eT_maxprice= (EditText) findViewById(R.id.eT_maxprice);
 
+
+        mRlModels = findViewById( R.id.rL_product_model );
+        mRlModelsYear = findViewById( R.id.rL_product_model_year );
+        mRlMake = findViewById( R.id.rL_product_model_make );
+
+        mRlModels.setOnClickListener(this);
+        mRlModelsYear.setOnClickListener(this);
+        mRlMake.setOnClickListener(this);
+
+        mTvcategoryModels = findViewById( R.id.tV_category_model );
+        mTvCategoryYears = findViewById( R.id.tV_category_model_year );
+        mTvMakes  = findViewById( R.id.tV_category_model_make );
+
         // Distance seekbar
         tV_starting_dis = (TextView) findViewById(R.id.tV_starting_dis);
         distance_seekbar = (SeekBar) findViewById(R.id.distance_seekbar);
@@ -183,8 +201,6 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
                             radio_highToLow.setChecked( false );
                             radio_lowToHigh.setChecked( false );
                         }
-
-
 
                         break;
 
@@ -420,6 +436,45 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.rL_back_btn:
                 onBackPressed();
                 break;
+
+
+            // category
+            case R.id.rL_product_model :
+
+                    intent = new Intent(mActivity, ProductModelsActivity.class);
+                    startActivityForResult(intent, VariableConstants.MODEL_REQUEST_CODE);
+
+                break;
+            // year
+            case R.id.rL_product_model_year :
+
+
+                    if(ManufactrerId != -1) {
+                        intent = new Intent( mActivity, YearModelsActivity.class );
+                        intent.putExtra( "model_id", ManufactrerId );
+                        startActivityForResult( intent, VariableConstants.MODEL_REQUEST_YEAR_CODE );
+                    }else {
+                        Toast.makeText( mActivity, "Please select make first.", Toast.LENGTH_SHORT ).show();
+                    }
+
+                break;
+
+            // make
+            case R.id.rL_product_model_make:
+
+                    if(ManufactrerId != -1) {
+                        String str = mTvcategoryModels.getText().toString();
+                        intent = new Intent( mActivity, MakeModelsActivity.class );
+                        intent.putExtra( "model_id", ManufactrerId );
+                        startActivityForResult( intent, VariableConstants.MODEL_REQUEST_MAKE_CODE );
+                    }else {
+                        Toast.makeText( mActivity, "Please select make first.", Toast.LENGTH_SHORT ).show();
+                    }
+
+
+                break;
+
+
 
             // save filtered datas
             case R.id.rL_apply:
@@ -757,6 +812,48 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
                     tV_setLocation.setText(address);
                     System.out.println(TAG+" "+"lat="+userLat+" "+"lng="+userLng+" "+"address="+address);
                     break;
+
+
+                // modelName
+                case VariableConstants.MODEL_REQUEST_CODE :
+                    String modelName=data.getStringExtra("modelName");
+                    String[] arr = modelName.split( "/" );
+
+                    if (modelName!=null)
+                    {
+                        mTvcategoryModels.setText(arr[0]);
+                        mTvcategoryModels.requestFocus();
+
+                        ManufactrerId = Integer.parseInt(arr[1]);
+
+//                        mRlModelsYear.performClick();
+
+                    }
+                    break;
+
+
+                // modelName  MODEL_REQUEST_MAKE_CODE
+                case VariableConstants.MODEL_REQUEST_YEAR_CODE :
+                    String yearName=data.getStringExtra("yearName");
+                    if (yearName!=null)
+                    {
+                        mTvCategoryYears.setText(yearName);
+                        mTvCategoryYears.requestFocus();
+
+//                        mRlMake.performClick();
+                    }
+                    break;
+
+
+                case VariableConstants.MODEL_REQUEST_MAKE_CODE :
+                    String makeName=data.getStringExtra("make_name");
+                    if (makeName!=null)
+                    {
+                        mTvMakes.setText(makeName);
+                        mTvMakes.requestFocus();
+                    }
+                    break;
+
             }
         }
     }

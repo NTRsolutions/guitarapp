@@ -110,8 +110,8 @@ public class EditProductActivity extends AppCompatActivity implements View.OnCli
         if (productImage!=null && !productImage.isEmpty())
             Glide.with(mActivity)
                     .load(productImage)
-                    .placeholder(R.drawable.default_image)
-                    .error(R.drawable.default_image)
+                    .placeholder(R.drawable.app_launcher_logo)
+                    .error(R.drawable.app_launcher_logo)
                     .into(iV_productImage);
 
         // set product name
