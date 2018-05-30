@@ -283,7 +283,6 @@ public class EditProductActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View v) {
         switch (v.getId())
         {
-            // back button
             case R.id.rL_back_btn :
                 onBackPressed();
                 break;
@@ -291,6 +290,7 @@ public class EditProductActivity extends AppCompatActivity implements View.OnCli
             // mark as sold
             case R.id.rL_markAsSold :
                 if (arrayListAcceptedOffer.size()>0) {
+                    // back button
                     Intent intent = new Intent(mActivity, SelectBuyerActivity.class);
                     intent.putExtra("acceptedOffer",arrayListAcceptedOffer);
                     intent.putExtra("postId",postId);

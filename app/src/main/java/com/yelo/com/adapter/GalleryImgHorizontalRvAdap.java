@@ -97,7 +97,7 @@ public class GalleryImgHorizontalRvAdap extends RecyclerView.Adapter<GalleryImgH
                     .load("file://"+path)
                     .asBitmap()
                     .transform(new MyTransformation(mActivity, rotationAngle, String.valueOf(System.currentTimeMillis())), new FitCenter(mActivity))
-                    .placeholder(R.drawable.default_image)
+                    .placeholder(R.drawable.app_launcher_logo)
                     // .fitCenter()
                     .into(holder.iV_captured_img);
 

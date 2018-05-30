@@ -82,8 +82,8 @@ public class SearchPeopleRvAdap extends RecyclerView.Adapter<SearchPeopleRvAdap.
         if (userImage!=null && !userImage.isEmpty())
             Picasso.with(mActivity)
             .load(userImage)
-            .placeholder(R.drawable.default_circle_img)
-            .error(R.drawable.default_circle_img)
+            .placeholder(R.drawable.profile_bg)
+            .error(R.drawable.profile_bg)
             .transform(new CircleTransform())
             .into(holder.image);
 

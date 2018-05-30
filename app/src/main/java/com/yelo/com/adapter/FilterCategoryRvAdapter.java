@@ -140,7 +140,7 @@ public class FilterCategoryRvAdapter extends RecyclerView.Adapter<FilterCategory
         Glide.with(mActivity)
                 .load(url)
                 //.placeholder(R.drawable.default_circle_img)
-                .error(R.drawable.default_circle_img)
+                .error(R.drawable.profile_bg)
                 .into(imageView);
 
         // set category name

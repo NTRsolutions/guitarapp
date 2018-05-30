@@ -698,11 +698,11 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                 requestDatas.put("offset", offset);
                 requestDatas.put("limit",limit);
                 requestDatas.put("token", mSessionManager.getAuthToken());
-//                requestDatas.put("latitude",40.758018);
-//                requestDatas.put("longitude",-73.974976);
+                requestDatas.put("latitude",40.758018);
+                requestDatas.put("longitude",-73.974976);
 
-                requestDatas.put("latitude",lat);
-                requestDatas.put("longitude",lng);
+//                requestDatas.put("latitude",lat);
+//                requestDatas.put("longitude",lng);
                 requestDatas.put( "category_name", mcategoryName );
                 requestDatas.put( "make", make );
                 requestDatas.put("pushToken",mSessionManager.getPushToken());
@@ -1403,8 +1403,14 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                 request_datas.put("distance",distance);
                 request_datas.put("latitude",currentLatitude);
                 request_datas.put("limit",limit);
-                request_datas.put("location",address);
-                request_datas.put("longitude",currentLongitude);
+                request_datas.put("location","New York, United States");
+//                request_datas.put("location",address);
+
+//                request_datas.put("latitude",currentLatitude);
+//                request_datas.put("longitude",currentLongitude);
+
+                request_datas.put("latitude",40.758018);
+                request_datas.put("longitude",-73.974976);
                 request_datas.put("maxPrice",maxPrice);
                 request_datas.put("minPrice",minPrice);
                 request_datas.put("offset",offset);

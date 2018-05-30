@@ -61,7 +61,6 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="cropped" value="true" />
-                                      <entry key="iconShape" value="NONE" />
                                       <entry key="imageAsset" value="$USER_HOME$/Downloads/app_launcher_logo.png" />
                                       <entry key="outputName" value="app_launcher_logo" />
                                     </map>

@@ -145,8 +145,8 @@ public class FollowingFragRvAdap extends RecyclerView.Adapter<FollowingFragRvAda
             Picasso.with(mActivity)
                     .load(user1_profilePic)
                     .transform(new CircleTransform())
-                    .placeholder(R.drawable.default_circle_img)
-                    .error(R.drawable.default_circle_img)
+                    .placeholder(R.drawable.app_launcher_logo)
+                    .error(R.drawable.app_launcher_logo)
                     .into(holder.iV_user1_profilePic);
 
         holder.iV_user1_profilePic.setOnClickListener(new View.OnClickListener() {
@@ -231,8 +231,8 @@ public class FollowingFragRvAdap extends RecyclerView.Adapter<FollowingFragRvAda
         if (imageUrl!=null && !imageUrl.isEmpty()) {
             Picasso.with(mActivity)
                     .load(imageUrl)
-                    .placeholder(R.drawable.default_image)
-                    .error(R.drawable.default_image)
+                    .placeholder(R.drawable.app_launcher_logo)
+                    .error(R.drawable.app_launcher_logo)
                     .into(imageView);
         }
     }

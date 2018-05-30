@@ -103,8 +103,8 @@ public class FacebookFriendsRvAdapter extends RecyclerView.Adapter<FacebookFrien
             Picasso.with(mActivity)
                     .load(profilePicUrl)
                     .transform(new CircleTransform())
-                    .placeholder(R.drawable.default_circle_img)
-                    .error(R.drawable.default_circle_img)
+                    .placeholder(R.drawable.profile_bg)
+                    .error(R.drawable.profile_bg)
                     .into(holder.iV_profilePicUrl);
 
         // follow and following icon

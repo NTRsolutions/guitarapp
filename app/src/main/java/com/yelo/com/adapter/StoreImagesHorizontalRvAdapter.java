@@ -104,7 +104,7 @@ public class StoreImagesHorizontalRvAdapter extends RecyclerView.Adapter<Recycle
                     Glide.with(mActivity)
                             .load(path)
                             .asBitmap()
-                            .placeholder(R.drawable.default_image)
+                            .placeholder(R.drawable.app_launcher_logo)
                             .into(myViewHolder.iV_captured_img);
 
                 } catch (OutOfMemoryError e) {

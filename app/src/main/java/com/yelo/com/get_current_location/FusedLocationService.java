@@ -50,6 +50,7 @@ public class FusedLocationService implements ConnectionCallbacks, OnConnectionFa
         this.locationReceiver = locationReceiver;
         mProgressDialog = new ProgressBarHandler(activity);
         buildGoogleApiClient();
+
         if (mGoogleApiClient != null && !mGoogleApiClient.isConnected())
             mGoogleApiClient.connect();
 
@@ -169,11 +170,7 @@ public class FusedLocationService implements ConnectionCallbacks, OnConnectionFa
                     case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
 
                         System.out.println("Pending result="+"SETTINGS_CHANGE_UNAVAILABLE");
-                        //Log.i(TAG,"LocationSettingsStatusCodes SETTINGS_CHANGE_UNAVAILABLE");
 
-                        // Location settings are not satisfied. However, we have
-                        // no way to fix the
-                        // settings so we won't show the dialog.
                         break;
                 }
             }

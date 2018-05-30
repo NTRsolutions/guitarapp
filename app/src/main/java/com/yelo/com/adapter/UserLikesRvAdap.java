@@ -107,8 +107,8 @@ public class UserLikesRvAdap extends RecyclerView.Adapter<UserLikesRvAdap.MyView
             Picasso.with(mActivity)
                     .load(profilePicUrl)
                     .transform(new CircleTransform())
-                    .placeholder(R.drawable.default_circle_img)
-                    .error(R.drawable.default_circle_img)
+                    .placeholder(R.drawable.profile_bg)
+                    .error(R.drawable.profile_bg)
                     .into(holder.iV_userPic);
 
         // Hide the follow option the looged-in user

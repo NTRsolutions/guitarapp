@@ -98,8 +98,8 @@ public class SelectBuyerRvAdap extends RecyclerView.Adapter<RecyclerView.ViewHol
             if (buyerImage!=null && !buyerImage.isEmpty())
                 Picasso.with(mActivity)
                         .load(buyerImage)
-                        .placeholder(R.drawable.default_circle_img)
-                        .error(R.drawable.default_circle_img)
+                        .placeholder(R.drawable.profile_bg)
+                        .error(R.drawable.profile_bg)
                         .transform(new CircleTransform())
                         .into(myViewHolder.image);
 

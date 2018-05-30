@@ -80,8 +80,8 @@ public class AcceptedOfferRvAdap extends RecyclerView.Adapter<AcceptedOfferRvAda
         if (buyerImage!=null && !buyerImage.isEmpty())
             Picasso.with(mActivity)
                     .load(buyerImage)
-                    .placeholder(R.drawable.default_circle_img)
-                    .error(R.drawable.default_circle_img)
+                    .placeholder(R.drawable.profile_bg)
+                    .error(R.drawable.profile_bg)
                     .transform(new CircleTransform())
                     .into(holder.image);
 

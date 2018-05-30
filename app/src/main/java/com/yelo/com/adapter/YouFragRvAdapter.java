@@ -88,8 +88,8 @@ public class YouFragRvAdapter extends RecyclerView.Adapter<YouFragRvAdapter.MyVi
             Picasso.with(mActivity)
                     .load(memberProfilePicUrl)
                     .transform(new CircleTransform())
-                    .placeholder(R.drawable.default_circle_img)
-                    .error(R.drawable.default_circle_img)
+                    .placeholder(R.drawable.profile_bg)
+                    .error(R.drawable.profile_bg)
                     .into(holder.iV_user1_profilePic);
 
         holder.iV_user1_profilePic.setOnClickListener(new View.OnClickListener() {

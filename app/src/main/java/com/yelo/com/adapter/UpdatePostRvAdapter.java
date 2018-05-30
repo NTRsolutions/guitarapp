@@ -124,7 +124,7 @@ public class UpdatePostRvAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                             .load(path)
                             .asBitmap()
                             .transform(new MyTransformation(mActivity,rotationAngle, String.valueOf(System.currentTimeMillis())), new FitCenter(mActivity))
-                            .placeholder(R.drawable.default_image)
+                            .placeholder(R.drawable.app_launcher_logo)
                             .into(myViewHolder.iV_captured_img);
             }
 

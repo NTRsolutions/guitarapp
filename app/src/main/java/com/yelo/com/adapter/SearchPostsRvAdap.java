@@ -50,8 +50,8 @@ public class SearchPostsRvAdap extends RecyclerView.Adapter<SearchPostsRvAdap.My
         if (productImage!=null && !productImage.isEmpty())
             Picasso.with(mActivity)
                     .load(productImage)
-                    .placeholder(R.drawable.default_circle_img)
-                    .error(R.drawable.default_circle_img)
+                    .placeholder(R.drawable.profile_bg)
+                    .error(R.drawable.profile_bg)
                     .transform(new CircleTransform())
                     .into(holder.image);
 

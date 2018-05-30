@@ -741,7 +741,7 @@
 
             <!-- Make price -->
             <RelativeLayout
-                android:visibility="gone"
+
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
                 android:background="@color/price_fill_color">
@@ -760,7 +760,7 @@
 
             </RelativeLayout>
             <RelativeLayout
-                android:visibility="gone"
+
                 android:id="@+id/rL_product_model"
                 android:layout_margin="@dimen/ten_dp"
                 android:layout_width="match_parent"
@@ -784,15 +784,15 @@
                         android:textColor="@color/item_name_color"
                         android:textSize="@dimen/heading_text_size"/>
 
-                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
-                        android:layout_marginStart="@dimen/five_dp"
-                        android:layout_marginLeft="@dimen/five_dp"
-                        android:layout_toEndOf="@+id/category_model"
-                        android:layout_toRightOf="@+id/category_model"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/star"
-                        android:textColor="@color/red_color"/>
+                    <!--<com.yelo.com.custom_fonts.TextViewRobotoMedium-->
+                        <!--android:layout_marginStart="@dimen/five_dp"-->
+                        <!--android:layout_marginLeft="@dimen/five_dp"-->
+                        <!--android:layout_toEndOf="@+id/category_model"-->
+                        <!--android:layout_toRightOf="@+id/category_model"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="@string/star"-->
+                        <!--android:textColor="@color/red_color"/>-->
 
                 </RelativeLayout>
 
@@ -830,7 +830,7 @@
                 </RelativeLayout>
             </RelativeLayout>
             <View
-                android:visibility="gone"
+
                 android:layout_marginLeft="@dimen/five_dp"
                 android:layout_marginStart="@dimen/five_dp"
                 android:layout_marginRight="@dimen/five_dp"
@@ -841,7 +841,7 @@
 
             <!-- Make price -->
             <RelativeLayout
-                android:visibility="gone"
+
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
                 android:background="@color/price_fill_color">
@@ -860,7 +860,7 @@
 
             </RelativeLayout>
             <RelativeLayout
-                android:visibility="gone"
+
                 android:id="@+id/rL_product_model_year"
                 android:layout_margin="@dimen/ten_dp"
                 android:layout_width="match_parent"
@@ -885,20 +885,20 @@
                         android:textColor="@color/item_name_color"
                         android:textSize="@dimen/heading_text_size" />
 
-                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
-                        android:layout_marginStart="@dimen/five_dp"
-                        android:layout_marginLeft="@dimen/five_dp"
-                        android:layout_toEndOf="@+id/category_model_year"
-                        android:layout_toRightOf="@+id/category_model_year"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/star"
-                        android:textColor="@color/red_color"/>
+                    <!--<com.yelo.com.custom_fonts.TextViewRobotoMedium-->
+                        <!--android:layout_marginStart="@dimen/five_dp"-->
+                        <!--android:layout_marginLeft="@dimen/five_dp"-->
+                        <!--android:layout_toEndOf="@+id/category_model_year"-->
+                        <!--android:layout_toRightOf="@+id/category_model_year"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="@string/star"-->
+                        <!--android:textColor="@color/red_color"/>-->
 
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:visibility="gone"
+
                     android:id="@+id/rL_dropDown_category_model_year"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
@@ -932,7 +932,7 @@
                 </RelativeLayout>
             </RelativeLayout>
             <View
-                android:visibility="gone"
+
                 android:layout_marginLeft="@dimen/five_dp"
                 android:layout_marginStart="@dimen/five_dp"
                 android:layout_marginRight="@dimen/five_dp"
@@ -943,7 +943,7 @@
 
             <!-- Make price -->
             <RelativeLayout
-                android:visibility="gone"
+
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
                 android:background="@color/price_fill_color">
@@ -962,7 +962,7 @@
 
             </RelativeLayout>
             <RelativeLayout
-                android:visibility="gone"
+
                 android:id="@+id/rL_product_model_make"
                 android:layout_margin="@dimen/ten_dp"
                 android:layout_width="match_parent"
@@ -986,15 +986,15 @@
                         android:textColor="@color/item_name_color"
                         android:textSize="@dimen/heading_text_size"/>
 
-                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/five_dp"
-                        android:layout_marginStart="@dimen/five_dp"
-                        android:layout_toEndOf="@+id/category_model_make"
-                        android:layout_toRightOf="@+id/category_model_make"
-                        android:text="@string/star"
-                        android:textColor="@color/red_color" />
+                    <!--<com.yelo.com.custom_fonts.TextViewRobotoMedium-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="@dimen/five_dp"-->
+                        <!--android:layout_marginStart="@dimen/five_dp"-->
+                        <!--android:layout_toEndOf="@+id/category_model_make"-->
+                        <!--android:layout_toRightOf="@+id/category_model_make"-->
+                        <!--android:text="@string/star"-->
+                        <!--android:textColor="@color/red_color" />-->
 
                 </RelativeLayout>
 

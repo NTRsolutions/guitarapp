@@ -273,9 +273,9 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             // Code For Captured Image Save in a ImageView.
             final  String imagePath = folderPath + File.separator + name ;
             mActivity.runOnUiThread(new Runnable() {
-                @Override
-                public void run()
-                {
+                    @Override
+                    public void run()
+                    {
                     pBar_captureImg.setVisibility(View.GONE);
                     System.out.println(TAG+" "+"image path="+imagePath);
                     CapturedImage image=new CapturedImage();

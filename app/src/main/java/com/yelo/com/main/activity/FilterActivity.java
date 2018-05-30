@@ -292,9 +292,6 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
         radio_lowToHigh = (RadioButton) findViewById(R.id.radio_lowToHigh);
 
 
-
-
-
         // posted within
         radio_last24hr = (RadioButton) findViewById(R.id.radio_last24hr);
         radio_last7day = (RadioButton) findViewById(R.id.radio_last7day);
