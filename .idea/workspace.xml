@@ -24,17 +24,10 @@
     <list default="true" id="b76c3859-026e-4afd-ac42-b0fb21e8686b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/DiscoverPeopleActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/DiscoverPeopleActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/products/ProductDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/products/ProductDetailsActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/tab_fragments/HomeFrag.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/tab_fragments/HomeFrag.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -107,8 +100,8 @@
       <file leaf-file-name="DiscoverPeopleActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/DiscoverPeopleActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="-57">
+              <caret line="91" column="26" lean-forward="false" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -157,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeFrag.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeFrag.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/tab_fragments/HomeFrag.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="1465" column="60" lean-forward="false" selection-start-line="1465" selection-start-column="60" selection-end-line="1465" selection-end-column="60" />
+            <state relative-caret-position="181">
+              <caret line="700" column="55" lean-forward="false" selection-start-line="700" selection-start-column="46" selection-end-line="700" selection-end-column="55" />
               <folding>
                 <element signature="e#7070#7118#0" expanded="true" />
                 <element signature="e#7119#7167#0" expanded="true" />
@@ -207,22 +200,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostProductActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/PostProductActivity.java">
+      <file leaf-file-name="ApiUrl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/utility/ApiUrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2425">
-              <caret line="921" column="34" lean-forward="false" selection-start-line="921" selection-start-column="34" selection-end-line="921" selection-end-column="34" />
+            <state relative-caret-position="297">
+              <caret line="120" column="78" lean-forward="false" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductDetailsActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PostProductActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/PostProductActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="674" column="24" lean-forward="false" selection-start-line="674" selection-start-column="24" selection-end-line="674" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDetailsActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/products/ProductDetailsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="493" column="0" lean-forward="false" selection-start-line="493" selection-start-column="0" selection-end-line="493" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="260">
+              <caret line="508" column="0" lean-forward="false" selection-start-line="508" selection-start-column="0" selection-end-line="508" selection-end-column="0" />
+              <folding>
+                <element signature="e#12900#12947#0" expanded="true" />
+                <element signature="e#21484#21535#0" expanded="true" />
+                <element signature="e#28231#28282#0" expanded="true" />
+                <element signature="e#34000#34054#0" expanded="true" />
+                <element signature="e#34329#34380#0" expanded="true" />
+                <element signature="e#36640#36689#0" expanded="true" />
+                <element signature="e#36727#36772#0" expanded="true" />
+                <element signature="e#37058#37091#0" expanded="true" />
+                <element signature="e#37190#37229#0" expanded="true" />
+                <element signature="e#37564#37591#0" expanded="true" />
+                <element signature="e#56416#56467#0" expanded="true" />
+                <element signature="e#57348#57402#0" expanded="true" />
+                <element signature="e#57695#57746#0" expanded="true" />
+                <element signature="e#62725#62772#0" expanded="true" />
+                <element signature="e#63330#63381#0" expanded="true" />
+                <element signature="e#65557#65611#0" expanded="true" />
+                <element signature="e#65738#65783#0" expanded="true" />
+                <element signature="e#67753#67799#0" expanded="true" />
+                <element signature="e#67811#67859#0" expanded="true" />
+                <element signature="e#68759#68810#0" expanded="true" />
+                <element signature="e#69998#70052#0" expanded="true" />
+                <element signature="e#70375#70426#0" expanded="true" />
+                <element signature="e#71625#71673#0" expanded="true" />
+                <element signature="e#74010#74036#0" expanded="true" />
+                <element signature="e#75938#75992#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -267,9 +296,9 @@
       <find>postedWithinText</find>
       <find>make</find>
       <find>latitude</find>
-      <find>40.758018</find>
-      <find>filterMake</find>
       <find>tV_category_model_year</find>
+      <find>filterMake</find>
+      <find>40.758018</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -4520,7 +4549,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/android-sdk-linux" />
     <property name="last_opened_file_path" value="$USER_HOME$/AndroidStudioProjects/mvvm-sample-app-part1" />
     <property name="device.picker.selection" value="396dbcb4" />
@@ -4772,7 +4801,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525842536035</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit changes">
+      <created>1527859724970</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527859724970</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -4781,13 +4817,13 @@
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5346386" sideWeight="0.502584" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04066265" sideWeight="0.49224806" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52710843" sideWeight="0.49224806" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298193" sideWeight="0.49741602" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5181598" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25301206" sideWeight="0.49483204" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.561747" sideWeight="0.49483204" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -4795,7 +4831,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16602068" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15662651" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3313253" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04066265" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21899225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -9389,14 +9425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/DiscoverPeopleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2033">
@@ -9421,22 +9449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/utility/ApiUrl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="92" column="26" lean-forward="false" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/products/ProductDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="493" column="0" lean-forward="false" selection-start-line="493" selection-start-column="0" selection-end-line="493" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/frag_home.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -9446,14 +9458,6 @@
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/PostProductActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2425">
-          <caret line="921" column="34" lean-forward="false" selection-start-line="921" selection-start-column="34" selection-end-line="921" selection-end-column="34" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_filter.xml">
@@ -9495,10 +9499,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/DiscoverPeopleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="91" column="26" lean-forward="false" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/utility/ApiUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="120" column="78" lean-forward="false" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/PostProductActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="674" column="24" lean-forward="false" selection-start-line="674" selection-start-column="24" selection-end-line="674" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/tab_fragments/HomeFrag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="1465" column="60" lean-forward="false" selection-start-line="1465" selection-start-column="60" selection-end-line="1465" selection-end-column="60" />
+        <state relative-caret-position="181">
+          <caret line="700" column="55" lean-forward="false" selection-start-line="700" selection-start-column="46" selection-end-line="700" selection-end-column="55" />
           <folding>
             <element signature="e#7070#7118#0" expanded="true" />
             <element signature="e#7119#7167#0" expanded="true" />
@@ -9526,6 +9554,40 @@
             <element signature="e#69082#69139#0" expanded="true" />
             <element signature="e#69226#69298#0" expanded="true" />
             <element signature="e#69326#69398#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/products/ProductDetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="508" column="0" lean-forward="false" selection-start-line="508" selection-start-column="0" selection-end-line="508" selection-end-column="0" />
+          <folding>
+            <element signature="e#12900#12947#0" expanded="true" />
+            <element signature="e#21484#21535#0" expanded="true" />
+            <element signature="e#28231#28282#0" expanded="true" />
+            <element signature="e#34000#34054#0" expanded="true" />
+            <element signature="e#34329#34380#0" expanded="true" />
+            <element signature="e#36640#36689#0" expanded="true" />
+            <element signature="e#36727#36772#0" expanded="true" />
+            <element signature="e#37058#37091#0" expanded="true" />
+            <element signature="e#37190#37229#0" expanded="true" />
+            <element signature="e#37564#37591#0" expanded="true" />
+            <element signature="e#56416#56467#0" expanded="true" />
+            <element signature="e#57348#57402#0" expanded="true" />
+            <element signature="e#57695#57746#0" expanded="true" />
+            <element signature="e#62725#62772#0" expanded="true" />
+            <element signature="e#63330#63381#0" expanded="true" />
+            <element signature="e#65557#65611#0" expanded="true" />
+            <element signature="e#65738#65783#0" expanded="true" />
+            <element signature="e#67753#67799#0" expanded="true" />
+            <element signature="e#67811#67859#0" expanded="true" />
+            <element signature="e#68759#68810#0" expanded="true" />
+            <element signature="e#69998#70052#0" expanded="true" />
+            <element signature="e#70375#70426#0" expanded="true" />
+            <element signature="e#71625#71673#0" expanded="true" />
+            <element signature="e#74010#74036#0" expanded="true" />
+            <element signature="e#75938#75992#0" expanded="true" />
           </folding>
         </state>
       </provider>
