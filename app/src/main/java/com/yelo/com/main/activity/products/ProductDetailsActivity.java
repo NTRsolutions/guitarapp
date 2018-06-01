@@ -649,7 +649,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         if (mStYear!=null && !mStYear.isEmpty())
         {
 
-            mTvYear.setText(mStMake);
+            mTvYear.setText(mStYear);
         }
 
         if (mStModel!=null && !mStModel.isEmpty())

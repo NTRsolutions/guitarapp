@@ -68,7 +68,7 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
     private ImageView iV_dropDown_currency;
     private FilterCategoryRvAdapter categoryRvAdapter;
     private EditText eT_minprice,eT_maxprice;
-    private String currency_symbol="",currency_code="",userLat="",userLng="",sortByText="",postedWithinText="",address="",sortBy="",setDistanceValue="",postedWithin="",minPrice="",maxPrice="";
+    private String currency_symbol="",currency_code="",userLat="",userLng="",sortByText="",postedWithinText="",address="",sortBy="",setDistanceValue="",postedWithin="",minPrice="",maxPrice="", filterMake="", filterYear="", filterModel="" ;
     private ArrayList<ProductCategoryResDatas> aL_categoryDatas;
     private boolean isToApplyFilter;
     private NotificationMessageDialog mNotificationMessageDialog;
@@ -79,7 +79,7 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
 
     boolean isCheckedWork = true;
     RelativeLayout mRlModels,mRlModelsYear,mRlMake;
-    int ManufactrerId = -1;
+    static int ManufactrerId = -1;
     TextView mTvcategoryModels, mTvCategoryYears, mTvMakes;
 
     @Override
@@ -120,6 +120,14 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
         userLat=intent.getStringExtra("userLat");
         userLng=intent.getStringExtra("userLng");
 
+        filterMake=intent.getStringExtra("filterMake");
+        filterYear=intent.getStringExtra("year");
+        filterModel=intent.getStringExtra("model");
+
+        if(filterMake.length() <= 0){
+            ManufactrerId = -1;
+        }
+
         permissionsArray = new String[]{ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION};
         runTimePermission = new RunTimePermission(mActivity, permissionsArray, false);
 
@@ -159,6 +167,10 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
         mTvcategoryModels = findViewById( R.id.tV_category_model );
         mTvCategoryYears = findViewById( R.id.tV_category_model_year );
         mTvMakes  = findViewById( R.id.tV_category_model_make );
+
+        mTvcategoryModels.setText( filterMake );
+        mTvCategoryYears.setText( filterYear );
+        mTvMakes.setText( filterModel );
 
         // Distance seekbar
         tV_starting_dis = (TextView) findViewById(R.id.tV_starting_dis);
@@ -620,6 +632,10 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
         filterIntent.putExtra("currency",currency_symbol);
         filterIntent.putExtra("postedWithinText",postedWithinText);
         filterIntent.putExtra("sortByText",sortByText);
+
+        filterIntent.putExtra("filterMake",mTvcategoryModels.getText().toString());
+        filterIntent.putExtra("year",mTvCategoryYears.getText().toString().trim());
+        filterIntent.putExtra("model",mTvMakes.getText().toString().trim());
         setResult(VariableConstants.FILTER_REQUEST_CODE, filterIntent);
         progress_bar_save.setVisibility(View.GONE);
         onBackPressed();
@@ -682,6 +698,15 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
 
         //eT_minprice.setHint(getResources().getString(R.string.default_price));
         //eT_maxprice.setHint(getResources().getString(R.string.default_price));
+
+        mTvMakes.setText( "" );
+        mTvCategoryYears.setText( "" );
+        mTvcategoryModels.setText( "" );
+        ManufactrerId = -1;
+
+        filterMake = "";
+        filterModel = "";
+        filterYear = "";
 
         setFilterDatas();
     }

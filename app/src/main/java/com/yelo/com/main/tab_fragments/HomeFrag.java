@@ -104,7 +104,7 @@ import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 public class HomeFrag extends Fragment implements View.OnClickListener, ProductItemClickListener
 {
     private String category="",categoryValue="",distance="",postedWithin="",minPrice="",maxPrice="",currency="",currency_code="",
-            currentLatitude="",currentLongitude="",sortByText="",sortBy="",postedWithinText="",address="";
+            currentLatitude="",currentLongitude="",sortByText="",sortBy="",postedWithinText="",address="",make ="", year="",model="", filterMake="";
     private SessionManager mSessionManager;
     private Activity mActivity;
     private static final String TAG=HomeFrag.class.getSimpleName();
@@ -144,7 +144,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
 
     public  static String KEY_FRAGMENT_FROM_CATGORY = "categoryname";
 
-    String mcategoryName , make;
+    String mcategoryName ;
     AppCompatTextView mTvTitle;
 
     public static HomeFrag getInstance(){
@@ -698,11 +698,11 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                 requestDatas.put("offset", offset);
                 requestDatas.put("limit",limit);
                 requestDatas.put("token", mSessionManager.getAuthToken());
-                requestDatas.put("latitude",40.758018);
-                requestDatas.put("longitude",-73.974976);
+//                requestDatas.put("latitude",40.758018);
+//                requestDatas.put("longitude",-73.974976);
 
-//                requestDatas.put("latitude",lat);
-//                requestDatas.put("longitude",lng);
+                requestDatas.put("latitude",lat);
+                requestDatas.put("longitude",lng);
                 requestDatas.put( "category_name", mcategoryName );
                 requestDatas.put( "make", make );
                 requestDatas.put("pushToken",mSessionManager.getPushToken());
@@ -929,7 +929,14 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                 filterIntent.putExtra("minPrice",minPrice);
                 filterIntent.putExtra("maxPrice",maxPrice);
                 filterIntent.putExtra("userLat",currentLatitude);
-                filterIntent.putExtra("userLng",currentLongitude);
+
+                filterIntent.putExtra("filterMake",filterMake);
+                filterIntent.putExtra("year",year);
+                filterIntent.putExtra("model",model);
+
+
+
+
                 HomeFrag.this.startActivityForResult(filterIntent, VariableConstants.FILTER_REQUEST_CODE);
                 break;
 
@@ -1039,6 +1046,11 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                     address=data.getStringExtra("address");
                     postedWithinText=data.getStringExtra("postedWithinText");
                     sortByText=data.getStringExtra("sortByText");
+
+                    filterMake=data.getStringExtra("filterMake");
+                    year=data.getStringExtra("year");
+                    model=data.getStringExtra("model");
+
                     arrayListExploreDatas.clear();
                     exploreRvAdapter.notifyDataSetChanged();
                     isFromSearch=true;
@@ -1257,6 +1269,15 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
         if (minPrice!=null && !minPrice.isEmpty())
             arrayListFilter.add(getResources().getString(R.string.min_price)+" "+currency+minPrice);
 
+        if (filterMake!=null && !filterMake.isEmpty())
+            arrayListFilter.add(filterMake);
+
+        if (year!=null && !year.isEmpty())
+            arrayListFilter.add(year);
+
+        if (model!=null && !model.isEmpty())
+            arrayListFilter.add(model);
+
         if (maxPrice!=null && !maxPrice.isEmpty())
             arrayListFilter.add(getResources().getString(R.string.max_price)+" "+currency+maxPrice);
 
@@ -1305,6 +1326,38 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                                     }
                                 }
                             }
+
+
+                            // remove make value
+                            if(filterMake != null){
+                                if(filterMake.length()>0){
+                                    if (deletedValue.equals(filterMake)){
+                                        filterMake="";
+                                    }
+                                }
+                            }
+
+                            // remove year value
+                            if(year != null){
+                                if(year.length()>0){
+                                    if (deletedValue.equals(year)){
+                                        year="";
+                                    }
+                                }
+                            }
+
+                            // remove year value
+                            if(model != null){
+                                if(model.length()>0){
+                                    if (deletedValue.equals(model)){
+                                        model="";
+                                    }
+                                }
+                            }
+
+
+                            if (deletedValue.contains(getResources().getString(R.string.km)))
+                                distance="";
 
                             // remove distance value
                             if (deletedValue.contains(getResources().getString(R.string.km)))
@@ -1403,14 +1456,14 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                 request_datas.put("distance",distance);
                 request_datas.put("latitude",currentLatitude);
                 request_datas.put("limit",limit);
-                request_datas.put("location","New York, United States");
-//                request_datas.put("location",address);
+//                request_datas.put("location","New York, United States");
+                request_datas.put("location",address);
 
-//                request_datas.put("latitude",currentLatitude);
-//                request_datas.put("longitude",currentLongitude);
+                request_datas.put("latitude",currentLatitude);
+                request_datas.put("longitude",currentLongitude);
 
-                request_datas.put("latitude",40.758018);
-                request_datas.put("longitude",-73.974976);
+//                request_datas.put("latitude",40.758018);
+//                request_datas.put("longitude",-73.974976);
                 request_datas.put("maxPrice",maxPrice);
                 request_datas.put("minPrice",minPrice);
                 request_datas.put("offset",offset);
@@ -1419,6 +1472,10 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                 request_datas.put("sortBy",sortBy);
                 request_datas.put("token",mSessionManager.getAuthToken());
                 request_datas.put("pushToken",mSessionManager.getPushToken());
+
+                request_datas.put("make",filterMake);
+                request_datas.put("year",year);
+                request_datas.put("model",model);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -1431,6 +1488,10 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                     mProgressBar.setVisibility(View.GONE);
                     System.out.println(TAG+" "+"product search res="+result);
                     if (result!=null && !result.isEmpty())
+                        if (arrayListExploreDatas!=null && arrayListExploreDatas.size()>0)
+                        {
+                            arrayListExploreDatas.clear();
+                        }
                         responseHandler(result);
                 }
 
@@ -1571,7 +1632,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                     isFineLocDenied=true;
                 }
 
-                if (permissionName.contains("ACCESS_FINE_LOCATION") && fineLocResult == PackageManager.PERMISSION_DENIED)
+                if (permissionName.contains("ACCEtSS_FINE_LOCATION") && fineLocResult == PackageManager.PERMISSION_DENIED)
                 {
                     System.out.println(TAG+" "+"location coarse denied...");
                     isCoarseLocDenied=true;

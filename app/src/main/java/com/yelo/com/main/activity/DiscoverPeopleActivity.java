@@ -71,7 +71,7 @@ public class DiscoverPeopleActivity extends AppCompatActivity implements View.On
         System.out.println(TAG+" "+"followingCount="+ followingCount);
 
         // Initialize data member
-        arrayListDiscoverData=new ArrayList<>();l va
+        arrayListDiscoverData=new ArrayList<>();
         CommonClass.statusBarColor(mActivity);
         mSessionManager=new SessionManager(mActivity);
         mProgressBar= (ProgressBar) findViewById(R.id.progress_bar);
