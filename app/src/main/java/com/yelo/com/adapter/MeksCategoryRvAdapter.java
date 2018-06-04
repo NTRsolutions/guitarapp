@@ -80,7 +80,7 @@ public class MeksCategoryRvAdapter extends RecyclerView.Adapter<MeksCategoryRvAd
         System.out.println(TAG+" "+"categoryName="+categoryName);
         if (categoryName!=null && !categoryName.isEmpty())
         {
-            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
+//            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
             holder.tV_category.setText(categoryName);
         }
     }
