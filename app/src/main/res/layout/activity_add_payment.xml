@@ -372,26 +372,6 @@
                 android:imeOptions="actionNext"
                 />
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
-                android:id="@+id/eT_re_ssn_number"
-                android:inputType="numberPassword"
-                android:maxLines="1"
-                android:textSize="@dimen/fifteen_sp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/border_edit_text"
-                android:textColorHint="@color/hint_color"
-                android:textColor="@color/black"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:drawablePadding="10dp"
-                android:paddingLeft="7dp"
-                android:maxLength="4"
-
-                android:hint="Last four of social"
-                android:layout_marginTop="10dp"
-                android:imeOptions="actionNext"
-                />
 
 
             <FrameLayout
@@ -421,6 +401,29 @@
                     android:layout_height="wrap_content" />
 
             </FrameLayout>
+
+
+            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                android:id="@+id/eT_re_ssn_number"
+                android:inputType="numberPassword"
+                android:maxLines="1"
+                android:textSize="@dimen/fifteen_sp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_edit_text"
+                android:textColorHint="@color/hint_color"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:paddingLeft="7dp"
+                android:maxLength="4"
+
+                android:hint="Last four of social"
+                android:layout_marginTop="10dp"
+                android:imeOptions="actionNext"
+                />
+
 
             <com.yelo.com.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_business"

@@ -113,7 +113,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
     private int index;
     private SwipeRefreshLayout mRefreshLayout;
     private boolean isFromSearch,isHomeFragVisible;
-    private LinearLayout linear_filter;
+    public static LinearLayout linear_filter;
     private ArrayList<String> arrayListFilter;
     private View view_filter_divider;
     private RelativeLayout rL_noProductFound,rL_no_internet,rL_action_bar,rL_sell_stuff;
@@ -997,6 +997,18 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
             }
         }else {
             make = "";
+
+            try {
+                if(FilterActivity.ManufactrerId == -1){
+                    filterMake = "";
+                    model = "";
+                    year = "";
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+
         }
 
 //        Toast.makeText( getActivity(), "onResume", Toast.LENGTH_SHORT ).show();
@@ -1459,11 +1471,11 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
 //                request_datas.put("location","New York, United States");
                 request_datas.put("location",address);
 
-                request_datas.put("latitude",currentLatitude);
-                request_datas.put("longitude",currentLongitude);
+//                request_datas.put("latitude",currentLatitude);
+//                request_datas.put("longitude",currentLongitude);
 
-//                request_datas.put("latitude",40.758018);
-//                request_datas.put("longitude",-73.974976);
+                request_datas.put("latitude",40.758018);
+                request_datas.put("longitude",-73.974976);
                 request_datas.put("maxPrice",maxPrice);
                 request_datas.put("minPrice",minPrice);
                 request_datas.put("offset",offset);

@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -258,6 +259,7 @@ public class ProductModelsActivity extends AppCompatActivity implements View.OnC
                             Intent intent=new Intent();
                             intent.putExtra("modelName",categoryName+"/"+aL_categoryDatas.get(position).getModelNodeId());
                             setResult(VariableConstants.MODEL_REQUEST_CODE,intent);
+                            ProductModelsActivity.this.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                             onBackPressed();
                             finish();
                         }

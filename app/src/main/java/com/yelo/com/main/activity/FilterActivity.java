@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,6 +21,7 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +33,7 @@ import com.yelo.com.fcm_push_notification.NotificationMessageDialog;
 import com.yelo.com.fcm_push_notification.NotificationUtils;
 import com.yelo.com.get_current_location.FusedLocationReceiver;
 import com.yelo.com.get_current_location.FusedLocationService;
+import com.yelo.com.main.tab_fragments.HomeFrag;
 import com.yelo.com.pojo_class.product_category.ProductCategoryResDatas;
 import com.yelo.com.utility.CommonClass;
 import com.yelo.com.utility.GetCompleteAddress;
@@ -79,9 +82,10 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
 
     boolean isCheckedWork = true;
     RelativeLayout mRlModels,mRlModelsYear,mRlMake;
-    static int ManufactrerId = -1;
+    public static int ManufactrerId = -1;
     TextView mTvcategoryModels, mTvCategoryYears, mTvMakes;
 
+    ScrollView mScrollView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -139,9 +143,13 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
         rV_category.setAdapter(categoryRvAdapter);
 
         // Initialize xml variables
+        mScrollView = findViewById( R.id.scrollView );
+        mScrollView.smoothScrollTo( 0,0 );
         CommonClass.statusBarColor(mActivity);
         rL_rootElement = (RelativeLayout) findViewById(R.id.rL_rootElement);
         tV_save = (TextView) findViewById(R.id.tV_save);
+
+
 
         TextView tV_reset = (TextView) findViewById(R.id.tV_reset);
         tV_reset.setOnClickListener(this);
@@ -154,6 +162,7 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
         rL_save.setOnClickListener(this);
         eT_minprice= (EditText) findViewById(R.id.eT_minprice);
         eT_maxprice= (EditText) findViewById(R.id.eT_maxprice);
+        this.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
 
         mRlModels = findViewById( R.id.rL_product_model );
@@ -517,6 +526,10 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
             // reset filter
             case R.id.tV_reset :
                 isToApplyFilter=false;
+                 if(HomeFrag.linear_filter != null){
+                     HomeFrag.linear_filter.removeAllViews();
+                 }
+
                 getCurrentLocation();
                 resetFilterDatas();
                 break;
@@ -814,6 +827,8 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
         System.out.println(TAG + " " + "on activity result called...."+" "+"req code="+requestCode+" "+"res code="+resultCode+" "+"data="+data);
         if (data != null) {
             switch (requestCode) {
+
+
                 // currency symbol
                 case VariableConstants.CURRENCY_REQUEST_CODE:
                     currency_code = data.getStringExtra("cuurency_code");
@@ -825,6 +840,7 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
 
                     // change dropdown icon
                     iV_dropDown_currency.setImageResource(R.drawable.drop_down_black_color_icon);
+
                     break;
 
                 case VariableConstants.CHANGE_LOC_REQ_CODE :
@@ -847,10 +863,17 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
                         mTvcategoryModels.requestFocus();
 
                         ManufactrerId = Integer.parseInt(arr[1]);
-
+                        mScrollView.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                //replace this line to scroll up or down
+                                mScrollView.smoothScrollTo( 0,0 );
+                            }
+                        }, 100L);
 //                        mRlModelsYear.performClick();
 
                     }
+//                    mScrollView.fullScroll(ScrollView.FOCUS_UP);
                     break;
 
 
@@ -861,9 +884,17 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
                     {
                         mTvCategoryYears.setText(yearName);
                         mTvCategoryYears.requestFocus();
-
+                        mScrollView.smoothScrollTo( 0,0 );
+                        mScrollView.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                //replace this line to scroll up or down
+                                mScrollView.smoothScrollTo( 0,0 );
+                            }
+                        }, 100L);
 //                        mRlMake.performClick();
                     }
+//                    mScrollView.fullScroll(ScrollView.FOCUS_UP);
                     break;
 
 
@@ -873,8 +904,18 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
                     {
                         mTvMakes.setText(makeName);
                         mTvMakes.requestFocus();
+                        mScrollView.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                //replace this line to scroll up or down
+                                mScrollView.smoothScrollTo( 0,0 );
+                            }
+                        }, 100L);
                     }
+//                    mScrollView.fullScroll(ScrollView.FOCUS_UP);
                     break;
+
+
 
             }
         }

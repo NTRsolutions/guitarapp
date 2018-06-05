@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -252,10 +253,11 @@ public class MakeModelsActivity extends AppCompatActivity implements View.OnClic
                         String categoryName=   aL_categoryDatas.get(position).getModel();
                         if (categoryName!=null && !categoryName.isEmpty())
                         {
-                            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
+//                            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
                             Intent intent=new Intent();
                             intent.putExtra("make_name",categoryName);
                             setResult(VariableConstants.MODEL_REQUEST_MAKE_CODE,intent);
+                            MakeModelsActivity.this.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                             onBackPressed();
                             finish();
                         }

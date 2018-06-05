@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -275,6 +276,7 @@ public class YearModelsActivity extends AppCompatActivity implements View.OnClic
                             categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
                             Intent intent=new Intent();
                             intent.putExtra("yearName",categoryName);
+                            YearModelsActivity.this.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                             setResult(VariableConstants.MODEL_REQUEST_YEAR_CODE,intent);
                             onBackPressed();
                             finish();

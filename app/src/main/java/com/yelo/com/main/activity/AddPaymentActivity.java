@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.ScrollingTabContainerView;
+import android.text.InputFilter;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -186,10 +187,16 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
                     if(position > 0){
                         mEdBusinessType.setText( arrayBusinessType[position].trim());
 
+                        mEdSocialNumber.setText( "" );
                         if(position == 1){
                             mEdTxId.setVisibility( View.INVISIBLE );
+                            mEdSocialNumber.setFilters(new InputFilter[] { new InputFilter.LengthFilter(30) });
+
+                             mEdSocialNumber.setHint( "Enter social number" );
                         }else {
                             mEdTxId.setVisibility( View.VISIBLE );
+                            mEdSocialNumber.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4) });
+                            mEdSocialNumber.setHint( "Last four of social" );
                         }
 
                     }else {
@@ -380,21 +387,27 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
             return false;
         }
 
-        if(isvalidEditText( mEdSocialNumber )){
 
-            Toast.makeText( this, "Please enter Social number.", Toast.LENGTH_SHORT ).show();
-            return false;
-        }  if(mEdSocialNumber.getText().toString().trim().length() !=4  ){
-
-            Toast.makeText( this, "Please enter Social number of only four digit", Toast.LENGTH_SHORT ).show();
-            return false;
-        }
 
         if(isvalidEditText( mEdBusinessType )){
 
 
             Toast.makeText( this, "Please enter business type.", Toast.LENGTH_SHORT ).show();
             return false;
+        }
+
+        if(isvalidEditText( mEdSocialNumber )){
+
+            Toast.makeText( this, "Please enter Social number.", Toast.LENGTH_SHORT ).show();
+            return false;
+        }
+
+        if(mEdBusinessType.getText().toString().trim().equalsIgnoreCase( "Music Store" )) {
+            if (mEdSocialNumber.getText().toString().trim().length() != 4) {
+
+                Toast.makeText( this, "Please enter Social number of only four digit", Toast.LENGTH_SHORT ).show();
+                return false;
+            }
         }
 
         if(mEdBusinessType.getText().toString().length() > 0) {
@@ -407,6 +420,8 @@ public class AddPaymentActivity extends AppCompatActivity implements View.OnClic
             }
 
         }
+
+
 
         if(isvalidEditText( mEdAccountHolderName )){
 
