@@ -42,26 +42,11 @@
                             <entry key="launcherLegacy">
                               <value>
                                 <PersistentState>
-                                  <option name="children">
-                                    <map>
-                                      <entry key="image">
-                                        <value>
-                                          <PersistentState>
-                                            <option name="values">
-                                              <map>
-                                                <entry key="paddingPercent" value="5" />
-                                              </map>
-                                            </option>
-                                          </PersistentState>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="cropped" value="true" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/app_launcher_logo.png" />
+                                      <entry key="iconShape" value="NONE" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/new.png" />
                                       <entry key="outputName" value="app_launcher_logo" />
                                     </map>
                                   </option>

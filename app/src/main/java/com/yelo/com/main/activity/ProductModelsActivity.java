@@ -1,9 +1,11 @@
 package com.yelo.com.main.activity;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.LocalBroadcastManager;
@@ -45,6 +47,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -69,25 +72,27 @@ public class ProductModelsActivity extends AppCompatActivity implements View.OnC
     private RecyclerView rV_category;
     private NotificationMessageDialog mNotificationMessageDialog;
     EditText mEdSearch;
+    LinearLayout mLiTitleSpeach;
     ModelCategoryRvAdapter categoryRvAdapter;
-     List<AllModels> aL_categoryDatas = new ArrayList<>(  );
+    List<AllModels> aL_categoryDatas = new ArrayList<>();
+
+    private static final int REQ_CODE_SPEECH_INPUT_TITLE = 100;
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_models);
-        overridePendingTransition(R.anim.activity_open_translate, R.anim.activity_close_scale);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.activity_models );
+        overridePendingTransition( R.anim.activity_open_translate, R.anim.activity_close_scale );
 
-        mActivity=ProductModelsActivity.this;
-        mNotificationMessageDialog=new NotificationMessageDialog(mActivity);
-        CommonClass.statusBarColor(mActivity);
-        progress_bar= (ProgressBar) findViewById(R.id.progress_bar);
-        rL_rootview= (LinearLayout) findViewById(R.id.rL_rootview);
-        rV_category= (RecyclerView) findViewById(R.id.rV_category);
-        RelativeLayout rL_back_btn = (RelativeLayout) findViewById(R.id.rL_back_btn);
-        rL_back_btn.setOnClickListener(this);
+        mActivity = ProductModelsActivity.this;
+        mNotificationMessageDialog = new NotificationMessageDialog( mActivity );
+        CommonClass.statusBarColor( mActivity );
+        progress_bar = (ProgressBar) findViewById( R.id.progress_bar );
+        rL_rootview = (LinearLayout) findViewById( R.id.rL_rootview );
+        rV_category = (RecyclerView) findViewById( R.id.rV_category );
+        RelativeLayout rL_back_btn = (RelativeLayout) findViewById( R.id.rL_back_btn );
+        rL_back_btn.setOnClickListener( this );
         mEdSearch = findViewById( R.id.ed_search );
-
 
         mEdSearch.addTextChangedListener( new TextWatcher() {
             @Override
@@ -108,83 +113,82 @@ public class ProductModelsActivity extends AppCompatActivity implements View.OnC
             }
         } );
 
-
         getCategoriesService();
+        mLiTitleSpeach = findViewById( R.id.layout_title );
+        mLiTitleSpeach.setOnClickListener( this );
+
     }
 
 
     @Override
-    protected void onResume()
-    {
+    protected void onResume() {
         super.onResume();
 
         // register GCM registration complete receiver
-        LocalBroadcastManager.getInstance(this).registerReceiver(mNotificationMessageDialog.mRegistrationBroadcastReceiver, new IntentFilter(Config.REGISTRATION_COMPLETE));
+        LocalBroadcastManager.getInstance( this ).registerReceiver( mNotificationMessageDialog.mRegistrationBroadcastReceiver, new IntentFilter( Config.REGISTRATION_COMPLETE ) );
 
         // register new push message receiver
         // by doing this, the activity will be notified each time a new message arrives
-        LocalBroadcastManager.getInstance(this).registerReceiver(mNotificationMessageDialog.mRegistrationBroadcastReceiver, new IntentFilter(Config.PUSH_NOTIFICATION));
+        LocalBroadcastManager.getInstance( this ).registerReceiver( mNotificationMessageDialog.mRegistrationBroadcastReceiver, new IntentFilter( Config.PUSH_NOTIFICATION ) );
 
         // clear the notification area when the app is opened
-        NotificationUtils.clearNotifications(getApplicationContext());
+        NotificationUtils.clearNotifications( getApplicationContext() );
     }
 
     @Override
     protected void onPause() {
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(mNotificationMessageDialog.mRegistrationBroadcastReceiver);
+        LocalBroadcastManager.getInstance( this ).unregisterReceiver( mNotificationMessageDialog.mRegistrationBroadcastReceiver );
         super.onPause();
     }
 
     /**
      * <h>GetCategoriesService</h>
      * <p>
-     *     This method is called from onCreate() method of the current class.
-     *     In this method we used to call the getCategories api using okHttp3.
-     *     Once we get the data we show that list in recyclerview.
+     * This method is called from onCreate() method of the current class.
+     * In this method we used to call the getCategories api using okHttp3.
+     * Once we get the data we show that list in recyclerview.
      * </p>
      */
-    private void getCategoriesService()
-    {
-        if (CommonClass.isNetworkAvailable(mActivity)) {
-            progress_bar.setVisibility(View.VISIBLE);
+    private void getCategoriesService() {
+        if (CommonClass.isNetworkAvailable( mActivity )) {
+            progress_bar.setVisibility( View.VISIBLE );
             JSONObject request_datas = new JSONObject();
 
             try {
-                request_datas.put("searchkey", "");
+                request_datas.put( "searchkey", "" );
 
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
-            OkHttp3Connection.doOkHttp3Connection(TAG, ApiUrl.GET_MODELS, OkHttp3Connection.Request_type.GET, request_datas, new OkHttp3Connection.OkHttp3RequestCallback() {
+            OkHttp3Connection.doOkHttp3Connection( TAG, ApiUrl.GET_MODELS, OkHttp3Connection.Request_type.GET, request_datas, new OkHttp3Connection.OkHttp3RequestCallback() {
                 @Override
                 public void onSuccess(String result, String user_tag) {
-                    progress_bar.setVisibility(View.GONE);
+                    progress_bar.setVisibility( View.GONE );
 
-                    System.out.println(TAG+" "+"get category res="+result);
+                    System.out.println( TAG + " " + "get category res=" + result );
 
                     Homecat homecat;
-                    Gson gson=new Gson();
-                    homecat=gson.fromJson(result,Homecat.class);
+                    Gson gson = new Gson();
+                    homecat = gson.fromJson( result, Homecat.class );
 
-                    switch (homecat.getCode())
-                    {
+                    switch (homecat.getCode()) {
 
                         // success
-                        case 200 :
-                          aL_categoryDatas=homecat.getAllModels();
-                            if (aL_categoryDatas!=null && aL_categoryDatas.size()>0)
+                        case 200:
+                            aL_categoryDatas = homecat.getAllModels();
+                            if (aL_categoryDatas != null && aL_categoryDatas.size() > 0)
 
-                        {
+                            {
 
-                                 categoryRvAdapter=new ModelCategoryRvAdapter(ProductModelsActivity.this,aL_categoryDatas);
-                                LinearLayoutManager layoutManager=new LinearLayoutManager(mActivity);
+                                categoryRvAdapter = new ModelCategoryRvAdapter( ProductModelsActivity.this, aL_categoryDatas );
+                                LinearLayoutManager layoutManager = new LinearLayoutManager( mActivity );
 
-                                rV_category.setLayoutManager(layoutManager);
-                                rV_category.setAdapter(categoryRvAdapter);
+                                rV_category.setLayoutManager( layoutManager );
+                                rV_category.setAdapter( categoryRvAdapter );
 
 
-                                filter("");
+                                filter( "" );
 
 
 //                                categoryRvAdapter.setOnItemClick(new ClickListener() {
@@ -208,65 +212,69 @@ public class ProductModelsActivity extends AppCompatActivity implements View.OnC
 
                         // Error
                         default:
-                            CommonClass.showSnackbarMessage(rL_rootview,homecat.getMessage());
+                            CommonClass.showSnackbarMessage( rL_rootview, homecat.getMessage() );
                             break;
                     }
                 }
 
                 @Override
                 public void onError(String error, String user_tag) {
-                    progress_bar.setVisibility(View.GONE);
-                    CommonClass.showSnackbarMessage(rL_rootview,error);
+                    progress_bar.setVisibility( View.GONE );
+                    CommonClass.showSnackbarMessage( rL_rootview, error );
                 }
-            });
-        }
-        else CommonClass.showSnackbarMessage(rL_rootview,getResources().getString(R.string.NoInternetAccess));
+            } );
+        } else
+            CommonClass.showSnackbarMessage( rL_rootview, getResources().getString( R.string.NoInternetAccess ) );
     }
 
     @Override
     public void onBackPressed() {
         finish();
-        overridePendingTransition(R.anim.activity_open_scale, R.anim.activity_close_translate);
+        overridePendingTransition( R.anim.activity_open_scale, R.anim.activity_close_translate );
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId())
-        {
-            case R.id.rL_back_btn :
+        switch (v.getId()) {
+            case R.id.rL_back_btn:
                 onBackPressed();
+                break;
+
+            // title speach recognition
+            case R.id.layout_title:
+                startVoiceInput( REQ_CODE_SPEECH_INPUT_TITLE );
                 break;
         }
     }
 
 
     List<AllModels> temp = null;
-    void filter(String text){
 
-        if(    categoryRvAdapter != null) {
+    void filter(String text) {
+
+        if (categoryRvAdapter != null) {
 
 
-            if(text.length() == 0){
+            if (text.length() == 0) {
                 categoryRvAdapter.updateList( aL_categoryDatas );
 
-                categoryRvAdapter.setOnItemClick(new ClickListener() {
+                categoryRvAdapter.setOnItemClick( new ClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        String categoryName=   aL_categoryDatas.get(position).getNameOfManufacturer();
-                        if (categoryName!=null && !categoryName.isEmpty())
-                        {
-                            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
-                            Intent intent=new Intent();
-                            intent.putExtra("modelName",categoryName+"/"+aL_categoryDatas.get(position).getModelNodeId());
-                            setResult(VariableConstants.MODEL_REQUEST_CODE,intent);
-                            ProductModelsActivity.this.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+                        String categoryName = aL_categoryDatas.get( position ).getNameOfManufacturer();
+                        if (categoryName != null && !categoryName.isEmpty()) {
+                            categoryName = categoryName.substring( 0, 1 ).toUpperCase() + categoryName.substring( 1 ).toLowerCase();
+                            Intent intent = new Intent();
+                            intent.putExtra( "modelName", categoryName + "/" + aL_categoryDatas.get( position ).getModelNodeId() );
+                            setResult( VariableConstants.MODEL_REQUEST_CODE, intent );
+                            ProductModelsActivity.this.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN );
                             onBackPressed();
                             finish();
                         }
                     }
-                });
+                } );
 
-            }else {
+            } else {
 
                 temp = new ArrayList();
                 for (AllModels d : aL_categoryDatas) {
@@ -279,27 +287,94 @@ public class ProductModelsActivity extends AppCompatActivity implements View.OnC
                 }
                 categoryRvAdapter.updateList( temp );
 
-                categoryRvAdapter.setOnItemClick(new ClickListener() {
+                categoryRvAdapter.setOnItemClick( new ClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        String categoryName=temp.get(position).getNameOfManufacturer();
-                        if (categoryName!=null && !categoryName.isEmpty())
-                        {
-                            categoryName=categoryName.substring(0,1).toUpperCase()+categoryName.substring(1).toLowerCase();
-                            Intent intent=new Intent();
-                            intent.putExtra("modelName",categoryName+"/"+aL_categoryDatas.get(position).getModelNodeId());
-                            setResult(VariableConstants.MODEL_REQUEST_CODE,intent);
+                        String categoryName = temp.get( position ).getNameOfManufacturer();
+                        if (categoryName != null && !categoryName.isEmpty()) {
+                            categoryName = categoryName.substring( 0, 1 ).toUpperCase() + categoryName.substring( 1 ).toLowerCase();
+                            Intent intent = new Intent();
+                            intent.putExtra( "modelName", categoryName + "/" + aL_categoryDatas.get( position ).getModelNodeId() );
+                            setResult( VariableConstants.MODEL_REQUEST_CODE, intent );
                             onBackPressed();
                             finish();
                         }
                     }
-                });
+                } );
             }
             //update recyclerview
 
 
+        }
+    }
 
+    private void startVoiceInput(int requestCode) {
+        Intent intent = new Intent( RecognizerIntent.ACTION_RECOGNIZE_SPEECH );
+        intent.putExtra( RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM );
+        intent.putExtra( RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault() );
+
+        if (REQ_CODE_SPEECH_INPUT_TITLE == requestCode) {
+            intent.putExtra( RecognizerIntent.EXTRA_PROMPT, "Please say some make name" );
+        }
+        try {
+            startActivityForResult( intent, requestCode );
+        } catch (ActivityNotFoundException a) {
 
         }
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult( requestCode, resultCode, data );
+        if (data != null) {
+            switch (requestCode) {
+
+                case REQ_CODE_SPEECH_INPUT_TITLE:
+                    if (resultCode == RESULT_OK && null != data) {
+                        ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                        String categoryName = result.get(0);
+                        categoryName = capitalize(categoryName);
+                        for (int i=0;i<aL_categoryDatas.size();i++){
+                            if (aL_categoryDatas.get(i).getNameOfManufacturer().contains( categoryName )){
+
+                                categoryName = categoryName.substring( 0, 1 ).toUpperCase() + categoryName.substring( 1 ).toLowerCase();
+
+                                if (categoryName != null && !categoryName.isEmpty()) {
+
+                                    Intent intent = new Intent();
+                                    intent.putExtra( "modelName", aL_categoryDatas.get(i).getNameOfManufacturer() + "/" + aL_categoryDatas.get( i ).getModelNodeId() );
+                                    setResult( VariableConstants.MODEL_REQUEST_CODE, intent );
+                                    ProductModelsActivity.this.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN );
+                                    onBackPressed();
+                                    finish();
+
+                                    break;
+                                }
+                            }
+                        }
+
+
+                    }
+                    break;
+            }
+        }
+    }
+
+    public static String capitalize(String input) {
+
+        String[] words = input.toLowerCase().split(" ");
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+
+            if (i > 0 && word.length() > 0) {
+                builder.append(" ");
+            }
+
+            String cap = word.substring(0, 1).toUpperCase() + word.substring(1);
+            builder.append(cap);
+        }
+        return builder.toString();
     }
 }

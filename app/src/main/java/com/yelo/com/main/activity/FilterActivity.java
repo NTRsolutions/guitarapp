@@ -868,9 +868,20 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
                             public void run() {
                                 //replace this line to scroll up or down
                                 mScrollView.smoothScrollTo( 0,0 );
+
+
+                                if(ManufactrerId != -1) {
+                                 Intent   intent = new Intent( mActivity, YearModelsActivity.class );
+                                    intent.putExtra( "model_id", ManufactrerId );
+                                    startActivityForResult( intent, VariableConstants.MODEL_REQUEST_YEAR_CODE );
+                                }else {
+                                    Toast.makeText( mActivity, "Please select make first.", Toast.LENGTH_SHORT ).show();
+                                }
                             }
                         }, 100L);
 //                        mRlModelsYear.performClick();
+
+
 
                     }
 //                    mScrollView.fullScroll(ScrollView.FOCUS_UP);
@@ -890,6 +901,14 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
                             public void run() {
                                 //replace this line to scroll up or down
                                 mScrollView.smoothScrollTo( 0,0 );
+                                if(ManufactrerId != -1) {
+                                    String str = mTvcategoryModels.getText().toString();
+                                    Intent intent = new Intent( mActivity, MakeModelsActivity.class );
+                                    intent.putExtra( "model_id", ManufactrerId );
+                                    startActivityForResult( intent, VariableConstants.MODEL_REQUEST_MAKE_CODE );
+                                }else {
+                                    Toast.makeText( mActivity, "Please select make first.", Toast.LENGTH_SHORT ).show();
+                                }
                             }
                         }, 100L);
 //                        mRlMake.performClick();
@@ -909,6 +928,8 @@ public class FilterActivity extends AppCompatActivity implements View.OnClickLis
                             public void run() {
                                 //replace this line to scroll up or down
                                 mScrollView.smoothScrollTo( 0,0 );
+
+
                             }
                         }, 100L);
                     }

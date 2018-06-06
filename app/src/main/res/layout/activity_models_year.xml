@@ -44,20 +44,41 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.yelo.com.custom_fonts.EditTextRobotoMedium
-            android:id="@+id/ed_search"
-            android:layout_height="50dp"
-            android:layout_width="match_parent"
+        <RelativeLayout
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:hint="@string/Search"
-            android:paddingLeft="7dp"
-            android:gravity="center"
-            android:inputType="number"
-            android:background="@drawable/edittext_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                android:id="@+id/ed_search"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+
+                android:hint="@string/make"
+                android:paddingLeft="7dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:background="@drawable/edittext_bottom_line"
 
 
-            />
+                />
+
+            <LinearLayout
+                android:id="@+id/layout_title"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:src="@mipmap/microphone"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rV_category"

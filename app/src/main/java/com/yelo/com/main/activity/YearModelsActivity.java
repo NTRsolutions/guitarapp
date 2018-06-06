@@ -1,9 +1,11 @@
 package com.yelo.com.main.activity;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.support.annotation.Nullable;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +16,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
@@ -41,6 +44,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * <h>ProductCategoryActivity</h>
@@ -65,6 +69,12 @@ public class YearModelsActivity extends AppCompatActivity implements View.OnClic
     List<String> listYear = new ArrayList<>(  );
     EditText mEdSearch;
     YearCategoryRvAdapter categoryRvAdapter;
+
+    LinearLayout mLiTitleSpeach;
+
+    List<AllModels> aL_categoryDatas = new ArrayList<>();
+
+    private static final int REQ_CODE_SPEECH_INPUT_TITLE = 100;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -90,9 +100,6 @@ public class YearModelsActivity extends AppCompatActivity implements View.OnClic
             listYear.add( i+"" );
 
         }
-
-
-
 
          categoryRvAdapter=new YearCategoryRvAdapter(YearModelsActivity.this,listYear);
         LinearLayoutManager layoutManager=new LinearLayoutManager(mActivity);
@@ -124,6 +131,8 @@ public class YearModelsActivity extends AppCompatActivity implements View.OnClic
 
         filter("");
 
+        mLiTitleSpeach = findViewById( R.id.layout_title );
+        mLiTitleSpeach.setOnClickListener( this );
 //        getCategoriesService();
     }
 
@@ -255,6 +264,11 @@ public class YearModelsActivity extends AppCompatActivity implements View.OnClic
             case R.id.rL_back_btn :
                 onBackPressed();
                 break;
+
+            // title speach recognition
+            case R.id.layout_title:
+                startVoiceInput( REQ_CODE_SPEECH_INPUT_TITLE );
+                break;
         }
     }
 
@@ -318,6 +332,58 @@ public class YearModelsActivity extends AppCompatActivity implements View.OnClic
 
 
 
+        }
+    }
+
+
+    private void startVoiceInput(int requestCode) {
+        Intent intent = new Intent( RecognizerIntent.ACTION_RECOGNIZE_SPEECH );
+        intent.putExtra( RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM );
+        intent.putExtra( RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault() );
+
+        if (REQ_CODE_SPEECH_INPUT_TITLE == requestCode) {
+            intent.putExtra( RecognizerIntent.EXTRA_PROMPT, "Please say some year in number" );
+        }
+        try {
+            startActivityForResult( intent, requestCode );
+        } catch (ActivityNotFoundException a) {
+
+        }
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult( requestCode, resultCode, data );
+        if (data != null) {
+            switch (requestCode) {
+
+                case REQ_CODE_SPEECH_INPUT_TITLE:
+                    if (resultCode == RESULT_OK && null != data) {
+                        ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                        String categoryName = result.get(0);
+                        for (int i=0;i<listYear.size();i++){
+                            if (listYear.get(i).equalsIgnoreCase( result.get(0) )){
+
+                                categoryName = categoryName.substring( 0, 1 ).toUpperCase() + categoryName.substring( 1 ).toLowerCase();
+
+                                if (categoryName != null && !categoryName.isEmpty()) {
+
+                                    Intent intent=new Intent();
+                                    intent.putExtra("yearName",categoryName);
+                                    setResult(VariableConstants.MODEL_REQUEST_YEAR_CODE,intent);
+                                    onBackPressed();
+                                    finish();
+
+                                    break;
+                                }
+                            }
+                        }
+
+
+                    }
+                    break;
+            }
         }
     }
 }

@@ -30,15 +30,22 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/AddPaymentActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/AddPaymentActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/app_launcher_logo-web.png" afterPath="$PROJECT_DIR$/app/src/main/app_launcher_logo-web.png" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/YearModelsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/YearModelsActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/tab_fragments/HomeFrag.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/tab_fragments/HomeFrag.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_payment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_payment.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_filter.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_filter.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_makes_year.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_makes_year.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_models.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_models.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_models_year.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_models_year.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/app_launcher_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/app_launcher_logo.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/app_launcher_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/app_launcher_logo.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/app_launcher_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/app_launcher_logo.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/app_launcher_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/app_launcher_logo.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/app_launcher_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/app_launcher_logo.png" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -98,94 +105,111 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DiscoverPeopleActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/DiscoverPeopleActivity.java">
+      <file leaf-file-name="YearModelsActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/YearModelsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1178">
-              <caret line="91" column="26" lean-forward="false" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+            <state relative-caret-position="5928">
+              <caret line="356" column="64" lean-forward="false" selection-start-line="356" selection-start-column="64" selection-end-line="356" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FilterActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java">
+      <file leaf-file-name="MakeModelsActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-707">
-              <caret line="275" column="0" lean-forward="true" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
-              <folding>
-                <element signature="e#8283#8320#0" expanded="true" />
-                <element signature="e#14740#14777#0" expanded="true" />
-                <element signature="e#19429#19479#0" expanded="true" />
-                <element signature="e#20236#20293#0" expanded="true" />
-                <element signature="e#20383#20442#0" expanded="true" />
-                <element signature="e#27028#27078#0" expanded="true" />
-                <element signature="e#27170#27209#0" expanded="true" />
-                <element signature="e#28757#28804#0" expanded="true" />
-                <element signature="e#28829#28876#0" expanded="true" />
-                <element signature="e#28966#29012#0" expanded="true" />
-                <element signature="e#29037#29085#0" expanded="true" />
-                <element signature="e#29172#29215#0" expanded="true" />
-                <element signature="e#29240#29292#0" expanded="true" />
-                <element signature="e#29379#29422#0" expanded="true" />
-                <element signature="e#29447#29499#0" expanded="true" />
-                <element signature="e#29995#30043#0" expanded="true" />
-                <element signature="e#30204#30252#0" expanded="true" />
-                <element signature="e#30411#30460#0" expanded="true" />
-                <element signature="e#30636#30682#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddPaymentActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/AddPaymentActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2945">
-              <caret line="201" column="27" lean-forward="false" selection-start-line="201" selection-start-column="27" selection-end-line="201" selection-end-column="27" />
-              <folding>
-                <element signature="method#getJSonStates#0;class#AddPaymentActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeFrag.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/tab_fragments/HomeFrag.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15428">
-              <caret line="905" column="16" lean-forward="false" selection-start-line="905" selection-start-column="16" selection-end-line="905" selection-end-column="16" />
+            <state relative-caret-position="5548">
+              <caret line="336" column="43" lean-forward="false" selection-start-line="336" selection-start-column="43" selection-end-line="336" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frag_home.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/frag_home.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="BuySellFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/BuySellFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="137" column="21" lean-forward="true" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
-              <folding>
-                <element signature="e#5628#5654#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2375">
+              <caret line="153" column="72" lean-forward="false" selection-start-line="153" selection-start-column="72" selection-end-line="153" selection-end-column="72" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_buy_sell.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_buy_sell.xml">
+      <file leaf-file-name="ApiUrl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/utility/ApiUrl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginOrSignupActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="1264" column="109" lean-forward="false" selection-start-line="1264" selection-start-column="24" selection-end-line="1264" selection-end-column="109" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_login_signup.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_signup.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="e#1754#1767#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1805">
+              <caret line="95" column="35" lean-forward="false" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_fields.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_fields.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2356">
+              <caret line="124" column="36" lean-forward="false" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaymentActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/PaymentActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="95" column="46" lean-forward="false" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductModelsActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2527">
+              <caret line="183" column="59" lean-forward="false" selection-start-line="183" selection-start-column="59" selection-end-line="183" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_models.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_models.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1349">
+              <caret line="71" column="43" lean-forward="false" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -203,9 +227,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>filter</find>
-      <find>mRlModels</find>
-      <find>rL_apply</find>
       <find>rL_product_model</find>
       <find>mTvMakes</find>
       <find>iV_productImage</find>
@@ -233,6 +254,9 @@
       <find>scrollViewFilter</find>
       <find>eT_minprice</find>
       <find>linear_filter</find>
+      <find>mLiTitleSpeach</find>
+      <find>tV_do_login</find>
+      <find>rL_do_login</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -4222,10 +4246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/ProductPictureFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/BuySellFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_post_product_success.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/HomePageActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_payment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeOfferActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/utility/CommonClass.java" />
@@ -4265,14 +4285,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/adapter/YearCategoryRvAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_payment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_filter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/YearModelsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/AddPaymentActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/tab_fragments/HomeFrag.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/frag_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_buy_sell.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_models.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_models_year.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_makes_year.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/YearModelsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java" />
       </list>
     </option>
   </component>
@@ -4298,6 +4322,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -4336,7 +4361,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -4473,32 +4498,12 @@
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="Uploader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarguitar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guitarguitar" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarguitar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guitarguitar" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4768,7 +4773,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527861796721</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit changes">
+      <created>1528176261515</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1528176261515</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -4781,22 +4793,21 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5346386" sideWeight="0.502584" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16602068" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15662651" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298193" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04066265" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10692771" sideWeight="0.49224806" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.49224806" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23255815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60240966" sideWeight="0.49741602" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21576227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12801205" sideWeight="0.49741602" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.4818402" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9006024" sideWeight="0.49483204" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5181598" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0813253" sideWeight="0.49483204" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -4804,6 +4815,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16602068" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -4930,25 +4942,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>150</line>
+          <line>161</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>153</line>
+          <line>164</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>157</line>
+          <line>168</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>169</line>
+          <line>180</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
@@ -6310,79 +6322,79 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>248</line>
+          <line>257</line>
           <properties />
           <option name="timeStamp" value="361" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>262</line>
+          <line>270</line>
           <properties />
           <option name="timeStamp" value="362" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>259</line>
+          <line>267</line>
           <properties />
           <option name="timeStamp" value="363" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>270</line>
+          <line>278</line>
           <properties />
           <option name="timeStamp" value="364" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>276</line>
+          <line>284</line>
           <properties />
           <option name="timeStamp" value="365" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>275</line>
+          <line>283</line>
           <properties />
           <option name="timeStamp" value="366" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>290</line>
+          <line>297</line>
           <properties />
           <option name="timeStamp" value="367" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>289</line>
+          <line>296</line>
           <properties />
           <option name="timeStamp" value="368" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>292</line>
+          <line>299</line>
           <properties />
           <option name="timeStamp" value="369" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>281</line>
+          <line>289</line>
           <properties />
           <option name="timeStamp" value="370" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>286</line>
+          <line>293</line>
           <properties />
           <option name="timeStamp" value="371" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>245</line>
+          <line>254</line>
           <properties />
           <option name="timeStamp" value="372" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>251</line>
+          <line>260</line>
           <properties />
           <option name="timeStamp" value="373" />
         </line-breakpoint>
@@ -6436,19 +6448,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>78</line>
+          <line>84</line>
           <properties />
           <option name="timeStamp" value="382" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>82</line>
+          <line>88</line>
           <properties />
           <option name="timeStamp" value="383" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>106</line>
+          <line>111</line>
           <properties />
           <option name="timeStamp" value="384" />
         </line-breakpoint>
@@ -6466,13 +6478,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>255</line>
+          <line>264</line>
           <properties />
           <option name="timeStamp" value="387" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java</url>
-          <line>279</line>
+          <line>287</line>
           <properties />
           <option name="timeStamp" value="388" />
         </line-breakpoint>
@@ -8356,25 +8368,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>290</line>
+          <line>305</line>
           <properties />
           <option name="timeStamp" value="818" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>285</line>
+          <line>300</line>
           <properties />
           <option name="timeStamp" value="819" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>288</line>
+          <line>303</line>
           <properties />
           <option name="timeStamp" value="820" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>283</line>
+          <line>298</line>
           <properties />
           <option name="timeStamp" value="821" />
         </line-breakpoint>
@@ -8656,19 +8668,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java</url>
-          <line>905</line>
+          <line>924</line>
           <properties />
           <option name="timeStamp" value="885" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java</url>
-          <line>904</line>
+          <line>923</line>
           <properties />
           <option name="timeStamp" value="886" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java</url>
-          <line>901</line>
+          <line>920</line>
           <properties />
           <option name="timeStamp" value="887" />
         </line-breakpoint>
@@ -8686,19 +8698,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>260</line>
+          <line>275</line>
           <properties />
           <option name="timeStamp" value="890" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>256</line>
+          <line>271</line>
           <properties />
           <option name="timeStamp" value="891" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>255</line>
+          <line>270</line>
           <properties />
           <option name="timeStamp" value="892" />
         </line-breakpoint>
@@ -8734,25 +8746,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>183</line>
+          <line>194</line>
           <properties />
           <option name="timeStamp" value="899" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>180</line>
+          <line>191</line>
           <properties />
           <option name="timeStamp" value="900" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>176</line>
+          <line>187</line>
           <properties />
           <option name="timeStamp" value="901" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
-          <line>171</line>
+          <line>182</line>
           <properties />
           <option name="timeStamp" value="902" />
         </line-breakpoint>
@@ -8785,6 +8797,48 @@
           <line>998</line>
           <properties />
           <option name="timeStamp" value="907" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
+          <line>344</line>
+          <properties />
+          <option name="timeStamp" value="908" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java</url>
+          <line>342</line>
+          <properties />
+          <option name="timeStamp" value="911" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java</url>
+          <line>998</line>
+          <properties />
+          <option name="timeStamp" value="913" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java</url>
+          <line>1279</line>
+          <properties />
+          <option name="timeStamp" value="914" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java</url>
+          <line>1255</line>
+          <properties />
+          <option name="timeStamp" value="915" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java</url>
+          <line>1427</line>
+          <properties />
+          <option name="timeStamp" value="916" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java</url>
+          <line>1426</line>
+          <properties />
+          <option name="timeStamp" value="917" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/HomePageActivity.java</url>
@@ -9199,79 +9253,11 @@
           <option name="timeStamp" value="634" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="908" />
+      <option name="time" value="918" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/Uploader/Cloudinary_reponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/event_bus/BusProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/device_camera/HandleCameraEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/device_camera/InternalStorageContentProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/pull_to_zoom/PullToZoomBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/custom_fonts/TextViewBukhariScriptRegular.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/scroll_bottom_tablayout/BottomNavigationBehavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/pull_to_zoom/PullToZoomScrollViewEx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4541">
-          <caret line="258" column="9" lean-forward="false" selection-start-line="258" selection-start-column="9" selection-end-line="258" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/adapter/CurrencyRvAdap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/adapter/ProductReviewRvAdap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2280">
@@ -9455,7 +9441,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/DiscoverPeopleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
+        <state relative-caret-position="0">
           <caret line="91" column="26" lean-forward="false" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
           <folding />
         </state>
@@ -9495,22 +9481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/PostProductActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="700" column="17" lean-forward="false" selection-start-line="700" selection-start-column="17" selection-end-line="700" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/utility/ApiUrl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="381" column="85" lean-forward="false" selection-start-line="381" selection-start-column="65" selection-end-line="381" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/adapter/MeksCategoryRvAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-710">
@@ -9519,6 +9489,195 @@
             <element signature="e#4501#4502#0" expanded="false" />
             <element signature="e#4539#4540#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/adapter/YearCategoryRvAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="96" column="7" lean-forward="false" selection-start-line="96" selection-start-column="7" selection-end-line="96" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_payment.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="421" column="49" lean-forward="false" selection-start-line="421" selection-start-column="30" selection-end-line="421" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_buy_sell.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155">
+          <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/frag_home.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="137" column="21" lean-forward="false" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_filter.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="944" column="0" lean-forward="false" selection-start-line="944" selection-start-column="0" selection-end-line="944" selection-end-column="0" />
+          <folding>
+            <element signature="e#3103#6835#0" expanded="false" />
+            <element signature="e#6848#7254#0" expanded="false" />
+            <element signature="e#7300#8156#0" expanded="false" />
+            <element signature="e#8169#11958#0" expanded="false" />
+            <element signature="e#11971#12377#0" expanded="false" />
+            <element signature="e#12423#13280#0" expanded="false" />
+            <element signature="e#13293#17081#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_post_product.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="124" column="31" lean-forward="false" selection-start-line="112" selection-start-column="16" selection-end-line="124" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/PostProductActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="1346" column="26" lean-forward="false" selection-start-line="1341" selection-start-column="16" selection-end-line="1346" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_models_year.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="80" column="25" lean-forward="false" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_makes_year.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/tab_fragments/HomeFrag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="415" column="41" lean-forward="true" selection-start-line="415" selection-start-column="41" selection-end-line="415" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="672" column="9" lean-forward="false" selection-start-line="672" selection-start-column="9" selection-end-line="672" selection-end-column="9" />
+          <folding>
+            <element signature="e#8283#8320#0" expanded="false" />
+            <element signature="e#14740#14777#0" expanded="false" />
+            <element signature="e#19429#19479#0" expanded="false" />
+            <element signature="e#20236#20293#0" expanded="false" />
+            <element signature="e#20383#20442#0" expanded="false" />
+            <element signature="e#27028#27078#0" expanded="false" />
+            <element signature="e#27170#27209#0" expanded="false" />
+            <element signature="e#28757#28804#0" expanded="false" />
+            <element signature="e#28829#28876#0" expanded="false" />
+            <element signature="e#28966#29012#0" expanded="false" />
+            <element signature="e#29037#29085#0" expanded="false" />
+            <element signature="e#29172#29215#0" expanded="false" />
+            <element signature="e#29240#29292#0" expanded="false" />
+            <element signature="e#29379#29422#0" expanded="false" />
+            <element signature="e#29447#29499#0" expanded="false" />
+            <element signature="e#29995#30043#0" expanded="false" />
+            <element signature="e#30204#30252#0" expanded="false" />
+            <element signature="e#30411#30460#0" expanded="false" />
+            <element signature="e#30636#30682#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_models.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1349">
+          <caret line="71" column="43" lean-forward="false" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2527">
+          <caret line="183" column="59" lean-forward="false" selection-start-line="183" selection-start-column="59" selection-end-line="183" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5548">
+          <caret line="336" column="43" lean-forward="false" selection-start-line="336" selection-start-column="43" selection-end-line="336" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/AddPaymentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="513" column="62" lean-forward="false" selection-start-line="513" selection-start-column="62" selection-end-line="513" selection-end-column="62" />
+          <folding>
+            <element signature="method#getJSonStates#0;class#AddPaymentActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/YearModelsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5928">
+          <caret line="356" column="64" lean-forward="false" selection-start-line="356" selection-start-column="64" selection-end-line="356" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -9534,335 +9693,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/PaymentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="95" column="42" lean-forward="false" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+        <state relative-caret-position="532">
+          <caret line="95" column="46" lean-forward="false" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/adapter/YearCategoryRvAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="96" column="7" lean-forward="false" selection-start-line="96" selection-start-column="7" selection-end-line="96" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/YearModelsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="278" column="46" lean-forward="false" selection-start-line="278" selection-start-column="46" selection-end-line="278" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_filter.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_signup.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="944" column="0" lean-forward="false" selection-start-line="944" selection-start-column="0" selection-end-line="944" selection-end-column="0" />
-          <folding>
-            <element signature="e#970#997#0" expanded="false" />
-            <element signature="e#1310#1326#0" expanded="false" />
-            <element signature="e#1356#1376#0" expanded="false" />
-            <element signature="e#2341#2364#0" expanded="false" />
-            <element signature="e#2698#2717#0" expanded="false" />
-            <element signature="e#2765#2784#0" expanded="false" />
-            <element signature="e#2872#2886#0" expanded="false" />
-            <element signature="e#3032#3056#0" expanded="false" />
-            <element signature="e#3103#6835#0" expanded="false" />
-            <element signature="e#3209#3224#0" expanded="false" />
-            <element signature="e#3993#4007#0" expanded="false" />
-            <element signature="e#4298#4324#0" expanded="false" />
-            <element signature="e#5888#5914#0" expanded="false" />
-            <element signature="e#6741#6768#0" expanded="false" />
-            <element signature="e#6848#7254#0" expanded="false" />
-            <element signature="e#6897#6913#0" expanded="false" />
-            <element signature="e#6957#6973#0" expanded="false" />
-            <element signature="e#7017#7033#0" expanded="false" />
-            <element signature="e#7075#7091#0" expanded="false" />
-            <element signature="e#7300#8156#0" expanded="false" />
-            <element signature="e#7407#7430#0" expanded="false" />
-            <element signature="e#7764#7783#0" expanded="false" />
-            <element signature="e#7831#7850#0" expanded="false" />
-            <element signature="e#7938#7952#0" expanded="false" />
-            <element signature="e#8098#8122#0" expanded="false" />
-            <element signature="e#8169#11958#0" expanded="false" />
-            <element signature="e#8280#8295#0" expanded="false" />
-            <element signature="e#9256#9270#0" expanded="false" />
-            <element signature="e#9379#9405#0" expanded="false" />
-            <element signature="e#10999#11025#0" expanded="false" />
-            <element signature="e#11864#11891#0" expanded="false" />
-            <element signature="e#11971#12377#0" expanded="false" />
-            <element signature="e#12020#12036#0" expanded="false" />
-            <element signature="e#12080#12096#0" expanded="false" />
-            <element signature="e#12140#12156#0" expanded="false" />
-            <element signature="e#12198#12214#0" expanded="false" />
-            <element signature="e#12423#13280#0" expanded="false" />
-            <element signature="e#12530#12553#0" expanded="false" />
-            <element signature="e#12887#12906#0" expanded="false" />
-            <element signature="e#12954#12973#0" expanded="false" />
-            <element signature="e#13061#13076#0" expanded="false" />
-            <element signature="e#13222#13246#0" expanded="false" />
-            <element signature="e#13293#17081#0" expanded="false" />
-            <element signature="e#13404#13419#0" expanded="false" />
-            <element signature="e#14197#14212#0" expanded="false" />
-            <element signature="e#14503#14529#0" expanded="false" />
-            <element signature="e#16122#16148#0" expanded="false" />
-            <element signature="e#16987#17014#0" expanded="false" />
-            <element signature="e#17231#17254#0" expanded="false" />
-            <element signature="e#17642#17665#0" expanded="false" />
-            <element signature="e#17699#17717#0" expanded="false" />
-            <element signature="e#17755#17779#0" expanded="false" />
-            <element signature="e#17827#17846#0" expanded="false" />
-            <element signature="e#17893#17912#0" expanded="false" />
-            <element signature="e#18375#18398#0" expanded="false" />
-            <element signature="e#18606#18635#0" expanded="false" />
-            <element signature="e#18683#18702#0" expanded="false" />
-            <element signature="e#18749#18768#0" expanded="false" />
-            <element signature="e#19208#19233#0" expanded="false" />
-            <element signature="e#19574#19590#0" expanded="false" />
-            <element signature="e#19925#19952#0" expanded="false" />
-            <element signature="e#20318#20341#0" expanded="false" />
-            <element signature="e#20729#20752#0" expanded="false" />
-            <element signature="e#20786#20804#0" expanded="false" />
-            <element signature="e#20842#20866#0" expanded="false" />
-            <element signature="e#20914#20933#0" expanded="false" />
-            <element signature="e#20980#20999#0" expanded="false" />
-            <element signature="e#21982#22005#0" expanded="false" />
-            <element signature="e#22440#22463#0" expanded="false" />
-            <element signature="e#22497#22515#0" expanded="false" />
-            <element signature="e#22553#22577#0" expanded="false" />
-            <element signature="e#22625#22644#0" expanded="false" />
-            <element signature="e#22691#22710#0" expanded="false" />
-            <element signature="e#23281#23304#0" expanded="false" />
-            <element signature="e#23338#23360#0" expanded="false" />
-            <element signature="e#23398#23422#0" expanded="false" />
-            <element signature="e#24003#24026#0" expanded="false" />
-            <element signature="e#24060#24078#0" expanded="false" />
-            <element signature="e#24116#24140#0" expanded="false" />
-            <element signature="e#24188#24204#0" expanded="false" />
-            <element signature="e#24251#24267#0" expanded="false" />
-            <element signature="e#24834#24849#0" expanded="false" />
-            <element signature="e#24896#24911#0" expanded="false" />
-            <element signature="e#24957#24976#0" expanded="false" />
-            <element signature="e#25024#25043#0" expanded="false" />
-            <element signature="e#25634#25661#0" expanded="false" />
-            <element signature="e#26522#26535#0" expanded="false" />
-            <element signature="e#26742#26771#0" expanded="false" />
-            <element signature="e#27191#27214#0" expanded="false" />
-            <element signature="e#27602#27625#0" expanded="false" />
-            <element signature="e#27659#27676#0" expanded="false" />
-            <element signature="e#27714#27738#0" expanded="false" />
-            <element signature="e#27786#27805#0" expanded="false" />
-            <element signature="e#27852#27871#0" expanded="false" />
-            <element signature="e#28750#28772#0" expanded="false" />
-            <element signature="e#28884#28913#0" expanded="false" />
-            <element signature="e#29067#29086#0" expanded="false" />
-            <element signature="e#29126#29141#0" expanded="false" />
-            <element signature="e#29184#29199#0" expanded="false" />
-            <element signature="e#29241#29260#0" expanded="false" />
-            <element signature="e#29952#29975#0" expanded="false" />
-            <element signature="e#30087#30116#0" expanded="false" />
-            <element signature="e#30270#30289#0" expanded="false" />
-            <element signature="e#30329#30344#0" expanded="false" />
-            <element signature="e#30387#30402#0" expanded="false" />
-            <element signature="e#30444#30463#0" expanded="false" />
-            <element signature="e#31158#31185#0" expanded="false" />
-            <element signature="e#31297#31326#0" expanded="false" />
-            <element signature="e#31480#31499#0" expanded="false" />
-            <element signature="e#31539#31554#0" expanded="false" />
-            <element signature="e#31597#31612#0" expanded="false" />
-            <element signature="e#31654#31673#0" expanded="false" />
-            <element signature="e#32368#32395#0" expanded="false" />
-            <element signature="e#32507#32536#0" expanded="false" />
-            <element signature="e#32690#32709#0" expanded="false" />
-            <element signature="e#32749#32764#0" expanded="false" />
-            <element signature="e#32807#32822#0" expanded="false" />
-            <element signature="e#32864#32883#0" expanded="false" />
-            <element signature="e#33472#33495#0" expanded="false" />
-            <element signature="e#33883#33906#0" expanded="false" />
-            <element signature="e#33940#33963#0" expanded="false" />
-            <element signature="e#34001#34025#0" expanded="false" />
-            <element signature="e#34073#34092#0" expanded="false" />
-            <element signature="e#34139#34158#0" expanded="false" />
-            <element signature="e#34982#35001#0" expanded="false" />
-            <element signature="e#35049#35068#0" expanded="false" />
-            <element signature="e#35116#35135#0" expanded="false" />
-            <element signature="e#35181#35200#0" expanded="false" />
-            <element signature="e#35302#35325#0" expanded="false" />
-            <element signature="e#35437#35466#0" expanded="false" />
-            <element signature="e#35565#35588#0" expanded="false" />
-            <element signature="e#36284#36303#0" expanded="false" />
-            <element signature="e#36351#36370#0" expanded="false" />
-            <element signature="e#36418#36437#0" expanded="false" />
-            <element signature="e#36483#36502#0" expanded="false" />
-            <element signature="e#36604#36627#0" expanded="false" />
-            <element signature="e#36739#36768#0" expanded="false" />
-            <element signature="e#36867#36890#0" expanded="false" />
-            <element signature="e#37527#37546#0" expanded="false" />
-            <element signature="e#37594#37613#0" expanded="false" />
-            <element signature="e#37661#37680#0" expanded="false" />
-            <element signature="e#37726#37745#0" expanded="false" />
-            <element signature="e#37847#37871#0" expanded="false" />
-            <element signature="e#37983#38012#0" expanded="false" />
-            <element signature="e#38111#38134#0" expanded="false" />
-            <element signature="e#38768#38787#0" expanded="false" />
-            <element signature="e#38835#38854#0" expanded="false" />
-            <element signature="e#38902#38921#0" expanded="false" />
-            <element signature="e#38967#38986#0" expanded="false" />
-            <element signature="e#39088#39109#0" expanded="false" />
-            <element signature="e#39221#39250#0" expanded="false" />
-            <element signature="e#39349#39372#0" expanded="false" />
-            <element signature="e#39955#39978#0" expanded="false" />
-            <element signature="e#40312#40331#0" expanded="false" />
-            <element signature="e#40379#40398#0" expanded="false" />
-            <element signature="e#40486#40501#0" expanded="false" />
-            <element signature="e#40647#40671#0" expanded="false" />
-            <element signature="e#41004#41023#0" expanded="false" />
-            <element signature="e#41067#41086#0" expanded="false" />
-            <element signature="e#41130#41149#0" expanded="false" />
-            <element signature="e#41191#41210#0" expanded="false" />
-            <element signature="e#41301#41324#0" expanded="false" />
-            <element signature="e#41886#41915#0" expanded="false" />
-            <element signature="e#42078#42096#0" expanded="false" />
-            <element signature="e#43130#43151#0" expanded="false" />
-            <element signature="e#43754#43781#0" expanded="false" />
-            <element signature="e#44218#44237#0" expanded="false" />
-            <element signature="e#44281#44300#0" expanded="false" />
-            <element signature="e#44344#44363#0" expanded="false" />
-            <element signature="e#44405#44424#0" expanded="false" />
-            <element signature="e#44515#44538#0" expanded="false" />
-            <element signature="e#44749#44763#0" expanded="false" />
-            <element signature="e#44862#44891#0" expanded="false" />
-            <element signature="e#45697#45712#0" expanded="false" />
-            <element signature="e#45760#45775#0" expanded="false" />
-            <element signature="e#45822#45837#0" expanded="false" />
-            <element signature="e#46715#46731#0" expanded="false" />
-            <element signature="e#46782#46798#0" expanded="false" />
-            <element signature="e#46952#46976#0" expanded="false" />
-            <element signature="e#47186#47201#0" expanded="false" />
-            <element signature="e#47887#47906#0" expanded="false" />
-            <element signature="e#47950#47969#0" expanded="false" />
-            <element signature="e#48013#48032#0" expanded="false" />
-            <element signature="e#48074#48093#0" expanded="false" />
-            <element signature="e#48184#48207#0" expanded="false" />
-            <element signature="e#48418#48430#0" expanded="false" />
-            <element signature="e#48529#48558#0" expanded="false" />
-            <element signature="e#49337#49352#0" expanded="false" />
-            <element signature="e#49400#49415#0" expanded="false" />
-            <element signature="e#49462#49477#0" expanded="false" />
-            <element signature="e#50354#50370#0" expanded="false" />
-            <element signature="e#50421#50437#0" expanded="false" />
-            <element signature="e#50591#50615#0" expanded="false" />
-            <element signature="e#50825#50840#0" expanded="false" />
-            <element signature="e#51386#51402#0" expanded="false" />
-            <element signature="e#51446#51462#0" expanded="false" />
-            <element signature="e#51506#51522#0" expanded="false" />
-            <element signature="e#51564#51580#0" expanded="false" />
-            <element signature="e#52274#52289#0" expanded="false" />
-            <element signature="e#52319#52339#0" expanded="false" />
-            <element signature="e#53277#53292#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="261" column="144" lean-forward="false" selection-start-line="261" selection-start-column="27" selection-end-line="261" selection-end-column="144" />
+        <state relative-caret-position="1805">
+          <caret line="95" column="35" lean-forward="false" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_fields.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="262" column="25" lean-forward="false" selection-start-line="262" selection-start-column="25" selection-end-line="262" selection-end-column="25" />
+        <state relative-caret-position="2356">
+          <caret line="124" column="36" lean-forward="false" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_payment.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/utility/ApiUrl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="421" column="49" lean-forward="false" selection-start-line="421" selection-start-column="30" selection-end-line="421" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/AddPaymentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2945">
-          <caret line="201" column="27" lean-forward="false" selection-start-line="201" selection-start-column="27" selection-end-line="201" selection-end-column="27" />
-          <folding>
-            <element signature="method#getJSonStates#0;class#AddPaymentActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/tab_fragments/HomeFrag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15428">
-          <caret line="905" column="16" lean-forward="false" selection-start-line="905" selection-start-column="16" selection-end-line="905" selection-end-column="16" />
+        <state relative-caret-position="323">
+          <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/BuySellFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-707">
-          <caret line="275" column="0" lean-forward="true" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
-          <folding>
-            <element signature="e#8283#8320#0" expanded="true" />
-            <element signature="e#14740#14777#0" expanded="true" />
-            <element signature="e#19429#19479#0" expanded="true" />
-            <element signature="e#20236#20293#0" expanded="true" />
-            <element signature="e#20383#20442#0" expanded="true" />
-            <element signature="e#27028#27078#0" expanded="true" />
-            <element signature="e#27170#27209#0" expanded="true" />
-            <element signature="e#28757#28804#0" expanded="true" />
-            <element signature="e#28829#28876#0" expanded="true" />
-            <element signature="e#28966#29012#0" expanded="true" />
-            <element signature="e#29037#29085#0" expanded="true" />
-            <element signature="e#29172#29215#0" expanded="true" />
-            <element signature="e#29240#29292#0" expanded="true" />
-            <element signature="e#29379#29422#0" expanded="true" />
-            <element signature="e#29447#29499#0" expanded="true" />
-            <element signature="e#29995#30043#0" expanded="true" />
-            <element signature="e#30204#30252#0" expanded="true" />
-            <element signature="e#30411#30460#0" expanded="true" />
-            <element signature="e#30636#30682#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2375">
+          <caret line="153" column="72" lean-forward="false" selection-start-line="153" selection-start-column="72" selection-end-line="153" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/frag_home.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="137" column="21" lean-forward="true" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
-          <folding>
-            <element signature="e#5628#5654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_buy_sell.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#1754#1767#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="219">
+          <caret line="1264" column="109" lean-forward="false" selection-start-line="1264" selection-start-column="24" selection-end-line="1264" selection-end-column="109" />
+          <folding />
         </state>
       </provider>
     </entry>

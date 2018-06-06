@@ -57,6 +57,7 @@ import com.yelo.com.get_current_location.FusedLocationReceiver;
 import com.yelo.com.get_current_location.FusedLocationService;
 import com.yelo.com.mqttchat.AppController;
 import com.yelo.com.mqttchat.Database.CouchDbController;
+import com.yelo.com.mqttchat.Utilities.Utilities;
 import com.yelo.com.pojo_class.CloudData;
 import com.yelo.com.pojo_class.EmailCheckPojo;
 import com.yelo.com.pojo_class.LogDevicePojo;
@@ -1393,6 +1394,8 @@ public class LoginOrSignupActivity extends AppCompatActivity implements View.OnC
                 requestDatas.put("longitude", currentLng);
                 requestDatas.put("username", eT_loginUserName.getText().toString());
                 requestDatas.put("password", eT_loginPassword.getText().toString());
+
+                Toast.makeText( mActivity, "Login params == "+ requestDatas.toString(), Toast.LENGTH_LONG ).show();
             }
             catch (JSONException e)
             {
@@ -1411,6 +1414,7 @@ public class LoginOrSignupActivity extends AppCompatActivity implements View.OnC
                         // Success
                         case "200":
 
+                            Toast.makeText( mActivity, "Login in 200", Toast.LENGTH_LONG ).show();
 
                             mSessionManager.setComingFrom( "login" );
                             mSessionManager.setIsUserLoggedIn(true);
@@ -1426,6 +1430,7 @@ public class LoginOrSignupActivity extends AppCompatActivity implements View.OnC
 
                         // Error
                         default:
+                            Toast.makeText( mActivity, "Login in default", Toast.LENGTH_LONG ).show();
                             progress_bar_login.setVisibility(View.GONE);
                             tV_do_login.setVisibility(View.VISIBLE);
                             CommonClass.showTopSnackBar(rL_rootElement,loginResponse.getMessage());
@@ -1438,6 +1443,7 @@ public class LoginOrSignupActivity extends AppCompatActivity implements View.OnC
                     progress_bar_login.setVisibility(View.GONE);
                     tV_do_login.setVisibility(View.VISIBLE);
                     CommonClass.showTopSnackBar(rL_rootElement,error);
+                    Toast.makeText( mActivity, "Login in Error", Toast.LENGTH_LONG ).show();
                 }
             });
         }
@@ -1470,6 +1476,8 @@ public class LoginOrSignupActivity extends AppCompatActivity implements View.OnC
                 request_datas.put("appVersion", BuildConfig.VERSION_NAME);
                 request_datas.put("token",token);
                 request_datas.put("deviceType",VariableConstants.DEVICE_TYPE);
+
+                Toast.makeText( mActivity, "logDeviceInfo params"+ request_datas.toString(), Toast.LENGTH_LONG ).show();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -1489,6 +1497,8 @@ public class LoginOrSignupActivity extends AppCompatActivity implements View.OnC
                     {
                         // success
                         case "200" :
+
+                            Toast.makeText( mActivity, "Login in device info 200", Toast.LENGTH_LONG ).show();
                             // Open Home page screen
                             //LandingActivity.mLandingActivity.finish();
                             //finish();
@@ -1505,11 +1515,13 @@ public class LoginOrSignupActivity extends AppCompatActivity implements View.OnC
 
                         // auth token expired
                         case "401" :
+                            Toast.makeText( mActivity, "Login in device info 401 ", Toast.LENGTH_LONG ).show();
                             CommonClass.sessionExpired(mActivity);
                             break;
 
                         // error
                         default:
+                            Toast.makeText( mActivity, "Login in device info default", Toast.LENGTH_LONG ).show();
                             tV_do_login.setVisibility(View.VISIBLE);
                             CommonClass.showSnackbarMessage(rL_rootElement,logDevicePojo.getMessage());
                             break;
@@ -1521,6 +1533,7 @@ public class LoginOrSignupActivity extends AppCompatActivity implements View.OnC
                     progress_bar_login.setVisibility(View.GONE);
                     tV_do_login.setVisibility(View.VISIBLE);
                     CommonClass.showSnackbarMessage(rL_rootElement,error);
+                    Toast.makeText( mActivity, "Login in device info error", Toast.LENGTH_LONG ).show();
                 }
             });
         }
