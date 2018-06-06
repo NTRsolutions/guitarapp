@@ -22,30 +22,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b76c3859-026e-4afd-ac42-b0fb21e8686b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/app_launcher_logo-web.png" afterPath="$PROJECT_DIR$/app/src/main/app_launcher_logo-web.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/FilterActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/MakeModelsActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/ProductModelsActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/YearModelsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/YearModelsActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_makes_year.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_makes_year.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_models.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_models.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_models_year.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_models_year.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/app_launcher_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/app_launcher_logo.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/app_launcher_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/app_launcher_logo.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/app_launcher_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/app_launcher_logo.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/app_launcher_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/app_launcher_logo.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/app_launcher_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/app_launcher_logo.png" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -148,8 +125,8 @@
       <file leaf-file-name="LoginOrSignupActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="1264" column="109" lean-forward="false" selection-start-line="1264" selection-start-column="24" selection-end-line="1264" selection-end-column="109" />
+            <state relative-caret-position="238">
+              <caret line="1265" column="0" lean-forward="true" selection-start-line="1265" selection-start-column="0" selection-end-line="1265" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -4780,7 +4757,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528176261515</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit changes">
+      <created>1528261625998</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1528261625998</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -4801,7 +4785,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21576227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12801205" sideWeight="0.49741602" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3253012" sideWeight="0.49741602" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.4818402" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -9539,6 +9523,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="893">
           <caret line="137" column="21" lean-forward="false" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+          <folding>
+            <element signature="e#5628#5654#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -9587,6 +9574,9 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="381">
           <caret line="80" column="25" lean-forward="false" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+          <folding>
+            <element signature="e#2290#2304#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -9597,6 +9587,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
           <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+          <folding>
+            <element signature="e#2050#2064#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -9739,8 +9732,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yelo/com/main/activity/LoginOrSignupActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="1264" column="109" lean-forward="false" selection-start-line="1264" selection-start-column="24" selection-end-line="1264" selection-end-column="109" />
+        <state relative-caret-position="238">
+          <caret line="1265" column="0" lean-forward="true" selection-start-line="1265" selection-start-column="0" selection-end-line="1265" selection-end-column="0" />
           <folding />
         </state>
       </provider>
