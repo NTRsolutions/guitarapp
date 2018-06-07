@@ -17,6 +17,7 @@ import com.yelo.com.R;
 import com.yelo.com.fcm_push_notification.Config;
 import com.yelo.com.fcm_push_notification.NotificationMessageDialog;
 import com.yelo.com.fcm_push_notification.NotificationUtils;
+import com.yelo.com.main.activity.products.TermsConditionActivity;
 import com.yelo.com.main.tab_fragments.ProfileFrag;
 import com.yelo.com.utility.CircleTransform;
 import com.yelo.com.utility.CommonClass;
@@ -100,7 +101,7 @@ public class ProfileSettingActivity extends Activity implements View.OnClickList
         try {
             String versionName = getResources().getString(R.string.version)+" "+mActivity.getPackageManager().getPackageInfo(mActivity.getPackageName(), 0).versionName;
             if (!versionName.isEmpty())
-            tV_version.setText(versionName);
+                tV_version.setText(versionName);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -188,23 +189,35 @@ public class ProfileSettingActivity extends Activity implements View.OnClickList
             // privacy policy
             case R.id.rL_privacy :
                 if (isToStartActivity) {
-                String privacyLink = getResources().getString(R.string.privacyPolicyUrl);
-                if (!privacyLink.isEmpty()) {
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(privacyLink));
-                    startActivity(browserIntent);
-                    isToStartActivity = false;
-                }}
+//                    String privacyLink = getResources().getString(R.string.privacyPolicyUrl);
+//                    if (!privacyLink.isEmpty()) {
+//                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(privacyLink));
+//                        startActivity(browserIntent);
+//                        isToStartActivity = false;
+//                    }
+
+
+                    Intent I = new Intent( ProfileSettingActivity.this, TermsConditionActivity.class );
+                    I.putExtra( TermsConditionActivity.KEY_COMING_FROM,"Privacy" );
+                    startActivity( I );
+                }
+
+
                 break;
 
             // Terms and condition
             case R.id.rL_termsNcondition :
                 if (isToStartActivity) {
-                String termsNcondition = getResources().getString(R.string.termsNconditionsUrl);
-                if (!termsNcondition.isEmpty()) {
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(termsNcondition));
-                    startActivity(browserIntent);
-                    isToStartActivity = false;
-                }
+//                    String termsNcondition = getResources().getString(R.string.termsNconditionsUrl);
+//                    if (!termsNcondition.isEmpty()) {
+//                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(termsNcondition));
+//                        startActivity(browserIntent);
+//                        isToStartActivity = false;
+//                    }
+
+                    Intent I = new Intent( ProfileSettingActivity.this, TermsConditionActivity.class );
+                    I.putExtra( TermsConditionActivity.KEY_COMING_FROM,"Terms" );
+                    startActivity( I );
                 }
                 break;
 
@@ -212,12 +225,9 @@ public class ProfileSettingActivity extends Activity implements View.OnClickList
             case R.id.rL_payment :
                 if (isToStartActivity) {
 
-
-                        intent = new Intent(mActivity, AddPaymentActivity.class);
-                        startActivity(intent);
-                        isToStartActivity = false;
-
-
+                    intent = new Intent(mActivity, AddPaymentActivity.class);
+                    startActivity(intent);
+                    isToStartActivity = false;
 
                 }
                 break;

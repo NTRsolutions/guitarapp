@@ -482,23 +482,29 @@ public class EditProfileActivity extends Activity implements View.OnClickListene
 
             // Save
             case R.id.tV_save :
-                if(eT_userName.getText().toString().isEmpty()){
-                    CommonClass.showSnackbarMessage(linear_rootElement,getString(R.string.empty_username));
-                    break;
+
+                try {
+                    if(eT_userName.getText().toString().isEmpty()){
+                        CommonClass.showSnackbarMessage(linear_rootElement,getString(R.string.empty_username));
+                        break;
+                    }
+                    System.out.println(TAG+" "+"isPictureTaken="+isPictureTaken+" "+"profilePicUrl="+profilePicUrl);
+                    if (isPictureTaken)
+                    {
+                        rL_pBar.setVisibility(View.VISIBLE);
+                        tV_save.setVisibility(View.INVISIBLE);
+                        getCloudinaryDetailsApi();
+                    }
+                    else
+                    {
+                        rL_pBar.setVisibility(View.VISIBLE);
+                        tV_save.setVisibility(View.INVISIBLE);
+                        updateProfileApi();
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
-                System.out.println(TAG+" "+"isPictureTaken="+isPictureTaken+" "+"profilePicUrl="+profilePicUrl);
-                if (isPictureTaken)
-                {
-                    rL_pBar.setVisibility(View.VISIBLE);
-                    tV_save.setVisibility(View.INVISIBLE);
-                    getCloudinaryDetailsApi();
-                }
-                else
-                {
-                    rL_pBar.setVisibility(View.VISIBLE);
-                    tV_save.setVisibility(View.INVISIBLE);
-                    updateProfileApi();
-                }
+
                 break;
         }
     }
@@ -743,10 +749,16 @@ public class EditProfileActivity extends Activity implements View.OnClickListene
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-        if (imm!=null)
-        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-        return true;
+
+       try {
+           InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+           if (imm!=null)
+               imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+           return true;
+       }catch (Exception e){
+
+       }
+       return true;
     }
 
     @Override

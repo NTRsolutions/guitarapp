@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/linear_rootElement">
+
+    <!-- Action bar -->
+    <RelativeLayout
+        android:id="@+id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:gravity="center"
+            android:background="@color/white"
+            android:id="@+id/rL_back_btn"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/dummy_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/simple_image_view"
+                android:src="@drawable/back_new" />
+
+
+        </LinearLayout>
+        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            android:id="@+id/text_view_title"
+            android:layout_toLeftOf="@+id/tV_save"
+            android:layout_toStartOf="@+id/tV_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/rL_back_btn"
+            android:layout_toRightOf="@+id/rL_back_btn"
+
+
+            android:textSize="@dimen/action_bar_text_size"/>
+
+    </RelativeLayout>
+
+    <!--Sign up profile content-->
+    <ScrollView
+        android:id="@+id/scrollView_editProfile"
+        android:scrollbars="none"
+        android:layout_below="@id/rL_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <!-- Email-Id -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <!-- Mobile number -->
+
+            <!-- Location -->
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/location_icon"
+                    android:id="@+id/iV_location"
+                    android:contentDescription="@string/simple_image_view"/>
+
+                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    android:id="@+id/tV_location"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@id/iV_location"
+                    android:layout_toEndOf="@id/iV_location"
+                    android:layout_margin="5dp"
+                    android:hint="@string/location"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/heading_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/news_divider_color"/>
+
+            <!-- Gender -->
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

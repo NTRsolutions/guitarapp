@@ -77,7 +77,8 @@ public class HomePageActivity extends AppCompatActivity
     public CustomBottomNavigationView bottomNavigationView;
     public RelativeLayout rL_rootElement;
     private boolean isToStartActivity;
-
+    private static final int TIME_INTERVAL = 2000;
+    private long mBackPressed;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -558,14 +559,15 @@ public class HomePageActivity extends AppCompatActivity
 
         Log.d( "backstackcount", count +"");
         if(count == 0){
-            this.getSupportFragmentManager().popBackStack();
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                super.finishAndRemoveTask();
+//            this.getSupportFragmentManager().popBackStack();
+            if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+                super.onBackPressed();
+                return;
+            } else {
+                Toast.makeText(this, "Tap again to exit.", Toast.LENGTH_SHORT).show();
             }
-            else {
+            mBackPressed = System.currentTimeMillis();
 
-                super.finish();
-            }
         }else {
             super.onBackPressed();
         }

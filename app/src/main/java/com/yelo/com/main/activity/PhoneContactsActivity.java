@@ -58,7 +58,8 @@ public class PhoneContactsActivity extends AppCompatActivity implements View.OnC
     private ArrayList<PhoneContactData> arrayListContacts;
     private PhoneContactRvAdapter phoneContactRvAdapter;
     private NotificationMessageDialog mNotificationMessageDialog;
-
+    RelativeLayout mRlNoPostFound;
+    RecyclerView rV_phoneContacts;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,9 +91,10 @@ public class PhoneContactsActivity extends AppCompatActivity implements View.OnC
         // Initialize xml values
         rL_rootElement= (RelativeLayout) findViewById(R.id.rL_rootElement);
         rL_friend_count= (RelativeLayout) findViewById(R.id.rL_friend_count);
-        RecyclerView rV_phoneContacts = (RecyclerView) findViewById(R.id.rV_phoneContacts);
+         rV_phoneContacts = (RecyclerView) findViewById(R.id.rV_phoneContacts);
         tV_friend_count= (TextView) findViewById(R.id.tV_friend_count);
         mProgress_bar= (ProgressBar) findViewById(R.id.progress_bar);
+        mRlNoPostFound = findViewById( R.id.rL_noProductFound );
 
         // set status bar color
         CommonClass.statusBarColor(mActivity);
@@ -212,6 +214,8 @@ public class PhoneContactsActivity extends AppCompatActivity implements View.OnC
                                 arrayListContacts.addAll(phoneContactMainPojo.getData());
                                 mSessionManager.setContectFriendCount(arrayListContacts.size());
 
+                                mRlNoPostFound.setVisibility( View.GONE );
+                                rV_phoneContacts.setVisibility( View.VISIBLE );
                                 // set count
                                 rL_friend_count.setVisibility(View.VISIBLE);
                                 String setCountText;
@@ -223,6 +227,13 @@ public class PhoneContactsActivity extends AppCompatActivity implements View.OnC
                                 // notify adapter
                                 phoneContactRvAdapter.notifyDataSetChanged();
                             }
+                            break;
+
+                        case "204":
+                            mRlNoPostFound.setVisibility( View.VISIBLE );
+                            rV_phoneContacts.setVisibility( View.GONE );
+                            // set count
+                            rL_friend_count.setVisibility(View.GONE);
                             break;
 
                         // auth token expired

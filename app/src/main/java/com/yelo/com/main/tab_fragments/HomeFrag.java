@@ -1471,11 +1471,11 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
 //                request_datas.put("location","New York, United States");
                 request_datas.put("location",address);
 
-//                request_datas.put("latitude",currentLatitude);
-//                request_datas.put("longitude",currentLongitude);
+                request_datas.put("latitude",currentLatitude);
+                request_datas.put("longitude",currentLongitude);
 
-                request_datas.put("latitude",40.758018);
-                request_datas.put("longitude",-73.974976);
+//                request_datas.put("latitude",40.758018);
+//                request_datas.put("longitude",-73.974976);
                 request_datas.put("maxPrice",maxPrice);
                 request_datas.put("minPrice",minPrice);
                 request_datas.put("offset",offset);
