@@ -10,6 +10,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.braintreegateway.BraintreeGateway;
+import com.braintreegateway.ClientTokenRequest;
+import com.braintreegateway.Environment;
+import com.braintreepayments.api.dropin.DropInActivity;
+import com.braintreepayments.api.dropin.DropInRequest;
+import com.braintreepayments.api.dropin.DropInResult;
+import com.braintreepayments.api.models.PaymentMethodNonce;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -90,6 +98,13 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
     String postId;
     EditText mEdCardNumber, mEdExirationdate, mEdCvv;
     CheckBox mCheckBox;
+
+    private static BraintreeGateway gateway = new BraintreeGateway(
+            Environment.SANDBOX,
+            "4rrgw4c38db356qz",
+            "pyg9v323y57hc8n8",
+            "c7ac4e27800f52999c8605a0a006c824"
+    );
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -166,27 +181,32 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
 
                 if(CommonClass.isNetworkAvailable(this)) {
 
+                    generateClientToken();
 
 
-                    if(validate()){
-                        String[] array = new String[2];
-                        array = mEdExirationdate.getText().toString().trim().split("-");
-                        if(ValidateCard(mEdCardNumber.getText().toString().trim(),Integer.parseInt(array[1]),Integer.parseInt(array[0]),mEdCvv.getText().toString().trim(),this))
-                        {
+//                    if(validate()){
+//                        String[] array = new String[2];
+//                        array = mEdExirationdate.getText().toString().trim().split("-");
+//                        if(ValidateCard(mEdCardNumber.getText().toString().trim(),Integer.parseInt(array[1]),Integer.parseInt(array[0]),mEdCvv.getText().toString().trim(),this))
+//                        {
+//
+//                            Card card = new Card(
+//                                    mEdCardNumber.getText().toString().trim(),
+//                                    Integer.parseInt(array[1]),
+//                                    Integer.parseInt(array[0]),
+//                                    mEdCvv.getText().toString().trim()
+//                            );
+//
+////                            getStripeToken( card );
+//
+//
+//                        }
+//
+//
+//                    }
+                }
 
-                            Card card = new Card(
-                                    mEdCardNumber.getText().toString().trim(),
-                                    Integer.parseInt(array[1]),
-                                    Integer.parseInt(array[0]),
-                                    mEdCvv.getText().toString().trim()
-                            );
-
-                            getStripeToken( card );
-                        }
-
-
-                    }
-                }else {
+                else {
                     Toast.makeText( this, "Please check your network", Toast.LENGTH_SHORT ).show();
                 }
 
@@ -196,7 +216,12 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
     }
 
 
+    public void onBraintreeSubmit(String token) {
+        DropInRequest dropInRequest = new DropInRequest().collectDeviceData( true )
+                .clientToken(token);
 
+        startActivityForResult(dropInRequest.getIntent(this), 1001);
+    }
 
 
 
@@ -366,6 +391,42 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
 
         return true;
 
+
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1001) {
+            if (resultCode == Activity.RESULT_OK) {
+                DropInResult result = data.getParcelableExtra(DropInResult.EXTRA_DROP_IN_RESULT);
+
+            String nonce =  result.getPaymentMethodNonce().getNonce();
+                // use the result to update your UI and send the payment method nonce to your server
+            } else if (resultCode == Activity.RESULT_CANCELED) {
+                // the user canceled
+            } else {
+                // handle errors here, an exception may be available in
+                Exception error = (Exception) data.getSerializableExtra( DropInActivity.EXTRA_ERROR);
+            }
+        }
+    }
+
+
+    private void generateClientToken(){
+
+        try {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+            StrictMode.setThreadPolicy(policy);
+            ClientTokenRequest clientTokenRequest = new ClientTokenRequest();
+
+            String clientToken = gateway.clientToken().generate(clientTokenRequest);
+            Log.i( "token for braintree ", clientToken );
+            onBraintreeSubmit(clientToken);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 

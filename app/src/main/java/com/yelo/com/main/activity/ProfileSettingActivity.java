@@ -35,6 +35,12 @@ import com.yelo.com.utility.VariableConstants;
  */
 public class ProfileSettingActivity extends Activity implements View.OnClickListener
 {
+
+
+//    Brain Tree Sandbox Us Account Details
+//    Email : ravi.k@brihaspatitech.com
+//    Password : Json@123data
+
     private DialogBox dialogBox;
     private Activity mActivity;
     private SessionManager mSessionManager;
