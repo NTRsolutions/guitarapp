@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.braintreepayments.api:braintree-2.13.1">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.13.1.aar/2c3353a8992af83f2222600aa4d1d774/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.13.1.aar/2c3353a8992af83f2222600aa4d1d774/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.13.1.aar/926412f48b7ab17b5d6f39d17be08ba5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.13.1.aar/926412f48b7ab17b5d6f39d17be08ba5/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

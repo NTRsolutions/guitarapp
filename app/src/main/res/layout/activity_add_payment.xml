@@ -14,7 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+
+        <RelativeLayout
+            android:id="@+id/rL_back_btn"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/back_arrow_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/simple_image_view"/>
+        </RelativeLayout>
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/text_title"
             android:layout_marginStart="@dimen/ten_dp"
             android:layout_marginLeft="@dimen/ten_dp"
@@ -46,7 +58,7 @@
             android:layout_height="match_parent">
 
 
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
 
 
                 android:gravity="center"
@@ -64,7 +76,7 @@
 
 
 
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
 
 
                 android:gravity="center_vertical"
@@ -80,7 +92,7 @@
                 android:text="PERSONAL INFORMATION"
                 />
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_Name"
                 android:inputType="text"
                 android:maxLines="1"
@@ -102,7 +114,7 @@
                 />
 
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_last_name"
                 android:inputType="text"
                 android:maxLines="1"
@@ -123,7 +135,7 @@
                 />
 
 
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/eT_date_of_birth"
                 android:inputType="number"
                 android:maxLines="1"
@@ -144,7 +156,7 @@
                 android:layout_marginTop="10dp"
                 />
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_phone_number"
                 android:inputType="number"
                 android:maxLines="1"
@@ -166,7 +178,7 @@
 
 
 
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
 
 
                 android:gravity="center_vertical"
@@ -181,7 +193,7 @@
                 android:paddingLeft="10dp"
                 android:text="ADDRESS INFORMATION"
                 />
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_address"
                 android:inputType="text"
                 android:maxLines="1"
@@ -230,7 +242,7 @@
             </FrameLayout>
 
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_state"
                 android:inputType="text"
                 android:maxLines="1"
@@ -310,7 +322,7 @@
 
             </FrameLayout>
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_city"
                 android:inputType="text"
                 android:maxLines="1"
@@ -332,7 +344,7 @@
                 android:visibility="gone"
                 />
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_postal_code"
                 android:inputType="number"
                 android:maxLines="1"
@@ -352,7 +364,7 @@
                 android:imeOptions="actionNext"
                 />
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_email"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
@@ -403,7 +415,7 @@
             </FrameLayout>
 
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_re_ssn_number"
                 android:inputType="numberPassword"
                 android:maxLines="1"
@@ -425,7 +437,7 @@
                 />
 
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_business"
                 android:inputType="text"
                 android:maxLines="1"
@@ -447,7 +459,7 @@
                 />
 
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_tx_id"
                 android:inputType="text"
                 android:maxLines="1"
@@ -471,7 +483,7 @@
 
 
 
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
 
 
                 android:gravity="center_vertical"
@@ -487,7 +499,7 @@
                 android:text="BANK INFORMATION"
                 />
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_account_holder_name"
                 android:inputType="text"
                 android:maxLines="1"
@@ -507,7 +519,7 @@
                 android:imeOptions="actionNext"
                 />
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_routingNumber"
                 android:inputType="number"
                 android:maxLines="1"
@@ -528,7 +540,7 @@
                 />
 
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_account_number"
                 android:inputType="number"
                 android:maxLines="1"
@@ -549,7 +561,7 @@
                 />
 
 
-            <com.yelo.com.custom_fonts.EditTextRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                 android:id="@+id/eT_re_account_number"
                 android:inputType="number"
                 android:maxLines="1"
@@ -581,7 +593,7 @@
                 android:layout_height="40dp"
                 android:background="@drawable/button_rounded_corner_payment"
                 >
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
 
                     android:gravity="center"
                     android:textSize="@dimen/nineteen_sp"

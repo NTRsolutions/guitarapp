@@ -29,7 +29,7 @@
                 android:contentDescription="@string/simple_image_view"
                 android:src="@drawable/back" />
 
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:layout_toRightOf="@id/dummy_back"
 
                 android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
                 android:textSize="14sp"/>
 
         </LinearLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_toLeftOf="@+id/tV_save"
             android:layout_toStartOf="@+id/tV_save"
             android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
             android:text="@string/edit_profile"
             android:textSize="@dimen/action_bar_text_size"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_save"
             android:text="@string/save"
             android:gravity="center"
@@ -116,7 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <com.yelo.com.utility.CircleImgViewWithBorder
+                    <com.demskigroup.guitaramps.utility.CircleImgViewWithBorder
                         android:id="@+id/iV_profile_pic"
                         android:visibility="visible"
                         android:layout_width="wrap_content"
@@ -155,7 +155,7 @@
                         android:id="@+id/iV_user_name"
                         android:contentDescription="@string/simple_image_view"/>
 
-                    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                    <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                         android:id="@+id/eT_fullName"
                         android:hint="@string/user_full_name"
                         android:maxLines="1"
@@ -189,7 +189,7 @@
                         android:src="@drawable/username_off"
                         android:id="@+id/iV_user_full_name"
                         android:contentDescription="@string/simple_image_view"/>
-                    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                    <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                         android:id="@+id/eT_userName"
                         android:maxLines="1"
                         android:layout_centerVertical="true"
@@ -224,7 +224,7 @@
                         android:src="@drawable/edit_profile_website_icon"
                         android:id="@+id/iV_password"
                         android:contentDescription="@string/simple_image_view"/>
-                    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                    <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                         android:id="@+id/eT_website"
                         android:maxLines="1"
                         android:inputType="text"
@@ -259,7 +259,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/edit_profile_bio_icon"
                         android:contentDescription="@string/simple_image_view"/>
-                    <com.yelo.com.custom_fonts.EditTextRobotoMedium
+                    <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
                         android:id="@+id/eT_bio"
                         android:singleLine="false"
                         android:inputType="text"
@@ -287,7 +287,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/background_color">
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:textAllCaps="true"
                     android:textSize="@dimen/eleven_sp"
                     android:textColor="@color/follow_people_color"
@@ -320,7 +320,7 @@
                     android:id="@+id/iV_email"
                     android:contentDescription="@string/simple_image_view"
                     />
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:id="@+id/tV_emailId"
                     android:gravity="center_vertical"
                     android:maxLines="1"
@@ -358,7 +358,7 @@
                     android:id="@+id/iV_phone_icon"
                     android:contentDescription="@string/simple_image_view"/>
 
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:id="@+id/tV_mobileNo"
                     android:maxLines="1"
                     android:inputType="number"
@@ -391,7 +391,7 @@
                     android:id="@+id/iV_location"
                     android:contentDescription="@string/simple_image_view"/>
 
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:id="@+id/tV_location"
                     android:singleLine="true"
                     android:ellipsize="end"
@@ -430,7 +430,7 @@
                     android:src="@drawable/edit_profile_gender_icon"
                     android:contentDescription="@string/simple_image_view"/>
 
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:id="@+id/tV_gender"
                     android:maxLines="1"
                     android:layout_centerVertical="true"

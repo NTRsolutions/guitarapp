@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/guitarguitar.iml" filepath="$PROJECT_DIR$/guitarguitar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/finalguitar.iml" filepath="$PROJECT_DIR$/finalguitar.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/simplecropmodule/simplecropmodule.iml" filepath="$PROJECT_DIR$/simplecropmodule/simplecropmodule.iml" />
     </modules>

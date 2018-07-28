@@ -10,7 +10,7 @@
         android:layout_margin="@dimen/eight_dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:id="@+id/tV_filter"
             android:layout_marginTop="@dimen/five_dp"
             android:text="@string/about"
@@ -24,9 +24,9 @@
 
         <ImageView
             android:id="@+id/tV_delete"
-            android:layout_width="11dp"
-            android:layout_height="11dp"
-            android:src="@drawable/cross"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/cross_icon_android"
             android:layout_marginStart="-8dp"
             android:layout_marginLeft="-8dp"
             android:layout_toEndOf="@+id/tV_filter"

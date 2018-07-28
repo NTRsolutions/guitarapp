@@ -20,7 +20,7 @@
             android:src="@drawable/default_circle_img"/>
 
         <!-- posted By User Name -->
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_productname"
             android:layout_toRightOf="@id/iV_profilePic"
             android:layout_toEndOf="@id/iV_profilePic"
@@ -35,7 +35,7 @@
             android:textColor="@color/item_name_color"/>
 
         <!--Time ex. 5 min ago-->
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:id="@+id/tV_time"
             android:textSize="@dimen/heading_text_size"
             android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
         android:layout_marginStart="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_currency"
             android:textSize="@dimen/ten_sp"
             android:textColor="@color/heading_color"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
            />
 
-        <com.yelo.com.custom_fonts.TextViewRobotoBlack
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBlack
             android:id="@+id/tV_price"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/tV_currency"
@@ -84,7 +84,7 @@
             />
     </RelativeLayout>
 
-    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
         android:id="@+id/tV_categoryName"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
@@ -129,7 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/simple_image_view"/>
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_view_count"
                 android:textColor="@color/sub_heading_color"
                 android:textSize="@dimen/fifteen_sp"
@@ -160,7 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/simple_image_view"/>
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_like_count"
                 android:textColor="@color/sub_heading_color"
                 android:textSize="@dimen/fifteen_sp"

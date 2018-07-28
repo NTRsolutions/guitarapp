@@ -14,7 +14,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@drawable/bottom_shadow">
 
-        <com.yelo.com.custom_fonts.TextViewOrgano
+        <com.demskigroup.guitaramps.custom_fonts.TextViewOrgano
             android:layout_marginStart="@dimen/ten_dp"
             android:layout_marginLeft="@dimen/ten_dp"
             android:gravity="center_vertical"
@@ -81,7 +81,7 @@
             android:src="@drawable/social_empty_screen_icon"
             android:contentDescription="@string/simple_image_view"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:layout_marginTop="@dimen/fifteen_dp"
             android:layout_gravity="center_horizontal"
             android:textSize="@dimen/fifteen_sp"
@@ -90,7 +90,7 @@
             android:textColor="@color/search_box_text_color"
             android:text="@string/please_follow_user"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:layout_gravity="center_horizontal"
             android:textSize="@dimen/fifteen_sp"
             android:layout_width="wrap_content"
@@ -109,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/rect_with_pink_color_rounded_corner_solid_shape">
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_save"
                 android:gravity="center"
                 android:textSize="16sp"

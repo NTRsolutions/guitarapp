@@ -25,7 +25,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_toLeftOf="@+id/rL_camera_icon"
             android:layout_toStartOf="@+id/rL_camera_icon"
             android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
 
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/done"

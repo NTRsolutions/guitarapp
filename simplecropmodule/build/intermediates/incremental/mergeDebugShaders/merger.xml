@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/brst-pc97/GIT/guitarguitar/simplecropmodule/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/brst-pc97/GIT/guitarguitar/simplecropmodule/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="E:\GIT\finalguitar\simplecropmodule\src\main\shaders"/></dataSet><dataSet config="debug"><source path="E:\GIT\finalguitar\simplecropmodule\src\debug\shaders"/></dataSet></merger>

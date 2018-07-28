@@ -1,37 +1,37 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:2:1-7:12
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:2:1-7:12
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:2:1-7:12
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:2:1-7:12
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:2:1-7:12
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:2:1-7:12
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:2:1-7:12
+ADDED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:2:1-7:12
 	package
-		ADDED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:3:11-58
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
+		ADDED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:3:11-58
+		INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
+		INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
 	android:versionName
-		ADDED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:5:11-36
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
+		ADDED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:5:11-36
+		INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
+		INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:2:11-69
+		ADDED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml:4:11-34
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
+		ADDED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml:4:11-34
+		INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
+		INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
 uses-sdk
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
-INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
+INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
-		ADDED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
+		INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
+		ADDED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
+		INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
-		ADDED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/simplecropmodule/AndroidManifest.xml
+		INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
+		ADDED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml
+		INJECTED from E:\GIT\finalguitar\simplecropmodule\AndroidManifest.xml

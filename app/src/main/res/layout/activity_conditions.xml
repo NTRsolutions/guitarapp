@@ -23,7 +23,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_color"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content">
 
             <!-- Other(see description) -->
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_description"
                 android:padding="15dp"
                 android:text="@string/other_see_descriptions"
@@ -64,7 +64,7 @@
                 android:layout_marginEnd="10dp"/>
 
             <!-- For parts -->
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_for_parts"
                 android:padding="15dp"
                 android:text="@string/for_parts"
@@ -83,7 +83,7 @@
                 android:layout_marginEnd="10dp"/>
 
             <!-- Used normal wear -->
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_normal_wear"
                 android:padding="15dp"
                 android:text="@string/used_normal_wear"
@@ -102,7 +102,7 @@
                 android:layout_marginEnd="10dp"/>
 
             <!--Open box never used-->
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_open_box"
                 android:padding="15dp"
                 android:text="@string/open_box"
@@ -121,7 +121,7 @@
                 android:layout_marginEnd="10dp"/>
 
             <!--Reconditioned or certified-->
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_reconditioned"
                 android:padding="15dp"
                 android:text="@string/reconditioned"
@@ -140,7 +140,7 @@
                 android:layout_marginEnd="10dp"/>
 
             <!-- New never used -->
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_never_used"
                 android:padding="15dp"
                 android:text="@string/new_never_used"

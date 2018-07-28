@@ -25,7 +25,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_color"
@@ -55,14 +55,14 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textSize="@dimen/small_text_size"
                     android:textColor="@color/post_text_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/if_you_already_have_paypal"/>
 
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textSize="@dimen/small_text_size"
                     android:textColor="@color/search_box_text_color"
                     android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
                 android:layout_marginStart="@dimen/fifteen_dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:id="@+id/tV_link"
                     android:layout_centerVertical="true"
                     android:textColor="@color/heading_color"
@@ -97,7 +97,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/connect_paypal_link"/>
-                <com.yelo.com.custom_fonts.EditTextRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoRegular
                     android:id="@+id/eT_yourName"
                     android:maxLines="1"
                     android:textSize="@dimen/eighteen_sp"
@@ -133,7 +133,7 @@
             android:background="@color/white"
             >
 
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/ten_dp"
@@ -158,7 +158,7 @@
                     android:layout_centerInParent="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:layout_gravity="center_vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -174,7 +174,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/paypal_me_icon"
                         android:contentDescription="@string/simple_image_view"/>
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:layout_marginLeft="@dimen/five_dp"
                         android:layout_marginStart="@dimen/five_dp"
                         android:layout_gravity="center_vertical"
@@ -210,7 +210,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/status_bar_color"
         >
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_save"
             android:gravity="center"
             android:textSize="@dimen/action_bar_text_size"

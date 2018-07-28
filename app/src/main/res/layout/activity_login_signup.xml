@@ -54,7 +54,7 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <com.yelo.com.custom_fonts.RadioButtonMedium
+                <com.demskigroup.guitaramps.custom_fonts.RadioButtonMedium
                     android:id="@+id/radio_login"
                     android:textSize="@dimen/heading_text_size"
                     android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                     android:textColor="@drawable/left_text_selector_on"
                     />
 
-                <com.yelo.com.custom_fonts.RadioButtonMedium
+                <com.demskigroup.guitaramps.custom_fonts.RadioButtonMedium
                     android:id="@+id/radio_signup"
                     android:textSize="@dimen/heading_text_size"
                     android:layout_width="match_parent"

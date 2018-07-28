@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/messages"
                 android:contentDescription="@string/simple_image_view"/>
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:layout_marginTop="@dimen/twenty_dp"
                 android:text="@string/no_chat_available"
                 android:layout_gravity="center"
@@ -66,7 +66,7 @@
             android:textSize="18sp"
             android:visibility="gone" />
     </RelativeLayout>
-    <com.yelo.com.mqttchat.Utilities.SlackLoadingView
+    <com.demskigroup.guitaramps.mqttchat.Utilities.SlackLoadingView
         android:id="@+id/slack"
         android:layout_width="72dp"
         android:layout_height="72dp"

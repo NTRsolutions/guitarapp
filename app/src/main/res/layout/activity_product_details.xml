@@ -8,13 +8,13 @@
     android:id="@+id/product_rootview">
 
     <!--The content of the product details-->
-    <com.yelo.com.pull_to_zoom.PullToZoomScrollViewEx
+    <com.demskigroup.guitaramps.pull_to_zoom.PullToZoomScrollViewEx
         android:id="@+id/scrollView_itemDetails"
         android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </com.yelo.com.pull_to_zoom.PullToZoomScrollViewEx>
+    </com.demskigroup.guitaramps.pull_to_zoom.PullToZoomScrollViewEx>
 
     <!-- Make offer -->
     <RelativeLayout
@@ -37,7 +37,7 @@
                 android:id="@+id/rL_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:id="@+id/tV_currency"
                     android:textSize="@dimen/ten_sp"
                     android:textColor="@color/white"
@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content"
                     />
 
-                <com.yelo.com.custom_fonts.TextViewRobotoBlack
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBlack
                     android:id="@+id/tV_productprice"
                     android:layout_toEndOf="@+id/tV_currency"
                     android:layout_toRightOf="@+id/tV_currency"
@@ -57,7 +57,7 @@
                     />
 
             </RelativeLayout>
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_negotiable"
                 android:layout_below="@+id/rL_price"
                 android:textSize="@dimen/ten_sp"
@@ -79,7 +79,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_buy"
                 android:textSize="@dimen/heading_text_size"
                 android:gravity="center"
@@ -99,7 +99,7 @@
                 android:layout_width="1dp"
                 android:background="#ffffff"
                 android:layout_height="match_parent"></LinearLayout>
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_makeoffer"
                 android:textSize="@dimen/heading_text_size"
                 android:gravity="center"
@@ -135,7 +135,7 @@
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_ProductName"
             android:layout_toLeftOf="@+id/rL_report_item"
             android:layout_toStartOf="@+id/rL_report_item"

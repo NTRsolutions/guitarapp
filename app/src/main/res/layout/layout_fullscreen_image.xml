@@ -11,7 +11,7 @@
 
 
     <!--android:transitionName="image"-->
-    <com.yelo.com.mqttchat.Utilities.TouchImageView
+    <com.demskigroup.guitaramps.mqttchat.Utilities.TouchImageView
         android:id="@+id/imgDisplay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

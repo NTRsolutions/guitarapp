@@ -20,7 +20,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:id="@+id/text_unfollow"
             android:textSize="@dimen/heading_text_size"
             android:textColor="@color/heading_color"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="@string/unfollow"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoBold
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBold
             android:id="@+id/tV_userName"
             android:textSize="@dimen/heading_text_size"
             android:layout_marginLeft="@dimen/five_dp"
@@ -51,7 +51,7 @@
         android:weightSum="2"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
-        <com.yelo.com.custom_fonts.TextViewRobotoBold
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBold
             android:id="@+id/tV_cancel"
             android:textStyle="bold"
             android:textColor="@color/item_name_color"
@@ -68,7 +68,7 @@
             android:layout_height="@dimen/fourty_dp"
             android:background="@color/news_divider_color"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoBold
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBold
             android:id="@+id/tV_unfollow"
             android:textStyle="bold"
             android:textColor="@color/item_name_color"

@@ -24,7 +24,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_color"
@@ -51,7 +51,7 @@
                 android:layout_height="@dimen/fouty_dp"
                 android:background="@color/thick_divider_color">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:id="@+id/tV_postedOn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                         android:id="@+id/tV_unique_click"
                         android:textSize="@dimen/twenty_two_sp"
                         android:layout_centerHorizontal="true"
@@ -86,7 +86,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/zero"/>
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:textColor="@color/unique_click"
                         android:textSize="@dimen/small_text_size"
                         android:layout_centerHorizontal="true"
@@ -109,7 +109,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                         android:id="@+id/tV_reviews"
                         android:textSize="@dimen/twenty_two_sp"
                         android:layout_centerHorizontal="true"
@@ -117,7 +117,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/zero"/>
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:textColor="@color/unique_click"
                         android:textSize="@dimen/small_text_size"
                         android:layout_centerHorizontal="true"
@@ -140,7 +140,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                         android:id="@+id/tV_total_click"
                         android:textSize="@dimen/twenty_two_sp"
                         android:layout_centerHorizontal="true"
@@ -148,7 +148,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/zero"/>
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:textColor="@color/unique_click"
                         android:textSize="@dimen/small_text_size"
                         android:layout_centerHorizontal="true"
@@ -167,7 +167,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                         android:id="@+id/tV_saved"
                         android:textSize="@dimen/twenty_two_sp"
                         android:layout_centerHorizontal="true"
@@ -175,7 +175,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/zero"/>
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:textColor="@color/unique_click"
                         android:textSize="@dimen/small_text_size"
                         android:layout_centerHorizontal="true"
@@ -201,7 +201,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:layout_toLeftOf="@+id/rL_duration"
                     android:layout_toStartOf="@+id/rL_duration"
                     android:layout_alignParentStart="true"
@@ -224,7 +224,7 @@
                     android:layout_marginEnd="@dimen/fifteen_dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                         android:id="@+id/tV_duration"
                         android:textSize="@dimen/fifteen_sp"
                         android:layout_centerVertical="true"
@@ -275,7 +275,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_dp">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
@@ -288,7 +288,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:id="@+id/tV_clicks"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"

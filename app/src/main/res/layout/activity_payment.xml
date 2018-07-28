@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/text_title"
             android:layout_marginStart="@dimen/ten_dp"
             android:layout_marginLeft="@dimen/ten_dp"
@@ -107,7 +107,7 @@
         android:layout_height="40dp"
         android:background="@drawable/button_rounded_corner_payment"
         >
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
 
             android:gravity="center"
             android:textSize="@dimen/nineteen_sp"

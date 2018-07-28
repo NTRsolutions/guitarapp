@@ -25,7 +25,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_color"
@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
                 android:background="@color/light_blue_color">
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textAllCaps="true"
                     android:layout_gravity="center_vertical"
                     android:gravity="center_vertical"
@@ -91,7 +91,7 @@
                 android:layout_height="@dimen/fourty_five_dp"
                 android:background="@color/white">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textSize="@dimen/subheading_text_size"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
@@ -130,7 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textSize="@dimen/subheading_text_size"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
@@ -165,7 +165,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
                 android:background="@color/light_blue_color">
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textAllCaps="true"
                     android:layout_gravity="center_vertical"
                     android:gravity="center_vertical"
@@ -201,7 +201,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textSize="@dimen/subheading_text_size"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
@@ -237,7 +237,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
                 android:background="@color/light_blue_color">
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textAllCaps="true"
                     android:layout_gravity="center_vertical"
                     android:gravity="center_vertical"
@@ -273,7 +273,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -311,7 +311,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
                 android:background="@color/light_blue_color">
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textAllCaps="true"
                     android:layout_gravity="center_vertical"
                     android:gravity="center_vertical"
@@ -337,7 +337,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textSize="@dimen/subheading_text_size"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
@@ -372,7 +372,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp"
                 android:background="@color/light_blue_color">
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textAllCaps="true"
                     android:layout_gravity="center_vertical"
                     android:gravity="center_vertical"
@@ -409,7 +409,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textSize="@dimen/subheading_text_size"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
@@ -448,7 +448,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:textSize="@dimen/subheading_text_size"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
@@ -585,7 +585,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fourty_five_dp">
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:id="@+id/tV_logout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -608,7 +608,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/background_color">
 
-                <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                     android:id="@+id/tV_version"
                     android:visibility="gone"
                     android:layout_marginTop="20dp"

@@ -24,7 +24,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_marginStart="@dimen/five_dp"
             android:layout_marginLeft="@dimen/five_dp"
             android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
             android:src="@drawable/empty_reviews_icon"
             android:contentDescription="@string/simple_image_view"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:id="@+id/tV_noReviews"
             android:layout_below="@+id/review_icon"
             android:layout_centerHorizontal="true"
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:text="@string/there_is_no_review"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:visibility="visible"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/tV_noReviews"
@@ -98,7 +98,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/add_review_bg">
 
-        <com.yelo.com.custom_fonts.EditTextRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoRegular
             android:id="@+id/eT_add_review"
             android:layout_toLeftOf="@+id/rL_send_message"
             android:layout_toStartOf="@+id/rL_send_message"
@@ -120,7 +120,7 @@
             android:layout_width="@dimen/ninety_dp"
             android:layout_height="match_parent"
             android:background="@color/sub_heading_color">
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_send"
                 android:layout_centerInParent="true"
                 android:textSize="@dimen/heading_text_size"

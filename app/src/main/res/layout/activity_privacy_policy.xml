@@ -33,7 +33,7 @@
 
 
         </LinearLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/text_view_title"
             android:layout_toLeftOf="@+id/tV_save"
             android:layout_toStartOf="@+id/tV_save"
@@ -97,7 +97,7 @@
                     android:id="@+id/iV_location"
                     android:contentDescription="@string/simple_image_view"/>
 
-                <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                     android:id="@+id/tV_location"
                     android:singleLine="true"
                     android:ellipsize="end"

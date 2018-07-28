@@ -17,7 +17,7 @@
         android:background="@drawable/counter_offer_received_bg">
 
         <!--android:layout_height="wrap_content"-->
-        <com.yelo.com.mqttchat.Utilities.AdjustableImageView
+        <com.demskigroup.guitaramps.mqttchat.Utilities.AdjustableImageView
             android:id="@+id/imgshow"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
             app:srcCompat="@drawable/ic_file_download_white_48px" />
 
 
-        <com.yelo.com.mqttchat.Utilities.RingProgressBar
+        <com.demskigroup.guitaramps.mqttchat.Utilities.RingProgressBar
             android:id="@+id/progress"
 
             android:layout_width="52dp"

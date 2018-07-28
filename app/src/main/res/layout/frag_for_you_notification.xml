@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/notification_you_empty"
             android:contentDescription="@string/simple_image_view"/>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_marginTop="@dimen/fifteen_dp"
             android:textSize="@dimen/heading_text_size"
             android:textColor="@color/heading_color"
@@ -51,14 +51,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/welcome_on_yelo"/>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:textSize="@dimen/subheading_text_size"
             android:textColor="@color/sub_heading_color"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/make_money_selling"/>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:textSize="@dimen/subheading_text_size"
             android:textColor="@color/sub_heading_color"
             android:layout_gravity="center_horizontal"
@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/rect_with_pink_color_rounded_corner_solid_shape">
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_save"
                 android:gravity="center"
                 android:textSize="16sp"

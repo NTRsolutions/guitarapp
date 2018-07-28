@@ -19,7 +19,7 @@
             android:contentDescription="@string/simple_image_view"
             android:layout_gravity="center"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:layout_marginTop="@dimen/twenty_dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/action_bar_text_size"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/successfully_posted"
@@ -43,7 +43,7 @@
             android:layout_height="@dimen/thirty_five_dp"
             android:background="@drawable/rect_pink_color_with_solid_shape"
             >
-          <com.yelo.com.custom_fonts.TextViewRobotoMedium
+          <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
               android:textSize="@dimen/heading_text_size"
               android:textColor="@color/white"
               android:layout_centerInParent="true"

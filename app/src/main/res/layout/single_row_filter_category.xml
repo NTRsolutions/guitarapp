@@ -23,7 +23,7 @@
             android:contentDescription="@string/simple_image_view"
             android:src="@drawable/add_photo"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:id="@+id/tV_category"
             android:textColor="@color/heading_color"
             android:text="@string/category"

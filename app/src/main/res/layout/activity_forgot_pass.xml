@@ -25,7 +25,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_marginStart="@dimen/five_dp"
             android:layout_marginLeft="@dimen/five_dp"
             android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
     </RelativeLayout>
 
     <!--Find your account-->
-    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
         android:layout_marginTop="30dp"
         android:layout_marginStart="@dimen/fifteen_dp"
         android:layout_marginLeft="@dimen/fifteen_dp"
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:text="@string/find_your_acc"/>
 
-    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/email_off"
             android:contentDescription="@string/simple_image_view"/>
-        <com.yelo.com.custom_fonts.EditTextRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoRegular
             android:id="@+id/eT_emailId"
             android:maxLines="1"
             android:layout_centerVertical="true"
@@ -114,7 +114,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@drawable/rect_purple_color_with_solid_shape"
         >
-        <com.yelo.com.custom_fonts.TextViewRobotoBold
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBold
             android:id="@+id/tV_send"
             android:gravity="center"
             android:textSize="16sp"

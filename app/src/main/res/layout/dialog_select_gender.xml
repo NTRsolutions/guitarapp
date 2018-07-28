@@ -11,7 +11,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/purple_color">
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:textColor="@color/white"
             android:text="@string/gender"
             android:textStyle="bold"
@@ -24,7 +24,7 @@
 
     </RelativeLayout>
 
-    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
         android:id="@+id/tV_male"
         android:textColor="@color/heading_color"
         android:textStyle="bold"
@@ -43,7 +43,7 @@
         android:layout_height="1dp"
         android:background="@color/news_divider_color"/>
 
-    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
         android:id="@+id/tV_female"
         android:textColor="@color/heading_color"
         android:textStyle="bold"

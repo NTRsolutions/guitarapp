@@ -23,7 +23,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_color"
@@ -41,7 +41,7 @@
         android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.yelo.com.custom_fonts.EditTextRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
             android:id="@+id/eT_searchCode"
             android:layout_margin="5dp"
             android:layout_centerVertical="true"
@@ -81,7 +81,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_weight="2"
             android:textColor="@color/purple_color"
             android:textSize="@dimen/heading_text_size"
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:text="@string/country"/>
 
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_code"
                 android:gravity="center"
                 android:layout_weight="1"
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/code"/>
 
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_symbol"
                 android:gravity="center"
                 android:layout_weight="1"

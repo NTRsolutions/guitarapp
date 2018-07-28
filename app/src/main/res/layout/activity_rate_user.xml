@@ -23,7 +23,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_color"
@@ -53,7 +53,7 @@
             android:src="@drawable/default_profile_image"
             android:contentDescription="@string/simple_image_view"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_rate_user"
             android:layout_gravity="center"
             android:textSize="@dimen/heading_text_size"
@@ -84,7 +84,7 @@
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:id="@+id/tV_absolutely"
                         android:textSize="@dimen/medium_text_size"
                         android:textColor="@color/login_tab_bg"
@@ -93,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/absolutely_not"/>
 
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:id="@+id/tV_not"
                         android:textSize="@dimen/medium_text_size"
                         android:textColor="@color/login_tab_bg"
@@ -110,7 +110,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:id="@+id/tV_yes"
                         android:textSize="@dimen/medium_text_size"
                         android:textColor="@color/login_tab_bg"
@@ -119,7 +119,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/yes"/>
 
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:id="@+id/tV_definitely"
                         android:textSize="@dimen/medium_text_size"
                         android:textColor="@color/login_tab_bg"
@@ -152,7 +152,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/status_bar_color"
         >
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_submit"
             android:gravity="center"
             android:textSize="@dimen/action_bar_text_size"

@@ -31,7 +31,7 @@
 
             >
 
-            <com.yelo.com.mqttchat.Utilities.AdjustableImageView
+            <com.demskigroup.guitaramps.mqttchat.Utilities.AdjustableImageView
                 android:id="@+id/vidshow"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

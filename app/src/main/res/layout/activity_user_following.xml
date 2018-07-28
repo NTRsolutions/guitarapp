@@ -25,7 +25,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_title"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/five_dp"
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/no_following_yet"
             android:contentDescription="@string/simple_image_view"/>
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:id="@+id/tV_no_following"
             android:textSize="@dimen/heading_text_size"
             android:textColor="@color/heading_color"
