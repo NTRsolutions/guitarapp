@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@color/white">
 
-    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
         android:id="@+id/tV_category"
         android:maxLines="1"
         android:padding="15dp"

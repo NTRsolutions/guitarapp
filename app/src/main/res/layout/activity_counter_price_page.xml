@@ -25,7 +25,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/simple_image_view"/>
         </RelativeLayout>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_color"
@@ -65,7 +65,7 @@
             android:layout_toRightOf="@+id/iV_productImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_productname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                 android:textColor="@color/item_name_color"
                 android:textSize="@dimen/heading_text_size"/>
 
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_location"
                 android:text="@string/default_location"
                 android:textSize="@dimen/small_text_size"
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_distance"
                 android:textSize="@dimen/small_text_size"
                 android:textColor="@color/location_color"
@@ -112,7 +112,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:textColor="@color/item_name_color"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
@@ -123,7 +123,7 @@
             android:layout_height="wrap_content"
             android:text="@string/your_offer"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_asking_price"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -134,7 +134,7 @@
             android:text="@string/asking_price"/>
     </RelativeLayout>
 
-    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
         android:visibility="gone"
         android:layout_below="@+id/rL_your_offer"
         android:id="@+id/notNegotiableTitle"
@@ -156,7 +156,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rect_gray_color_stroke_and_solid_shape">
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
@@ -169,7 +169,7 @@
             android:textColor="@color/purple_color"
             android:text="$"/>
 
-        <com.yelo.com.custom_fonts.EditTextRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
             android:layout_toEndOf="@id/currency"
             android:layout_toRightOf="@id/currency"
             android:textCursorDrawable="@drawable/edittext_cursiour"
@@ -201,7 +201,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="?android:selectableItemBackground">
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_save"
                 android:gravity="center"
                 android:textSize="16sp"

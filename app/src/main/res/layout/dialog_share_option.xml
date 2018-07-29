@@ -23,7 +23,7 @@
             android:src="@drawable/fb_invite_icon"
             android:contentDescription="@string/simple_image_view"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:layout_marginLeft="@dimen/ten_dp"
             android:layout_marginStart="@dimen/ten_dp"
             android:layout_toRightOf="@+id/iV_facebook_icon"
@@ -59,7 +59,7 @@
             android:src="@drawable/ic_copy"
             android:contentDescription="@string/simple_image_view"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:layout_marginLeft="@dimen/ten_dp"
             android:layout_marginStart="@dimen/ten_dp"
             android:layout_toRightOf="@+id/iV_copy_icon"
@@ -78,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"/>
     <!-- Cancel -->
-    <com.yelo.com.custom_fonts.TextViewRobotoBold
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBold
         android:id="@+id/cancel_button"
         android:textStyle="bold"
         android:textColor="@color/pink_color"

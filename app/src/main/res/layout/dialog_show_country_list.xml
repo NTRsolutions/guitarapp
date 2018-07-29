@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@drawable/bottom_shadow">
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_marginStart="@dimen/ten_dp"
             android:layout_marginLeft="@dimen/ten_dp"
             android:layout_width="match_parent"
@@ -27,7 +27,7 @@
         android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.yelo.com.custom_fonts.EditTextRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoMedium
             android:id="@+id/eT_searchCode"
             android:layout_margin="5dp"
             android:layout_centerVertical="true"

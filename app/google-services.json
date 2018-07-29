@@ -8,9 +8,40 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:748571226913:android:e5a348c107e5941f",
+        "android_client_info": {
+          "package_name": "com.demskigroup.guitaramps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748571226913-ks5vrhec6v2sp9v3et9ngii6482pd18g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvmP4XVQ3HVwCU37kqqDv37fQgI0O6wwE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:748571226913:android:411704a430b42c5e",
         "android_client_info": {
-          "package_name": "com.yelo.com"
+          "package_name": "com.demskigroup.guitaramps"
         }
       },
       "oauth_client": [

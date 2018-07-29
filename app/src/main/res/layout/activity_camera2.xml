@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/rL_rootview">
 
-    <com.yelo.com.utility.AutoFitTextureView
+    <com.demskigroup.guitaramps.utility.AutoFitTextureView
         android:id="@+id/texture"
 
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:layout_width="100dp"
             android:layout_height="match_parent">
 
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cancel"
@@ -45,7 +45,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true">
 
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_upload"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

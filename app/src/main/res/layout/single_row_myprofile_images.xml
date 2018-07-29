@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <com.yelo.com.utility.DynamicHeightImageView
+    <com.demskigroup.guitaramps.utility.DynamicHeightImageView
         android:id="@+id/iV_image"
         android:background="@color/image_bg_color"
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/featured_icon"
             android:contentDescription="@string/simple_image_view"/>
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

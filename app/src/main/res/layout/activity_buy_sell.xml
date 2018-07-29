@@ -19,7 +19,7 @@
         android:layout_height="match_parent">
 
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/text_view_buy"
             android:text="What are you looking for?"
             android:textSize="25sp"
@@ -40,7 +40,7 @@
             android:layout_height="60dp"
             android:background="@drawable/button_rounded_corner_payment"
             >
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
 
                 android:gravity="center"
                 android:textSize="@dimen/nineteen_sp"
@@ -99,7 +99,7 @@
             android:layout_height="60dp"
             android:background="@drawable/button_rounded_corner_payment"
             >
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
 
                 android:gravity="center"
                 android:textSize="@dimen/nineteen_sp"

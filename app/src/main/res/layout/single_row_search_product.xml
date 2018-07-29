@@ -26,7 +26,7 @@
             android:layout_toRightOf="@+id/image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_heading"
                 android:textSize="16sp"
                 android:textColor="@color/item_name_color"
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 />
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_subHeading"
                 android:layout_marginTop="2dp"
                 android:layout_below="@id/tV_heading"

@@ -51,7 +51,7 @@
             app:srcCompat="@drawable/ic_play_arrow_black_48px" />
 
 
-        <com.yelo.com.mqttchat.Utilities.RingProgressBar
+        <com.demskigroup.guitaramps.mqttchat.Utilities.RingProgressBar
             android:id="@+id/progress"
             android:layout_width="52dp"
             android:layout_height="52dp"

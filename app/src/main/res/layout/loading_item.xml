@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-    <com.yelo.com.mqttchat.Utilities.SlackLoadingView
+    <com.demskigroup.guitaramps.mqttchat.Utilities.SlackLoadingView
         android:id="@+id/slack"
         android:layout_width="wrap_content"
         android:layout_height="48dp"

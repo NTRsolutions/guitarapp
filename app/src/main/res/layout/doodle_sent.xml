@@ -153,7 +153,7 @@
             app:srcCompat="@drawable/ic_file_download_white_48px" />
 
 
-        <com.yelo.com.mqttchat.Utilities.RingProgressBar
+        <com.demskigroup.guitaramps.mqttchat.Utilities.RingProgressBar
             android:id="@+id/progress"
 
             android:layout_width="52dp"

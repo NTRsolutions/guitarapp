@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/rect_white_color_with_solid_shape">
 
-    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/permission_denied"
@@ -14,7 +14,7 @@
         android:layout_marginStart="@dimen/fifteen_dp"
         android:layout_marginTop="@dimen/fifteen_dp"/>
 
-    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
         android:id="@+id/tV_permission_name"
         android:textSize="@dimen/subheading_text_size"
         android:layout_marginLeft="@dimen/fifteen_dp"
@@ -30,18 +30,20 @@
         android:weightSum="2"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_cancel"
-            android:textAllCaps="true"
+
             android:textStyle="bold"
-            android:textColor="@color/item_name_color"
+            android:textColor="@color/white"
             android:gravity="center"
             android:text="@string/cancel"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+
+            android:layout_height="40dp"
+            android:layout_gravity="center"
             android:textSize="@dimen/heading_text_size"
-            android:background="@drawable/selector_list_view"
+            android:background="#d3d3d3"
             />
 
         <RelativeLayout
@@ -49,7 +51,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent">
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_unfollow"
                 android:layout_margin="@dimen/eight_dp"
                 android:textStyle="bold"

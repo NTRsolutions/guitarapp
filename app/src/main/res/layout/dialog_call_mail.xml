@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/call_icon"
             android:contentDescription="@string/simple_image_view"/>
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_centerVertical="true"
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/simple_image_view"
             />
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
@@ -78,7 +78,7 @@
         android:background="@color/divider_color"/>
 
     <!-- Cancel -->
-    <com.yelo.com.custom_fonts.TextViewRobotoBold
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBold
         android:id="@+id/cancel_button"
         android:textStyle="bold"
         android:textColor="@color/pink_color"

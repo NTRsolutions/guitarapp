@@ -44,7 +44,7 @@
             android:visibility="gone"
             android:src="@drawable/empty_following"
             android:contentDescription="@string/simple_image_view"/>
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:textSize="@dimen/heading_text_size"
             android:textColor="@color/heading_color"
             android:layout_gravity="center_horizontal"

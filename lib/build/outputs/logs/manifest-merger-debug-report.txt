@@ -1,33 +1,33 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:1:1-12:12
-INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:1:1-12:12
-INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:1:1-12:12
+ADDED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:1:1-12:12
 	package
-		ADDED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:2:5-45
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml
+		ADDED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:2:5-45
+		INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml
+		INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:1:11-69
+		ADDED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:1:11-69
 uses-sdk
-ADDED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:4:5-72
-INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:4:5-72
-INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:4:5-72
-INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:4:5-72
-INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:4:5-72
+ADDED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:4:5-72
+INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:4:5-72
+INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:4:5-72
+INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:4:5-72
+INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:4:5-72
 	android:targetSdkVersion
-		ADDED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:4:41-70
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml
+		ADDED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:4:41-70
+		INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml
+		INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:4:15-40
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml
-		INJECTED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml
+		ADDED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:4:15-40
+		INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml
+		INJECTED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml
 application
-ADDED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:6:5-10:19
+ADDED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:6:5-10:19
 	android:label
-		ADDED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:7:9-41
+		ADDED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:7:9-41
 	android:icon
-		ADDED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:8:9-45
+		ADDED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:8:9-45
 	android:allowBackup
-		ADDED from /home/brst-pc97/GIT/guitarguitar/lib/src/main/AndroidManifest.xml:6:18-44
+		ADDED from E:\GIT\finalguitar\lib\src\main\AndroidManifest.xml:6:18-44

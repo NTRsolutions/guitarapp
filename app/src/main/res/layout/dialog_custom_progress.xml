@@ -23,7 +23,7 @@
             android:indeterminateDrawable="@drawable/white_color_progress_bar_bg"
             />
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

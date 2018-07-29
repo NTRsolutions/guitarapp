@@ -19,11 +19,11 @@ android {
     buildToolsVersion '27.0.3'
     defaultConfig {
         vectorDrawables.setUseSupportLibrary(true)
-        applicationId "com.yelo.com"
+        applicationId "com.demskigroup.guitaramps"
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 9028
-        versionName "3.4"
+        versionName "1.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         renderscriptTargetApi 16
         renderscriptSupportModeEnabled true

@@ -15,7 +15,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimaryDark">
 
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:layout_marginStart="@dimen/ten_dp"
             android:layout_marginLeft="@dimen/ten_dp"
             android:gravity="center"
@@ -101,31 +101,47 @@
                     android:src="@drawable/places_ic_search"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <EditText
-                    android:textCursorDrawable="@drawable/black_color_cursiour_drawable"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/search_view_background"
-                    android:maxLines="1"
-                    android:textColor="@color/black"
-                    android:gravity="center_vertical"
-                    android:layout_toEndOf="@id/search_icon"
-                    android:layout_toRightOf="@id/search_icon"
-                    android:layout_toLeftOf="@+id/close_icon"
-                    android:layout_toStartOf="@+id/close_icon"
-                    android:hint="@string/search_text"
-                    android:textSize="17sp"
                     android:id="@+id/search_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp" />
-                <ImageView
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:id="@+id/close_icon"
-                    android:contentDescription="@string/app_name"
+                    android:layout_width="282dp"
+                    android:layout_height="40dp"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/cross_icon"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_toEndOf="@id/search_icon"
+                    android:layout_toLeftOf="@+id/layoout_cancel"
+                    android:layout_toRightOf="@id/search_icon"
+                    android:layout_toStartOf="@+id/layoout_cancel"
+                    android:background="@drawable/search_view_background"
+                    android:gravity="center_vertical"
+                    android:hint="@string/search_text"
+
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@drawable/black_color_cursiour_drawable"
+                    android:textSize="17sp" />
+
+
+                 <LinearLayout
+                     android:id="@+id/layoout_cancel"
+                     android:layout_alignParentEnd="true"
+                     android:layout_alignParentRight="true"
+                     android:layout_centerVertical="true"
+
+                     android:layout_width="30dp"
+                     android:gravity="center"
+                     android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/close_icon"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="11dp"
+
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/cross_icon" />
+                 </LinearLayout>
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>

@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/simple_image_view"/>
 
-            <com.yelo.com.custom_fonts.EditTextRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.EditTextRobotoRegular
                 android:id="@+id/eT_search_users"
                 android:inputType="textNoSuggestions"
                 android:cursorVisible="true"

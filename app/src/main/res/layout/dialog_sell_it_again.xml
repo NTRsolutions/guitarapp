@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/rect_white_color_with_solid_shape">
 
-    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
         android:id="@+id/tV_title"
         android:layout_margin="@dimen/fifteen_dp"
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:layout_marginRight="@dimen/fifteen_dp">
 
         <!-- Log out -->
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_yes"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
@@ -39,7 +39,7 @@
             android:layout_height="match_parent"/>
 
         <!-- Cancel -->
-        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
             android:id="@+id/tV_no"
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/fifteen_dp"

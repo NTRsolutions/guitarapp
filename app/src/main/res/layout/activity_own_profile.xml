@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/coordinate_rootView"
-    android:background="@drawable/home_page_bg">
+    android:background="@color/white">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
@@ -132,7 +132,7 @@
                     android:layout_below="@+id/rL_cover_image"
                     android:layout_marginTop="-50dp">
 
-                    <com.yelo.com.utility.CircleImgViewWithBorder
+                    <com.demskigroup.guitaramps.utility.CircleImgViewWithBorder
                         android:id="@+id/iV_profile_pic"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
@@ -174,7 +174,7 @@
                     android:layout_marginTop="@dimen/fifteen_dp"
                     android:orientation="vertical">
 
-                    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                         android:id="@+id/tV_fullName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -197,7 +197,7 @@
                             android:stepSize="1.0"
                             android:theme="@style/RatingBar"
                             style="@style/Widget.AppCompat.RatingBar.Small" />
-                        <com.yelo.com.custom_fonts.TextViewRobotoMedium
+                        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                             android:visibility="gone"
                             android:id="@+id/tV_ratedBy"
                             android:gravity="center"
@@ -212,7 +212,7 @@
                     </LinearLayout>
 
                     <!-- Verified by -->
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:layout_marginTop="@dimen/ten_dp"
                         android:textColor="@color/sub_heading"
                         android:textSize="@dimen/small_text_size"
@@ -312,7 +312,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical">
 
-                            <com.yelo.com.custom_fonts.TextViewRobotoBold
+                            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBold
                                 android:id="@+id/tV_posts_count"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -320,7 +320,7 @@
                                 android:textColor="@color/pink_color"
                                 android:textSize="@dimen/subheading_text_size" />
 
-                            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/five_dp"
@@ -349,7 +349,7 @@
                             android:layout_marginStart="@dimen/eight_dp"
                             android:layout_marginLeft="@dimen/eight_dp">
 
-                            <com.yelo.com.custom_fonts.TextViewRobotoBold
+                            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBold
                                 android:id="@+id/tV_follower_count"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -357,7 +357,7 @@
                                 android:textColor="@color/pink_color"
                                 android:textSize="@dimen/subheading_text_size" />
 
-                            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/five_dp"
@@ -386,7 +386,7 @@
                             android:layout_marginStart="@dimen/eight_dp"
                             android:layout_marginLeft="@dimen/eight_dp">
 
-                            <com.yelo.com.custom_fonts.TextViewRobotoBold
+                            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoBold
                                 android:id="@+id/tV_following_count"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -394,7 +394,7 @@
                                 android:textColor="@color/pink_color"
                                 android:textSize="@dimen/subheading_text_size" />
 
-                            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/five_dp"
@@ -408,7 +408,7 @@
                     </LinearLayout>
 
                     <!-- Bio -->
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:id="@+id/tV_bio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -418,7 +418,7 @@
                         android:visibility="visible" />
 
                     <!-- website -->
-                    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+                    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                         android:id="@+id/tV_website"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -446,13 +446,13 @@
             android:layout_height="45dp"
             android:background="@color/tab_bg"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/login_page_blue_box"
+            app:tabIndicatorColor="@color/pink_color"
             app:tabIndicatorHeight="2.5dp"
             app:tabMaxWidth="0dp"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/login_page_blue_box"
+            app:tabSelectedTextColor="@color/pink_color"
             app:tabTextAppearance="@style/AppTabTextAppearance"
-            app:tabTextColor="@color/tab_unselected_color" />
+            app:tabTextColor="@color/colorPrimaryDark" />
 
         <View
             android:layout_width="match_parent"

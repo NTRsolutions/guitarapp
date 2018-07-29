@@ -350,6 +350,7 @@
     <string name="coarse_location">Coarse Location</string>
     <string name="fine_location">Fine Location</string>
     <string name="read_contact">Read Phone Contact</string>
+    <string name="record_audio">the Mike Record Audio</string>
     <string name="you_just_bought">You just bought</string>
     <string name="pls_rate_your_exp_with">Please rate your experience with the seller by clicking here</string>
     <!--Fetch Address-->
@@ -368,8 +369,9 @@
     <!-- Keys -->
     <!--AIzaSyCqd2N4c4vDRU18HGWUdIR_gv0eX80RWwI-->
     <!--AIzaSyCut_UpCItTRN7Blad2ooEP5x8f3fX-Rq4-->
+    <!--AIzaSyD2Cp9HczZQeuJVxdHnxajEJkzdJXlWpCM-->
     <string name="facebook_app_id">2023177354602917</string><!--put your facebook app id-->
-    <string name="google_map_api_key">AIzaSyD2Cp9HczZQeuJVxdHnxajEJkzdJXlWpCM</string><!--put your google map key from google api console-->
+    <string name="google_map_api_key">AIzaSyA1ECX82F0_P1Ls5RovKOwJIhv8LbEskJk</string><!--put your google map key from google api console-->
     <string name="servers_client_id">612096447830-v96ehhvmol8jrj44i0ps07dho3lt1cj6.apps.googleusercontent.com</string><!--put server client id from google api console -->
 
     <!--McD8c7RCgP7lLD_viXa_kp1_  google client secret Gogle plus api//-->

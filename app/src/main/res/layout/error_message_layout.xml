@@ -26,7 +26,7 @@
             android:scaleType="center" />
     </FrameLayout>
 
-    <com.yelo.com.custom_fonts.TextViewRobotoMedium
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
         android:layout_marginTop="15dp"
         android:text="@string/message"
         android:textColor="@color/error_heading_color"
@@ -37,7 +37,7 @@
         android:gravity="center"
         />
 
-    <com.yelo.com.custom_fonts.TextViewRobotoRegular
+    <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
         android:id="@+id/tV_message_title"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"

@@ -12,7 +12,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="45dp">
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:id="@+id/tV_countryName"
             android:layout_gravity="center_vertical"
             android:layout_weight="2"
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@string/country"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:id="@+id/tV_code"
             android:gravity="center"
             android:layout_gravity="center_vertical"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:text="@string/code"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:id="@+id/tV_symbol"
             android:layout_gravity="center_vertical"
             android:gravity="center"

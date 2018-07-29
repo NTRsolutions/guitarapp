@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="1">
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_current_page"
                 android:alpha="1"
                 android:textColor="@color/white"
@@ -62,7 +62,7 @@
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:textSize="18sp"
                 android:layout_marginStart="@dimen/five_dp"
                 android:layout_marginLeft="@dimen/five_dp"
@@ -70,7 +70,7 @@
                 android:text="@string/of"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <com.yelo.com.custom_fonts.TextViewRobotoMedium
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoMedium
                 android:id="@+id/tV_total_pages"
                 android:textSize="18sp"
                 android:layout_marginStart="@dimen/five_dp"

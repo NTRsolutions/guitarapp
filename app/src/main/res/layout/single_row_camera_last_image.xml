@@ -16,7 +16,7 @@
             android:src="@drawable/rect_gray_color_dotted_line_shape"
             android:contentDescription="@string/simple_image_view"/>
 
-        <com.yelo.com.custom_fonts.TextViewRobotoRegular
+        <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
             android:id="@+id/tV_coverPicText"
             android:layout_marginTop="@dimen/fifteen_dp"
             android:textColor="@color/hide_button_border_color"

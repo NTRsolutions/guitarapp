@@ -31,7 +31,7 @@
             android:layout_toEndOf="@+id/iV_fbicon"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp">
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_connect_to_fb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
                 android:textSize="@dimen/heading_text_size"
                 android:textColor="@color/heading_color"/>
 
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_fb_friends_count"
                 android:layout_below="@+id/tV_connect_to_fb"
                 android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp">
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_connect_to_contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
                 android:textSize="@dimen/heading_text_size"
                 android:textColor="@color/heading_color"/>
 
-            <com.yelo.com.custom_fonts.TextViewRobotoRegular
+            <com.demskigroup.guitaramps.custom_fonts.TextViewRobotoRegular
                 android:id="@+id/tV_contect_friend_count"
                 android:layout_below="@+id/tV_connect_to_contact"
                 android:layout_width="wrap_content"
