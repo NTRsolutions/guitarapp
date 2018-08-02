@@ -464,6 +464,7 @@ public class EditProfileActivity extends Activity implements View.OnClickListene
             case R.id.tV_emailId :
                 if (isToStartActivity) {
                     intent = new Intent(mActivity, VerifyEmailIdActivity.class);
+                    intent.putExtra(VerifyEmailIdActivity.KEY_EMAIL,tV_emailId.getText().toString().trim() );
                     startActivityForResult(intent, VERIFY_EMAIL_REQ_CODE);
                     isToStartActivity = false;
                 }

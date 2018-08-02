@@ -88,6 +88,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
@@ -300,7 +302,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                             {
                                 System.out.println(TAG+" "+"lat in refreshing="+lat+" "+"lng="+lng);
                                 if (isLocationFound(lat,lng))
-                                    getUserPosts(index);
+                                   // getUserPosts(index);
+                                    getGuestPosts( index );
                                 else getCurrentLocation();
                             }
                             else {
@@ -529,7 +532,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                         index=0;
 
                         if (mSessionManager.getIsUserLoggedIn()) {
-                            getUserPosts( index );
+                           // getUserPosts( index );
+                            getGuestPosts(index);
                         }else {
                             getGuestPosts( index );
                         }
@@ -767,11 +771,37 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                 arrayListExploreDatas.addAll(explorePojoMain.getData());
                 if (arrayListExploreDatas!=null && arrayListExploreDatas.size()>0)
                 {
+                    List<ExploreResponseDatas>  exploreNewResponseData;
                     isLoading = arrayListExploreDatas.size() < 15;
                     System.out.println(TAG+" "+"home page set isLoading="+isLoading);
 
-                    rL_noProductFound.setVisibility(View.GONE);
-                    exploreRvAdapter.notifyDataSetChanged();
+                     String userNameLoggedIn = mSessionManager.getUserName().trim();
+                    if (mSessionManager.getIsUserLoggedIn())
+
+                    {
+
+
+                         exploreNewResponseData= new ArrayList<>();
+
+                        exploreNewResponseData.addAll(arrayListExploreDatas);
+                        for (int i =  arrayListExploreDatas.size()-1; i >=  0; i--){
+                            String postedBYUserName =arrayListExploreDatas.get(i).getPostedByUserName().trim();
+                            if(userNameLoggedIn.equalsIgnoreCase(postedBYUserName)){
+                                arrayListExploreDatas.remove(i);
+                            }
+                        }
+                        Log.i("length of products",exploreNewResponseData.size() +"");
+//                        arrayListExploreDatas.clear();
+                       // arrayListExploreDatas.addAll(exploreNewResponseData);
+
+                    }
+
+                    if(arrayListExploreDatas.size() == 0){
+                        rL_noProductFound.setVisibility(View.VISIBLE);
+                    }else {
+                        rL_noProductFound.setVisibility(View.GONE);
+                        exploreRvAdapter.notifyDataSetChanged();
+                    }
 
                     // Load more
                     /*mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -843,7 +873,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                                     else {
                                         // check is user is logged in or not if its login then show according to location if not then show all posts.
                                         if (mSessionManager.getIsUserLoggedIn())
-                                            getUserPosts(index);
+                                           // getUserPosts(index);
+                                        getGuestPosts(index);
                                         else getGuestPosts(index);
                                     }
                                 }
@@ -985,7 +1016,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
             {
                 System.out.println(TAG+" "+"lat in refreshing="+lat+" "+"lng="+lng);
                 if (isLocationFound(lat,lng))
-                    getUserPosts(index);
+                    //getUserPosts(index);
+                    getGuestPosts(index);
                 else getCurrentLocation();
             }
             else {
@@ -1106,7 +1138,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                     {
                         case Activity.RESULT_CANCELED :
                             index = 0;
-                            getUserPosts(index);
+                           // getUserPosts(index);
+                            getGuestPosts(index);
                             break;
                     }
                     break;
@@ -1442,7 +1475,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
             {
                 System.out.println(TAG+" "+"lat in refreshing="+lat+" "+"lng="+lng);
                 if (isLocationFound(lat,lng))
-                    getUserPosts(index);
+                    //getUserPosts(index);
+                getGuestPosts(index);
                 else getCurrentLocation();
             }
             else getGuestPosts(index);
@@ -1656,7 +1690,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener, ProductI
                     index = 0;
                     lat=lng="";
                     arrayListExploreDatas.clear();
-                    getUserPosts(index);
+                   // getUserPosts(index);
+                    getGuestPosts(index);
                 }
 
                 errorMessageDialog.dismiss();

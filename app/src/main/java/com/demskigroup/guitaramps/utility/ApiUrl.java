@@ -77,7 +77,8 @@ public class ApiUrl
  /**
   * email verification
   */
- public static final String VERIFY_EMAIL1=BASE_URL+"emailCheck";
+ public static final String VERIFY_EMAIL1=BASE_URL+"check_mail";
+
 
  /**
   * email verification

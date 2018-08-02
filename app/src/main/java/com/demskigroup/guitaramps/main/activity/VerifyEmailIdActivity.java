@@ -15,6 +15,10 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.demskigroup.guitaramps.pojo_class.EditProfilePojo;
+import com.demskigroup.guitaramps.pojo_class.edit_profile_pojo.EditProfileData;
 import com.google.gson.Gson;
 import com.demskigroup.guitaramps.R;
 import com.demskigroup.guitaramps.fcm_push_notification.Config;
@@ -50,6 +54,10 @@ public class VerifyEmailIdActivity extends AppCompatActivity implements View.OnC
     private ProgressBar progress_bar;
     private TextView tV_send;
     private NotificationMessageDialog mNotificationMessageDialog;
+    Intent I =  null;
+    public static  String KEY_EMAIL = "key_email";
+    String email = null;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,7 +65,14 @@ public class VerifyEmailIdActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_verify_email);
         overridePendingTransition(R.anim.activity_open_translate, R.anim.activity_close_scale);
 
+
+         I = getIntent();
+         email = I.getStringExtra(KEY_EMAIL);
+
         initVariables();
+        if(email == null) {
+            getProfileDatasApi();
+        }
     }
 
     /**
@@ -88,6 +103,10 @@ public class VerifyEmailIdActivity extends AppCompatActivity implements View.OnC
 
         // EditText Email Address
         eT_emailId= (EditText) findViewById(R.id.eT_emailId);
+        if(email != null){
+            eT_emailId.setText(email);
+        }
+
         eT_emailId.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -157,6 +176,8 @@ public class VerifyEmailIdActivity extends AppCompatActivity implements View.OnC
             try {
                 request_datas.put("email", eT_emailId.getText().toString());
                 request_datas.put("token", mSessionManager.getAuthToken());
+
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -193,6 +214,25 @@ public class VerifyEmailIdActivity extends AppCompatActivity implements View.OnC
                         case "401" :
                             CommonClass.sessionExpired(mActivity);
                             break;
+
+                        case "500":
+                            CommonClass.showSnackbarMessage(linear_rootElement,"Email Updated");
+
+                            final Timer t2 = new Timer();
+                            t2.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    Intent intent=new Intent();
+                                    intent.putExtra("emailId",eT_emailId.getText().toString());
+                                    setResult(VERIFY_EMAIL_REQ_CODE,intent);
+                                    // when the task active then close the activity
+                                    t2.cancel();
+                                    onBackPressed();
+                                }
+                            }, 3000);
+                            break;
+
+
 
                         default:
                             CommonClass.showSnackbarMessage(linear_rootElement,verifyEmailMain.getMessage());
@@ -232,5 +272,69 @@ public class VerifyEmailIdActivity extends AppCompatActivity implements View.OnC
     public void onBackPressed() {
         finish();
         overridePendingTransition(R.anim.activity_open_scale, R.anim.activity_close_translate);
+    }
+
+
+    private void getProfileDatasApi()
+    {
+        if (CommonClass.isNetworkAvailable(mActivity))
+        {
+
+            progress_bar.setVisibility(View.VISIBLE);
+            JSONObject request_datas = new JSONObject();
+            try {
+                request_datas.put("token", mSessionManager.getAuthToken());
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            OkHttp3Connection.doOkHttp3Connection(TAG, ApiUrl.EDIT_PROFILE, OkHttp3Connection.Request_type.POST, request_datas, new OkHttp3Connection.OkHttp3RequestCallback() {
+                @Override
+                public void onSuccess(String result, String user_tag)
+                {
+                    progress_bar.setVisibility(View.GONE);
+                    System.out.println(TAG + " " + "edit profile res=" + result);
+
+                    EditProfilePojo editProfilePojo;
+                    Gson gson=new Gson();
+                    editProfilePojo=gson.fromJson(result,EditProfilePojo.class);
+
+                    switch (editProfilePojo.getCode())
+                    {
+                        // success
+                        case "200" :
+
+                            EditProfileData editProfileData=editProfilePojo.getData();
+                            if (editProfileData!=null)
+                            {
+
+                                email=editProfileData.getEmail();
+                                eT_emailId.setText(email);
+
+                                // Set user profile pic
+
+                            }
+                            break;
+
+                        // auth token expired
+                        case "401" :
+                            CommonClass.sessionExpired(mActivity);
+                            break;
+
+                        // error
+                        default:
+                            CommonClass.showSnackbarMessage(linear_rootElement,editProfilePojo.getMessage());
+                            break;
+                    }
+                }
+
+                @Override
+                public void onError(String error, String user_tag) {
+                    progress_bar.setVisibility(View.GONE);
+                }
+            });
+        }
+        else CommonClass.showSnackbarMessage(linear_rootElement,getResources().getString(R.string.NoInternetAccess));
+
     }
 }
